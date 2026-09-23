@@ -75,3 +75,14 @@ test('reads the domain from an opt-out issue form', async () => {
   assert.equal(parseDomain('### Domain\n\n_No response_'), null);
   assert.equal(parseDomain('### Domain\n\nexample.com; rm -rf /'), null);
 });
+
+test('garbled, minified and CJK font names', () => {
+  assert.equal(normalizeFamily('\u03a2\ufffd\ufffd\ufffd\u017a\ufffd')?.slug, 'unknown');
+  assert.equal(normalizeFamily('M')?.slug, 'unknown');
+  assert.equal(normalizeFamily('ヒラギノ角ゴ Pro W3')?.name, 'Hiragino Kaku Gothic');
+  assert.equal(normalizeFamily('ＭＳ Ｐゴシック')?.name, 'MS PGothic');
+  assert.equal(normalizeFamily('맑은 고딕')?.name, 'Malgun Gothic');
+  assert.equal(normalizeFamily('微软雅黑')?.slug, 'microsoft-yahei');
+  assert.match(slugify('デザイン書体'), /^u-30c7-/);
+  assert.equal(slugify('Crème Brûlée'), 'creme-brulee');
+});

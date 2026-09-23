@@ -142,7 +142,7 @@ for (const kind of ['wayback', 'weekly', 'daily'] as Kind[]) {
         date: kind === 'wayback' ? date : r.crawled_at.slice(0, 10),
         method: r.method ?? 'browser',
         body,
-        heading: normalizeFamily(r.heading_font) ?? body,
+        heading: ((h) => (h && h.slug !== 'unknown' ? h : body))(normalizeFamily(r.heading_font)),
         sources: r.sources ?? [],
         platform: r.platform ?? null,
         raw: r,
@@ -329,7 +329,7 @@ const categoryList = categories.map((slug) => {
 });
 
 const allFonts = new Map<string, Font>();
-for (const o of baseObs) for (const f of [o.body, o.heading]) if (f) allFonts.set(f.slug, f);
+for (const o of baseObs) for (const f of [o.body, o.heading]) if (f && f.slug !== 'unknown') allFonts.set(f.slug, f);
 
 write('overview.json', {
   generated_at: new Date().toISOString(),
