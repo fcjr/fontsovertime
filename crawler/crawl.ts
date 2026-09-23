@@ -9,6 +9,7 @@ import { robotsAllows } from './robots.ts';
 type Site = { domain: string; category: string };
 const { values, positionals } = parseArgs({
   allowPositionals: true,
+  allowNegative: true,
   options: {
     shard: { type: 'string', default: '0/1' },
     out: { type: 'string', default: 'out/crawl.jsonl' },
@@ -19,6 +20,7 @@ const { values, positionals } = parseArgs({
   },
 });
 
+// PROXY_URL may contain {session}; each site gets its own value so a page and its assets share one exit IP.
 const proxy = (() => {
   if (!process.env.PROXY_URL) return null;
   const u = new URL(process.env.PROXY_URL);
@@ -27,6 +29,14 @@ const proxy = (() => {
     ...(u.username ? { username: decodeURIComponent(u.username), password: decodeURIComponent(u.password) } : {}),
   };
 })();
+const stickyProxy = (p: NonNullable<typeof proxy>) => {
+  const session = Math.random().toString(36).slice(2, 12);
+  return {
+    ...p,
+    ...(p.username ? { username: p.username.replaceAll('{session}', session) } : {}),
+    ...(p.password ? { password: p.password.replaceAll('{session}', session) } : {}),
+  };
+};
 const respectRobots = process.env.PROXY_RESPECT_ROBOTS !== '0';
 
 process.on('uncaughtException', (e) => console.error('uncaught:', e.message));
@@ -87,7 +97,8 @@ async function crawlSite(browser: Awaited<ReturnType<typeof launch>>, extract: s
   const base = { domain: site.domain, category: site.category, crawled_at: new Date().toISOString(), method: 'browser' };
   const urls = [`https://${site.domain}/`];
   if (!site.domain.startsWith('www.')) urls.push(`https://www.${site.domain}/`);
-  return { ...base, ...(await measurePage(browser, extract, urls, progress, opts)) };
+  urls.push(`http://${site.domain}/`);
+  return { ...base, ...(await measurePage(browser, extract, urls, progress, opts.proxy ? { ...opts, proxy: stickyProxy(opts.proxy) } : opts)) };
 }
 
 const [shardIndex, shardCount] = values.shard.split('/').map(Number);

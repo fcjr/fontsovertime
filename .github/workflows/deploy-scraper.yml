@@ -1,0 +1,48 @@
+name: deploy-scraper
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'crawler/**'
+      - 'pipeline/**'
+      - 'deploy/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/deploy-scraper.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-scraper
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to the crawl server
+        env:
+          KEY: ${{ secrets.SCRAPER_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.SCRAPER_KNOWN_HOSTS }}
+          HOST: ${{ secrets.SCRAPER_HOST }}
+          SHA: ${{ github.sha }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          ssh -i ~/.ssh/deploy_key -o BatchMode=yes -o IdentitiesOnly=yes "deploy@$HOST" "$SHA"

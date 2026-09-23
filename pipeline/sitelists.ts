@@ -49,13 +49,22 @@ for (const file of readdirSync(SITES).filter((f) => f.endsWith('.csv')).sort()) 
   }
 }
 
-const adultHosts = new Set(
-  (await fetchText('https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-only/hosts').catch(() => ''))
-    .split('\n')
-    .filter((l) => l.startsWith('0.0.0.0 '))
-    .map((l) => bare(l.split(/\s+/)[1] ?? '')),
-);
-const isAdult = (d: string, host = d) => !/\.(gov|edu|mil)(\.[a-z]{2})?$/.test(d) && (ADULT.test(d) || adultHosts.has(d) || adultHosts.has(host));
+const adultLists = [
+  'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn-only/hosts',
+  'https://raw.githubusercontent.com/blocklistproject/Lists/master/porn.txt',
+];
+const adultHosts = new Set<string>();
+for (const url of adultLists)
+  for (const line of (await fetchText(url).catch(() => '')).split('\n'))
+    if (line.startsWith('0.0.0.0 ')) adultHosts.add(bare(line.split(/\s+/)[1] ?? ''));
+// Mainstream sites that the broad adult blocklists flag anyway.
+const ADULT_ALLOW = new Set([
+  'camscanner.com', 'tnpscexams.in', 'ome.tv', 'cosmopolitan.com', 'super.cz', 'hmv.co.jp', 'suruga-ya.jp', 'papy.co.jp',
+  'nicovideo.jp', 'dmm.com', 'videa.hu', 'funnyjunk.com', 'yanmaga.jp', 'mangakatana.com', 'fanfox.net', 'weebcentral.com',
+  'scan-manga.com', 'lectormangass.net', 'comix.to', 'badoo.com', 'seaart.ai',
+]);
+const isAdult = (d: string, host = d) =>
+  !ADULT_ALLOW.has(d) && !/\.(gov|edu|mil)(\.[a-z]{2})?$/.test(d) && (ADULT.test(d) || adultHosts.has(d) || adultHosts.has(host));
 
 const crux = (await fetchText('https://raw.githubusercontent.com/zakird/crux-top-lists/main/data/global/current.csv.gz', true)).trim().split('\n').slice(1);
 const limit = Number(values.top);

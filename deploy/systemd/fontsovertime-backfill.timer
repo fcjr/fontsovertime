@@ -1,8 +1,8 @@
 [Unit]
-Description=Wayback backfill, one budgeted run per hour until done
+Description=Wayback backfill, one budgeted run every six hours until done
 
 [Timer]
-OnCalendar=hourly
+OnCalendar=*-*-* 00/6:00:00 UTC
 RandomizedDelaySec=300
 Persistent=true
 Unit=fontsovertime@backfill.service

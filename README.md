@@ -57,11 +57,13 @@ Add a row to a hand-curated `sites/<category>.csv` (`domain,subcategory,source,a
 
 ## Crawl server
 
-The weekly, daily and archive backfill jobs run on one small Linux server (Ubuntu 24.04; a 4 vCPU / 8 GB ARM machine is plenty).
+The weekly, daily and archive backfill jobs run on one small Linux server (Ubuntu 24.04 or newer; 4 vCPU and 8 GB is plenty). On x86-64 it uses Google Chrome, elsewhere Playwright's Chromium.
 
-1. As root: `curl -fsSL https://raw.githubusercontent.com/fcjr/fontsovertime/main/deploy/setup.sh | bash`. The first run prints a deploy key; add it to the repo with write access and run the script again.
-2. Put secrets in `/etc/fontsovertime.env` (created by the script): the residential proxy URL, an optional per-run proxy bandwidth cap and optional healthchecks.io URLs.
-3. Timers: weekly on Sundays and daily Monday to Saturday at 03:00 UTC, and the backfill hourly until it runs out of work. `systemctl list-timers 'fontsovertime-*'` shows them and `journalctl -u 'fontsovertime@*'` the logs.
+1. As root: `DEPLOY_PUBKEY="ssh-ed25519 ..." bash deploy/setup.sh` (or pipe it from GitHub). The first run prints the server's own deploy key; add it to the repo with write access and run the script again.
+2. Settings live in `/etc/fontsovertime.env`: the residential proxy URL, per-run proxy bandwidth cap, crawl concurrency and optional healthchecks.io URLs.
+3. Timers: weekly on Sundays and daily Monday to Saturday at 03:00 UTC, and the backfill every six hours until it runs out of work. `systemctl list-timers 'fontsovertime-*'` shows them and `journalctl -u 'fontsovertime@*'` the logs.
+
+Pushes that touch the crawler, pipeline or deploy files run the tests and then `deploy-scraper.yml`, which connects as the `deploy` user. That user's key can only run `deploy/deploy.sh`, which updates the checkouts (jobs in progress pick up new code on their next run), Chrome and Playwright's browser, and the systemd units. Repository secrets: `SCRAPER_SSH_KEY`, `SCRAPER_KNOWN_HOSTS`, `SCRAPER_HOST`.
 
 The backfill reads quarterly copies of each homepage from the Internet Archive and Arquivo.pt, going back 10 years by default. Each archive has its own request budget: the Internet Archive's starts at 30 a minute and rises to at most 60 while it returns no errors, and Arquivo.pt's stays far below its published limits. It measures only the quarters needed to find when fonts changed, caches capture lists and stylesheets on disk, tries other copies from the same quarter when one is unusable, and retries temporary failures on later runs. Progress and an estimated finish time are written to `data/runs/backfill-status.json`.
 

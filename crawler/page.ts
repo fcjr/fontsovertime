@@ -60,7 +60,7 @@ export function sourceOf(url: string) {
   return PROVIDERS.find(([re]) => re.test(host))?.[1] ?? 'self';
 }
 
-export const launch = () => chromium.launch({ channel: 'chromium' });
+export const launch = () => chromium.launch({ channel: process.env.BROWSER_CHANNEL || 'chromium', headless: process.env.HEADLESS !== '0' });
 export const loadExtract = () => readFile(new URL('./extract.js', import.meta.url), 'utf8');
 
 export function withTimeout<T>(p: Promise<T>, ms: number): Promise<T> {
@@ -69,9 +69,25 @@ export function withTimeout<T>(p: Promise<T>, ms: number): Promise<T> {
   return Promise.race([p, timeout]).finally(() => clearTimeout(timer));
 }
 
+const CHALLENGE_PAGE = /just a moment|checking your browser|attention required|please wait|one more step|ddos protection/i;
+const agents = new WeakMap<Browser, Promise<string>>();
+
+// The browser's own user agent, minus the headless marker, so the claimed browser, version and OS stay consistent.
 function userAgentFor(browser: Browser) {
-  const major = browser.version().split('.')[0];
-  return `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${major}.0.0.0 Safari/537.36`;
+  if (!agents.has(browser))
+    agents.set(
+      browser,
+      (async () => {
+        const context = await browser.newContext();
+        try {
+          const page = await context.newPage();
+          return ((await page.evaluate('navigator.userAgent')) as string).replace('HeadlessChrome', 'Chrome');
+        } finally {
+          await context.close().catch(() => {});
+        }
+      })(),
+    );
+  return agents.get(browser)!;
 }
 
 export async function measurePage(
@@ -94,7 +110,7 @@ export async function measurePage(
   const context = await browser.newContext({
     javaScriptEnabled: !opts.archived,
     ...(opts.proxy ? { proxy: opts.proxy } : {}),
-    userAgent: userAgentFor(browser),
+    userAgent: await userAgentFor(browser),
     viewport: { width: 1280, height: 800 },
     locale: 'en-US',
     serviceWorkers: 'block',
@@ -147,10 +163,11 @@ export async function measurePage(
     progress.step = 'goto';
     let response = null;
     let navError: unknown;
-    for (const url of urls) {
+    for (const [i, url] of urls.entries()) {
       try {
         response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: opts.navTimeout ?? 30_000 });
         navError = undefined;
+        if (response && [404, 410].includes(response.status()) && i < urls.length - 1) continue;
         break;
       } catch (e) {
         navError = e;
@@ -163,6 +180,14 @@ export async function measurePage(
 
     progress.step = 'load';
     await page.waitForLoadState('load', { timeout: LOAD_TIMEOUT }).catch(() => {});
+    if (!opts.archived && CHALLENGE_PAGE.test(await page.title().catch(() => ''))) {
+      progress.step = 'challenge';
+      for (let waited = 0; waited < 20_000; waited += 1000) {
+        await page.waitForTimeout(1000);
+        if (!CHALLENGE_PAGE.test(await page.title().catch(() => 'just a moment'))) break;
+      }
+      await page.waitForLoadState('load', { timeout: LOAD_TIMEOUT }).catch(() => {});
+    }
     await page.waitForTimeout(1000);
     progress.step = 'fonts';
     const fontsReady = await page.evaluate(
