@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { load, type FontRef, type Overview } from '../lib/data';
 import { fontLinks } from '../lib/specimen';
 import Wordmark from '../components/Wordmark.astro';
+import { optOutUrl, REPO_URL } from '../lib/site';
 
 interface Props {
   title?: string;
@@ -89,8 +90,9 @@ const nav = [
         </p>
         <ul class="foot-links">
           <li><a href="/methodology">How it works</a></li>
-          <li><a href="/methodology#opt-out">Opt out</a></li>
+          <li><a href={optOutUrl()}>Opt out your site</a></li>
           <li><a href="/changes.xml">RSS</a></li>
+          <li><a href={REPO_URL}>Code and data on GitHub</a></li>
         </ul>
       </div>
     </footer>

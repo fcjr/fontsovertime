@@ -1,0 +1,58 @@
+name: opt-out
+
+on:
+  issues:
+    types: [opened, edited, labeled, reopened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: opt-out
+  cancel-in-progress: false
+
+jobs:
+  handle:
+    if: >-
+      github.event.issue.state == 'open' &&
+      (contains(github.event.issue.labels.*.name, 'opt-out') || startsWith(github.event.issue.title, 'Opt out')) &&
+      (github.event.action != 'labeled' || github.event.label.name == 'approved')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - id: check
+        run: node pipeline/optout.ts
+      - name: Commit
+        if: steps.check.outputs.status == 'done'
+        env:
+          DOMAIN: ${{ steps.check.outputs.domain }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "fontsovertime-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          node pipeline/aggregate.ts
+          git add sites/exclude.txt data/snapshots data/exports
+          git diff --cached --quiet && exit 0
+          git commit -m "Opt out $DOMAIN (#$ISSUE)"
+          git pull --rebase
+          git push
+      - name: Reply
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STATUS: ${{ steps.check.outputs.status }}
+          MESSAGE: ${{ steps.check.outputs.message }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          printf '%s\n' "$MESSAGE" > reply.md
+          gh issue comment "$ISSUE" --body-file reply.md
+          if [ "$STATUS" = done ]; then
+            gh issue edit "$ISSUE" --remove-label needs-verification || true
+            gh issue close "$ISSUE" --reason completed
+          else
+            gh label create needs-verification --color FBCA04 --description "Waiting for proof of site ownership" --force
+            gh issue edit "$ISSUE" --add-label needs-verification
+          fi

@@ -1,0 +1,49 @@
+name: Opt out a website
+description: Stop Fonts Over Time from crawling a site you run, and remove its data.
+title: 'Opt out: '
+labels: ['opt-out']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We load each homepage once a week with a normal browser, never log in and never follow links. If you run a site and would rather not be included, we'll stop crawling it and remove it from the site and the downloadable data.
+
+        **To confirm you run the site, do one of these before or after filing:**
+        - Add a DNS TXT record on the domain containing `fontsovertime-opt-out`, or
+        - Serve a plain text file at `https://YOUR-DOMAIN/.well-known/fontsovertime-opt-out` containing `fontsovertime-opt-out`.
+
+        A bot checks automatically when the issue is opened and every time you edit it. You can remove the record or file once the issue is closed.
+  - type: input
+    id: domain
+    attributes:
+      label: Domain
+      description: The domain as it appears on fontsovertime.com, without https:// or a path.
+      placeholder: example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your relationship to the site
+      options:
+        - I own or run it
+        - I work for the organization that runs it
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: verification
+    attributes:
+      label: How you verified
+      options:
+        - DNS TXT record
+        - .well-known file
+        - I can't do either (a maintainer will follow up)
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else we should know
+    validations:
+      required: false

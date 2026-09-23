@@ -3,6 +3,7 @@ import { existsSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import Layout from '../layouts/Layout.astro';
 import { kb } from '../lib/format';
+import { rawUrl, REPO_URL } from '../lib/site';
 
 const root = join(process.cwd(), '..', 'data', 'snapshots');
 const list = (kind: string) => {
@@ -12,7 +13,7 @@ const list = (kind: string) => {
     .filter((f) => f.endsWith('.jsonl.gz'))
     .sort()
     .reverse()
-    .map((f) => ({ name: f.replace('.jsonl.gz', ''), href: `/data/snapshots/${kind}/${f}`, size: statSync(join(dir, f)).size }));
+    .map((f) => ({ name: f.replace('.jsonl.gz', ''), href: rawUrl(`data/snapshots/${kind}/${f}`), size: statSync(join(dir, f)).size }));
 };
 const groups = [
   { kind: 'weekly', title: 'Weekly crawls', note: 'Every tracked homepage, once a week.' },
@@ -25,6 +26,7 @@ const groups = [
   <section class="wrap hero">
     <h1>The data</h1>
     <p class="lede">Everything behind this site is free to download and reuse. If you publish something with it, a link back is appreciated.</p>
+    <p>The files are hosted in the project’s <a href={REPO_URL}>GitHub repository</a>, alongside the site lists and the crawler, so you can also clone it or follow its history.</p>
   </section>
 
   <section class="wrap">
@@ -33,7 +35,7 @@ const groups = [
         <h2>This week, as a spreadsheet</h2>
         <p class="muted">One row per site: body font, heading font, platform, how the fonts are served, and when we saw it.</p>
       </div>
-      <a class="button" href="/data/latest.csv" download>Download CSV</a>
+      <a class="button" href={rawUrl('data/exports/latest.csv')}>Download CSV</a>
     </div>
   </section>
 
@@ -48,7 +50,7 @@ const groups = [
           <ul class="files">
             {g.files.map((f) => (
               <li>
-                <a href={f.href} download class="num">
+                <a href={f.href} class="num">
                   {f.name}
                 </a>
                 <span class="muted small num">{kb(f.size)}</span>

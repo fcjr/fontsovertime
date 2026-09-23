@@ -12,14 +12,17 @@
     "aggregate": "node pipeline/aggregate.ts",
     "backfill": "node pipeline/wayback.ts",
     "dev": "pnpm --filter web dev",
-    "build": "pnpm --filter web build",
+    "build": "node pipeline/aggregate.ts && pnpm --filter web build",
     "test": "node --test pipeline/",
-    "lists": "node pipeline/indie.ts && node pipeline/sitelists.ts"
+    "lists": "node pipeline/indie.ts && node pipeline/sitelists.ts",
+    "preview": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
   "devDependencies": {
     "@types/node": "^26.6.2",
     "playwright": "^1.63.0",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "wrangler": "^4.136.3"
   },
   "packageManager": "pnpm@10.28.0"
 }

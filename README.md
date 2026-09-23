@@ -11,6 +11,7 @@ sites/            one CSV per industry category, cohorts/ (top sites, YC, unicor
 crawler/          Playwright crawler (crawl.ts), in-page extractor (extract.js), static CSS fallback (static.ts)
 pipeline/         merge shards, normalize names (aliases.json), aggregate, Wayback backfill
 data/snapshots/   weekly/, daily/ and wayback/ crawls as gzipped JSON Lines
+data/exports/     latest.csv, one row per site (linked from the site's data page)
 data/agg/         precomputed JSON the site is built from
 web/              Astro site
 ```
@@ -51,8 +52,8 @@ Add a row to a hand-curated `sites/<category>.csv` (`domain,subcategory,source,a
 
 ## Opting out
 
-Open an issue, or a pull request adding your domain to `sites/exclude.txt`. It will be dropped before the next crawl and stays out when the lists are rebuilt.
+[Open an opt-out request](https://github.com/fcjr/fontsovertime/issues/new?template=opt-out.yml). To show you run the site, add a DNS TXT record containing `fontsovertime-opt-out`, or serve a plain text file at `/.well-known/fontsovertime-opt-out` containing the same text. The `opt-out` workflow checks automatically. Once verified it adds the domain to `sites/exclude.txt`, removes its rows from every published snapshot and the CSV export, and closes the issue. Earlier versions stay in git history. If neither check is possible, a maintainer can add the `approved` label instead.
 
 ## Deploying
 
-`deploy.yml` builds the site and publishes it to the `fontsovertime` Cloudflare Pages project. It needs `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` repository secrets.
+The site is a Cloudflare Worker serving static assets (`wrangler.jsonc`), deployed by Cloudflare's GitHub integration on every push to `main`, including the crawl bot's commits. Build command: `pnpm build` (aggregates `data/snapshots` into `data/agg`, then builds `web/dist`). Deploy command: `npx wrangler deploy`. `pnpm preview` serves the built site locally with Wrangler.

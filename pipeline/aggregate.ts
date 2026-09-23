@@ -491,8 +491,8 @@ const csv = [
     return [s.domain, s.category, s.body?.name, s.heading?.name, s.platform, o.sources.join(' '), s.method, s.date].map(csvEscape).join(',');
   }),
 ].join('\n');
-mkdirSync(join(OUT, 'export'), { recursive: true });
-writeFileSync(join(OUT, 'export/latest.csv'), csv + '\n');
+mkdirSync(join(ROOT, 'data/exports'), { recursive: true });
+writeFileSync(join(ROOT, 'data/exports/latest.csv'), csv + '\n');
 
 console.error(`aggregated ${observations.length} observations, ${byDomain.size} sites, ${allFonts.size} fonts, ${changes.length} changes`);
 if (unknown.length) console.error('unaliased:', unknown.map(([n, c]) => `${n} (${c})`).join(', '));

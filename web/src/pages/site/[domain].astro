@@ -5,6 +5,7 @@ import Switches from '../../components/Switches.astro';
 import { load, type Change, type FontRef, type SiteRow } from '../../lib/data';
 import { date, kb, pct, PLATFORM_LABELS, SOURCE_LABELS } from '../../lib/format';
 import { glyphs } from '../../lib/specimen';
+import { optOutUrl } from '../../lib/site';
 
 type Detail = { family: string; share: number; stack: string; weights: Record<string, number>; font: FontRef | null };
 type Site = SiteRow & {
@@ -76,7 +77,8 @@ const weightList = (w: Record<string, number>) =>
       </div>
     </dl>
     <p class="small muted observed">
-      Last observed {date(s.date)}{s.method === 'static' ? ', from the page’s CSS because the browser crawl was blocked' : ''}.
+      Last observed {date(s.date)}{s.method === 'static' ? ', from the page’s CSS because the browser crawl was blocked' : ''}. Run this site and
+      want it removed? <a href={optOutUrl(s.domain)}>Request an opt-out</a>.
     </p>
   </section>
 

@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { load, type CategorySummary, type Overview } from '../lib/data';
 import { pct } from '../lib/format';
+import { optOutUrl, REPO_URL } from '../lib/site';
 
 const o = load<Overview>('overview.json');
 const cats = load<CategorySummary[]>('categories.json');
@@ -134,7 +135,17 @@ const cats = load<CategorySummary[]>('categories.json');
       <h2 id="opt-out">Opting out</h2>
       <p>
         We load each homepage once per crawl, with a normal browser and no logins, and never follow links. If you run a site and would rather not be
-        included, open an issue or a pull request adding it to the exclusion list in the project’s repository. We remove it before the next crawl, and it stays out when the lists are rebuilt.
+        included, open an opt-out request. It asks you to confirm you run the site, either with a DNS TXT record or a small file on the site, and a bot
+        checks it automatically. Once confirmed, the site is never crawled again and its data is removed from this site and the current downloads. Older versions of the data files remain in the repository’s history.
+      </p>
+      <p class="actions">
+        <a class="button" href={optOutUrl()}>Request an opt-out</a>
+      </p>
+
+      <h2>Source</h2>
+      <p>
+        The crawler, the site lists and every snapshot are on <a href={REPO_URL}>GitHub</a>. Corrections to the lists and font names are welcome as
+        pull requests.
       </p>
     </div>
   </article>
@@ -154,5 +165,22 @@ const cats = load<CategorySummary[]>('categories.json');
   }
   .prose h2 {
     padding-top: 12px;
+  }
+  .actions {
+    margin-top: 1.4em;
+  }
+  .button {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--signal);
+    color: var(--paper);
+    text-decoration: none;
+    padding: 12px 22px;
+  }
+  .button:hover {
+    background: var(--ink);
+    color: var(--paper);
   }
 </style>

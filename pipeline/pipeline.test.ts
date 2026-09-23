@@ -68,3 +68,10 @@ test('folds hosts to one registrable domain', async () => {
   assert.equal(registrable('someone.github.io'), 'someone.github.io');
   assert.equal(hostOf('https://www.Example.com/path'), 'example.com');
 });
+
+test('reads the domain from an opt-out issue form', async () => {
+  const { parseDomain } = await import('./optout.ts');
+  assert.equal(parseDomain('### Domain\n\nhttps://www.Example.com/about\n\n### Your relationship'), 'example.com');
+  assert.equal(parseDomain('### Domain\n\n_No response_'), null);
+  assert.equal(parseDomain('### Domain\n\nexample.com; rm -rf /'), null);
+});

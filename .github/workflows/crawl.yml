@@ -82,6 +82,7 @@ jobs:
           pattern: shard-*
           merge-multiple: true
       - run: node pipeline/merge.ts --kind ${{ needs.plan.outputs.kind }} out/shard-*.jsonl
+      - run: node pipeline/aggregate.ts
       - name: Commit
         run: |
           git config user.name "fontsovertime-bot"
@@ -91,8 +92,3 @@ jobs:
           git commit -m "Crawl: ${{ needs.plan.outputs.kind }} $(date -u +%F)"
           git pull --rebase
           git push
-
-  deploy:
-    needs: aggregate
-    uses: ./.github/workflows/deploy.yml
-    secrets: inherit
