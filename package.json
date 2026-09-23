@@ -13,7 +13,7 @@
     "backfill": "node pipeline/wayback.ts",
     "dev": "pnpm --filter web dev",
     "build": "node pipeline/aggregate.ts && pnpm --filter web build",
-    "test": "node --test pipeline/",
+    "test": "node --test 'pipeline/*.test.ts'",
     "lists": "node pipeline/indie.ts && node pipeline/sitelists.ts",
     "preview": "wrangler dev",
     "deploy": "wrangler deploy"
