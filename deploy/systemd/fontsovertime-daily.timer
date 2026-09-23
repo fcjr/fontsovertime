@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily crawl of well-known sites
+
+[Timer]
+OnCalendar=Mon..Sat *-*-* 03:00:00 UTC
+Persistent=true
+Unit=fontsovertime@daily.service
+
+[Install]
+WantedBy=timers.target

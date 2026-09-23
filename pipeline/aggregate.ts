@@ -172,11 +172,14 @@ for (const o of observations) {
 }
 for (const list of byDomain.values()) list.sort((a, b) => a.date.localeCompare(b.date) || (a.kind === 'daily' ? 1 : -1));
 
+const CARRY_FORWARD_DAYS = 35;
+const latestLive = observations.filter((o) => o.kind !== 'wayback').map((o) => o.date).sort().at(-1);
 const current = new Map<string, Obs>();
 for (const [domain, list] of byDomain) {
   const live = list.filter((o) => o.kind !== 'wayback');
-  const last = live.at(-1) ?? list.at(-1)!;
-  current.set(domain, last);
+  const last = live.at(-1);
+  if (last && latestLive && Date.parse(latestLive) - Date.parse(last.date) > CARRY_FORWARD_DAYS * 864e5) continue;
+  current.set(domain, last ?? list.at(-1)!);
 }
 
 const categoryOf = (domain: string, o?: Obs) => siteMeta.get(domain)?.category ?? o?.raw.category ?? 'other';
@@ -453,7 +456,7 @@ write('fonts.json', fontIndex);
 const unknown = [...unaliased].sort((a, b) => b[1] - a[1]).slice(0, 40);
 const siteIndex = [];
 for (const [domain, list] of byDomain) {
-  const cur = current.get(domain)!;
+  const cur = current.get(domain) ?? list.at(-1)!;
   const meta = siteMeta.get(domain);
   const spans: { from: string; to: string; body: unknown; heading: unknown; method: string }[] = [];
   for (const o of list.filter((x) => x.kind !== 'daily' || x.method === 'browser')) {

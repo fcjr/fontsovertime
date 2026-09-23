@@ -18,6 +18,7 @@ const { values } = parseArgs({
     budget: { type: 'string', default: '0' },
     out: { type: 'string' },
     browser: { type: 'string', default: 'auto' },
+    'redo-old': { type: 'boolean', default: false },
   },
 });
 
@@ -127,7 +128,8 @@ const [shardIndex, shardCount] = values.shard.split('/').map(Number);
 queue = queue.filter((_, i) => i % shardCount === shardIndex);
 
 const done = new Map<string, Row>();
-for (const snap of listSnapshots('wayback')) for (const r of readJsonl(snap.path)) done.set(`${snap.id}|${r.domain}`, r);
+for (const snap of listSnapshots('wayback'))
+  for (const r of readJsonl(snap.path)) if (!values['redo-old'] || r.v === 2) done.set(`${snap.id}|${r.domain}`, r);
 const nowQuarter = quarterOf(new Date().toISOString().replace(/-/g, '').slice(0, 8));
 const fromYear = new Date().getUTCFullYear() - Number(values.years);
 queue = queue.filter((s) => {
@@ -191,7 +193,7 @@ async function worker() {
         for (let q = 1; q <= 4; q++) {
           const quarter = `${y}-Q${q}`;
           if (quarter < nowQuarter && !done.has(`${quarter}|${site.domain}`))
-            record(quarter, { domain: site.domain, category: site.category, crawled_at: `${y}-${String((q - 1) * 3 + 1).padStart(2, '0')}-01T00:00:00Z`, method: 'wayback', status: 'no_capture' });
+            record(quarter, { v: 2, domain: site.domain, category: site.category, crawled_at: `${y}-${String((q - 1) * 3 + 1).padStart(2, '0')}-01T00:00:00Z`, method: 'wayback', status: 'no_capture' });
         }
       processed++;
       console.error(`[${processed}/${total}] ${site.domain.padEnd(28)} not in the archive`);
@@ -201,6 +203,7 @@ async function worker() {
     stats.captures += todo.length;
     const results = new Map<number, Row>();
     const baseFor = (c: (typeof todo)[number]) => ({
+      v: 2,
       domain: site.domain,
       category: site.category,
       crawled_at: `${c.ts.slice(0, 4)}-${c.ts.slice(4, 6)}-${c.ts.slice(6, 8)}T00:00:00Z`,

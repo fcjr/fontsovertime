@@ -1,0 +1,13 @@
+[Unit]
+Description=Fonts Over Time %i job
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=crawler
+WorkingDirectory=/home/crawler
+EnvironmentFile=/etc/fontsovertime.env
+ExecStart=/home/crawler/crawl/deploy/run.sh %i
+TimeoutStartSec=12h
+Nice=5

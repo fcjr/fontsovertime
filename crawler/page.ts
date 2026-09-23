@@ -77,12 +77,19 @@ export async function measurePage(
   extract: string,
   urls: string[],
   progress: { step: string },
-  opts: { navTimeout?: number; archived?: boolean; throttle?: () => Promise<void>; onThrottled?: () => void } = {},
+  opts: {
+    navTimeout?: number;
+    archived?: boolean;
+    throttle?: () => Promise<void>;
+    onThrottled?: () => void;
+    proxy?: { server: string; username?: string; password?: string };
+  } = {},
 ): Promise<Measurement> {
   const started = Date.now();
   progress.step = 'context';
   const context = await browser.newContext({
     javaScriptEnabled: !opts.archived,
+    ...(opts.proxy ? { proxy: opts.proxy } : {}),
     userAgent: userAgentFor(browser),
     viewport: { width: 1280, height: 800 },
     locale: 'en-US',
@@ -100,7 +107,15 @@ export async function measurePage(
     const page = await context.newPage();
     if (opts.onThrottled) page.on('response', (res) => res.status() === 429 && opts.onThrottled!());
     const fontRequests: Promise<{ url: string; bytes: number }>[] = [];
+    const transfers: Promise<number>[] = [];
     page.on('requestfinished', (req) => {
+      if (opts.proxy)
+        transfers.push(
+          req
+            .sizes()
+            .then((s) => s.requestHeadersSize + s.requestBodySize + s.responseHeadersSize + s.responseBodySize)
+            .catch(() => 0),
+        );
       if (req.resourceType() !== 'font') return;
       fontRequests.push(
         req
@@ -182,6 +197,7 @@ export async function measurePage(
       fonts_ready: fontsReady,
       text_chars: data.text_chars,
       text_nodes: data.text_nodes,
+      ...(opts.proxy ? { via: 'proxy', transfer_bytes: (await Promise.all(transfers)).reduce((n, b) => n + b, 0) } : {}),
       ms: Date.now() - started,
     };
   } finally {

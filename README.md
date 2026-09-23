@@ -2,11 +2,12 @@
 
 Which typefaces the web's homepages use, tracked weekly: [fontsovertime.com](https://fontsovertime.com).
 
-Every Sunday a GitHub Actions workflow opens about 10,000 homepages in headless Chromium, records the font doing the work for body text and headings, commits the results to this repo, and redeploys the static site to Cloudflare Pages. A smaller list of well-known sites is crawled daily to catch switches quickly.
+Every Sunday a small crawl server opens about 11,000 homepages in headless Chromium, records the font doing the work for body text and headings, and commits the results to this repo; Cloudflare redeploys the site on push. A smaller list of well-known sites is crawled daily to catch switches quickly.
 
 ## Layout
 
 ```
+deploy/           crawl server setup, job runner and systemd timers
 sites/            one CSV per industry category, cohorts/ (top sites, YC, unicorns), marquee.txt for the daily crawl
 crawler/          Playwright crawler (crawl.ts), in-page extractor (extract.js), static CSS fallback (static.ts)
 pipeline/         merge shards, normalize names (aliases.json), aggregate, Wayback backfill
@@ -53,6 +54,16 @@ Add a row to a hand-curated `sites/<category>.csv` (`domain,subcategory,source,a
 ## Opting out
 
 [Open an opt-out request](https://github.com/fcjr/fontsovertime/issues/new?template=opt-out.yml). To show you run the site, add a DNS TXT record containing `fontsovertime-opt-out`, or serve a plain text file at `/.well-known/fontsovertime-opt-out` containing the same text. The `opt-out` workflow checks automatically. Once verified it adds the domain to `sites/exclude.txt`, removes its rows from every published snapshot and the CSV export, and closes the issue. Earlier versions stay in git history. If neither check is possible, a maintainer can add the `approved` label instead.
+
+## Crawl server
+
+The weekly, daily and archive backfill jobs run on one small Linux server (Ubuntu 24.04; a 4 vCPU / 8 GB ARM machine is plenty).
+
+1. As root: `curl -fsSL https://raw.githubusercontent.com/fcjr/fontsovertime/main/deploy/setup.sh | bash`. The first run prints a deploy key; add it to the repo with write access and run the script again.
+2. Put secrets in `/etc/fontsovertime.env` (created by the script): the residential proxy URL, an optional per-run proxy bandwidth cap and optional healthchecks.io URLs.
+3. Timers: weekly on Sundays and daily Monday to Saturday at 03:00 UTC, and the backfill hourly until it runs out of work. `systemctl list-timers 'fontsovertime-*'` shows them and `journalctl -u 'fontsovertime@*'` the logs.
+
+Each crawl visits every site directly, retries timeouts, then retries sites that block the server through the proxy. It skips the proxy for sites whose robots.txt disallows all crawlers, and stops once it reaches `PROXY_MAX_MB`. A summary of every run is committed to `data/runs/`. The backfill never uses the proxy.
 
 ## Deploying
 

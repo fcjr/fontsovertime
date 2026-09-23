@@ -91,3 +91,13 @@ test('unescapes CSS escapes in family names', () => {
   assert.equal(normalizeFamily('Hurme Geometric Sans\\ 3')?.name, 'Hurme Geometric Sans 3');
   assert.equal(normalizeFamily('\\31 0x Sans')?.name, '10x Sans');
 });
+
+test('robots.txt: only a whole-site disallow for all agents counts', async () => {
+  const { disallowsAll } = await import('../crawler/robots.ts');
+  assert.equal(disallowsAll('User-agent: *\nDisallow: /'), true);
+  assert.equal(disallowsAll('User-agent: *\nDisallow: /admin\nDisallow: /search'), false);
+  assert.equal(disallowsAll('User-agent: GPTBot\nDisallow: /\n\nUser-agent: *\nAllow: /'), false);
+  assert.equal(disallowsAll('User-agent: *\nDisallow: /\nAllow: /$'), false);
+  assert.equal(disallowsAll('User-agent: BadBot\nUser-agent: *\nDisallow: /'), true);
+  assert.equal(disallowsAll(''), false);
+});
