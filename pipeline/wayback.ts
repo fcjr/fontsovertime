@@ -12,8 +12,8 @@ const { values } = parseArgs({
   options: {
     years: { type: 'string', default: '10' },
     concurrency: { type: 'string', default: '3' },
-    rpm: { type: 'string', default: '30' },
-    'max-rpm': { type: 'string', default: '60' },
+    rpm: { type: 'string', default: '15' },
+    'max-rpm': { type: 'string', default: '30' },
     limit: { type: 'string' },
     only: { type: 'string' },
     shard: { type: 'string', default: '0/1' },
@@ -33,7 +33,7 @@ const GENERIC = /^(serif|sans-serif|monospace|system-ui|cursive|fantasy|inherit|
 const TRANSIENT = /timeout|ECONN|ERR_CONNECTION|ERR_TIMED_OUT|ERR_NETWORK|ERR_HTTP2|\b5\d\d\b|site timeout/i;
 const MAX_ATTEMPTS = 3;
 const CACHE = join(ROOT, 'out', 'cache');
-const stats = { measured: 0, inferred: 0, browser: 0, static: 0, failed: 0, alternates: 0, cssHits: 0, cssMisses: 0 };
+const stats = { deferred: 0, measured: 0, inferred: 0, browser: 0, static: 0, failed: 0, alternates: 0, cssHits: 0, cssMisses: 0 };
 
 // Request budget per archive: additive increase while healthy, halve on 429, long pause on refusal.
 class Limiter {
@@ -81,12 +81,18 @@ class Limiter {
     this.paused = Math.max(this.paused, Date.now() + 60_000);
     console.error(`${this.name}: 429, slowing to ${this.rpm}/min`);
   };
+  // Paused (for example after a refusal) long enough that callers should use another archive for now.
+  unavailable() {
+    return this.paused - Date.now() > 60_000;
+  }
   onRefused = (what = '') => {
+    if (this.unavailable()) return;
     this.refusals++;
     this.streak = 0;
     this.rpm = Math.max(this.min, Math.floor(this.rpm / 2));
-    this.paused = Math.max(this.paused, Date.now() + 15 * 60_000);
-    console.error(`${this.name}: connection refused${what ? ` (${what.slice(0, 160)})` : ''}, pausing 15 minutes, then ${this.rpm}/min`);
+    const minutes = Math.min(120, 15 * 2 ** Math.min(this.refusals - 1, 3));
+    this.paused = Date.now() + minutes * 60_000;
+    console.error(`${this.name}: connection refused${what ? ` (${what.slice(0, 160)})` : ''}, pausing ${minutes} minutes, then ${this.rpm}/min`);
   };
 }
 
@@ -94,6 +100,7 @@ const isRefusal = (e: unknown) =>
   /ECONNREFUSED|ERR_CONNECTION_REFUSED/.test(String((e as Error)?.message ?? e) + String((e as { cause?: { code?: string } })?.cause?.code ?? ''));
 
 async function get(limiter: Limiter, url: string, attempt = 0, redirect: RequestRedirect = 'follow'): Promise<Response | null> {
+  if (limiter.unavailable()) return null;
   await limiter.take();
   try {
     const res = await fetch(url, { headers: { 'user-agent': USER_AGENT }, redirect, signal: AbortSignal.timeout(45_000) });
@@ -107,9 +114,9 @@ async function get(limiter: Limiter, url: string, attempt = 0, redirect: Request
     }
     return res;
   } catch (e) {
-    if (isRefusal(e) && attempt < 6) {
+    if (isRefusal(e)) {
       limiter.onRefused(url);
-      return get(limiter, url, attempt + 1, redirect);
+      return null;
     }
     if (attempt < 2) {
       await sleep(3_000);
@@ -332,7 +339,8 @@ async function worker() {
     }
     const lists = await Promise.all(archives.map(async (a) => ({ a, rows: await cached(`${a.name}/${site.domain}/${fromYear}`, 30, () => a.cdx(site.domain, fromYear)) })));
     const indexFailed = lists.some((l) => l.rows === null);
-    if (indexFailed) {
+    const onlyPaused = lists.every((l) => l.rows !== null || l.a.index.unavailable());
+    if (indexFailed && !onlyPaused) {
       const tries = (retries.get(site.domain) ?? 0) + 1;
       retries.set(site.domain, tries);
       if (tries < 3) {
@@ -364,10 +372,14 @@ async function worker() {
     if (!indexFailed) for (const q of todo) if (!byQuarter.has(q)) record(q, { ...baseFor(q), method: 'wayback', status: 'no_capture' });
 
     const results = new Map<number, Row>();
-    const measure = async (i: number) => {
+    const measure = async (i: number): Promise<Row | null> => {
       if (results.has(i)) return results.get(i)!;
       const q = withCaptures[i];
-      const options = [...byQuarter.get(q)!].sort((a, b) => a.archive.replay.waitMs() - b.archive.replay.waitMs());
+      const options = [...byQuarter.get(q)!].filter((c) => !c.archive.replay.unavailable()).sort((a, b) => a.archive.replay.waitMs() - b.archive.replay.waitMs());
+      if (!options.length) {
+        stats.deferred++;
+        return null;
+      }
       stats.measured++;
       let row: Row | null = null;
       let lastError = '';
@@ -410,7 +422,13 @@ async function worker() {
           row = { ...baseFor(q, c), method: 'wayback-browser', ...m };
           break;
         }
-        if (/ERR_CONNECTION_REFUSED/.test(String(m.error))) a.replay.onRefused(String(m.error));
+        if (/ERR_CONNECTION_REFUSED/.test(String(m.error))) {
+          a.replay.onRefused(String(m.error));
+          if (a.replay.unavailable()) {
+            stats.deferred++;
+            return null;
+          }
+        }
         lastError = String(m.error ?? (defaultOnly ? 'browser default only' : 'unusable capture'));
       }
       if (!row) {
@@ -427,7 +445,7 @@ async function worker() {
       results.set(i, row);
       return row;
     };
-    const key = (r: Row) => (r.status === 'ok' ? `${normalizeFamily(r.body_font)?.slug}|${normalizeFamily(r.heading_font)?.slug}` : null);
+    const key = (r: Row | null) => (r?.status === 'ok' ? `${normalizeFamily(r.body_font)?.slug}|${normalizeFamily(r.heading_font)?.slug}` : null);
     const bisect = async (lo: number, hi: number): Promise<void> => {
       if (hi - lo < 2) return;
       const a = key(await measure(lo));
