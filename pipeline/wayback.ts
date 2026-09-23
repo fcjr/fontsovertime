@@ -191,7 +191,7 @@ const arquivoIndex = new Limiter('arquivo-cdx', 30, 60);
 const arquivo: Archive = {
   name: 'arquivo',
   host: /^https:\/\/arquivo\.pt\//,
-  replay: new Limiter('arquivo', 120, 200),
+  replay: new Limiter('arquivo', 200, 400),
   index: arquivoIndex,
   async cdx(domain, fromYear) {
     const res = await get(arquivoIndex, `https://arquivo.pt/wayback/cdx?url=${domain}/&output=json&from=${fromYear}&filter=status:[23]..&filter=mime:text/html`);
@@ -375,7 +375,9 @@ async function worker() {
     const measure = async (i: number): Promise<Row | null> => {
       if (results.has(i)) return results.get(i)!;
       const q = withCaptures[i];
-      const options = [...byQuarter.get(q)!].filter((c) => !c.archive.replay.unavailable()).sort((a, b) => a.archive.replay.waitMs() - b.archive.replay.waitMs());
+      const options = [...byQuarter.get(q)!]
+        .filter((c) => !c.archive.replay.unavailable())
+        .sort((a, b) => Number(a.archive === ia) - Number(b.archive === ia) || a.archive.replay.waitMs() - b.archive.replay.waitMs());
       if (!options.length) {
         stats.deferred++;
         return null;
@@ -392,7 +394,7 @@ async function worker() {
               navTimeout: 90_000,
               archived: true,
               archiveHost: a.host,
-              throttle: a.replay.take,
+              throttle: a === ia ? async () => (await a.replay.take(), await a.replay.take()) : a.replay.take,
               onThrottled: a.replay.onThrottled,
               styleCache: styleCache(q),
             }),
@@ -410,7 +412,7 @@ async function worker() {
           row = { ...baseFor(q, c), method: 'wayback-browser', ...m };
           break;
         }
-        if (a.raw) {
+        if (a.raw && process.env.BACKFILL_STATIC === '1') {
           const s = await staticCrawl(c.url, a.raw(c.ts)).catch(() => null);
           if (usableStatic(s) && !/^times/i.test(s!.body_font!)) {
             stats.static++;
