@@ -1,4 +1,6 @@
-export type Series = { label: string; values: (number | null)[]; family?: string | null; href?: string };
+import { LICENSED_TIP } from './specimen';
+
+export type Series = { label: string; values: (number | null)[]; family?: string | null; licensed?: boolean; href?: string };
 export type Payload = { dates: string[]; kinds: string[]; labels: string[]; ns?: number[]; series: Series[]; height: number };
 
 const NS = 'http://www.w3.org/2000/svg';
@@ -75,8 +77,9 @@ export function mountTrend(root: HTMLElement, data: Payload) {
     btn.setAttribute('aria-pressed', 'true');
     const sw = html('span', 'sw');
     sw.style.background = color(i, single);
-    const name = html('span', 'tc-key-name', s.label);
+    const name = html('span', s.licensed ? 'tc-key-name licensed' : 'tc-key-name', s.label);
     name.style.fontFamily = fam(s);
+    if (s.licensed) btn.dataset.tip = LICENSED_TIP;
     btn.append(sw, name);
     btn.addEventListener('click', () => {
       if (hidden.has(i)) hidden.delete(i);
@@ -223,7 +226,8 @@ export function mountTrend(root: HTMLElement, data: Payload) {
       for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 18) ends[k].y = ends[k - 1].y + 18;
       for (const e of ends) {
         const s = data.series[e.i];
-        const t = el('text', { x: width - m.right + 12, y: e.y + 5, class: 'direct', 'data-i': e.i, style: `font-family:${fam(s)}` }, svg);
+        const t = el('text', { x: width - m.right + 12, y: e.y + 5, class: s.licensed ? 'direct licensed' : 'direct', 'data-i': e.i, style: `font-family:${fam(s)}` }, svg);
+        if (s.licensed) t.dataset.tip = LICENSED_TIP;
         t.textContent = s.label.length > 16 ? s.label.slice(0, 15) + '…' : s.label;
         labels.push(t);
       }
@@ -270,7 +274,7 @@ export function mountTrend(root: HTMLElement, data: Payload) {
         const row = html('div', 'tip-r');
         const sw = html('span', 'sw');
         sw.style.background = color(r.i, single);
-        const name = html('span', 'tip-name', r.s.label);
+        const name = html('span', r.s.licensed ? 'tip-name licensed' : 'tip-name', r.s.label);
         name.style.fontFamily = fam(r.s);
         row.append(sw, name, html('b', undefined, `${(r.v! * 100).toFixed(1)}%`));
         tip.append(row);

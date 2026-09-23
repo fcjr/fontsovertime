@@ -17,8 +17,8 @@ const fonts = [m.crawl, m.archive].flatMap((s) => Object.values(s.windows).flatM
   <section class="wrap hero">
     <h1>Rising and falling</h1>
     <p class="lede">
-      Popularity shows where the web is. Switches show where it’s going. Each bar counts sites that changed their body font to or away from a typeface,
-      so a small face gaining a few sites can outrank a giant that’s standing still.
+      Each bar counts sites that changed their body font to or away from a font. A small font gaining a few sites can outrank a popular one that
+      isn’t moving.
     </p>
   </section>
   <section class="wrap">
@@ -27,9 +27,9 @@ const fonts = [m.crawl, m.archive].flatMap((s) => Object.values(s.windows).flatM
   <section class="wrap section">
     <div class="prose small-prose">
       <p>
-        A switch counts only when a site shows the new font twice in a row, and a switch that reverses within a year is treated as noise and dropped.
-        Our crawl and the web archive history are never mixed: the archive estimates come from a different method on a smaller set of well-known
-        sites, so they’re a rougher guide. <a href="/methodology">How the data is collected</a>.
+        A switch counts only when a site shows the new font twice in a row. We drop switches that reverse within a year. Our crawl and the web
+        archive history are kept separate because the archive estimates use a different method on a smaller set of sites, so treat them as rougher.
+        <a href="/methodology">How the data is collected</a>.
       </p>
     </div>
   </section>

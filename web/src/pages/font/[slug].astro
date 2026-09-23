@@ -9,7 +9,8 @@ import SiteTable from '../../components/SiteTable.astro';
 import { load, type Breakdown, type Change, type FontIndexEntry, type FontRef, type Period, type SiteRow } from '../../lib/data';
 import { date, pct, SOURCE_LABELS, trendText } from '../../lib/format';
 import { load as loadAgg, type Overview } from '../../lib/data';
-import { fontStack } from '../../lib/specimen';
+import { fontStack, LICENSED_TIP } from '../../lib/specimen';
+import Lock from '@lucide/astro/icons/lock';
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -53,16 +54,17 @@ const origin = f.specimen?.source === 'google' ? 'Google Fonts' : f.specimen?.so
 >
   <section class="wrap hero">
     <p class="crumb small"><a href="/fonts">Fonts</a></p>
-    <h1 class:list={['specimen', { licensed: !stack }]} style={style}>{f.name}</h1>
+    <h1 class:list={['specimen', { licensed: !stack }]} style={style} data-tip={stack ? undefined : LICENSED_TIP}>{f.name}</h1>
     <p class="about">
+      {!stack && <Lock size={16} aria-hidden="true" class="lock" />}
       {
         f.specimen?.source === 'local'
           ? f.generic
-            ? 'A generic family: the site asked for whatever the visitor’s system provides.'
+            ? 'A generic family. The site asked for the visitor’s default font.'
             : 'A system font, installed with most operating systems. Shown here in your own copy.'
           : origin
-            ? `Free to use, from ${origin}. The name above and the samples below are set in it.`
-            : 'A commercial or custom typeface. We can’t serve it, so this page is set in our text face.'
+            ? `Free to use, from ${origin}. The name and samples on this page are set in it.`
+            : 'A commercial or custom font. We can’t license it for this site, so the name is shown in our own typeface.'
       }
     </p>
   </section>
@@ -199,6 +201,11 @@ const origin = f.specimen?.source === 'google' ? 'Google Fonts' : f.specimen?.so
   .about {
     color: var(--ink-2);
     max-width: 36rem;
+  }
+  .about :global(.lock) {
+    vertical-align: -2px;
+    margin-right: 6px;
+    color: var(--ink-3);
   }
   .facts {
     display: grid;

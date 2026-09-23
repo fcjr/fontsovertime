@@ -37,6 +37,7 @@ const periods = overview.periods;
 
 <script>
   import { mountTrend, type Payload } from '../lib/trend';
+  import { LICENSED_TIP } from '../lib/specimen';
 
   type F = { name: string; slug: string; sites: number; specimen: { source: string; family: string; id?: string } | null };
   type P = { id: string; date: string; kind: string };
@@ -75,7 +76,10 @@ const periods = overview.periods;
     a.href = `/font/${f.slug}`;
     a.textContent = f.name;
     if (f.specimen) a.style.fontFamily = `${f.specimen.family === 'system-ui' ? 'system-ui' : `"${f.specimen.family}"`}, var(--display)`;
-    else a.className = 'licensed';
+    else {
+      a.className = 'licensed';
+      a.dataset.tip = LICENSED_TIP;
+    }
     return a;
   }
 
@@ -114,7 +118,7 @@ const periods = overview.periods;
       ns: periods.map((p) => (p as { n?: number }).n ?? 0),
       series: chosen.map((s) => {
         const f = bySlug.get(s)!;
-        return { label: f.name, values: seriesData![s]?.[role === 'body' ? 0 : 1] ?? [], family: f.specimen ? (f.specimen.family === 'system-ui' ? 'system-ui' : `"${f.specimen.family}"`) : null };
+        return { label: f.name, values: seriesData![s]?.[role === 'body' ? 0 : 1] ?? [], family: f.specimen ? (f.specimen.family === 'system-ui' ? 'system-ui' : `"${f.specimen.family}"`) : null, licensed: !f.specimen };
       }),
       height: 340,
     };

@@ -17,7 +17,7 @@ const label = (k: string) => labels[k] ?? (k === 'other' ? 'Other' : k);
 <figure class="sb">
   <figcaption>{title}</figcaption>
   <div class="bar" role="img" aria-label={parts.map((p) => `${label(p.key)} ${pct(p.share)}`).join(', ')}>
-    {parts.map((p, i) => <span class="seg" style={`flex:${p.share} 0 0; background: var(--s${i + 1}, var(--ink-3))`} title={`${label(p.key)}: ${pct(p.share)}`} />)}
+    {parts.map((p, i) => <span class="seg" style={`flex:${p.share} 0 0; background: var(--s${i + 1}, var(--ink-3))`} data-tip={`${label(p.key)}: ${pct(p.share)}`} />)}
   </div>
   <ul class="legend">
     {

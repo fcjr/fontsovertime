@@ -43,6 +43,6 @@ export function trendText(periods: { kind: string; date: string }[], panel: numb
   const from = archive[0].date.slice(0, 4);
   return {
     title: `Share among the ${panel} sites we can trace back to ${from}`,
-    caption: `Dashed lines before ${since} are estimates from web archive copies of these homepages; the solid part is our own weekly crawl. Because this follows a fixed set of ${panel} sites, its numbers differ from the rankings above, which cover every site we crawl.`,
+    caption: `Dashed lines before ${since} are estimates from archived copies of these homepages. Solid lines are our weekly crawl. This chart follows a fixed set of ${panel} sites, so its numbers differ from the rankings, which cover every site we crawl.`,
   };
 }

@@ -38,3 +38,5 @@ export function fontLinks(fonts: (FontRef | null | undefined)[], opts: { text?: 
 export function glyphs(...strings: string[]) {
   return [...new Set(strings.join('') + '0123456789')].sort().join('');
 }
+
+export const LICENSED_TIP = 'Commercial font. We can’t license it for this site, so the name is shown in our own typeface.';

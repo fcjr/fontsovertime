@@ -202,8 +202,36 @@ p {
 
 .licensed {
   font-family: var(--display);
-  font-style: italic;
-  font-variation-settings: 'wght' 380, 'wdth' 100;
+  font-variation-settings: 'wght' 420, 'wdth' 100;
+  color: var(--ink-3);
+}
+[data-tip] {
+  cursor: help;
+}
+a[data-tip] {
+  cursor: pointer;
+}
+.tip-pop {
+  position: fixed;
+  z-index: 50;
+  max-width: 17rem;
+  padding: 8px 10px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(2px);
+  transition: opacity 120ms, transform 120ms;
+}
+.tip-pop.show {
+  opacity: 1;
+  transform: none;
 }
 
 .table {
@@ -430,6 +458,9 @@ p {
   fill: var(--ink);
   font-size: 15px;
   transition: opacity 160ms;
+}
+.tc-stage .direct.licensed {
+  fill: var(--ink-3);
 }
 .tc-stage .cross {
   stroke: var(--ink);

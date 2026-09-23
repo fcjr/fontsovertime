@@ -17,7 +17,7 @@ const payload = JSON.stringify({
   kinds: periods.map((p) => p.kind),
   labels: periods.map((p) => (p.kind === 'wayback' ? p.id.replace('-', ' ') : `Week of ${date(p.date)}`)),
   ns: periods.map((p) => p.n),
-  series: series.slice(0, 6).map((x) => ({ label: x.label, values: x.values, family: x.font ? fontStack(x.font) : null })),
+  series: series.slice(0, 6).map((x) => ({ label: x.label, values: x.values, family: x.font ? fontStack(x.font) : null, licensed: !!x.font && !fontStack(x.font) })),
   height,
 });
 ---
@@ -32,7 +32,7 @@ const payload = JSON.stringify({
       <div class="tc-plot" data-trend={payload} aria-label={`${title}. Interactive line chart; a table view follows.`} role="figure" />
     ) : (
       <p class="tc-empty">
-        Trend lines appear once there are at least two data points. Our weekly crawl started recently; this fills in as it runs.
+        Trend lines need at least two data points. Our weekly crawl started recently, so this fills in over the next few weeks.
       </p>
     )
   }

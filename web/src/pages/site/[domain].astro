@@ -77,7 +77,7 @@ const weightList = (w: Record<string, number>) =>
       </div>
     </dl>
     <p class="small muted observed">
-      Last observed {date(s.date)}{s.method === 'static' ? ', from the page’s CSS because the browser crawl was blocked' : ''}. Run this site and
+      Last checked {date(s.date)}{s.method === 'static' ? ', from the page’s CSS because the browser crawl was blocked' : ''}. Run this site and
       want it removed? <a href={optOutUrl(s.domain)}>Request an opt-out</a>.
     </p>
   </section>
@@ -148,8 +148,8 @@ const weightList = (w: Record<string, number>) =>
     <div class="section-head">
       <h2 id="hist-h">History</h2>
       <p>
-        Each row is a stretch of time where the fonts stayed the same. Rows marked Web archive are estimated from saved copies of the page and are
-        less reliable than our own crawl.
+        Each row is a stretch of time where the fonts stayed the same. Rows marked Web archive are estimates from saved copies of the page and less
+        reliable than our own crawl.
       </p>
     </div>
     <ol class="timeline">

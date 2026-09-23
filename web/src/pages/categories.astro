@@ -8,7 +8,7 @@ import { glyphs } from '../lib/specimen';
 const all = load<CategorySummary[]>('categories.json');
 const fonts = all.flatMap((c) => c.top);
 const sections = [
-  { title: 'By traffic and funding', note: 'Overlapping groups: a site can be in the top 1,000 and a Y Combinator company at once.', items: all.filter((c) => c.kind === 'cohort') },
+  { title: 'By traffic and funding', note: 'These overlap. A site can be in the top 1,000 and a Y Combinator company.', items: all.filter((c) => c.kind === 'cohort') },
   { title: 'By industry', note: 'Every site belongs to exactly one of these.', items: all.filter((c) => c.kind === 'category') },
 ].filter((x) => x.items.length);
 ---
@@ -16,7 +16,7 @@ const sections = [
 <Layout title="Categories" fonts={fonts} specimenText={glyphs(...fonts.map((f) => f.name))}>
   <section class="wrap hero">
     <h1>By kind of site</h1>
-    <p class="lede">Type choices cluster. The most visited sites, the newest startups and the oldest newspapers each have their own habits.</p>
+    <p class="lede">The most used fonts for each kind of site we track.</p>
   </section>
   {
     sections.map((sec) => (

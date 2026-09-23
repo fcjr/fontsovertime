@@ -86,8 +86,8 @@ const nav = [
     <footer class="foot">
       <div class="wrap foot-grid">
         <p class="foot-note">
-          Fonts Over Time loads {overview?.n_sites?.toLocaleString() ?? 'a few thousand'} homepages every week in a real browser and records the
-          typeface doing the work. It runs on free infrastructure, and every snapshot is <a href="/data">downloadable</a>.
+          Fonts Over Time loads {overview?.n_sites?.toLocaleString() ?? 'a few thousand'} homepages every week in a real browser and records which
+          fonts they use. Every snapshot is <a href="/data">free to download</a>.
         </p>
         <ul class="foot-links">
           <li><a href="/methodology">How it works</a></li>
@@ -99,6 +99,48 @@ const nav = [
     </footer>
   </body>
 </html>
+
+<script>
+  const pop = document.createElement('div');
+  pop.className = 'tip-pop';
+  pop.setAttribute('role', 'tooltip');
+  pop.id = 'tip-pop';
+  document.body.append(pop);
+  let current: Element | null = null;
+
+  function show(target: Element) {
+    const text = target.getAttribute('data-tip');
+    if (!text) return;
+    current = target;
+    pop.textContent = text;
+    target.setAttribute('aria-describedby', pop.id);
+    const r = target.getBoundingClientRect();
+    const w = pop.offsetWidth;
+    const h = pop.offsetHeight;
+    const left = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), innerWidth - w - 8);
+    const top = r.top - h - 8 >= 8 ? r.top - h - 8 : r.bottom + 8;
+    pop.style.left = `${left}px`;
+    pop.style.top = `${top}px`;
+    pop.classList.add('show');
+  }
+  function hide() {
+    current?.removeAttribute('aria-describedby');
+    current = null;
+    pop.classList.remove('show');
+  }
+  const tipOf = (e: Event) => (e.target instanceof Element ? e.target.closest('[data-tip]') : null);
+  document.addEventListener('pointerover', (e) => {
+    const t = tipOf(e);
+    if (t && t !== current) show(t);
+    else if (!t && current) hide();
+  });
+  document.addEventListener('focusin', (e) => {
+    const t = tipOf(e);
+    if (t) show(t);
+  });
+  document.addEventListener('focusout', hide);
+  addEventListener('scroll', hide, { passive: true });
+</script>
 
 <style>
   .skip {

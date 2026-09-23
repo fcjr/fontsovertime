@@ -21,7 +21,7 @@ const { items, max = Math.max(...items.map((i) => i.share), 0.0001), unit = 'sit
         <span class="track" aria-hidden="true">
           <span class="fill" style={`width:${Math.max((it.share / max) * 100, 0.8)}%`} />
         </span>
-        <span class="value num" title={it.count !== undefined ? `${it.count} ${unit}` : undefined}>
+        <span class="value num" data-tip={it.count !== undefined ? `${it.count} ${unit}` : undefined}>
           {pct(it.share)}
         </span>
       </li>

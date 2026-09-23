@@ -11,7 +11,8 @@ import Heatmap from '../components/Heatmap.astro';
 import Momentum, { type MomentumData } from '../components/Momentum.astro';
 import { load, type Overview, type Ranked } from '../lib/data';
 import { date, kb, pct, PLATFORM_LABELS, SOURCE_LABELS, trendText } from '../lib/format';
-import { glyphs } from '../lib/specimen';
+import { glyphs, LICENSED_TIP } from '../lib/specimen';
+import Lock from '@lucide/astro/icons/lock';
 
 const o = load<Overview>('overview.json');
 const momentum = load<MomentumData>('momentum.json');
@@ -28,15 +29,14 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
 
 <Layout fonts={fonts} specimenText={text}>
   <section class="wrap hero">
-    <h1>Type, tracked.</h1>
+    <h1>What the web is set in</h1>
     <div class="hero-side">
       <p class="lede">
-        Every week we open {o.n_sites.toLocaleString()} homepages in a real browser and record the typeface doing the work. Here’s what the web is set
-        in{o.latest ? ` as of ${date(o.latest.date)}` : ''}.
+        Every week we load {o.n_sites.toLocaleString()} homepages in a real browser and record which fonts they use{o.latest ? `. Last crawl: ${date(o.latest.date)}` : ''}.
       </p>
       <p class="key small">
-        Each name is set in its own typeface where the license allows. <span class="licensed">Italic names</span> are commercial faces we can’t serve.
-        {o.trend_panel && ` The small lines show each font’s trend among the ${o.trend_panel} sites we can trace back in time, dashed where estimated from web archives.`}
+        Names are set in their own font when it’s free to use. <span class="licensed" data-tip={LICENSED_TIP} tabindex="0"><Lock size={13} aria-hidden="true" /> Grey names</span> are commercial fonts we can’t license.
+        {o.trend_panel && ` Sparklines show the trend across ${o.trend_panel} sites we can trace back in time, dashed where estimated from web archives.`}
       </p>
     </div>
   </section>
@@ -59,7 +59,7 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
     <div class="section-head">
       <h2 id="move-h">Rising and falling</h2>
       <a class="more" href="/trends">All movers</a>
-      <p>Not the most used, but the most switched to and away from. Hover a row for example sites.</p>
+      <p>Fonts sites are switching to and away from. Hover a row for example sites.</p>
     </div>
     <Momentum data={momentum} id="home" limit={6} flows={false} />
   </section>
@@ -68,24 +68,24 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
     <div class="section-head">
       <h2 id="map-h">The type map</h2>
       <a class="more" href="/fonts">Every font</a>
-      <p>Every tile is a typeface, sized by how many homepages use it for body text. Switch between kinds of site to watch the map redraw.</p>
+      <p>Each tile is a font, sized by how many homepages use it for body text. Pick a kind of site to filter.</p>
     </div>
     <TypeMap sets={mapSets} />
   </section>
 
   <section class="wrap section" aria-labelledby="cat-h">
     <div class="section-head">
-      <h2 id="cat-h">Where each face lives</h2>
+      <h2 id="cat-h">By category</h2>
       <a class="more" href="/categories">All categories</a>
-      <p>Darker cells mean a larger share of that category’s homepages. Select a category to sort by it.</p>
+      <p>Darker cells mean a larger share of that category’s homepages. Click a category to sort by it.</p>
     </div>
     <Heatmap fonts={o.matrix.fonts} categories={o.matrix.categories} values={o.matrix.values} />
   </section>
 
   <section class="wrap section" aria-labelledby="serve-h">
     <div class="section-head">
-      <h2 id="serve-h">How the type arrives</h2>
-      <p>Where the font files come from, and what the sites are built with.</p>
+      <h2 id="serve-h">How fonts are served</h2>
+      <p>Where font files come from, and what the sites are built with.</p>
     </div>
     <div class="two">
       <StackBar data={o.sources} labels={SOURCE_LABELS} title="Font source for body text" />
@@ -169,8 +169,11 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
     max-width: 36rem;
   }
   .key .licensed {
-    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     font-size: 1.0625rem;
+    white-space: nowrap;
   }
   .board-wrap > :global(.podium) {
     border-top: 2px solid var(--ink);

@@ -11,7 +11,7 @@ const cats = load<CategorySummary[]>('categories.json');
 <Layout title="How it works" description="How Fonts Over Time detects the typeface a website uses, what it can’t see, and how to opt out.">
   <section class="wrap hero">
     <h1>How it works</h1>
-    <p class="lede">What we measure, how, and where the numbers are weaker than they look.</p>
+    <p class="lede">What we measure, how we measure it, and where the numbers are weak.</p>
   </section>
 
   <article class="wrap">
@@ -19,8 +19,8 @@ const cats = load<CategorySummary[]>('categories.json');
       <h2>What counts as a site’s font</h2>
       <p>
         Every Sunday we open each homepage in a real Chromium browser, wait for its web fonts to finish loading, and walk every visible piece of text
-        on the page. For each run of text we read the computed <code>font-family</code> and work out which family is actually drawing it: the first
-        one in the stack that has a loaded font file. If none has loaded and the stack starts with the operating system’s interface font, we record
+        on the page. For each run of text we read the computed <code>font-family</code> and find which family draws it, which is the first
+        one in the stack with a loaded font file. If none has loaded and the stack starts with the operating system’s interface font, we record
         <code>system-ui</code>. Otherwise we record the first family named.
       </p>
       <p>
@@ -46,8 +46,7 @@ const cats = load<CategorySummary[]>('categories.json');
       <h2>Switches</h2>
       <p>
         A switch is recorded only when a site shows a new font in two browser crawls in a row, so an A/B test, a slow font server or a one-day
-        experiment doesn’t count. A few hundred of the best-known sites are crawled daily, which means their switches show up within two days; the rest take two
-        weeks.
+        experiment doesn’t count. We crawl a few hundred of the best-known sites daily, so their switches show up within two days. The rest take two weeks.
       </p>
 
       <h2>How far back the data goes</h2>
@@ -88,7 +87,7 @@ const cats = load<CategorySummary[]>('categories.json');
         <li>
           Our crawler runs from US data centers, so sites that serve different pages by country show us their US version.
         </li>
-        <li>Commercial fonts can’t be displayed here, so their names are set in italics instead of in their own face.</li>
+        <li>We can’t license commercial fonts for this site, so their names are shown in grey in our own typeface.</li>
       </ul>
 
       <h3>Blocked this week</h3>
@@ -115,20 +114,20 @@ const cats = load<CategorySummary[]>('categories.json');
 
       <h2>The sites</h2>
       <p>
-        The list is rebuilt from open sources, so anyone can reproduce it:
+        We build the list from open sources, so anyone can reproduce it.
       </p>
       <ul>
         <li>
-          <strong>Top sites</strong>: the 5,000 most visited origins in the Chrome UX Report, Google’s public data on real Chrome traffic. We fold
+          <strong>Top sites.</strong> The 5,000 most visited origins in the Chrome UX Report, Google’s public data on real Chrome traffic. We fold
           subdomains and country versions into one site per company and leave out adult sites.
         </li>
-        <li><strong>Y Combinator</strong>: every active, public and acquired company in the YC directory that has a website.</li>
+        <li><strong>Y Combinator.</strong> Every active, public and acquired company in the YC directory that has a website.</li>
         <li>
-          <strong>Unicorns</strong>: private companies valued at $1 billion or more. The starting point is Wikipedia’s list, with websites from
-          Wikidata; because that list has many gaps, over half the entries and websites were added or checked by hand. Each row records its source.
+          <strong>Unicorns.</strong> Private companies valued at $1 billion or more. The starting point is Wikipedia’s list, with websites from
+          Wikidata. That list has many gaps, so over half the entries and websites were added or checked by hand. Each row records its source.
         </li>
         <li>
-          <strong>Indie blogs</strong>: personal sites pooled from the Kagi Small Web list, the HN Popularity Contest and a list of Hacker News
+          <strong>Indie blogs.</strong> Personal sites pooled from the Kagi Small Web list, the HN Popularity Contest and a list of Hacker News
           users’ blogs, then ranked by how many of their posts scored 100 points or more on Hacker News since 2023. We keep the top 1,000.
         </li>
         <li>

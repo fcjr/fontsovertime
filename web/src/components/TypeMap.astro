@@ -1,7 +1,7 @@
 ---
 import type { FontRef } from '../lib/data';
 import { pct } from '../lib/format';
-import { fontStack } from '../lib/specimen';
+import { fontStack, LICENSED_TIP } from '../lib/specimen';
 import { squarify } from '../lib/treemap';
 
 type Item = FontRef & { share: number; count: number };
@@ -41,6 +41,7 @@ const laid = sets.map((set) => {
                 class:list={['tile', { first: k === 0, licensed: !stack, tiny: t.w * t.h < 40 }]}
                 style={`left:${t.x}%;top:${(t.y / H) * 100}%;width:${t.w}%;height:${(t.h / H) * 100}%;--chars:${Math.max(t.item.name.length, 3)};--i:${k}`}
                 aria-label={`${t.item.name}: ${pct(t.item.share)} of ${s.label.toLowerCase()} homepages, ${t.item.count} sites`}
+                data-tip={stack ? undefined : LICENSED_TIP}
               >
                 <span class="t-name" style={stack ? `font-family:${stack}, var(--sans)` : undefined}>
                   {t.item.name}
@@ -141,6 +142,12 @@ const laid = sets.map((set) => {
   .tile.first {
     background: var(--signal);
     color: var(--paper);
+  }
+  .tile.licensed {
+    color: var(--ink-3);
+  }
+  .tile.first.licensed {
+    color: color-mix(in srgb, var(--paper) 70%, transparent);
   }
   .tile:hover,
   .tile:focus-visible {

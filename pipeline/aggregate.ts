@@ -13,9 +13,9 @@ const specimen = (slug: string) => catalog[slug] ?? null;
 const TOP = 24;
 const CATEGORIES: Record<string, { name: string; blurb: string }> = {
   startups: { name: 'Startups', blurb: 'Y Combinator companies and unicorns that don’t belong to another category.' },
-  saas: { name: 'SaaS', blurb: 'Business software, where the neo-grotesque has held the line for a decade.' },
+  saas: { name: 'SaaS', blurb: 'Business software companies.' },
   devtools: { name: 'Developer tools', blurb: 'Languages, frameworks and the platforms developers ship on.' },
-  news: { name: 'News', blurb: 'Newspapers and news sites, the last stronghold of the custom serif.' },
+  news: { name: 'News', blurb: 'Newspapers and news sites.' },
   ecommerce: { name: 'E-commerce', blurb: 'Retailers and direct-to-consumer brands.' },
   enterprise: { name: 'Enterprise', blurb: 'Fortune 500 and the largest companies in the world.' },
   government: { name: 'Government', blurb: 'Federal, state and national government sites.' },
@@ -24,8 +24,8 @@ const CATEGORIES: Record<string, { name: string; blurb: string }> = {
   popular: { name: 'Popular sites', blurb: 'Heavily visited sites that don’t fit another category: media, tools, forums and portals.' },
 };
 const COHORTS: Record<string, { name: string; blurb: string }> = {
-  'top-1k': { name: 'Top 1,000', blurb: 'The thousand most visited sites on the web, ranked by Chrome’s own traffic data.' },
-  'top-5k': { name: 'Top 5,000', blurb: 'The five thousand most visited sites, one entry per company.' },
+  'top-1k': { name: 'Top 1,000', blurb: 'The 1,000 most visited sites, ranked by Chrome traffic data.' },
+  'top-5k': { name: 'Top 5,000', blurb: 'The 5,000 most visited sites, one entry per company.' },
   yc: { name: 'Y Combinator', blurb: 'Every active, public and acquired Y Combinator company with a website.' },
   unicorns: { name: 'Unicorns', blurb: 'Private companies valued at a billion dollars or more.' },
 };
