@@ -52,7 +52,7 @@ const payload = JSON.stringify({
             periods.map((p, i) => (
               <tr>
                 <td>{p.kind === 'wayback' ? p.id.replace('-', ' ') : date(p.date)}</td>
-                <td>{p.kind === 'wayback' ? `Internet Archive estimate, ${p.n} sites` : `Our crawl, ${p.n.toLocaleString()} sites`}</td>
+                <td>{p.kind === 'wayback' ? `Web archive estimate, ${p.n} sites` : `Our crawl, ${p.n.toLocaleString()} sites`}</td>
                 {series.map((s) => (
                   <td class="r">{pct(s.values[i])}</td>
                 ))}

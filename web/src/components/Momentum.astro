@@ -18,7 +18,7 @@ interface Props {
 const { data, limit = 8, flows = true, id } = Astro.props;
 const sources = [
   { key: 'crawl', label: 'Our crawl', src: data.crawl },
-  { key: 'archive', label: 'Internet Archive history', src: data.archive },
+  { key: 'archive', label: 'Web archive history', src: data.archive },
 ] as const;
 const defaultSource = data.crawl.windows.all?.switches ? 'crawl' : 'archive';
 const windowKeys = ['all', '2y', '1y'];
@@ -73,7 +73,7 @@ const since = (s: string | null | undefined) => (s ? date(s) : '');
               {w.switches
                 ? s.key === 'crawl'
                   ? `${w.switches.toLocaleString()} font switches across ${s.src.sites.toLocaleString()} sites in our crawl, ${since(w.from)} to ${since(w.to)}.`
-                  : `${w.switches.toLocaleString()} font switches estimated from Internet Archive copies of ${s.src.sites} well-known sites, ${since(w.from)} to ${since(w.to)}.`
+                  : `${w.switches.toLocaleString()} font switches estimated from web archive copies of ${s.src.sites} well-known sites, ${since(w.from)} to ${since(w.to)}.`
                 : ''}
             </p>
             {rows.length ? (
@@ -100,7 +100,7 @@ const since = (s: string | null | undefined) => (s ? date(s) : '');
             ) : (
               <p class="mo-empty">
                 {s.key === 'crawl'
-                  ? `Our crawl has ${s.src.weeks ?? 0} week${s.src.weeks === 1 ? '' : 's'} of data so far. A switch counts once a site shows a new font in two crawls in a row, so the first ones appear after the next weekly crawl. Until then, the Internet Archive history is the only view of change.`
+                  ? `Our crawl has ${s.src.weeks ?? 0} week${s.src.weeks === 1 ? '' : 's'} of data so far. A switch counts once a site shows a new font in two crawls in a row, so the first ones appear after the next weekly crawl. Until then, the web archive history is the only view of change.`
                   : 'Not enough switches in this window to rank fonts.'}
               </p>
             )}

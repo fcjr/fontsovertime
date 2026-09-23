@@ -57,7 +57,7 @@ export function mountTrend(root: HTMLElement, data: Payload) {
   if (hasArchive && hasLive) {
     const key = html('div', 'tc-source-key');
     key.innerHTML =
-      '<span><svg width="22" height="6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" class="k-archive"/></svg>Internet Archive estimate</span>' +
+      '<span><svg width="22" height="6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" class="k-archive"/></svg>Web archive estimate</span>' +
       '<span><svg width="22" height="6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" class="k-live"/></svg>Our crawl</span>';
     controls.append(key);
   }
@@ -145,7 +145,7 @@ export function mountTrend(root: HTMLElement, data: Payload) {
       const bx = x(Math.min(times[firstLive], t1));
       const w = bx - m.left;
       el('rect', { x: m.left, y: m.top, width: w, height: plotBottom - m.top, class: 'archive' }, svg);
-      if (w > 170) el('text', { x: m.left + 10, y: m.top + 18, class: 'archive-label' }, svg).textContent = 'Internet Archive estimates';
+      if (w > 170) el('text', { x: m.left + 10, y: m.top + 18, class: 'archive-label' }, svg).textContent = 'Web archive estimates';
       el('line', { x1: bx, x2: bx, y1: m.top, y2: plotBottom, class: 'crawl-start' }, svg);
       const nearEdge = bx > width - m.right - 90;
       el('text', { x: nearEdge ? bx - 8 : bx + 8, y: m.top + 18, class: 'crawl-label', 'text-anchor': nearEdge ? 'end' : 'start' }, svg).textContent =
@@ -265,7 +265,7 @@ export function mountTrend(root: HTMLElement, data: Payload) {
       });
       tip.replaceChildren(html('div', 'tip-h', data.labels[j]));
       const n = data.ns?.[j];
-      tip.append(html('div', 'tip-src', `${data.kinds[j] === 'wayback' ? 'Internet Archive estimate' : 'Our crawl'}${n ? `, ${n.toLocaleString()} sites` : ''}`));
+      tip.append(html('div', 'tip-src', `${data.kinds[j] === 'wayback' ? 'Web archive estimate' : 'Our crawl'}${n ? `, ${n.toLocaleString()} sites` : ''}`));
       for (const r of rows) {
         const row = html('div', 'tip-r');
         const sw = html('span', 'sw');

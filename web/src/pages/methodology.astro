@@ -52,7 +52,7 @@ const cats = load<CategorySummary[]>('categories.json');
 
       <h2>How far back the data goes</h2>
       <p>
-        Our own crawl started in September 2026. Everything on this site dated earlier is an estimate from the Internet Archive, covering a smaller set of
+        Our own crawl started in September 2026. Everything on this site dated earlier is an estimate from web archives, covering a smaller set of
         about {o.trend_panel ?? 'a hundred'} well-known sites that we can trace back to 2021. When we checked the archive estimates for the most recent
         quarter against our own crawl, they named the same body font about two times in three. Treat the long-range trend lines as a rough guide, and our
         crawl as the record. Charts draw archive estimates as dashed lines on a shaded background and our crawl as solid lines.
@@ -60,10 +60,11 @@ const cats = load<CategorySummary[]>('categories.json');
 
       <h2>History before our crawls</h2>
       <p>
-        The shaded part of each trend chart comes from the Internet Archive’s copies of the same homepages, one per quarter back to 2021. We load each
-        archived page’s HTML and CSS in the same browser and run the same measurement, with scripts turned off to keep our load on the Archive
-        light. If that fails we read the archived CSS directly. Because the font files themselves often weren’t archived, we record the typeface
-        the page asks for rather than what an old copy manages to draw.
+        The shaded part of each trend chart comes from copies of the same homepages saved by the Internet Archive and by Arquivo.pt, Portugal’s
+        national web archive, one per quarter. We load each archived page’s HTML and CSS in the same browser and run the same measurement, with
+        scripts turned off and every request paced to stay well within each archive’s limits. Because the font files themselves often weren’t
+        archived, we record the typeface the page asks for rather than what an old copy manages to draw. When a copy’s stylesheets weren’t
+        archived, we try another copy from the same quarter, and leave the quarter out if none works, rather than guess.
       </p>
       <p>
         Fonts change rarely, so we don’t measure every quarter. We measure the first and last copy; if they match we fill in the quarters between,

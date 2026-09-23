@@ -63,6 +63,8 @@ The weekly, daily and archive backfill jobs run on one small Linux server (Ubunt
 2. Put secrets in `/etc/fontsovertime.env` (created by the script): the residential proxy URL, an optional per-run proxy bandwidth cap and optional healthchecks.io URLs.
 3. Timers: weekly on Sundays and daily Monday to Saturday at 03:00 UTC, and the backfill hourly until it runs out of work. `systemctl list-timers 'fontsovertime-*'` shows them and `journalctl -u 'fontsovertime@*'` the logs.
 
+The backfill reads quarterly copies of each homepage from the Internet Archive and Arquivo.pt, going back 10 years by default. Each archive has its own request budget: the Internet Archive's starts at 30 a minute and rises to at most 60 while it returns no errors, and Arquivo.pt's stays far below its published limits. It measures only the quarters needed to find when fonts changed, caches capture lists and stylesheets on disk, tries other copies from the same quarter when one is unusable, and retries temporary failures on later runs. Progress and an estimated finish time are written to `data/runs/backfill-status.json`.
+
 Each crawl visits every site directly, retries timeouts, then retries sites that block the server through the proxy. It skips the proxy for sites whose robots.txt disallows all crawlers, and stops once it reaches `PROXY_MAX_MB`. A summary of every run is committed to `data/runs/`. The backfill never uses the proxy.
 
 ## Deploying

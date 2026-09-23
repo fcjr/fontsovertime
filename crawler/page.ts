@@ -9,6 +9,8 @@ type Extracted = {
   platform: string | null;
   preloads: number;
   broken_css: number;
+  stylesheets: number;
+  empty_css: number;
   text_chars: number;
   text_nodes: number;
   dominant: FontShare[];
@@ -36,7 +38,7 @@ const PROVIDERS: [RegExp, string][] = [
   [/(^|\.)typography\.com$/, 'hoefler'],
   [/(^|\.)fonts\.(net|com)$/, 'monotype'],
 ];
-const ARCHIVED = /^https?:\/\/web\.archive\.org\/web\/\d+[a-z_]*\/(.+)$/;
+const ARCHIVED = /^https?:\/\/(?:web\.archive\.org\/web|arquivo\.pt\/wayback)\/\d+[a-z_]*\/(.+)$/;
 
 export const unwrap = (url: string) => {
   const m = url.match(ARCHIVED);
@@ -82,6 +84,8 @@ export async function measurePage(
     archived?: boolean;
     throttle?: () => Promise<void>;
     onThrottled?: () => void;
+    archiveHost?: RegExp;
+    styleCache?: { get(url: string): string | null; put(url: string, css: string): void };
     proxy?: { server: string; username?: string; password?: string };
   } = {},
 ): Promise<Measurement> {
@@ -101,7 +105,22 @@ export async function measurePage(
     await context.route('**/*', async (route) => {
       const req = route.request();
       if (blockedTypes.has(req.resourceType()) || BLOCKED_HOSTS.test(hostname(req.url()))) return route.abort().catch(() => {});
-      if (opts.throttle && /^https?:\/\/web\.archive\.org\//.test(req.url())) await opts.throttle();
+      const fromArchive = !!opts.archiveHost && opts.archiveHost.test(req.url());
+      if (fromArchive && opts.styleCache && req.resourceType() === 'stylesheet') {
+        const key = unwrap(req.url());
+        const hit = opts.styleCache.get(key);
+        if (hit !== null) return route.fulfill({ status: 200, contentType: 'text/css', body: hit }).catch(() => {});
+        if (opts.throttle) await opts.throttle();
+        try {
+          const res = await route.fetch();
+          const body = await res.text();
+          if (res.ok()) opts.styleCache.put(key, body);
+          return await route.fulfill({ response: res, body });
+        } catch {
+          return route.abort().catch(() => {});
+        }
+      }
+      if (fromArchive && opts.throttle) await opts.throttle();
       return route.continue().catch(() => {});
     });
     const page = await context.newPage();
@@ -167,8 +186,9 @@ export async function measurePage(
 
     const finalUrl = unwrap(page.url());
     const httpStatus = response?.status() ?? null;
-    const unstyled = data.broken_css > 0 && /^("?times new roman"?|serif)$/i.test(data.dominant[0]?.stack ?? '');
-    const leftArchive = opts.archived && !/^https:\/\/web\.archive\.org\//.test(page.url());
+    const unstyled =
+      (data.broken_css > 0 || (opts.archived && (data.empty_css > 0 || data.declared.length > 0))) && /^("?times( new roman)?"?|serif)$/i.test(data.dominant[0]?.stack ?? '');
+    const leftArchive = opts.archived && !(opts.archiveHost ?? /^https:\/\/web\.archive\.org\//).test(page.url());
     const archiveMiss = opts.archived && (leftArchive || /wayback machine/i.test(data.title) || !data.text_chars || unstyled);
     const status =
       archiveMiss ? 'error'
@@ -195,6 +215,7 @@ export async function measurePage(
       font_requests: fonts.length,
       font_bytes: fonts.reduce((n, f) => n + f.bytes, 0),
       preloads: data.preloads,
+      stylesheets: data.stylesheets,
       fonts_ready: fontsReady,
       text_chars: data.text_chars,
       text_nodes: data.text_nodes,

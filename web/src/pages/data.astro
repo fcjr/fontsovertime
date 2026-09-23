@@ -18,7 +18,7 @@ const list = (kind: string) => {
 const groups = [
   { kind: 'weekly', title: 'Weekly crawls', note: 'Every tracked homepage, once a week.' },
   { kind: 'daily', title: 'Daily crawls', note: 'A few hundred of the best-known sites, every day.' },
-  { kind: 'wayback', title: 'Archive backfill', note: 'One Internet Archive copy per site per quarter, read from CSS.' },
+  { kind: 'wayback', title: 'Archive backfill', note: 'Quarterly estimates from the Internet Archive and Arquivo.pt.' },
 ].map((g) => ({ ...g, files: list(g.kind) }));
 ---
 

@@ -126,6 +126,15 @@
     platform,
     preloads: document.querySelectorAll('link[rel~=preload][as=font]').length,
     broken_css: [...document.querySelectorAll('link[rel~=stylesheet]')].filter((l) => !l.sheet).length,
+    stylesheets: document.querySelectorAll('link[rel~=stylesheet], style').length,
+    empty_css: [...document.querySelectorAll('link[rel~=stylesheet]')].filter((l) => {
+      if (!l.sheet) return true;
+      try {
+        return l.sheet.cssRules.length === 0;
+      } catch {
+        return false;
+      }
+    }).length,
     text_chars: all.chars,
     text_nodes: nodes,
     dominant: summarize(all),

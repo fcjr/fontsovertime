@@ -43,8 +43,8 @@ case "$kind" in
     message="Crawl: daily $today"
     ;;
   backfill)
-    node pipeline/wayback.ts --redo-old --concurrency 2 --rpm "${BACKFILL_RPM:-30}" --budget 55
-    paths=(data/snapshots/wayback)
+    node pipeline/wayback.ts --redo-old --years "${BACKFILL_YEARS:-10}" --concurrency 3 --rpm "${BACKFILL_RPM:-30}" --max-rpm "${BACKFILL_MAX_RPM:-60}" --budget 55 --status data/runs/backfill-status.json
+    paths=(data/snapshots/wayback data/runs/backfill-status.json)
     message="Wayback backfill $today"
     ;;
 esac

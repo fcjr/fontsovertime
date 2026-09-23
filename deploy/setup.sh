@@ -64,7 +64,11 @@ PROXY_RESPECT_ROBOTS=1
 # Stop using the proxy after this many megabytes in one run.
 PROXY_MAX_MB=2000
 CRAWL_CONCURRENCY=6
+# Internet Archive request rate: start, and ceiling it may climb to while there are no 429s.
 BACKFILL_RPM=30
+BACKFILL_MAX_RPM=60
+# How far back the archive backfill goes.
+BACKFILL_YEARS=10
 # Optional healthchecks.io ping URLs.
 HC_WEEKLY=
 HC_DAILY=
