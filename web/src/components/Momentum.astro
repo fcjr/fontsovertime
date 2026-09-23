@@ -1,0 +1,339 @@
+---
+import type { FontRef } from '../lib/data';
+import { date } from '../lib/format';
+import FontName from './FontName.astro';
+
+type MoverFont = FontRef & { adopted: number; dropped: number; net: number; into: string[]; outof: string[] };
+type Flow = { from: FontRef; to: FontRef; count: number; examples: string[] };
+type Window = { label: string; from: string | null; to: string | null; switches: number; fonts: MoverFont[]; flows: Flow[] };
+type Source = { sites: number; windows: Record<string, Window>; weeks?: number; since?: string | null };
+export type MomentumData = { crawl: Source; archive: Source };
+
+interface Props {
+  data: MomentumData;
+  limit?: number;
+  flows?: boolean;
+  id: string;
+}
+const { data, limit = 8, flows = true, id } = Astro.props;
+const sources = [
+  { key: 'crawl', label: 'Our crawl', src: data.crawl },
+  { key: 'archive', label: 'Internet Archive history', src: data.archive },
+] as const;
+const defaultSource = data.crawl.windows.all?.switches ? 'crawl' : 'archive';
+const windowKeys = ['all', '2y', '1y'];
+
+function movers(w: Window) {
+  const gainers = w.fonts.filter((f) => f.net > 0).slice(0, limit);
+  const losers = w.fonts
+    .filter((f) => f.net < 0)
+    .sort((a, b) => a.net - b.net)
+    .slice(0, limit)
+    .reverse();
+  const max = Math.max(1, ...[...gainers, ...losers].flatMap((f) => [f.adopted, f.dropped]));
+  return { rows: [...gainers, ...losers], max };
+}
+const since = (s: string | null | undefined) => (s ? date(s) : '');
+---
+
+<div class="mo" data-momentum={id} data-source={defaultSource} data-window="all">
+  <div class="mo-controls">
+    <div class="seg" role="group" aria-label="Data source">
+      {
+        sources.map((s) => (
+          <button type="button" data-set-source={s.key} aria-pressed={s.key === defaultSource ? 'true' : 'false'}>
+            {s.label}
+          </button>
+        ))
+      }
+    </div>
+    <div class="seg" role="group" aria-label="Time window">
+      {
+        windowKeys.map((k) => (
+          <button type="button" data-set-window={k} aria-pressed={k === 'all' ? 'true' : 'false'}>
+            {k === 'all' ? 'All' : k === '2y' ? 'Last 2 years' : 'Last year'}
+          </button>
+        ))
+      }
+    </div>
+    <p class="mo-key small">
+      <span><span class="sw out" />Sites that switched away</span>
+      <span><span class="sw in" />Sites that switched to it</span>
+    </p>
+  </div>
+
+  {
+    sources.map((s) =>
+      windowKeys.map((k) => {
+        const w = s.src.windows[k];
+        const { rows, max } = movers(w);
+        return (
+          <div class="mo-panel" data-panel-source={s.key} data-panel-window={k} hidden={!(s.key === defaultSource && k === 'all')}>
+            <p class="mo-scope small muted num">
+              {w.switches
+                ? s.key === 'crawl'
+                  ? `${w.switches.toLocaleString()} font switches across ${s.src.sites.toLocaleString()} sites in our crawl, ${since(w.from)} to ${since(w.to)}.`
+                  : `${w.switches.toLocaleString()} font switches estimated from Internet Archive copies of ${s.src.sites} well-known sites, ${since(w.from)} to ${since(w.to)}.`
+                : ''}
+            </p>
+            {rows.length ? (
+              <ol class="mo-rows">
+                {rows.map((f) => (
+                  <li class:list={['mo-row', f.net > 0 ? 'up' : 'down']} tabindex="0">
+                    <span class="mo-name">
+                      <FontName font={f} />
+                    </span>
+                    <span class="mo-bar out" aria-hidden="true">
+                      <span style={`width:${(f.dropped / max) * 100}%`} />
+                    </span>
+                    <span class="mo-bar in" aria-hidden="true">
+                      <span style={`width:${(f.adopted / max) * 100}%`} />
+                    </span>
+                    <span class="mo-net num">{f.net > 0 ? `+${f.net}` : `−${Math.abs(f.net)}`}</span>
+                    <span class="mo-detail small">
+                      {f.adopted} switched to it{f.into.length > 0 && <span class="muted"> ({f.into.slice(0, 3).join(', ')})</span>}. {f.dropped} switched away
+                      {f.outof.length > 0 && <span class="muted"> ({f.outof.slice(0, 3).join(', ')})</span>}.
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <p class="mo-empty">
+                {s.key === 'crawl'
+                  ? `Our crawl has ${s.src.weeks ?? 0} week${s.src.weeks === 1 ? '' : 's'} of data so far. A switch counts once a site shows a new font in two crawls in a row, so the first ones appear after the next weekly crawl. Until then, the Internet Archive history is the only view of change.`
+                  : 'Not enough switches in this window to rank fonts.'}
+              </p>
+            )}
+            {flows && w.flows.length > 0 && (
+              <div class="mo-flows">
+                <h3>Where sites went</h3>
+                <ol>
+                  {w.flows.slice(0, 8).map((fl) => (
+                    <li>
+                      <span class="from">
+                        <FontName font={fl.from} />
+                      </span>
+                      <span class="arrow" aria-hidden="true">
+                        →
+                      </span>
+                      <span class="sr-only">to</span>
+                      <span class="to">
+                        <FontName font={fl.to} />
+                      </span>
+                      <span class="num muted small">
+                        {fl.count} {fl.count === 1 ? 'site' : 'sites'}
+                      </span>
+                      <span class="ex small muted">{fl.examples.slice(0, 3).join(', ')}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+          </div>
+        );
+      }),
+    )
+  }
+</div>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-momentum]')) {
+    const panels = [...root.querySelectorAll<HTMLElement>('[data-panel-source]')];
+    const sync = () => {
+      for (const p of panels) p.hidden = !(p.dataset.panelSource === root.dataset.source && p.dataset.panelWindow === root.dataset.window);
+      root.querySelectorAll<HTMLButtonElement>('[data-set-source]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.setSource === root.dataset.source)));
+      root.querySelectorAll<HTMLButtonElement>('[data-set-window]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.setWindow === root.dataset.window)));
+    };
+    root.querySelectorAll<HTMLButtonElement>('[data-set-source]').forEach((b) =>
+      b.addEventListener('click', () => {
+        root.dataset.source = b.dataset.setSource;
+        sync();
+      }),
+    );
+    root.querySelectorAll<HTMLButtonElement>('[data-set-window]').forEach((b) =>
+      b.addEventListener('click', () => {
+        root.dataset.window = b.dataset.setWindow;
+        sync();
+      }),
+    );
+  }
+</script>
+
+<style>
+  .mo-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 20px;
+    margin: 16px 0 8px;
+  }
+  .seg {
+    display: inline-flex;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 2px;
+  }
+  .seg button {
+    font: inherit;
+    font-size: 0.8125rem;
+    color: var(--ink-2);
+    background: none;
+    border: 0;
+    border-radius: 999px;
+    padding: 5px 12px;
+    cursor: pointer;
+  }
+  .seg button[aria-pressed='true'] {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .mo-key {
+    display: flex;
+    gap: 16px;
+    color: var(--ink-2);
+    margin: 0;
+  }
+  .mo-key > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mo-key .sw {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+  .sw.out {
+    background: var(--s2);
+  }
+  .sw.in {
+    background: var(--signal);
+  }
+  .mo-scope {
+    margin: 4px 0 12px;
+    min-height: 1.4em;
+  }
+  .mo-rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid var(--ink);
+  }
+  .mo-row {
+    display: grid;
+    grid-template-columns: minmax(0, 14rem) minmax(0, 1fr) minmax(0, 1fr) 3.5rem;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    outline: none;
+  }
+  .mo-row:focus-visible {
+    box-shadow: inset 0 0 0 2px var(--signal);
+  }
+  .mo-name {
+    font-size: 1.375rem;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 16px;
+  }
+  .mo-bar {
+    height: 12px;
+    display: flex;
+  }
+  .mo-bar.out {
+    justify-content: flex-end;
+    border-right: 1px solid var(--ink);
+  }
+  .mo-bar.out span {
+    background: var(--s2);
+    border-radius: 4px 0 0 4px;
+  }
+  .mo-bar.in span {
+    background: var(--signal);
+    border-radius: 0 4px 4px 0;
+  }
+  .mo-bar span {
+    display: block;
+    height: 100%;
+    min-width: 0;
+  }
+  .mo-net {
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.0625rem;
+  }
+  .mo-detail {
+    grid-column: 1 / -1;
+    color: var(--ink-2);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 180ms ease, margin 180ms ease;
+  }
+  .mo-row:hover .mo-detail,
+  .mo-row:focus-visible .mo-detail {
+    max-height: 4em;
+    margin-top: 6px;
+  }
+  .mo-empty {
+    color: var(--ink-2);
+    max-width: 40rem;
+    padding: 24px 0;
+    border-top: 2px solid var(--ink);
+  }
+  .mo-flows {
+    margin-top: 40px;
+  }
+  .mo-flows h3 {
+    margin-bottom: 8px;
+  }
+  .mo-flows ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .mo-flows li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2rem minmax(0, 1fr) 5rem;
+    align-items: baseline;
+    gap: 2px 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: 1.25rem;
+  }
+  .mo-flows .from :global(.fn) {
+    text-decoration: line-through;
+    text-decoration-color: var(--s2);
+    text-decoration-thickness: 1.5px;
+  }
+  .mo-flows .arrow {
+    color: var(--ink-3);
+    text-align: center;
+  }
+  .mo-flows .num {
+    text-align: right;
+  }
+  .mo-flows .ex {
+    grid-column: 1 / -1;
+  }
+  @media (max-width: 640px) {
+    .mo-row {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 3rem;
+    }
+    .mo-name {
+      grid-column: 1 / -1;
+      margin-bottom: 6px;
+    }
+    .mo-flows li {
+      grid-template-columns: minmax(0, 1fr) 1.5rem minmax(0, 1fr);
+    }
+    .mo-flows .num {
+      grid-column: 1 / -1;
+      text-align: left;
+    }
+  }
+</style>

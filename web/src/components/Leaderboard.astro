@@ -8,8 +8,9 @@ interface Props {
   fonts: Ranked[];
   feature?: number;
   role?: 'body' | 'heading';
+  kinds?: string[];
 }
-const { fonts, feature = 10, role = 'body' } = Astro.props;
+const { fonts, feature = 10, role = 'body', kinds = [] } = Astro.props;
 const podium = fonts.slice(0, 3);
 const top = fonts.slice(3, feature);
 const rest = fonts.slice(feature);
@@ -37,7 +38,7 @@ const noun = role === 'body' ? 'body text' : 'headings';
             {f.delta !== null && Math.abs(f.delta) >= 0.0005 && <span class="delta">{points(f.delta)}</span>}
           </span>
         </div>
-        <Sparkline values={f.series} width={160} label={`${f.name} share of ${noun} over time`} />
+        <Sparkline values={f.series} kinds={kinds} width={160} label={`${f.name} share of ${noun} over time`} />
       </li>
     ))
   }
@@ -60,7 +61,7 @@ const noun = role === 'body' ? 'body text' : 'headings';
           {f.delta !== null && Math.abs(f.delta) >= 0.0005 && <span class:list={['delta num', f.delta > 0 ? 'up' : 'down']}>{points(f.delta)}</span>}
         </div>
         <div class="trend">
-          <Sparkline values={f.series} label={`${f.name} share of ${noun} over time`} />
+          <Sparkline values={f.series} kinds={kinds} label={`${f.name} share of ${noun} over time`} />
         </div>
       </li>
     ))

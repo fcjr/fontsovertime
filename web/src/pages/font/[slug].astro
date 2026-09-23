@@ -7,13 +7,15 @@ import Switches from '../../components/Switches.astro';
 import FontName from '../../components/FontName.astro';
 import SiteTable from '../../components/SiteTable.astro';
 import { load, type Breakdown, type Change, type FontIndexEntry, type FontRef, type Period, type SiteRow } from '../../lib/data';
-import { date, pct, SOURCE_LABELS } from '../../lib/format';
+import { date, pct, SOURCE_LABELS, trendText } from '../../lib/format';
+import { load as loadAgg, type Overview } from '../../lib/data';
 import { fontStack } from '../../lib/specimen';
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 type Font = FontIndexEntry & {
-  first_seen: string;
+  first_live: string | null;
+  first_archive: string | null;
   periods: Period[];
   series: { body: (number | null)[]; heading: (number | null)[] };
   by_category: { slug: string; name: string; count: number; share: number }[];
@@ -39,6 +41,7 @@ const samples = [...f.using]
   .filter((s) => s.title && s.title.length > 12 && s.title.length < 90)
   .slice(0, 3);
 const others = [...f.pairs, ...f.switched_to.map((c) => c.from), ...f.switched_from.map((c) => c.to)];
+const trend = trendText(f.periods, loadAgg<Overview>('overview.json').trend_panel, `homepages using ${f.name}`);
 const origin = f.specimen?.source === 'google' ? 'Google Fonts' : f.specimen?.source === 'fontshare' ? 'Fontshare' : null;
 ---
 
@@ -79,8 +82,12 @@ const origin = f.specimen?.source === 'google' ? 'Google Fonts' : f.specimen?.so
         <dd class="num">{pct(f.share)}</dd>
       </div>
       <div>
-        <dt>First seen</dt>
-        <dd class="num">{f.first_seen ? date(f.first_seen) : '–'}</dd>
+        <dt>In our crawl since</dt>
+        <dd class="num">{f.first_live ? date(f.first_live) : '–'}</dd>
+      </div>
+      <div>
+        <dt>Earliest archive record</dt>
+        <dd class="num">{f.first_archive ? date(f.first_archive) : 'None'}</dd>
       </div>
     </dl>
   </section>
@@ -113,7 +120,8 @@ const origin = f.specimen?.source === 'google' ? 'Google Fonts' : f.specimen?.so
         { label: 'Body text', values: f.series.body },
         { label: 'Headings', values: f.series.heading },
       ]}
-      title={`Share of homepages using ${f.name}`}
+      title={trend.title}
+      caption={trend.caption}
     />
   </section>
 

@@ -1,5 +1,5 @@
 export type Series = { label: string; values: (number | null)[]; family?: string | null; href?: string };
-export type Payload = { dates: string[]; kinds: string[]; labels: string[]; series: Series[]; height: number };
+export type Payload = { dates: string[]; kinds: string[]; labels: string[]; ns?: number[]; series: Series[]; height: number };
 
 const NS = 'http://www.w3.org/2000/svg';
 const RANGES = [
@@ -52,6 +52,15 @@ export function mountTrend(root: HTMLElement, data: Payload) {
   ranges.setAttribute('role', 'group');
   ranges.setAttribute('aria-label', 'Time range');
   if (!single) controls.append(legend);
+  const hasArchive = data.kinds.some((k) => k === 'wayback');
+  const hasLive = data.kinds.some((k) => k !== 'wayback');
+  if (hasArchive && hasLive) {
+    const key = html('div', 'tc-source-key');
+    key.innerHTML =
+      '<span><svg width="22" height="6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" class="k-archive"/></svg>Internet Archive estimate</span>' +
+      '<span><svg width="22" height="6" aria-hidden="true"><line x1="0" y1="3" x2="22" y2="3" class="k-live"/></svg>Our crawl</span>';
+    controls.append(key);
+  }
   if (available.length > 1) controls.append(ranges);
   const stage = html('div', 'tc-stage');
   stage.style.height = `${data.height}px`;
@@ -133,9 +142,14 @@ export function mountTrend(root: HTMLElement, data: Payload) {
 
     const firstLive = data.kinds.findIndex((k) => k !== 'wayback');
     if (firstLive > 0 && times[firstLive] > t0) {
-      const w = x(Math.min(times[firstLive], t1)) - m.left;
+      const bx = x(Math.min(times[firstLive], t1));
+      const w = bx - m.left;
       el('rect', { x: m.left, y: m.top, width: w, height: plotBottom - m.top, class: 'archive' }, svg);
-      if (w > 120) el('text', { x: m.left + 10, y: m.top + 18, class: 'archive-label' }, svg).textContent = 'Archive estimates';
+      if (w > 170) el('text', { x: m.left + 10, y: m.top + 18, class: 'archive-label' }, svg).textContent = 'Internet Archive estimates';
+      el('line', { x1: bx, x2: bx, y1: m.top, y2: plotBottom, class: 'crawl-start' }, svg);
+      const nearEdge = bx > width - m.right - 90;
+      el('text', { x: nearEdge ? bx - 8 : bx + 8, y: m.top + 18, class: 'crawl-label', 'text-anchor': nearEdge ? 'end' : 'start' }, svg).textContent =
+        `Our crawl from ${new Date(times[firstLive]).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })}`;
     }
 
     for (let v = 0; v <= max + 1e-9; v += step) {
@@ -166,23 +180,38 @@ export function mountTrend(root: HTMLElement, data: Payload) {
         return;
       }
       const pts = idx.filter((j) => s.values[j] !== null).map((j) => [x(times[j]), y(s.values[j]!)] as const);
-      let d = '';
+      let archiveD = '';
+      let liveD = '';
       let pen = false;
+      let prev: [number, number] | null = null;
+      let prevArchive = false;
       for (const j of idx) {
         const v = s.values[j];
         if (v === null) {
           pen = false;
+          prev = null;
           continue;
         }
-        d += `${pen ? 'L' : 'M'}${x(times[j]).toFixed(1)},${y(v).toFixed(1)}`;
+        const p: [number, number] = [x(times[j]), y(v)];
+        const archived = data.kinds[j] === 'wayback';
+        const seg = `${p[0].toFixed(1)},${p[1].toFixed(1)}`;
+        if (archived) archiveD += `${pen && prevArchive ? 'L' : 'M'}${seg}`;
+        else {
+          if (pen && prev && prevArchive) archiveD += `L${seg}`;
+          liveD += `${pen && !prevArchive ? 'L' : 'M'}${seg}`;
+        }
         pen = true;
+        prev = p;
+        prevArchive = archived;
       }
       const area = pts.length > 1 ? `M${pts[0][0]},${plotBottom}` + pts.map(([px, py]) => `L${px.toFixed(1)},${py.toFixed(1)}`).join('') + `L${pts.at(-1)![0]},${plotBottom}Z` : '';
       areas.push(el('path', { d: area, class: 'area', style: `fill:${color(i, single)}` }, gAreas));
-      const line = el('path', { d, class: 'line', style: `stroke:${color(i, single)}` }, gLines);
-      line.addEventListener('pointerenter', () => setFocus(i));
-      line.addEventListener('pointerleave', () => setFocus(null));
-      lines.push(line);
+      const group = el('g', { class: 'series' }, gLines);
+      if (archiveD) el('path', { d: archiveD, class: 'line archive-line', style: `stroke:${color(i, single)}` }, group);
+      if (liveD) el('path', { d: liveD, class: 'line', style: `stroke:${color(i, single)}` }, group);
+      group.addEventListener('pointerenter', () => setFocus(i));
+      group.addEventListener('pointerleave', () => setFocus(null));
+      lines.push(group as unknown as SVGPathElement);
       if (pts.length) {
         el('circle', { cx: pts.at(-1)![0], cy: pts.at(-1)![1], r: 4, class: 'end', style: `fill:${color(i, single)}` }, gLines);
         ends.push({ y: pts.at(-1)![1], i });
@@ -201,19 +230,11 @@ export function mountTrend(root: HTMLElement, data: Payload) {
     }
 
     if (!drawn && !reduceMotion()) {
-      drawn = true;
-      for (const l of lines) {
-        const len = l.getTotalLength?.() ?? 0;
-        if (!len) continue;
-        l.style.strokeDasharray = `${len}`;
-        l.style.strokeDashoffset = `${len}`;
-        l.getBoundingClientRect();
-        l.style.transition = 'stroke-dashoffset 1100ms cubic-bezier(.2,.7,.2,1)';
-        l.style.strokeDashoffset = '0';
-        l.addEventListener('transitionend', () => {
-          l.style.strokeDasharray = '';
-          l.style.transition = '';
-        });
+      for (const g of [gLines, gAreas]) {
+        g.style.clipPath = 'inset(0 100% 0 0)';
+        g.getBoundingClientRect();
+        g.style.transition = 'clip-path 1100ms cubic-bezier(.2,.7,.2,1)';
+        g.style.clipPath = 'inset(0 0 0 0)';
       }
     }
     drawn = true;
@@ -243,6 +264,8 @@ export function mountTrend(root: HTMLElement, data: Payload) {
         }
       });
       tip.replaceChildren(html('div', 'tip-h', data.labels[j]));
+      const n = data.ns?.[j];
+      tip.append(html('div', 'tip-src', `${data.kinds[j] === 'wayback' ? 'Internet Archive estimate' : 'Our crawl'}${n ? `, ${n.toLocaleString()} sites` : ''}`));
       for (const r of rows) {
         const row = html('div', 'tip-r');
         const sw = html('span', 'sw');

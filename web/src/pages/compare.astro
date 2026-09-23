@@ -111,6 +111,7 @@ const periods = overview.periods;
       dates: periods.map((p) => p.date),
       kinds: periods.map((p) => p.kind),
       labels: periods.map((p) => (p.kind === 'wayback' ? p.id.replace('-', ' ') : `Week of ${p.date}`)),
+      ns: periods.map((p) => (p as { n?: number }).n ?? 0),
       series: chosen.map((s) => {
         const f = bySlug.get(s)!;
         return { label: f.name, values: seriesData![s]?.[role === 'body' ? 0 : 1] ?? [], family: f.specimen ? (f.specimen.family === 'system-ui' ? 'system-ui' : `"${f.specimen.family}"`) : null };

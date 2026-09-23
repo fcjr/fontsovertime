@@ -8,11 +8,12 @@ import Switches from '../../components/Switches.astro';
 import FontName from '../../components/FontName.astro';
 import SiteTable from '../../components/SiteTable.astro';
 import { load, type Breakdown, type CategorySummary, type Change, type Pairing, type Period, type Ranked, type SiteRow } from '../../lib/data';
-import { pct, PLATFORM_LABELS, SOURCE_LABELS } from '../../lib/format';
+import { pct, PLATFORM_LABELS, SOURCE_LABELS, trendText } from '../../lib/format';
 import { glyphs } from '../../lib/specimen';
 
 type Category = CategorySummary & {
   periods: Period[];
+  trend_panel: number | null;
   body: Ranked[];
   heading: Ranked[];
   sources: Breakdown;
@@ -29,6 +30,7 @@ export function getStaticPaths() {
 const c = load<Category>(`category/${Astro.params.slug}.json`);
 const fonts = [...c.body, ...c.heading, ...c.pairings.flatMap((p) => [p.heading, p.body]), ...c.changes.flatMap((x) => [x.from, x.to])];
 const topSix = c.body.filter((f) => !f.generic).slice(0, 6);
+const trend = trendText(c.periods, c.trend_panel, `${c.name.toLowerCase()} homepages using each font`);
 ---
 
 <Layout title={c.name} description={`The fonts ${c.name.toLowerCase()} sites use for body text and headings, tracked weekly.`} fonts={fonts} specimenText={glyphs(...fonts.map((f) => f.name))}>
@@ -45,11 +47,11 @@ const topSix = c.body.filter((f) => !f.generic).slice(0, 6);
     <div class="section-head">
       <h2 id="body-h">Body text</h2>
     </div>
-    <Leaderboard fonts={c.body} feature={6} />
+    <Leaderboard fonts={c.body} feature={6} kinds={c.periods.map((p) => p.kind)} />
   </section>
 
   <section class="wrap section">
-    <TrendChart periods={c.periods} series={topSix.map((f) => ({ label: f.name, values: f.series, font: f }))} height={360} title={`Body text share among ${c.name.toLowerCase()} sites`} />
+    <TrendChart periods={c.periods} series={topSix.map((f) => ({ label: f.name, values: f.series, font: f }))} height={360} title={trend.title} caption={trend.caption} />
   </section>
 
   <section class="wrap section two" aria-labelledby="head-h">

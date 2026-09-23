@@ -50,6 +50,14 @@ const cats = load<CategorySummary[]>('categories.json');
         weeks.
       </p>
 
+      <h2>How far back the data goes</h2>
+      <p>
+        Our own crawl started in September 2026. Everything on this site dated earlier is an estimate from the Internet Archive, covering a smaller set of
+        about {o.trend_panel ?? 'a hundred'} well-known sites that we can trace back to 2021. When we checked the archive estimates for the most recent
+        quarter against our own crawl, they named the same body font about two times in three. Treat the long-range trend lines as a rough guide, and our
+        crawl as the record. Charts draw archive estimates as dashed lines on a shaded background and our crawl as solid lines.
+      </p>
+
       <h2>History before our crawls</h2>
       <p>
         The shaded part of each trend chart comes from the Internet Archive’s copies of the same homepages, one per quarter back to 2021. We load each

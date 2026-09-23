@@ -16,6 +16,7 @@ const payload = JSON.stringify({
   dates: periods.map((p) => p.date),
   kinds: periods.map((p) => p.kind),
   labels: periods.map((p) => (p.kind === 'wayback' ? p.id.replace('-', ' ') : `Week of ${date(p.date)}`)),
+  ns: periods.map((p) => p.n),
   series: series.slice(0, 6).map((x) => ({ label: x.label, values: x.values, family: x.font ? fontStack(x.font) : null })),
   height,
 });
@@ -31,7 +32,7 @@ const payload = JSON.stringify({
       <div class="tc-plot" data-trend={payload} aria-label={`${title}. Interactive line chart; a table view follows.`} role="figure" />
     ) : (
       <p class="tc-empty">
-        Trend lines appear once there are at least two crawls to compare. The first weekly crawl is in; the next lands on Sunday.
+        Trend lines appear once there are at least two data points. Our weekly crawl started recently; this fills in as it runs.
       </p>
     )
   }
@@ -42,6 +43,7 @@ const payload = JSON.stringify({
         <thead>
           <tr>
             <th>Period</th>
+            <th>Source</th>
             {series.map((s) => <th class="r">{s.label}</th>)}
           </tr>
         </thead>
@@ -49,7 +51,8 @@ const payload = JSON.stringify({
           {
             periods.map((p, i) => (
               <tr>
-                <td>{p.kind === 'wayback' ? `${p.id} (archive)` : date(p.date)}</td>
+                <td>{p.kind === 'wayback' ? p.id.replace('-', ' ') : date(p.date)}</td>
+                <td>{p.kind === 'wayback' ? `Internet Archive estimate, ${p.n} sites` : `Our crawl, ${p.n.toLocaleString()} sites`}</td>
                 {series.map((s) => (
                   <td class="r">{pct(s.values[i])}</td>
                 ))}

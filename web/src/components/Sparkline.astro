@@ -1,11 +1,12 @@
 ---
 interface Props {
   values: (number | null)[];
+  kinds?: string[];
   width?: number;
   height?: number;
   label?: string;
 }
-const { values, width = 120, height = 32, label } = Astro.props;
+const { values, kinds = [], width = 120, height = 32, label } = Astro.props;
 const known = values.map((v, i) => [i, v] as const).filter(([, v]) => v !== null) as [number, number][];
 const max = Math.max(...known.map(([, v]) => v), 0.0001);
 const min = Math.min(...known.map(([, v]) => v), max);
@@ -13,22 +14,40 @@ const span = max - min || max || 1;
 const pad = 3;
 const x = (i: number) => (values.length <= 1 ? width - pad : pad + (i / (values.length - 1)) * (width - pad * 2));
 const y = (v: number) => height - pad - ((v - min) / span) * (height - pad * 2);
-const segments: string[] = [];
-let current = '';
+const archiveSegs: string[] = [];
+const liveSegs: string[] = [];
+let archive = '';
+let live = '';
+let prev: [number, number, boolean] | null = null;
 values.forEach((v, i) => {
   if (v === null) {
-    if (current) segments.push(current);
-    current = '';
-  } else current += `${current ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`;
+    if (archive) archiveSegs.push(archive);
+    if (live) liveSegs.push(live);
+    archive = live = '';
+    prev = null;
+    return;
+  }
+  const isArchive = kinds[i] === 'wayback';
+  const pt = `${x(i).toFixed(1)},${y(v).toFixed(1)}`;
+  if (isArchive) archive += `${archive ? 'L' : 'M'}${pt}`;
+  else {
+    if (prev && prev[2] && archive) archive += `L${pt}`;
+    live += `${live ? 'L' : 'M'}${pt}`;
+  }
+  prev = [x(i), y(v), isArchive];
 });
-if (current) segments.push(current);
+if (archive) archiveSegs.push(archive);
+if (live) liveSegs.push(live);
 const last = known.at(-1);
 ---
 
 {
   known.length > 1 ? (
     <svg class="spark" viewBox={`0 0 ${width} ${height}`} width={width} height={height} role="img" aria-label={label ?? 'Trend'}>
-      {segments.map((d) => (
+      {archiveSegs.map((d) => (
+        <path d={d} class="archive" />
+      ))}
+      {liveSegs.map((d) => (
         <path d={d} />
       ))}
       {last && <circle cx={x(last[0])} cy={y(last[1])} r="2.5" />}
@@ -49,6 +68,11 @@ const last = known.at(-1);
     stroke-width: 1.5;
     stroke-linejoin: round;
     stroke-linecap: round;
+  }
+  path.archive {
+    stroke: var(--ink-3);
+    stroke-dasharray: 3 3;
+    stroke-width: 1.25;
   }
   circle {
     fill: var(--ink);

@@ -8,18 +8,22 @@ import Switches from '../components/Switches.astro';
 import FontName from '../components/FontName.astro';
 import TypeMap from '../components/TypeMap.astro';
 import Heatmap from '../components/Heatmap.astro';
+import Momentum, { type MomentumData } from '../components/Momentum.astro';
 import { load, type Overview, type Ranked } from '../lib/data';
-import { date, kb, pct, PLATFORM_LABELS, SOURCE_LABELS } from '../lib/format';
+import { date, kb, pct, PLATFORM_LABELS, SOURCE_LABELS, trendText } from '../lib/format';
 import { glyphs } from '../lib/specimen';
 
 const o = load<Overview>('overview.json');
+const momentum = load<MomentumData>('momentum.json');
 const mapSets = [
   { key: 'all', label: 'All sites', n: o.n_sites, items: o.body },
   ...o.categories.map((c) => ({ key: c.slug, label: c.name, n: c.n, items: load<{ body: Ranked[] }>(`category/${c.slug}.json`).body })),
 ];
-const fonts = [...mapSets.flatMap((m) => m.items.slice(0, 20)), ...o.matrix.fonts, ...o.body, ...o.heading, ...o.categories.flatMap((c) => c.top.slice(0, 3)), ...o.changes.flatMap((c) => [c.from, c.to]), ...o.pairings.flatMap((p) => [p.heading, p.body])];
+const moverFonts = [momentum.crawl, momentum.archive].flatMap((src) => Object.values(src.windows).flatMap((w) => w.fonts.slice(0, 6).concat(w.fonts.slice(-6))));
+const fonts = [...moverFonts, ...mapSets.flatMap((m) => m.items.slice(0, 20)), ...o.matrix.fonts, ...o.body, ...o.heading, ...o.categories.flatMap((c) => c.top.slice(0, 3)), ...o.changes.flatMap((c) => [c.from, c.to]), ...o.pairings.flatMap((p) => [p.heading, p.body])];
 const text = glyphs(...fonts.map((f) => f?.name ?? ''));
 const topSix = o.body.filter((f) => !f.generic).slice(0, 6);
+const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for body text');
 ---
 
 <Layout fonts={fonts} specimenText={text}>
@@ -32,22 +36,32 @@ const topSix = o.body.filter((f) => !f.generic).slice(0, 6);
       </p>
       <p class="key small">
         Each name is set in its own typeface where the license allows. <span class="licensed">Italic names</span> are commercial faces we can’t serve.
+        {o.trend_panel && ` The small lines show each font’s trend among the ${o.trend_panel} sites we can trace back in time, dashed where estimated from the Internet Archive.`}
       </p>
     </div>
   </section>
 
   <section class="wrap board-wrap" aria-labelledby="body-h">
     <h2 id="body-h" class="sr-only">Most used body fonts</h2>
-    <Leaderboard fonts={o.body} feature={10} />
+    <Leaderboard fonts={o.body} feature={10} kinds={o.periods.map((p) => p.kind)} />
   </section>
 
   <section class="wrap section" aria-labelledby="trend-h">
     <div class="section-head">
       <h2 id="trend-h">Over time</h2>
       <a class="more" href="/compare">Compare any fonts</a>
-      <p>The shaded years come from archived copies of each homepage, read from its CSS. Everything after is our weekly browser crawl.</p>
+      <p>Body text share over time. Hover a name to isolate it; click to hide it.</p>
     </div>
-    <TrendChart periods={o.periods} series={topSix.map((f) => ({ label: f.name, values: f.series, font: f }))} title="Share of homepages using each font for body text" caption={o.trend_panel ? `Follows the same ${o.trend_panel} homepages through time, so the lines show sites changing fonts rather than our sample changing. Hover a name to isolate it; click to hide it.` : 'Hover a name to isolate it; click to hide it.'} height={380} />
+    <TrendChart periods={o.periods} series={topSix.map((f) => ({ label: f.name, values: f.series, font: f }))} title={trend.title} caption={trend.caption} height={380} />
+  </section>
+
+  <section class="wrap section" aria-labelledby="move-h">
+    <div class="section-head">
+      <h2 id="move-h">Rising and falling</h2>
+      <a class="more" href="/trends">All movers</a>
+      <p>Not the most used, but the most switched to and away from. Hover a row for example sites.</p>
+    </div>
+    <Momentum data={momentum} id="home" limit={6} flows={false} />
   </section>
 
   <section class="wrap section" aria-labelledby="map-h">

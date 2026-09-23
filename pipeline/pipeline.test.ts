@@ -86,3 +86,8 @@ test('garbled, minified and CJK font names', () => {
   assert.match(slugify('デザイン書体'), /^u-30c7-/);
   assert.equal(slugify('Crème Brûlée'), 'creme-brulee');
 });
+
+test('unescapes CSS escapes in family names', () => {
+  assert.equal(normalizeFamily('Hurme Geometric Sans\\ 3')?.name, 'Hurme Geometric Sans 3');
+  assert.equal(normalizeFamily('\\31 0x Sans')?.name, '10x Sans');
+});

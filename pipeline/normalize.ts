@@ -39,13 +39,21 @@ export function normalizeFamily(raw: string | null | undefined) {
   if (!raw) return null;
   const hit = cache.get(raw);
   if (hit) return hit;
-  let s = raw.normalize('NFKC').trim().replace(/^['"]|['"]$/g, '').replace(/\s+/g, ' ');
+  let s = raw
+    .normalize('NFKC')
+    .trim()
+    .replace(/^['"]|['"]$/g, '')
+    .replace(/\\([0-9a-f]{1,6})\s?/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/\\(.)/g, '$1')
+    .replace(/\s+/g, ' ');
   if (s.includes('\ufffd') || /[\u0080-\u009f]/.test(s)) return UNKNOWN;
   const nextFont = s.match(/^__(.+?)_(?:Fallback_)?[0-9a-f]{5,}$/i);
   if (nextFont) s = nextFont[1].replace(/_/g, ' ');
   s = s.replace(/[-_ ][0-9a-f]{6,}$/i, '');
   if (/^(font|ff|f)$/i.test(s) || /^wf_[0-9a-f]{12,}$/i.test(raw.trim())) return UNKNOWN;
   if (!GENERIC.has(s.toLowerCase()) && s.replace(/\s/g, '').length <= 2) return UNKNOWN;
+  const genericFont = s.toLowerCase().match(/^(sans-?serif|serif|monospace)[\s_-]*(font|family|stack)$/);
+  if (genericFont) s = genericFont[1].replace('sansserif', 'sans-serif');
   let result;
   if (GENERIC.has(s.toLowerCase())) result = { name: s.toLowerCase(), slug: slugify(s), generic: true };
   else {

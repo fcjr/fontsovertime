@@ -372,9 +372,45 @@ p {
   stroke-linecap: round;
   transition: opacity 160ms, stroke-width 160ms;
 }
-.tc-stage .line.dim,
+.tc-stage .series.dim,
 .tc-stage .direct.dim {
   opacity: 0.18;
+}
+.tc-stage .archive-line {
+  stroke-dasharray: 5 4;
+  stroke-width: 1.75;
+}
+.tc-stage .crawl-start {
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+.tc-stage .crawl-label {
+  fill: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+}
+.tc-source-key {
+  display: flex;
+  gap: 16px;
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+}
+.tc-source-key span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.tc-source-key line {
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+.tc-source-key .k-archive {
+  stroke-dasharray: 4 3;
+}
+.tip-src {
+  color: var(--ink-3);
+  font-size: 0.75rem;
+  margin: -4px 0 6px;
 }
 .tc-stage .area {
   opacity: 0;

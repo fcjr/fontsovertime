@@ -147,7 +147,10 @@ const weightList = (w: Record<string, number>) =>
   <section class="wrap section" aria-labelledby="hist-h">
     <div class="section-head">
       <h2 id="hist-h">History</h2>
-      <p>Each row is a stretch of time where the fonts stayed the same. Archive rows are read from saved copies of the page’s CSS and are less precise.</p>
+      <p>
+        Each row is a stretch of time where the fonts stayed the same. Rows marked Internet Archive are estimated from saved copies of the page and are
+        less reliable than our own crawl.
+      </p>
     </div>
     <ol class="timeline">
       {
@@ -155,7 +158,7 @@ const weightList = (w: Record<string, number>) =>
           <li class:list={{ archive: h.method === 'wayback' }}>
             <span class="when num small">
               {h.from === h.to ? date(h.from) : `${date(h.from)} to ${date(h.to)}`}
-              {h.method === 'wayback' && <span class="tag">archive</span>}
+              <span class:list={['tag', { live: h.method !== 'wayback' }]}>{h.method === 'wayback' ? 'Internet Archive' : 'Our crawl'}</span>
             </span>
             <span class="fonts">
               <FontName font={h.body} />
@@ -352,10 +355,16 @@ const weightList = (w: Record<string, number>) =>
   .tag {
     margin-left: 8px;
     color: var(--ink-3);
-    border: 1px solid var(--rule);
+    border: 1px dashed var(--ink-3);
     border-radius: 4px;
-    padding: 0 5px;
+    padding: 0 6px;
     font-size: 0.75rem;
+    white-space: nowrap;
+  }
+  .tag.live {
+    color: var(--ink);
+    border-style: solid;
+    border-color: var(--ink);
   }
   .fonts {
     font-size: 1.5rem;

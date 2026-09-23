@@ -32,3 +32,17 @@ export const PLATFORM_LABELS: Record<string, string> = {
   gatsby: 'Gatsby',
   none: 'Other or custom',
 };
+
+export function trendText(periods: { kind: string; date: string }[], panel: number | null, subject: string) {
+  const archive = periods.filter((p) => p.kind === 'wayback');
+  const live = periods.find((p) => p.kind !== 'wayback');
+  const since = live ? new Date(live.date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }) : null;
+  if (!panel || !archive.length) {
+    return { title: `Share of ${subject} over time`, caption: since ? `From our weekly crawl, which started in ${since}.` : '' };
+  }
+  const from = archive[0].date.slice(0, 4);
+  return {
+    title: `Share among the ${panel} sites we can trace back to ${from}`,
+    caption: `Dashed lines before ${since} are estimates from Internet Archive copies of these homepages; the solid part is our own weekly crawl. Because this follows a fixed set of ${panel} sites, its numbers differ from the rankings above, which cover every site we crawl.`,
+  };
+}

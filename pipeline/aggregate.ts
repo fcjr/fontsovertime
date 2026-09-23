@@ -376,6 +376,7 @@ for (const cat of categoryList) {
   const hist = (catPanel >= PANEL_MIN ? trendObs : weeklyObs).filter((o) => inGroup(o.domain, cat.slug, o));
   write(`category/${cat.slug}.json`, {
     ...cat,
+    trend_panel: catPanel >= PANEL_MIN ? catPanel : null,
     periods: periodsOut,
     body: ranking(obs, hist, 'body', 16),
     heading: ranking(obs, hist, 'heading', 10),
@@ -409,7 +410,9 @@ for (const font of allFonts.values()) {
     e.count++;
     partners.set(other.slug, e);
   }
-  const firstSeen = observations.filter((o) => o.body?.slug === font.slug || o.heading?.slug === font.slug).map((o) => o.date).sort()[0];
+  const seen = observations.filter((o) => o.body?.slug === font.slug || o.heading?.slug === font.slug);
+  const firstLive = seen.filter((o) => o.kind !== 'wayback').map((o) => o.date).sort()[0] ?? null;
+  const firstArchive = seen.filter((o) => o.kind === 'wayback').map((o) => o.date).sort()[0] ?? null;
   const entry = {
     name: font.name,
     slug: font.slug,
@@ -424,7 +427,8 @@ for (const font of allFonts.values()) {
   fontIndex.push(entry);
   write(`font/${font.slug}.json`, {
     ...entry,
-    first_seen: firstSeen,
+    first_live: firstLive,
+    first_archive: firstArchive,
     periods: periodsOut,
     series: { body: s, heading: sh },
     by_category: byCategory,
@@ -480,6 +484,103 @@ for (const [domain, list] of byDomain) {
 siteIndex.sort((a, b) => a.domain.localeCompare(b.domain));
 write('sites.json', siteIndex);
 write('changes.json', changes.slice(0, 500));
+
+type Transition = { date: string; domain: string; from: Font; to: Font };
+function transitions(family: 'archive' | 'crawl') {
+  const out: Transition[] = [];
+  for (const [domain, list] of byDomain) {
+    const seq = list.filter((o) => (family === 'archive' ? o.kind === 'wayback' : o.kind !== 'wayback' && o.method === 'browser'));
+    const found: Transition[] = [];
+    let stable: Font | null = null;
+    let candidate: Font | null = null;
+    let seen = 0;
+    let since = '';
+    let lastDate = '';
+    for (const o of seq) {
+      if (o.date === lastDate) continue;
+      lastDate = o.date;
+      const v = o.body;
+      if (!eligible(v)) continue;
+      if (!stable) stable = v;
+      else if (v!.slug === stable.slug) candidate = null;
+      else {
+        if (candidate?.slug === v!.slug) seen++;
+        else {
+          candidate = v;
+          seen = 1;
+          since = o.date;
+        }
+        if (seen >= 2) {
+          found.push({ date: since, domain, from: stable, to: v! });
+          stable = v;
+          candidate = null;
+        }
+      }
+    }
+    const reversed = new Set<number>();
+    for (let i = 0; i + 1 < found.length; i++) {
+      const a = found[i];
+      const b = found[i + 1];
+      if (a.to.slug === b.from.slug && b.to.slug === a.from.slug && Date.parse(b.date) - Date.parse(a.date) < 400 * 864e5) {
+        reversed.add(i);
+        reversed.add(i + 1);
+      }
+    }
+    out.push(...found.filter((_, i) => !reversed.has(i)));
+  }
+  return out;
+}
+
+function momentum(list: Transition[], sites: number) {
+  const end = list.map((t) => t.date).sort().at(-1) ?? new Date().toISOString().slice(0, 10);
+  const windows = [
+    { key: 'all', label: 'All', days: Infinity },
+    { key: '2y', label: '2 years', days: 730 },
+    { key: '1y', label: '1 year', days: 365 },
+  ];
+  const result: Record<string, unknown> = {};
+  for (const w of windows) {
+    const inWindow = list.filter((t) => Date.parse(end) - Date.parse(t.date) <= w.days * 864e5);
+    const fonts = new Map<string, { font: Font; adopted: number; dropped: number; into: string[]; outof: string[] }>();
+    const entry = (f: Font) => fonts.get(f.slug) ?? fonts.set(f.slug, { font: f, adopted: 0, dropped: 0, into: [], outof: [] }).get(f.slug)!;
+    const flows = new Map<string, { from: Font; to: Font; count: number; examples: string[] }>();
+    for (const t of inWindow) {
+      const to = entry(t.to);
+      to.adopted++;
+      if (to.into.length < 5) to.into.push(t.domain);
+      const from = entry(t.from);
+      from.dropped++;
+      if (from.outof.length < 5) from.outof.push(t.domain);
+      const key = `${t.from.slug}|${t.to.slug}`;
+      const flow = flows.get(key) ?? flows.set(key, { from: t.from, to: t.to, count: 0, examples: [] }).get(key)!;
+      flow.count++;
+      if (flow.examples.length < 4) flow.examples.push(t.domain);
+    }
+    const first = inWindow.map((t) => t.date).sort()[0] ?? null;
+    result[w.key] = {
+      label: w.label,
+      from: first,
+      to: inWindow.length ? end : null,
+      switches: inWindow.length,
+      fonts: [...fonts.values()]
+        .filter((f) => f.adopted + f.dropped >= 2)
+        .map((f) => ({ ...fontRef(f.font), adopted: f.adopted, dropped: f.dropped, net: f.adopted - f.dropped, into: f.into, outof: f.outof }))
+        .sort((a, b) => b.net - a.net || b.adopted - a.adopted),
+      flows: [...flows.values()]
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 12)
+        .map((f) => ({ from: fontRef(f.from), to: fontRef(f.to), count: f.count, examples: f.examples })),
+    };
+  }
+  return { sites, windows: result };
+}
+
+const liveSites = new Set(observations.filter((o) => o.kind !== 'wayback').map((o) => o.domain)).size;
+const liveWeeks = trendPeriods.filter((p) => p.kind === 'weekly').length;
+write('momentum.json', {
+  crawl: { ...momentum(transitions('crawl'), liveSites), weeks: liveWeeks, since: trendPeriods.find((p) => p.kind === 'weekly')?.date ?? null },
+  archive: momentum(transitions('archive'), panel.size),
+});
 write('pairings.json', { body_heading: pairings(baseObs, 60) });
 write('categories.json', categoryList);
 
