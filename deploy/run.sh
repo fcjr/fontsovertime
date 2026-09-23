@@ -21,6 +21,11 @@ hc() { if [ -n "${!hc_var:-}" ]; then curl -fsS -m 10 --retry 3 "${!hc_var}$1" >
 hc /start
 trap 'hc /fail' ERR
 
+# A stopped job may have saved data without committing it; keep it rather than blocking the pull.
+if [ -n "$(git status --porcelain -- data)" ]; then
+  git add data
+  git commit -q -m "Save data from an interrupted $kind run"
+fi
 git pull -q --rebase origin main
 pnpm install --frozen-lockfile --silent
 

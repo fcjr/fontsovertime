@@ -14,11 +14,17 @@ release=/home/crawler/release
 echo "release: $(as_crawler 'cd ~/release && git log -1 --format="%h %s"')"
 
 for dir in crawl backfill; do
-  if as_crawler "exec 9>/tmp/fontsovertime-$dir.lock; flock -n 9 && cd ~/$dir && git pull -q --rebase origin main && pnpm install --frozen-lockfile --silent"; then
-    echo "$dir: updated to $(as_crawler "cd ~/$dir && git rev-parse --short HEAD")"
-  else
-    echo "$dir: a job is running; it picks up the new code when it next starts"
-  fi
+  result="$(as_crawler "exec 9>/tmp/fontsovertime-$dir.lock
+    flock -n 9 || { echo busy; exit; }
+    cd ~/$dir
+    [ -z \"\$(git status --porcelain -- data)\" ] || { echo unsaved; exit; }
+    git pull -q --rebase origin main && pnpm install --frozen-lockfile --silent && echo updated || echo failed")"
+  case "$result" in
+    *updated) echo "$dir: updated to $(as_crawler "cd ~/$dir && git rev-parse --short HEAD")" ;;
+    *busy) echo "$dir: a job is running; it picks up the new code when it next starts" ;;
+    *unsaved) echo "$dir: has data from an interrupted run; the next job saves it and updates" ;;
+    *) echo "$dir: update failed" ;;
+  esac
 done
 
 as_crawler 'cd ~/release && pnpm install --frozen-lockfile --silent && pnpm exec playwright install chromium >/dev/null'
