@@ -81,12 +81,12 @@ class Limiter {
     this.paused = Math.max(this.paused, Date.now() + 60_000);
     console.error(`${this.name}: 429, slowing to ${this.rpm}/min`);
   };
-  onRefused = () => {
+  onRefused = (what = '') => {
     this.refusals++;
     this.streak = 0;
     this.rpm = Math.max(this.min, Math.floor(this.rpm / 2));
     this.paused = Math.max(this.paused, Date.now() + 15 * 60_000);
-    console.error(`${this.name}: connection refused, pausing 15 minutes, then ${this.rpm}/min`);
+    console.error(`${this.name}: connection refused${what ? ` (${what.slice(0, 160)})` : ''}, pausing 15 minutes, then ${this.rpm}/min`);
   };
 }
 
@@ -108,7 +108,7 @@ async function get(limiter: Limiter, url: string, attempt = 0): Promise<Response
     return res;
   } catch (e) {
     if (isRefusal(e) && attempt < 6) {
-      limiter.onRefused();
+      limiter.onRefused(url);
       return get(limiter, url, attempt + 1);
     }
     if (attempt < 2) {
@@ -376,7 +376,7 @@ async function worker() {
           ),
           240_000,
         ).catch(async (e) => {
-          if (isRefusal(e)) a.replay.onRefused();
+          if (isRefusal(e)) a.replay.onRefused(String((e as Error).message ?? e));
           await (browser as Browser | null)?.close().catch(() => {});
           browser = null;
           return { status: 'error', error: String((e as Error).message ?? e).split('\n')[0] };
@@ -399,7 +399,7 @@ async function worker() {
           row = { ...baseFor(q, c), method: 'wayback-browser', ...m };
           break;
         }
-        if (/ERR_CONNECTION_REFUSED/.test(String(m.error))) a.replay.onRefused();
+        if (/ERR_CONNECTION_REFUSED/.test(String(m.error))) a.replay.onRefused(String(m.error));
         lastError = String(m.error ?? (defaultOnly ? 'browser default only' : 'unusable capture'));
       }
       if (!row) {
