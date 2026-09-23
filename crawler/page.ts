@@ -122,6 +122,7 @@ export async function measurePage(
       const req = route.request();
       if (blockedTypes.has(req.resourceType()) || BLOCKED_HOSTS.test(hostname(req.url()))) return route.abort().catch(() => {});
       const fromArchive = !!opts.archiveHost && opts.archiveHost.test(req.url());
+      if (opts.archived && !fromArchive && req.isNavigationRequest()) return route.abort('blockedbyclient').catch(() => {});
       if (fromArchive && opts.styleCache && req.resourceType() === 'stylesheet') {
         const key = unwrap(req.url());
         const hit = opts.styleCache.get(key);

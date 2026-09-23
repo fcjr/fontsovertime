@@ -93,27 +93,27 @@ class Limiter {
 const isRefusal = (e: unknown) =>
   /ECONNREFUSED|ERR_CONNECTION_REFUSED/.test(String((e as Error)?.message ?? e) + String((e as { cause?: { code?: string } })?.cause?.code ?? ''));
 
-async function get(limiter: Limiter, url: string, attempt = 0): Promise<Response | null> {
+async function get(limiter: Limiter, url: string, attempt = 0, redirect: RequestRedirect = 'follow'): Promise<Response | null> {
   await limiter.take();
   try {
-    const res = await fetch(url, { headers: { 'user-agent': USER_AGENT }, signal: AbortSignal.timeout(45_000) });
+    const res = await fetch(url, { headers: { 'user-agent': USER_AGENT }, redirect, signal: AbortSignal.timeout(45_000) });
     if (res.status === 429 && attempt < 4) {
       limiter.onThrottled();
-      return get(limiter, url, attempt + 1);
+      return get(limiter, url, attempt + 1, redirect);
     }
     if (res.status >= 500 && attempt < 2) {
       await sleep(5_000 * 2 ** attempt);
-      return get(limiter, url, attempt + 1);
+      return get(limiter, url, attempt + 1, redirect);
     }
     return res;
   } catch (e) {
     if (isRefusal(e) && attempt < 6) {
       limiter.onRefused(url);
-      return get(limiter, url, attempt + 1);
+      return get(limiter, url, attempt + 1, redirect);
     }
     if (attempt < 2) {
       await sleep(3_000);
-      return get(limiter, url, attempt + 1);
+      return get(limiter, url, attempt + 1, redirect);
     }
     return null;
   }
@@ -161,10 +161,21 @@ const ia: Archive = {
     return rows.map(([ts, url, status]) => ({ ts, url, status: Number(status) }));
   },
   replayUrl: (ts, url) => `https://web.archive.org/web/${ts}if_/${url}`,
+  // Follow redirects by hand and only inside the archive: an archived redirect to a live site is an unusable capture.
   raw: (ts) => async (url) => {
-    const res = await get(iaLimiter, `https://web.archive.org/web/${ts}id_/${url}`);
-    if (!res || !res.url.startsWith('https://web.archive.org/')) return null;
-    return { status: res.status, url, text: await res.text() };
+    let target = `https://web.archive.org/web/${ts}id_/${url}`;
+    for (let hops = 0; hops < 6; hops++) {
+      const res = await get(iaLimiter, target, 0, 'manual');
+      if (!res) return null;
+      const location = res.headers.get('location');
+      if (res.status >= 300 && res.status < 400 && location) {
+        target = new URL(location, target).href;
+        if (!target.startsWith('https://web.archive.org/')) return null;
+        continue;
+      }
+      return { status: res.status, url, text: await res.text() };
+    }
+    return null;
   },
 };
 
@@ -454,6 +465,18 @@ async function worker() {
   }
   await (browser as Browser | null)?.close().catch(() => {});
 }
+
+// Stop cleanly on SIGTERM/SIGINT (systemd stop, timeouts): save what's measured and exit.
+let exiting = false;
+for (const signal of ['SIGTERM', 'SIGINT'] as const)
+  process.on(signal, () => {
+    if (exiting) return;
+    exiting = true;
+    console.error(`${signal}: saving progress and exiting`);
+    stop = true;
+    flush();
+    process.exit(0);
+  });
 
 await Promise.all(Array.from({ length: Number(values.concurrency) }, worker));
 flush();
