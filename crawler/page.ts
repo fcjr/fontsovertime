@@ -168,7 +168,8 @@ export async function measurePage(
     const finalUrl = unwrap(page.url());
     const httpStatus = response?.status() ?? null;
     const unstyled = data.broken_css > 0 && /^("?times new roman"?|serif)$/i.test(data.dominant[0]?.stack ?? '');
-    const archiveMiss = opts.archived && (/wayback machine/i.test(data.title) || !data.text_chars || unstyled);
+    const leftArchive = opts.archived && !/^https:\/\/web\.archive\.org\//.test(page.url());
+    const archiveMiss = opts.archived && (leftArchive || /wayback machine/i.test(data.title) || !data.text_chars || unstyled);
     const status =
       archiveMiss ? 'error'
       : (httpStatus && [401, 403, 429, 503].includes(httpStatus)) || CHALLENGE.test(data.title) ? 'blocked'

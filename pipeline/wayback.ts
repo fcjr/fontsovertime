@@ -91,7 +91,7 @@ const waybackFetcher =
   (ts: string): Fetcher =>
   async (url) => {
     const res = await get(`https://web.archive.org/web/${ts}id_/${url}`);
-    if (!res) return null;
+    if (!res || !res.url.startsWith('https://web.archive.org/')) return null;
     return { status: res.status, url, text: await res.text() };
   };
 
