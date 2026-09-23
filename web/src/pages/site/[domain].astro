@@ -1,0 +1,380 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FontName from '../../components/FontName.astro';
+import Switches from '../../components/Switches.astro';
+import { load, type Change, type FontRef, type SiteRow } from '../../lib/data';
+import { date, kb, pct, PLATFORM_LABELS, SOURCE_LABELS } from '../../lib/format';
+import { glyphs } from '../../lib/specimen';
+
+type Detail = { family: string; share: number; stack: string; weights: Record<string, number>; font: FontRef | null };
+type Site = SiteRow & {
+  subcategory: string | null;
+  cohorts: { slug: string; name: string }[];
+  title: string | null;
+  final_url: string | null;
+  sources: string[];
+  font_hosts: string[];
+  font_bytes: number | null;
+  preloads: number | null;
+  dominant: Detail[];
+  heading_detail: Detail[];
+  declared: { family: string; weights: string[]; variable: boolean; status?: string[]; font: FontRef | null }[];
+  history: { from: string; to: string; body: FontRef | null; heading: FontRef | null; method: string }[];
+  changes: Change[];
+};
+
+export function getStaticPaths() {
+  return load<SiteRow[]>('sites.json').map((s) => ({ params: { domain: s.domain } }));
+}
+
+const s = load<Site>(`site/${Astro.params.domain}.json`);
+const cats = load<{ slug: string; name: string }[]>('categories.json');
+const cat = cats.find((c) => c.slug === s.category);
+const fonts = [s.body, s.heading, ...s.dominant.map((d) => d.font), ...s.history.flatMap((h) => [h.body, h.heading])];
+const used = s.declared.filter((d) => !d.status || d.status.includes('loaded'));
+const unused = s.declared.length - used.length;
+const weightList = (w: Record<string, number>) =>
+  Object.keys(w)
+    .sort((a, b) => Number(a) - Number(b))
+    .join(', ');
+---
+
+<Layout
+  title={s.domain}
+  description={`${s.domain} sets its body text in ${s.body?.name ?? 'an unknown font'}${s.heading && s.heading.slug !== s.body?.slug ? ` and headings in ${s.heading.name}` : ''}. Font history and details.`}
+  fonts={fonts}
+  specimenText={glyphs(...fonts.map((f) => f?.name ?? ''))}
+>
+  <section class="wrap hero">
+    <p class="crumb small">
+      {cat ? <a href={`/category/${cat.slug}`}>{cat.name}</a> : 'Site'}
+    </p>
+    <h1 class="domain">{s.domain}</h1>
+    {s.title && <p class="title muted">{s.title}</p>}
+    {
+      s.cohorts.length > 0 && (
+        <ul class="cohorts">
+          {s.cohorts.map((c) => (
+            <li>
+              <a href={`/category/${c.slug}`}>{c.name}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+
+  <section class="wrap">
+    <dl class="now">
+      <div>
+        <dt>Body text</dt>
+        <dd><FontName font={s.body} /></dd>
+      </div>
+      <div>
+        <dt>Headings</dt>
+        <dd><FontName font={s.heading} /></dd>
+      </div>
+    </dl>
+    <p class="small muted observed">
+      Last observed {date(s.date)}{s.method === 'static' ? ', from the page’s CSS because the browser crawl was blocked' : ''}.
+    </p>
+  </section>
+
+  {
+    s.dominant.length > 0 && (
+      <section class="wrap section two">
+        <div>
+          <div class="section-head">
+            <h2>All text on the page</h2>
+          </div>
+          <ul class="mix">
+            {s.dominant.map((d) => (
+              <li>
+                <span class="mix-name">
+                  <FontName font={d.font} />
+                </span>
+                <span class="mix-bar" aria-hidden="true">
+                  <span style={`width:${d.share * 100}%`} />
+                </span>
+                <span class="num small">{pct(d.share)}</span>
+                <span class="mix-meta small muted">Weights {weightList(d.weights)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <div class="section-head">
+            <h2>Loading</h2>
+          </div>
+          <dl class="kv">
+            <div>
+              <dt>Served by</dt>
+              <dd>{s.sources.length ? s.sources.map((x) => SOURCE_LABELS[x] ?? x).join(', ') : 'No web fonts'}</dd>
+            </div>
+            <div>
+              <dt>Font files</dt>
+              <dd class="num">{kb(s.font_bytes)}</dd>
+            </div>
+            <div>
+              <dt>Preloaded fonts</dt>
+              <dd class="num">{s.preloads ?? '–'}</dd>
+            </div>
+            <div>
+              <dt>Families declared</dt>
+              <dd class="num">
+                {s.declared.length}
+                {unused > 0 && <span class="muted"> ({unused} never used)</span>}
+              </dd>
+            </div>
+            <div>
+              <dt>Platform</dt>
+              <dd>{s.platform ? (PLATFORM_LABELS[s.platform] ?? s.platform) : 'Custom or unknown'}</dd>
+            </div>
+            {s.font_hosts.length > 0 && (
+              <div>
+                <dt>Font hosts</dt>
+                <dd class="hosts small">{s.font_hosts.join(', ')}</dd>
+              </div>
+            )}
+          </dl>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="wrap section" aria-labelledby="hist-h">
+    <div class="section-head">
+      <h2 id="hist-h">History</h2>
+      <p>Each row is a stretch of time where the fonts stayed the same. Archive rows are read from saved copies of the page’s CSS and are less precise.</p>
+    </div>
+    <ol class="timeline">
+      {
+        [...s.history].reverse().map((h) => (
+          <li class:list={{ archive: h.method === 'wayback' }}>
+            <span class="when num small">
+              {h.from === h.to ? date(h.from) : `${date(h.from)} to ${date(h.to)}`}
+              {h.method === 'wayback' && <span class="tag">archive</span>}
+            </span>
+            <span class="fonts">
+              <FontName font={h.body} />
+              {h.heading && h.heading.slug !== h.body?.slug && (
+                <span class="with">
+                  <span class="muted small">headings</span> <FontName font={h.heading} />
+                </span>
+              )}
+            </span>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  {
+    s.changes.length > 0 && (
+      <section class="wrap section">
+        <div class="section-head"><h2>Switches</h2></div>
+        <Switches changes={s.changes} />
+      </section>
+    )
+  }
+
+  {
+    s.declared.length > 0 && (
+      <section class="wrap section">
+        <details class="declared">
+          <summary>Every font face the page declares ({s.declared.length})</summary>
+          <div class="table-scroll">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Family as declared</th>
+                  <th>Weights</th>
+                  <th>Variable</th>
+                  <th>Used</th>
+                </tr>
+              </thead>
+              <tbody>
+                {s.declared.map((d) => (
+                  <tr>
+                    <td>{d.family}</td>
+                    <td class="num">{d.weights.join(', ')}</td>
+                    <td>{d.variable ? 'Yes' : 'No'}</td>
+                    <td>{!d.status ? '–' : d.status.includes('loaded') ? 'Yes' : 'No'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+    )
+  }
+</Layout>
+
+<style>
+  .hero {
+    padding-top: clamp(40px, 6vw, 88px);
+    padding-bottom: 32px;
+    display: grid;
+    gap: 12px;
+  }
+  .crumb a {
+    color: var(--ink-3);
+  }
+  .domain {
+    overflow-wrap: anywhere;
+  }
+  .title {
+    max-width: 40rem;
+  }
+  .cohorts {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .cohorts a {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    padding: 3px 10px;
+  }
+  .cohorts a:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .now {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 24px 48px;
+    margin: 0;
+    padding: 24px 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .now dt {
+    color: var(--ink-3);
+    font-size: 0.875rem;
+  }
+  .now dd {
+    margin: 6px 0 0;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+  }
+  .observed {
+    margin-top: 12px;
+  }
+  .two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 32px 64px;
+    align-items: start;
+  }
+  .mix {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .mix li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 6rem 3rem;
+    align-items: center;
+    gap: 4px 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .mix-name {
+    font-size: 1.375rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .mix-bar {
+    height: 8px;
+  }
+  .mix-bar span {
+    display: block;
+    height: 100%;
+    background: var(--ink);
+    border-radius: 0 4px 4px 0;
+    min-width: 2px;
+  }
+  .mix .num {
+    text-align: right;
+  }
+  .mix-meta {
+    grid-column: 1 / -1;
+  }
+  .kv {
+    margin: 0;
+    display: grid;
+  }
+  .kv div {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .kv dt {
+    color: var(--ink-3);
+  }
+  .kv dd {
+    margin: 0;
+  }
+  .hosts {
+    overflow-wrap: anywhere;
+  }
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .timeline li {
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 4px 24px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: baseline;
+  }
+  .when {
+    color: var(--ink-2);
+  }
+  .tag {
+    margin-left: 8px;
+    color: var(--ink-3);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 0 5px;
+    font-size: 0.75rem;
+  }
+  .fonts {
+    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    align-items: baseline;
+  }
+  .archive .fonts {
+    color: var(--ink-2);
+  }
+  .with {
+    font-size: 1.125rem;
+  }
+  .declared summary {
+    cursor: pointer;
+    font-weight: 500;
+  }
+  @media (max-width: 640px) {
+    .timeline li {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,1001 @@
+domain,hn_stories,hn_points,source
+simonwillison.net,142,60362,kagi-smallweb hn-popularity
+jeffgeerling.com,83,26195,kagi-smallweb hn-popularity hn-personal-blogs
+krebsonsecurity.com,83,25615,hn-popularity
+righto.com,67,13331,kagi-smallweb hn-popularity
+shkspr.mobi,49,13440,kagi-smallweb hn-popularity hn-personal-blogs
+lcamtuf.substack.com,49,11886,hn-popularity
+seangoedecke.com,44,16088,kagi-smallweb hn-popularity
+rachelbythebay.com,44,12996,kagi-smallweb hn-popularity
+jvns.ca,42,14342,kagi-smallweb hn-popularity
+fabiensanglard.net,42,12692,kagi-smallweb hn-popularity
+pluralistic.net,41,11765,kagi-smallweb hn-popularity
+matklad.github.io,36,8839,kagi-smallweb hn-popularity
+construction-physics.com,36,8547,hn-popularity
+daringfireball.net,35,13842,kagi-smallweb hn-popularity
+xeiaso.net,32,11517,kagi-smallweb hn-popularity hn-personal-blogs
+lucumr.pocoo.org,31,9172,kagi-smallweb hn-popularity
+dynomight.net,31,8511,kagi-smallweb hn-popularity
+stratechery.com,31,8415,hn-popularity
+daniel.haxx.se,31,7802,kagi-smallweb hn-popularity
+paulgraham.com,29,10809,hn-popularity
+danluu.com,29,10048,kagi-smallweb hn-popularity
+thebignewsletter.com,28,8965,hn-popularity
+computer.rip,28,7257,kagi-smallweb hn-popularity
+gwern.net,28,6551,hn-popularity
+susam.net,27,6811,kagi-smallweb hn-popularity hn-personal-blogs
+writings.stephenwolfram.com,25,8117,kagi-smallweb hn-popularity
+lemire.me,25,4202,kagi-smallweb hn-popularity
+bitsaboutmoney.com,24,6918,kagi-smallweb hn-popularity
+wheresyoured.at,24,6500,hn-popularity
+tedium.co,24,5694,kagi-smallweb hn-popularity
+martinfowler.com,24,5284,kagi-smallweb hn-popularity
+abortretry.fail,24,4717,hn-popularity
+words.filippo.io,23,6449,kagi-smallweb
+oldvcr.blogspot.com,23,4166,kagi-smallweb hn-popularity
+johndcook.com,23,3926,kagi-smallweb hn-popularity
+antirez.com,22,10906,kagi-smallweb hn-popularity
+ntietz.com,22,5401,kagi-smallweb hn-popularity hn-personal-blogs
+filfre.net,22,5169,kagi-smallweb hn-popularity
+terrytao.wordpress.com,22,4766,kagi-smallweb hn-popularity
+resobscura.substack.com,22,4068,hn-popularity
+practical.engineering,21,6589,kagi-smallweb hn-popularity
+garymarcus.substack.com,21,5707,hn-popularity
+taylor.town,21,4985,kagi-smallweb hn-popularity hn-personal-blogs
+acoup.blog,21,4433,kagi-smallweb hn-popularity
+nullprogram.com,21,4023,kagi-smallweb hn-popularity
+mitchellh.com,20,13378,kagi-smallweb hn-popularity
+blog.jim-nielsen.com,20,9199,kagi-smallweb hn-popularity
+marginalia.nu,20,6912,kagi-smallweb hn-popularity hn-personal-blogs
+blog.jgc.org,20,6724,kagi-smallweb hn-personal-blogs
+lapcatsoftware.com,20,5962,kagi-smallweb hn-popularity
+experimental-history.com,20,5459,hn-popularity
+bernsteinbear.com,20,3832,kagi-smallweb hn-popularity hn-personal-blogs
+matduggan.com,19,6216,kagi-smallweb hn-popularity hn-personal-blogs
+schneier.com,19,5080,kagi-smallweb hn-popularity
+borretti.me,19,4497,kagi-smallweb hn-popularity hn-personal-blogs
+eli.thegreenplace.net,19,3449,kagi-smallweb hn-popularity
+tonsky.me,18,10996,kagi-smallweb hn-popularity
+idiallo.com,18,7955,kagi-smallweb hn-popularity
+troyhunt.com,18,7103,kagi-smallweb hn-popularity hn-personal-blogs
+geohot.github.io,18,5938,kagi-smallweb hn-popularity
+mjg59.dreamwidth.org,18,4156,kagi-smallweb hn-popularity
+neal.fun,17,16444,hn-popularity
+blog.plover.com,17,4468,kagi-smallweb hn-popularity hn-personal-blogs
+research.swtch.com,17,4394,kagi-smallweb hn-popularity
+tech.marksblogg.com,17,3642,kagi-smallweb hn-popularity
+scottaaronson.blog,16,4302,kagi-smallweb hn-popularity
+ploum.net,16,4120,kagi-smallweb hn-popularity hn-personal-blogs
+datagubbe.se,16,3815,kagi-smallweb hn-popularity
+hillelwayne.com,16,3682,kagi-smallweb hn-popularity
+entropicthoughts.com,16,3366,kagi-smallweb hn-popularity
+thechipletter.substack.com,16,2716,hn-popularity
+magazine.sebastianraschka.com,15,4946,hn-popularity
+berthub.eu,15,4853,hn-popularity
+joanwestenberg.com,15,4833,hn-popularity
+dfarq.homeip.net,15,3579,kagi-smallweb hn-popularity
+patrick-breyer.de,14,5584,kagi-smallweb hn-popularity
+aphyr.com,14,5184,kagi-smallweb hn-popularity
+downtowndougbrown.com,14,4688,kagi-smallweb hn-popularity
+henrikkarlsson.xyz,14,4429,hn-popularity
+unsung.aresluna.org,14,4427,kagi-smallweb hn-popularity
+dmitry.gr,14,4142,kagi-smallweb hn-popularity
+herman.bearblog.dev,14,4003,kagi-smallweb hn-popularity
+austinhenley.com,14,3589,kagi-smallweb hn-popularity hn-personal-blogs
+brooker.co.za,14,3519,kagi-smallweb hn-popularity
+joshwcomeau.com,14,3454,kagi-smallweb hn-popularity
+drewdevault.com,14,2803,kagi-smallweb hn-popularity
+devever.net,14,2737,hn-popularity hn-personal-blogs
+maurycyz.com,13,7404,kagi-smallweb hn-popularity
+stackdiary.com,13,5839,hn-popularity
+cs.cmu.edu,13,5097,hn-popularity
+derekthompson.org,13,4423,hn-popularity
+beej.us,13,4341,kagi-smallweb hn-popularity
+tbray.org,13,3520,kagi-smallweb hn-popularity
+ounapuu.ee,13,3389,kagi-smallweb hn-popularity hn-personal-blogs
+sive.rs,13,3261,kagi-smallweb hn-popularity
+xkcd.com,13,3002,hn-popularity
+tidyfirst.substack.com,13,2955,hn-popularity
+purplesyringa.moe,13,2889,kagi-smallweb hn-popularity
+ratfactor.com,13,2759,kagi-smallweb hn-popularity
+antonz.org,13,2457,kagi-smallweb hn-popularity
+openmymind.net,13,2440,kagi-smallweb
+nicole.express,13,2024,kagi-smallweb hn-popularity
+tratt.net,13,1949,kagi-smallweb hn-popularity
+blog.gingerbeardman.com,13,1743,kagi-smallweb
+ciechanow.ski,12,12859,kagi-smallweb hn-popularity
+justine.lol,12,5967,kagi-smallweb hn-popularity
+mtlynch.io,12,5536,kagi-smallweb hn-popularity
+mitxela.com,12,5241,kagi-smallweb hn-popularity
+nesbitt.io,12,5209,kagi-smallweb hn-popularity
+brr.fyi,12,4599,hn-popularity
+evanhahn.com,12,3885,kagi-smallweb hn-popularity
+brendangregg.com,12,3871,kagi-smallweb hn-popularity
+gatesnotes.com,12,3772,hn-popularity
+chiark.greenend.org.uk,12,3633,hn-popularity
+admiralcloudberg.medium.com,12,3107,hn-popularity
+yosefk.com,12,2842,kagi-smallweb hn-popularity
+underjord.io,12,2286,kagi-smallweb hn-popularity
+muratbuffalo.blogspot.com,12,1953,kagi-smallweb hn-popularity hn-personal-blogs
+eieio.games,11,6083,kagi-smallweb hn-popularity
+ludic.mataroa.blog,11,5658,kagi-smallweb hn-popularity
+overreacted.io,11,4584,kagi-smallweb hn-popularity
+minimaxir.com,11,4455,kagi-smallweb hn-popularity
+martinalderson.com,11,4184,kagi-smallweb hn-popularity
+terriblesoftware.org,11,4075,kagi-smallweb hn-popularity
+lalitm.com,11,3886,kagi-smallweb hn-popularity
+blogsystem5.substack.com,11,3118,hn-popularity
+astralcodexten.com,11,3107,hn-popularity
+jyn.dev,11,3067,kagi-smallweb hn-popularity
+olano.dev,11,2982,kagi-smallweb hn-popularity
+bitecode.dev,11,2968,hn-popularity
+blog.benjojo.co.uk,11,2783,kagi-smallweb hn-popularity
+bellard.org,11,2762,hn-popularity
+eugeneyan.com,11,2693,kagi-smallweb hn-popularity
+steveblank.com,11,2677,kagi-smallweb hn-popularity
+rubenerd.com,11,2651,hn-popularity
+michael.stapelberg.ch,11,2615,kagi-smallweb hn-popularity
+raymii.org,11,2285,kagi-smallweb hn-popularity
+ianvisits.co.uk,11,1975,kagi-smallweb hn-popularity
+surfingcomplexity.blog,11,1941,kagi-smallweb
+vermaden.wordpress.com,11,1687,kagi-smallweb
+bcantrill.dtrace.org,10,3833,kagi-smallweb
+seths.blog,10,3635,kagi-smallweb hn-popularity
+jsomers.net,10,3603,kagi-smallweb hn-popularity
+vickiboykis.com,10,3260,kagi-smallweb hn-popularity
+dwarkesh.com,10,3133,hn-popularity
+jakelazaroff.com,10,2958,kagi-smallweb hn-popularity hn-personal-blogs
+alexwlchan.net,10,2867,kagi-smallweb hn-popularity hn-personal-blogs
+folklore.org,10,2699,hn-popularity
+graydon2.dreamwidth.org,10,2676,hn-popularity
+blog.yossarian.net,10,2420,kagi-smallweb hn-personal-blogs
+computerenhance.com,10,2418,hn-popularity
+antipope.org,10,2398,kagi-smallweb hn-popularity
+jefftk.com,10,2304,kagi-smallweb hn-popularity hn-personal-blogs
+mattkeeter.com,10,2182,kagi-smallweb hn-popularity hn-personal-blogs
+corecursive.com,10,2167,hn-popularity
+wingolog.org,10,2059,kagi-smallweb hn-popularity
+brandur.org,10,2049,kagi-smallweb hn-popularity
+morling.dev,10,1978,kagi-smallweb hn-personal-blogs
+verdagon.dev,10,1865,kagi-smallweb hn-popularity
+honest-broker.com,10,1852,hn-popularity
+lock.cmpxchg8b.com,9,4200,hn-popularity
+nolanlawson.com,9,3920,kagi-smallweb hn-popularity
+jakeseliger.com,9,3856,hn-popularity hn-personal-blogs
+da.vidbuchanan.co.uk,9,3729,kagi-smallweb hn-popularity hn-personal-blogs
+dbushell.com,9,3499,kagi-smallweb hn-popularity
+gilesthomas.com,9,3212,kagi-smallweb hn-popularity
+danq.me,9,3077,kagi-smallweb
+it-notes.dragas.net,9,2992,kagi-smallweb hn-popularity
+micahflee.com,9,2799,kagi-smallweb hn-popularity
+corrode.dev,9,2743,hn-popularity
+jepsen.io,9,2716,hn-popularity
+kevinboone.me,9,2605,kagi-smallweb
+dbreunig.com,9,2592,kagi-smallweb hn-popularity
+allenpike.com,9,2499,hn-popularity hn-personal-blogs
+blog.cryptographyengineering.com,9,2491,kagi-smallweb hn-popularity
+viewfromthewing.com,9,2463,hn-popularity
+gaultier.github.io,9,2380,kagi-smallweb
+ascii.textfiles.com,9,2320,kagi-smallweb hn-popularity
+ben-evans.com,9,2105,kagi-smallweb hn-popularity
+en.andros.dev,9,2011,kagi-smallweb
+calnewport.com,9,1934,kagi-smallweb hn-popularity
+popovicu.com,9,1928,kagi-smallweb hn-popularity
+notes.eatonphil.com,9,1894,kagi-smallweb hn-personal-blogs
+ssp.sh,9,1871,kagi-smallweb
+lilianweng.github.io,9,1825,kagi-smallweb
+softwaredoug.com,9,1777,kagi-smallweb hn-personal-blogs
+masteringemacs.org,9,1753,kagi-smallweb hn-popularity
+blog.samaltman.com,9,1725,kagi-smallweb hn-popularity
+two-wrongs.com,9,1669,hn-popularity
+jacquesmattheij.com,9,1650,kagi-smallweb hn-popularity
+ericmigi.com,8,5932,hn-popularity
+samwho.dev,8,4682,kagi-smallweb hn-popularity
+davidoks.blog,8,3427,hn-popularity
+blog.miguelgrinberg.com,8,3001,kagi-smallweb
+anildash.com,8,2994,kagi-smallweb hn-popularity
+redblobgames.com,8,2737,kagi-smallweb hn-popularity
+baldurbjarnason.com,8,2233,kagi-smallweb hn-popularity
+xn--gckvb8fzb.com,8,2157,kagi-smallweb hn-popularity
+copetti.org,8,2152,kagi-smallweb hn-popularity
+qntm.org,8,2128,kagi-smallweb hn-popularity
+without.boats,8,2003,kagi-smallweb hn-popularity
+longform.asmartbear.com,8,1982,kagi-smallweb
+blog.cr.yp.to,8,1946,kagi-smallweb hn-popularity
+daemonology.net,8,1910,kagi-smallweb hn-popularity
+palant.info,8,1902,kagi-smallweb hn-popularity
+phoboslab.org,8,1894,kagi-smallweb hn-popularity
+benhoyt.com,8,1888,kagi-smallweb hn-popularity hn-personal-blogs
+sethmlarson.dev,8,1867,kagi-smallweb
+mcyoung.xyz,8,1867,kagi-smallweb hn-popularity
+kobzol.github.io,8,1825,kagi-smallweb
+randomascii.wordpress.com,8,1793,kagi-smallweb hn-popularity
+fasterthanli.me,8,1721,kagi-smallweb hn-popularity hn-personal-blogs
+chriscoyier.net,8,1645,kagi-smallweb hn-popularity
+thenumb.at,8,1635,kagi-smallweb
+ochagavia.nl,8,1606,kagi-smallweb hn-personal-blogs
+lethain.com,8,1592,kagi-smallweb hn-popularity
+mattlakeman.org,8,1589,kagi-smallweb hn-popularity
+world.hey.com,8,1559,kagi-smallweb hn-personal-blogs
+probablydance.com,8,1515,kagi-smallweb hn-popularity
+johncarlosbaez.wordpress.com,8,1422,kagi-smallweb hn-popularity
+scattered-thoughts.net,8,1407,kagi-smallweb hn-popularity
+interconnected.org,8,1379,kagi-smallweb
+kerkour.com,8,1276,kagi-smallweb hn-popularity
+walzr.com,7,6567,hn-popularity
+geoffreylitt.com,7,3736,kagi-smallweb hn-popularity
+refactoringenglish.com,7,3128,kagi-smallweb hn-popularity
+idlewords.com,7,3088,kagi-smallweb hn-popularity
+raptitude.com,7,2996,kagi-smallweb hn-popularity
+rakhim.exotext.com,7,2943,kagi-smallweb hn-popularity
+blinry.org,7,2903,kagi-smallweb hn-popularity
+alexharri.com,7,2692,kagi-smallweb hn-popularity
+danielchasehooper.com,7,2686,kagi-smallweb hn-popularity
+vgel.me,7,2603,kagi-smallweb hn-popularity
+makingsoftware.com,7,2530,hn-popularity
+werd.io,7,2471,kagi-smallweb hn-personal-blogs
+allthingsdistributed.com,7,2452,kagi-smallweb hn-popularity
+tylercipriani.com,7,2362,kagi-smallweb hn-popularity
+aresluna.org,7,2342,kagi-smallweb hn-popularity
+xania.org,7,2332,kagi-smallweb hn-popularity
+anderegg.ca,7,2304,kagi-smallweb hn-personal-blogs
+soatok.blog,7,2118,kagi-smallweb hn-popularity hn-personal-blogs
+kristoff.it,7,2095,kagi-smallweb hn-popularity
+blog.ericgoldman.org,7,2055,kagi-smallweb
+bessstillman.substack.com,7,2024,hn-popularity
+avi.im,7,1951,kagi-smallweb
+nullpt.rs,7,1924,kagi-smallweb
+lisyarus.github.io,7,1846,kagi-smallweb
+512pixels.net,7,1843,kagi-smallweb hn-popularity
+fzakaria.com,7,1843,kagi-smallweb
+jasoneckert.github.io,7,1814,kagi-smallweb hn-personal-blogs
+apenwarr.ca,7,1759,kagi-smallweb hn-popularity
+ianthehenry.com,7,1736,kagi-smallweb hn-popularity
+acko.net,7,1734,kagi-smallweb hn-popularity
+dustri.org,7,1703,kagi-smallweb
+yorickpeterse.com,7,1621,kagi-smallweb
+danielmangum.com,7,1621,kagi-smallweb hn-popularity
+maggieappleton.com,7,1616,kagi-smallweb hn-popularity
+henrikwarne.com,7,1610,kagi-smallweb
+calpaterson.com,7,1599,kagi-smallweb hn-popularity
+til.simonwillison.net,7,1575,kagi-smallweb
+mmapped.blog,7,1552,kagi-smallweb
+bitfieldconsulting.com,7,1481,kagi-smallweb hn-popularity
+aethermug.com,7,1472,kagi-smallweb
+davidrevoy.com,7,1458,kagi-smallweb hn-popularity
+j3s.sh,7,1412,kagi-smallweb hn-popularity
+kalzumeus.com,7,1406,hn-popularity
+paulkrugman.substack.com,7,1356,hn-popularity
+blog.greg.technology,7,1332,kagi-smallweb
+jacobfilipp.com,7,1321,kagi-smallweb
+lewiscampbell.tech,7,1319,kagi-smallweb
+mceglowski.substack.com,7,1276,hn-popularity
+rednafi.com,7,1256,kagi-smallweb hn-popularity
+brainbaking.com,7,1256,kagi-smallweb
+neugierig.org,7,1192,kagi-smallweb hn-popularity
+lawrencecpaulson.github.io,7,1185,kagi-smallweb
+quuxplusone.github.io,7,1169,kagi-smallweb hn-popularity
+signoregalilei.com,7,1122,kagi-smallweb
+themarginalian.org,7,1092,hn-popularity
+nand2mario.github.io,7,1023,kagi-smallweb
+0xsid.com,6,5539,kagi-smallweb hn-popularity
+rosenzweig.io,6,4846,hn-popularity
+oimo.io,6,4749,hn-popularity
+theshamblog.com,6,4060,kagi-smallweb hn-popularity
+addyosmani.com,6,3506,kagi-smallweb hn-popularity
+samcurry.net,6,3491,kagi-smallweb hn-popularity
+unchartedterritories.tomaspueyo.com,6,3311,hn-popularity
+jonathanhaidt.substack.com,6,3153,hn-popularity
+karpathy.github.io,6,2835,kagi-smallweb hn-popularity
+neilzone.co.uk,6,2774,kagi-smallweb hn-popularity
+jacobbartlett.substack.com,6,2737,hn-popularity
+waxy.org,6,2612,kagi-smallweb hn-popularity
+mrbruh.com,6,2547,kagi-smallweb hn-popularity
+mariozechner.at,6,2492,kagi-smallweb hn-popularity
+michaelgeist.ca,6,2428,kagi-smallweb hn-popularity
+axleos.com,6,2300,hn-popularity
+build-your-own.org,6,2128,hn-popularity
+diamondgeezer.blogspot.com,6,1928,hn-popularity
+nicholas.carlini.com,6,1927,kagi-smallweb
+drobinin.com,6,1901,kagi-smallweb
+amygoodchild.com,6,1889,kagi-smallweb hn-popularity
+kk.org,6,1888,hn-popularity
+httptoolkit.com,6,1856,hn-popularity
+prog21.dadgum.com,6,1849,hn-popularity
+robinsloan.com,6,1847,kagi-smallweb hn-popularity
+vadimkravcenko.com,6,1808,hn-popularity hn-personal-blogs
+dotat.at,6,1789,kagi-smallweb hn-popularity hn-personal-blogs
+lyra.horse,6,1783,kagi-smallweb
+martin.kleppmann.com,6,1761,kagi-smallweb hn-popularity
+futilitycloset.com,6,1746,kagi-smallweb hn-popularity
+ben.page,6,1681,kagi-smallweb hn-popularity
+noahpinion.blog,6,1680,hn-popularity
+stephendiehl.com,6,1662,kagi-smallweb hn-popularity
+alexmolas.com,6,1650,kagi-smallweb hn-popularity hn-personal-blogs
+moultano.wordpress.com,6,1648,kagi-smallweb hn-popularity
+blog.nelhage.com,6,1629,kagi-smallweb
+louwrentius.com,6,1591,kagi-smallweb
+read.engineerscodex.com,6,1582,hn-popularity
+mazzo.li,6,1555,kagi-smallweb
+blog.dshr.org,6,1546,kagi-smallweb
+eaton-works.com,6,1538,kagi-smallweb
+platformer.news,6,1531,hn-popularity
+chrbutler.com,6,1512,kagi-smallweb
+dgl.cx,6,1494,kagi-smallweb
+infrequently.org,6,1483,kagi-smallweb
+notgull.net,6,1483,kagi-smallweb
+andreinc.net,6,1470,kagi-smallweb hn-popularity
+huyenchip.com,6,1461,kagi-smallweb
+agwa.name,6,1459,kagi-smallweb
+norvig.com,6,1440,hn-popularity
+ma.tt,6,1422,kagi-smallweb hn-popularity
+whynothugo.nl,6,1420,kagi-smallweb
+gustedt.wordpress.com,6,1389,kagi-smallweb
+30fps.net,6,1363,kagi-smallweb
+blog.codingconfessions.com,6,1359,hn-popularity
+fi-le.net,6,1341,kagi-smallweb
+andre.arko.net,6,1332,kagi-smallweb
+blog.maximeheckel.com,6,1310,kagi-smallweb
+aras-p.info,6,1309,kagi-smallweb hn-popularity
+gleam.run,6,1301,hn-popularity
+byroot.github.io,6,1293,kagi-smallweb
+bunniestudios.com,6,1267,kagi-smallweb hn-popularity
+gregorygundersen.com,6,1266,kagi-smallweb
+joeyh.name,6,1262,kagi-smallweb hn-popularity
+xenodium.com,6,1258,kagi-smallweb hn-personal-blogs
+abuseofnotation.github.io,6,1247,kagi-smallweb
+ishadeed.com,6,1238,kagi-smallweb
+blog.demofox.org,6,1237,kagi-smallweb
+taoofmac.com,6,1232,kagi-smallweb hn-popularity hn-personal-blogs
+hakibenita.com,6,1223,kagi-smallweb
+nibblestew.blogspot.com,6,1207,kagi-smallweb hn-popularity
+orlp.net,6,1204,kagi-smallweb hn-popularity hn-personal-blogs
+beautifulpublicdata.com,6,1199,kagi-smallweb
+newsletter.mollywhite.net,6,1157,hn-popularity
+jakearchibald.com,6,1150,kagi-smallweb hn-popularity
+wordsandbuttons.online,6,1108,kagi-smallweb hn-popularity
+zserge.com,6,1093,kagi-smallweb hn-popularity hn-personal-blogs
+tomverbeure.github.io,6,1093,kagi-smallweb hn-personal-blogs
+blog.brixit.nl,6,1088,kagi-smallweb hn-popularity
+kguttag.com,6,1029,kagi-smallweb
+evalapply.org,6,1004,kagi-smallweb hn-personal-blogs
+lukeplant.me.uk,6,892,kagi-smallweb hn-personal-blogs
+centauri-dreams.org,6,858,kagi-smallweb
+blog.pkh.me,6,843,kagi-smallweb
+ben-mini.com,5,3551,kagi-smallweb hn-popularity
+fortressofdoors.com,5,3474,kagi-smallweb hn-popularity hn-personal-blogs
+orchidfiles.com,5,3442,kagi-smallweb hn-popularity
+sockpuppet.org,5,3154,kagi-smallweb hn-popularity
+arslan.io,5,3016,kagi-smallweb
+unix.foo,5,3000,kagi-smallweb hn-popularity
+nelson.cloud,5,2258,kagi-smallweb hn-personal-blogs
+lunduke.locals.com,5,2172,hn-popularity
+birchtree.me,5,2164,kagi-smallweb
+mertbulan.com,5,2150,kagi-smallweb hn-popularity
+alecmuffett.com,5,2098,kagi-smallweb
+worksonmymachine.substack.com,5,1869,hn-popularity
+stephango.com,5,1850,kagi-smallweb
+pages.cs.wisc.edu,5,1784,hn-popularity
+joshcollinsworth.com,5,1783,kagi-smallweb
+cprimozic.net,5,1717,kagi-smallweb
+ersei.net,5,1611,kagi-smallweb
+daniel.lawrence.lu,5,1562,kagi-smallweb hn-popularity
+nuejs.org,5,1552,hn-popularity
+hamel.dev,5,1540,kagi-smallweb
+garden.bradwoods.io,5,1527,kagi-smallweb hn-personal-blogs
+mooreds.com,5,1501,kagi-smallweb
+fxrant.blogspot.com,5,1485,kagi-smallweb
+xuanwo.io,5,1484,kagi-smallweb
+manuelmoreale.com,5,1445,kagi-smallweb hn-personal-blogs
+amazingcto.com,5,1427,hn-popularity
+charity.wtf,5,1420,hn-popularity
+blog.liw.fi,5,1394,kagi-smallweb
+stavros.io,5,1389,kagi-smallweb hn-popularity
+codemanship.wordpress.com,5,1387,kagi-smallweb
+fromjason.xyz,5,1357,kagi-smallweb hn-popularity
+craigmod.com,5,1301,kagi-smallweb hn-popularity hn-personal-blogs
+thehftguy.com,5,1295,kagi-smallweb hn-popularity
+steveklabnik.com,5,1291,kagi-smallweb
+ergaster.org,5,1288,kagi-smallweb
+muffinman.io,5,1267,kagi-smallweb hn-personal-blogs
+pboyd.io,5,1258,kagi-smallweb hn-popularity
+benkuhn.net,5,1242,kagi-smallweb hn-popularity
+natesilver.net,5,1238,hn-popularity
+jalammar.github.io,5,1236,kagi-smallweb
+dubroy.com,5,1229,kagi-smallweb hn-popularity
+josem.co,5,1224,kagi-smallweb
+windytan.com,5,1218,kagi-smallweb hn-popularity
+embracethered.com,5,1218,kagi-smallweb
+jeremykun.com,5,1212,kagi-smallweb hn-popularity
+beyondloom.com,5,1212,kagi-smallweb hn-popularity
+destroyallsoftware.com,5,1203,hn-popularity
+simonschreibt.de,5,1189,kagi-smallweb
+iankduncan.com,5,1187,kagi-smallweb
+kevinlynagh.com,5,1179,kagi-smallweb
+blog.matthewbrunelle.com,5,1168,kagi-smallweb
+meyerweb.com,5,1153,kagi-smallweb
+matt.might.net,5,1118,hn-popularity
+jamesshore.com,5,1101,kagi-smallweb hn-personal-blogs
+sunshowers.io,5,1100,kagi-smallweb
+cliffle.com,5,1094,kagi-smallweb hn-popularity
+gabrielsieben.tech,5,1093,hn-popularity
+bvisness.me,5,1093,kagi-smallweb
+maxread.substack.com,5,1091,hn-popularity
+jpcamara.com,5,1065,kagi-smallweb
+ferd.ca,5,1064,kagi-smallweb hn-popularity
+daverupert.com,5,1033,kagi-smallweb
+papersplease.org,5,1013,kagi-smallweb
+carette.xyz,5,1011,kagi-smallweb hn-popularity
+steve-yegge.medium.com,5,1004,hn-popularity
+boz.com,5,991,kagi-smallweb
+linusakesson.net,5,991,kagi-smallweb hn-popularity
+wolfstreet.com,5,984,kagi-smallweb
+eukaryotewritesblog.com,5,980,kagi-smallweb
+virtuallyfun.com,5,969,kagi-smallweb hn-popularity
+incoherency.co.uk,5,962,kagi-smallweb hn-popularity
+tavianator.com,5,959,kagi-smallweb
+iximiuz.com,5,955,kagi-smallweb
+blog.feld.me,5,949,kagi-smallweb
+potaroo.net,5,947,kagi-smallweb
+peter.eisentraut.org,5,945,kagi-smallweb
+governance.fyi,5,944,hn-popularity
+xnacly.me,5,939,kagi-smallweb hn-personal-blogs
+diziet.dreamwidth.org,5,937,kagi-smallweb
+zverok.space,5,937,kagi-smallweb
+pointersgonewild.com,5,913,kagi-smallweb
+arcadeblogger.com,5,904,kagi-smallweb
+ashvardanian.com,5,873,kagi-smallweb hn-personal-blogs
+blog.glyph.im,5,871,kagi-smallweb
+journal.stuffwithstuff.com,5,856,kagi-smallweb hn-popularity
+yummymelon.com,5,811,kagi-smallweb
+caseyhandmer.wordpress.com,5,801,kagi-smallweb hn-popularity
+thephd.dev,5,790,kagi-smallweb
+mssv.net,5,754,kagi-smallweb hn-personal-blogs
+pagetable.com,5,721,hn-popularity
+v5.chriskrycho.com,5,706,kagi-smallweb
+svpow.com,5,695,kagi-smallweb
+people.csail.mit.edu,5,692,kagi-smallweb
+technicshistory.com,5,665,kagi-smallweb
+kibty.town,4,3355,hn-popularity
+timsh.org,4,2928,kagi-smallweb hn-popularity
+crawshaw.io,4,2872,kagi-smallweb hn-popularity
+cabel.com,4,2650,kagi-smallweb hn-popularity
+buchodi.com,4,2585,kagi-smallweb hn-popularity
+chadnauseam.com,4,2356,kagi-smallweb hn-popularity
+manualdousuario.net,4,2318,kagi-smallweb
+grantslatton.com,4,2191,kagi-smallweb hn-popularity
+3blue1brown.com,4,2189,hn-popularity
+alicegg.tech,4,2136,kagi-smallweb hn-personal-blogs
+awesomekling.substack.com,4,2106,hn-popularity
+matan-h.com,4,2073,kagi-smallweb hn-popularity
+sambent.com,4,2053,kagi-smallweb hn-popularity
+christianselig.com,4,1992,kagi-smallweb
+visualrambling.space,4,1930,kagi-smallweb
+sprocketfox.io,4,1910,kagi-smallweb
+bryanbraun.com,4,1840,kagi-smallweb hn-popularity
+simedw.com,4,1773,kagi-smallweb
+icode4.coffee,4,1716,kagi-smallweb
+ankursethi.com,4,1712,kagi-smallweb
+jola.dev,4,1710,kagi-smallweb hn-popularity
+blog.frost.kiwi,4,1702,kagi-smallweb
+alexschapiro.com,4,1648,kagi-smallweb
+andrewkchan.dev,4,1642,hn-popularity
+dgerrells.com,4,1624,kagi-smallweb
+atomic14.com,4,1615,kagi-smallweb hn-personal-blogs
+ericdaigle.ca,4,1570,kagi-smallweb
+bobdahacker.com,4,1569,kagi-smallweb
+alexplescan.com,4,1562,kagi-smallweb
+blog.danslimmon.com,4,1535,kagi-smallweb
+dzombak.com,4,1534,kagi-smallweb hn-popularity
+andrewkelley.me,4,1522,kagi-smallweb hn-popularity
+bramcohen.com,4,1510,hn-popularity
+darrellowens.substack.com,4,1490,hn-popularity
+varun.ch,4,1460,kagi-smallweb
+xenaproject.wordpress.com,4,1445,kagi-smallweb
+lr0.org,4,1420,kagi-smallweb hn-popularity
+sebastianraschka.com,4,1389,kagi-smallweb
+jmmv.dev,4,1383,kagi-smallweb hn-personal-blogs
+noahpinion.substack.com,4,1372,hn-popularity
+hypercritical.co,4,1371,kagi-smallweb hn-popularity
+notes.alinpanaitiu.com,4,1370,hn-popularity
+blog.danielh.cc,4,1361,kagi-smallweb
+hforsten.com,4,1357,kagi-smallweb
+blog.tymscar.com,4,1350,kagi-smallweb
+frantic.im,4,1315,kagi-smallweb hn-popularity hn-personal-blogs
+quarter--mile.com,4,1281,kagi-smallweb
+neelc.org,4,1276,kagi-smallweb hn-popularity
+blog.glyphdrawing.club,4,1266,kagi-smallweb
+vidarholen.net,4,1248,kagi-smallweb
+haskellforall.com,4,1234,kagi-smallweb hn-popularity
+xorvoid.com,4,1228,kagi-smallweb hn-personal-blogs
+electrospaces.net,4,1225,kagi-smallweb
+solipsys.co.uk,4,1214,hn-popularity
+xlii.space,4,1212,kagi-smallweb
+localghost.dev,4,1211,kagi-smallweb
+joshua.hu,4,1205,kagi-smallweb
+vale.rocks,4,1204,kagi-smallweb
+rknight.me,4,1199,kagi-smallweb hn-popularity
+nmn.gl,4,1195,kagi-smallweb
+hanselman.com,4,1188,kagi-smallweb hn-popularity
+coryd.dev,4,1177,kagi-smallweb hn-popularity
+eev.ee,4,1151,kagi-smallweb hn-popularity
+sheldonbrown.com,4,1145,kagi-smallweb
+lexaloffle.com,4,1138,kagi-smallweb hn-popularity
+rahuljuliato.com,4,1138,kagi-smallweb hn-popularity
+jank-lang.org,4,1120,kagi-smallweb
+garrit.xyz,4,1118,kagi-smallweb hn-popularity
+jacobian.org,4,1110,kagi-smallweb hn-popularity
+box2d.org,4,1109,kagi-smallweb
+amanvir.com,4,1094,kagi-smallweb hn-popularity
+wilsoniumite.com,4,1090,kagi-smallweb hn-popularity
+blogs.igalia.com,4,1087,kagi-smallweb
+boston.conman.org,4,1080,kagi-smallweb hn-personal-blogs
+tuananh.net,4,1077,kagi-smallweb hn-popularity
+scottsmitelli.com,4,1074,kagi-smallweb
+elijahpotter.dev,4,1064,kagi-smallweb
+scd31.com,4,1062,kagi-smallweb
+successfulsoftware.net,4,1058,kagi-smallweb
+boyter.org,4,1056,kagi-smallweb hn-popularity hn-personal-blogs
+herbsutter.com,4,1037,kagi-smallweb
+onemileatatime.com,4,1032,hn-popularity
+erikbern.com,4,1022,kagi-smallweb hn-popularity
+12gramsofcarbon.com,4,1004,hn-popularity
+basicappleguy.com,4,1000,kagi-smallweb
+kenschutte.com,4,996,kagi-smallweb
+jasonfantl.com,4,986,kagi-smallweb
+ralfj.de,4,982,kagi-smallweb
+gingerbill.org,4,981,kagi-smallweb
+markround.com,4,974,kagi-smallweb
+floooh.github.io,4,970,kagi-smallweb
+worseonpurpose.com,4,964,hn-popularity
+readonlymemo.com,4,958,kagi-smallweb
+adamj.eu,4,950,kagi-smallweb
+jonashietala.se,4,950,kagi-smallweb
+flyingpenguin.com,4,947,kagi-smallweb hn-popularity
+andersmurphy.com,4,944,kagi-smallweb
+davidgomes.com,4,943,kagi-smallweb
+sdomi.pl,4,942,kagi-smallweb
+dri.es,4,930,kagi-smallweb
+laurent.le-brun.eu,4,921,kagi-smallweb
+fangpenlin.com,4,920,kagi-smallweb
+ahelwer.ca,4,918,kagi-smallweb
+twobithistory.org,4,918,hn-popularity
+ironicsans.ghost.io,4,918,kagi-smallweb
+autodidacts.io,4,917,kagi-smallweb
+philipotoole.com,4,915,kagi-smallweb
+jesseduffield.com,4,913,kagi-smallweb
+randsinrepose.com,4,913,kagi-smallweb hn-popularity
+ribbonfarm.com,4,908,hn-popularity
+boehs.org,4,896,kagi-smallweb
+profmattstrassler.com,4,888,kagi-smallweb
+justinmath.com,4,883,kagi-smallweb
+patrickmccanna.net,4,882,kagi-smallweb
+tedgioia.substack.com,4,878,hn-popularity
+quoteinvestigator.com,4,874,kagi-smallweb
+koenvangilst.nl,4,873,kagi-smallweb
+mistys-internet.website,4,873,kagi-smallweb
+crocidb.com,4,872,kagi-smallweb hn-personal-blogs
+gregegan.net,4,869,kagi-smallweb
+bentasker.co.uk,4,863,kagi-smallweb hn-personal-blogs
+macchaffee.com,4,857,kagi-smallweb hn-personal-blogs
+specbranch.com,4,856,kagi-smallweb hn-popularity hn-personal-blogs
+stitcher.io,4,822,kagi-smallweb hn-popularity
+christianheilmann.com,4,818,kagi-smallweb
+nnethercote.github.io,4,815,kagi-smallweb
+charlespetzold.com,4,807,kagi-smallweb hn-popularity
+essenceia.github.io,4,804,kagi-smallweb
+fractalfir.github.io,4,798,kagi-smallweb
+passo.uno,4,798,kagi-smallweb
+jxnl.co,4,795,kagi-smallweb
+zknill.io,4,782,kagi-smallweb
+blog.haschek.at,4,780,kagi-smallweb hn-popularity
+zackoverflow.dev,4,777,kagi-smallweb
+jacob.gold,4,760,kagi-smallweb
+blog.regehr.org,4,750,kagi-smallweb hn-popularity
+spacebar.news,4,749,kagi-smallweb
+projectgus.com,4,748,kagi-smallweb
+danielsada.tech,4,743,kagi-smallweb hn-personal-blogs
+technoblogy.com,4,741,kagi-smallweb
+belkadan.com,4,740,kagi-smallweb
+arpitbhayani.me,4,738,kagi-smallweb
+journal.paoloamoroso.com,4,734,kagi-smallweb
+16bpp.net,4,734,kagi-smallweb
+coredumped.dev,4,728,kagi-smallweb hn-personal-blogs
+hiandrewquinn.github.io,4,726,hn-popularity
+jvt.me,4,725,kagi-smallweb hn-personal-blogs
+jackkelly.name,4,721,kagi-smallweb
+serd.es,4,710,kagi-smallweb
+akkartik.name,4,709,kagi-smallweb
+jack-vanlightly.com,4,707,kagi-smallweb
+funcall.blogspot.com,4,703,kagi-smallweb
+wadetregaskis.com,4,700,kagi-smallweb
+blog.julik.nl,4,700,kagi-smallweb
+rodneybrooks.com,4,697,kagi-smallweb
+stevelosh.com,4,695,kagi-smallweb hn-popularity
+vitalik.eth.limo,4,695,kagi-smallweb
+dthompson.us,4,693,kagi-smallweb
+jamesoclaire.com,4,690,kagi-smallweb
+matt-rickard.com,4,686,hn-popularity hn-personal-blogs
+thurrott.com,4,682,hn-popularity
+gregoryszorc.com,4,678,kagi-smallweb
+obrhubr.org,4,666,kagi-smallweb
+healeycodes.com,4,651,kagi-smallweb
+maplant.com,4,649,kagi-smallweb
+linuxjedi.co.uk,4,648,kagi-smallweb
+movq.de,4,632,kagi-smallweb
+constructionphysics.substack.com,4,628,hn-popularity
+blog.eladgil.com,4,627,hn-popularity
+typesanitizer.com,4,622,kagi-smallweb
+andreyor.st,4,612,kagi-smallweb
+smallcultfollowing.com,4,610,kagi-smallweb
+philipzucker.com,4,603,kagi-smallweb
+darkcoding.net,4,597,kagi-smallweb
+bytes.zone,4,595,kagi-smallweb
+corsix.org,4,589,kagi-smallweb
+thejpster.org.uk,4,588,kagi-smallweb
+intuitiveexplanations.com,4,587,hn-popularity
+shayon.dev,4,577,kagi-smallweb
+ajxs.me,4,575,kagi-smallweb hn-personal-blogs
+re.factorcode.org,4,575,kagi-smallweb
+bt.ht,4,567,hn-personal-blogs
+thunderseethe.dev,4,562,kagi-smallweb
+hirrolot.github.io,4,552,kagi-smallweb
+rnikhil.com,4,551,kagi-smallweb hn-personal-blogs
+bumbershootsoft.wordpress.com,4,547,kagi-smallweb
+martypc.blogspot.com,4,525,kagi-smallweb
+nrk.neocities.org,4,523,kagi-smallweb
+mathenchant.wordpress.com,4,512,kagi-smallweb
+mattgreer.dev,4,507,kagi-smallweb
+int10h.org,4,504,kagi-smallweb
+leancrew.com,4,491,kagi-smallweb
+mnot.net,4,488,kagi-smallweb
+mayerowitz.io,3,3326,kagi-smallweb hn-popularity
+bbycroft.net,3,3204,hn-popularity
+jimmyhmiller.github.io,3,2731,hn-popularity
+file770.com,3,2400,hn-popularity
+thatprivacyguy.com,3,2390,kagi-smallweb hn-popularity
+laplab.me,3,2369,kagi-smallweb hn-popularity
+jamesbvaughan.com,3,2284,kagi-smallweb hn-popularity
+blog.alexellis.io,3,2254,kagi-smallweb
+tombedor.dev,3,2208,kagi-smallweb hn-popularity
+switowski.com,3,2101,kagi-smallweb hn-popularity
+matt.sh,3,2099,kagi-smallweb
+tenderlovemaking.com,3,2086,kagi-smallweb
+maxleiter.com,3,2079,kagi-smallweb hn-popularity hn-personal-blogs
+dmitrybrant.com,3,1999,kagi-smallweb hn-popularity
+om.co,3,1944,kagi-smallweb hn-popularity
+karpathy.ai,3,1936,hn-popularity
+people.kernel.org,3,1901,kagi-smallweb
+nooneshappy.com,3,1847,kagi-smallweb hn-popularity
+calv.info,3,1834,kagi-smallweb
+leanrada.com,3,1830,kagi-smallweb hn-popularity
+jenson.org,3,1776,kagi-smallweb hn-popularity
+steipete.me,3,1771,kagi-smallweb hn-popularity
+iter.ca,3,1764,kagi-smallweb hn-popularity
+dkb.blog,3,1689,hn-popularity
+anvaka.github.io,3,1689,hn-popularity
+claytonwramsey.com,3,1678,kagi-smallweb
+0xkato.xyz,3,1676,kagi-smallweb hn-popularity
+engineersneedart.com,3,1657,kagi-smallweb
+lina.sh,3,1655,kagi-smallweb
+predr.ag,3,1647,kagi-smallweb hn-popularity hn-personal-blogs
+blog.habets.se,3,1647,kagi-smallweb
+adriano.fyi,3,1639,kagi-smallweb hn-personal-blogs
+matthewstrom.com,3,1619,hn-popularity
+anandsanwal.me,3,1600,kagi-smallweb hn-popularity
+blog.wilsonl.in,3,1598,kagi-smallweb
+jenn.site,3,1554,kagi-smallweb
+neatnik.net,3,1497,kagi-smallweb
+blog.jakesaunders.dev,3,1471,kagi-smallweb
+stevehanov.ca,3,1462,kagi-smallweb hn-popularity
+deadlanguagesociety.com,3,1460,hn-popularity
+iamvishnu.com,3,1449,kagi-smallweb hn-personal-blogs
+catskull.net,3,1448,kagi-smallweb hn-popularity
+jackpoulson.substack.com,3,1417,hn-popularity
+jameshaydon.github.io,3,1387,kagi-smallweb hn-popularity
+chriskiehl.com,3,1368,kagi-smallweb hn-popularity
+rmoff.net,3,1364,kagi-smallweb hn-popularity
+rwmj.wordpress.com,3,1348,kagi-smallweb hn-popularity
+emnudge.dev,3,1322,kagi-smallweb
+hawksley.dev,3,1301,kagi-smallweb
+bitbashing.io,3,1293,kagi-smallweb hn-popularity
+gabrielweinberg.com,3,1278,hn-popularity
+gowers.wordpress.com,3,1270,kagi-smallweb
+artemis.sh,3,1268,kagi-smallweb hn-popularity
+noperator.dev,3,1258,kagi-smallweb
+this.weekinsecurity.com,3,1258,hn-popularity
+lorenstew.art,3,1239,kagi-smallweb
+timkellogg.me,3,1235,kagi-smallweb hn-popularity
+thomask.sdf.org,3,1228,hn-popularity hn-personal-blogs
+not-ship.com,3,1224,hn-popularity
+drew.silcock.dev,3,1219,kagi-smallweb
+robertheaton.com,3,1196,kagi-smallweb hn-popularity
+blog.jsbarretto.com,3,1180,kagi-smallweb
+blog.senko.net,3,1166,kagi-smallweb hn-personal-blogs
+blog.0x7d0.dev,3,1165,kagi-smallweb hn-popularity
+technicalwriting.dev,3,1149,kagi-smallweb
+iliana.fyi,3,1134,kagi-smallweb
+blog.ctms.me,3,1131,kagi-smallweb
+blog.fogus.me,3,1116,kagi-smallweb hn-popularity hn-personal-blogs
+jackcook.com,3,1111,kagi-smallweb
+herecomesthemoon.net,3,1092,kagi-smallweb
+johnnydecimal.com,3,1089,kagi-smallweb
+notesbylex.com,3,1082,kagi-smallweb
+blog.startifact.com,3,1081,kagi-smallweb hn-popularity
+scotto.me,3,1078,kagi-smallweb
+awesomekling.github.io,3,1066,hn-popularity
+lars.ingebrigtsen.no,3,1064,kagi-smallweb
+ghuntley.com,3,1064,kagi-smallweb
+lisp-journey.gitlab.io,3,1063,kagi-smallweb
+raphkoster.com,3,1063,kagi-smallweb
+mbuffett.com,3,1059,kagi-smallweb hn-popularity
+chrisbrunet.com,3,1059,hn-popularity
+jazco.dev,3,1052,kagi-smallweb hn-popularity
+rachel.fast.ai,3,1045,kagi-smallweb
+heatherburns.tech,3,1044,kagi-smallweb
+furbo.org,3,1041,kagi-smallweb
+fidget-spinner.github.io,3,1041,kagi-smallweb
+ericwbailey.website,3,1039,kagi-smallweb
+linuxblog.io,3,1038,kagi-smallweb hn-popularity
+solvingprocrastination.com,3,1035,hn-popularity
+blog.hofstede.it,3,1032,kagi-smallweb hn-popularity
+giuliomagnifico.blog,3,1031,kagi-smallweb hn-personal-blogs
+wizardzines.com,3,1031,hn-popularity
+mrmarket.lol,3,1029,kagi-smallweb hn-popularity
+mynoise.net,3,1022,kagi-smallweb
+crisesnotes.com,3,1015,hn-popularity
+dnhkng.github.io,3,1015,kagi-smallweb
+dgroshev.com,3,1014,kagi-smallweb hn-popularity
+blog.yakkomajuri.com,3,1010,kagi-smallweb
+nathan.rs,3,999,kagi-smallweb
+plbrault.com,3,994,kagi-smallweb hn-popularity
+scottlawsonbc.com,3,993,kagi-smallweb hn-popularity
+zachholman.com,3,985,kagi-smallweb hn-popularity
+martin.janiczek.cz,3,983,kagi-smallweb
+sankalp.bearblog.dev,3,979,kagi-smallweb
+lexi-lambda.github.io,3,971,kagi-smallweb
+larstofus.com,3,971,kagi-smallweb
+10maurycy10.github.io,3,967,hn-popularity
+craftinginterpreters.com,3,962,hn-popularity
+moq.dev,3,958,kagi-smallweb
+matt.blwt.io,3,941,kagi-smallweb
+robinlinacre.com,3,941,kagi-smallweb
+jeffhuang.com,3,941,hn-popularity
+boydkane.com,3,937,kagi-smallweb
+coryzue.com,3,935,kagi-smallweb hn-popularity
+tynan.com,3,934,kagi-smallweb hn-personal-blogs
+qsantos.fr,3,932,kagi-smallweb hn-personal-blogs
+yaky.dev,3,928,kagi-smallweb
+vincentschmalbach.com,3,928,kagi-smallweb
+rachsmith.com,3,927,kagi-smallweb
+chollinger.com,3,925,kagi-smallweb
+codeconfessions.substack.com,3,916,hn-personal-blogs
+blog.nuclearsecrecy.com,3,906,kagi-smallweb hn-popularity
+evilsocket.net,3,906,kagi-smallweb
+p.migdal.pl,3,897,kagi-smallweb hn-popularity
+erichartford.com,3,894,kagi-smallweb
+macwright.com,3,889,kagi-smallweb hn-popularity
+maxrozen.com,3,878,kagi-smallweb hn-personal-blogs
+alfy.blog,3,874,kagi-smallweb
+blog.rongarret.info,3,867,kagi-smallweb hn-popularity hn-personal-blogs
+quantum5.ca,3,859,kagi-smallweb
+pcjs.org,3,844,kagi-smallweb
+hamatti.org,3,841,kagi-smallweb
+12challenges.substack.com,3,838,hn-popularity
+win-vector.com,3,837,hn-personal-blogs
+gmays.com,3,836,kagi-smallweb
+den.dev,3,830,kagi-smallweb hn-personal-blogs
+vin01.github.io,3,827,kagi-smallweb
+catonmat.net,3,815,hn-popularity
+ohadravid.github.io,3,813,kagi-smallweb
+moderndescartes.com,3,802,kagi-smallweb
+moxie.org,3,802,kagi-smallweb hn-popularity
+mlumiste.com,3,800,kagi-smallweb
+jcs.org,3,797,kagi-smallweb
+blog.chrislewis.au,3,797,kagi-smallweb
+bytesauna.com,3,796,kagi-smallweb
+lastweekinaws.com,3,795,kagi-smallweb
+cybercultural.com,3,793,kagi-smallweb
+wattenberger.com,3,792,kagi-smallweb
+boringsql.com,3,789,kagi-smallweb
+a1k0n.net,3,787,kagi-smallweb
+benjoffe.com,3,786,kagi-smallweb
+neilmadden.blog,3,784,kagi-smallweb
+blog.persistent.info,3,775,kagi-smallweb
+newsletter.eng-leadership.com,3,774,hn-personal-blogs
+batsov.com,3,774,kagi-smallweb
+werwolv.net,3,770,kagi-smallweb
+tomscii.sig7.se,3,766,kagi-smallweb
+seiya.me,3,765,kagi-smallweb
+virtualize.sh,3,764,kagi-smallweb
+rozumem.xyz,3,757,kagi-smallweb
+chadaustin.me,3,756,kagi-smallweb
+timdettmers.com,3,750,kagi-smallweb
+sophiebits.com,3,750,kagi-smallweb
+practicalbetterments.com,3,746,kagi-smallweb hn-popularity
+devz.cl,3,737,kagi-smallweb
+castle-engine.io,3,731,kagi-smallweb
+arnon.dk,3,730,kagi-smallweb
+unplannedobsolescence.com,3,728,kagi-smallweb
+avestura.dev,3,725,kagi-smallweb hn-personal-blogs
+btxx.org,3,725,kagi-smallweb
+blog.phronemophobic.com,3,724,kagi-smallweb
+grossack.site,3,724,kagi-smallweb
+awealthofcommonsense.com,3,720,kagi-smallweb
+dannyguo.com,3,717,kagi-smallweb hn-personal-blogs
+lcamtuf.coredump.cx,3,716,hn-popularity
+blog.robertelder.org,3,715,kagi-smallweb hn-popularity
+willem.com,3,714,kagi-smallweb
+slatestarcodex.com,3,709,hn-popularity
+karthinks.com,3,709,kagi-smallweb
+nickjanetakis.com,3,708,kagi-smallweb hn-personal-blogs
+borischerny.com,3,707,kagi-smallweb
+blog.kronis.dev,3,702,kagi-smallweb
+tim.blog,3,701,hn-popularity
+oranlooney.com,3,699,kagi-smallweb
+morepablo.com,3,698,kagi-smallweb
+blog.reverberate.org,3,694,kagi-smallweb
+jack.bio,3,694,kagi-smallweb
+glthr.com,3,688,kagi-smallweb hn-popularity hn-personal-blogs
+eshelyaron.com,3,685,kagi-smallweb
+thehistoryblog.com,3,685,kagi-smallweb
+andrewlock.net,3,680,kagi-smallweb
+blog.jez.io,3,679,kagi-smallweb
+growingswe.com,3,675,kagi-smallweb
+lnav.org,3,670,kagi-smallweb
+dayvster.com,3,669,kagi-smallweb
+understandlegacycode.com,3,666,kagi-smallweb
+goughlui.com,3,666,kagi-smallweb
+chrisdone.com,3,655,kagi-smallweb
+blog.tjll.net,3,653,kagi-smallweb hn-personal-blogs
+b-list.org,3,652,kagi-smallweb
+brianmckenna.org,3,649,kagi-smallweb
+ramones.dev,3,649,kagi-smallweb
+imperialviolet.org,3,647,kagi-smallweb hn-popularity
+00f.net,3,646,kagi-smallweb
+lambdaland.org,3,646,kagi-smallweb hn-personal-blogs
+thehistoryoftheweb.com,3,645,kagi-smallweb
+leebriggs.co.uk,3,645,kagi-smallweb
+tomcritchlow.com,3,642,kagi-smallweb
+nuxx.net,3,637,kagi-smallweb hn-personal-blogs
+jamesg.blog,3,636,kagi-smallweb hn-popularity hn-personal-blogs
+netmeister.org,3,634,kagi-smallweb hn-popularity
+viralinstruction.com,3,632,kagi-smallweb hn-personal-blogs
+richg42.blogspot.com,3,630,kagi-smallweb
+grumpygamer.com,3,627,kagi-smallweb
+iev.ee,3,626,kagi-smallweb
+clivethompson.medium.com,3,625,hn-popularity
+gomakethings.com,3,621,kagi-smallweb
+yoric.github.io,3,617,kagi-smallweb
+bret.dk,3,611,kagi-smallweb
+gavinhoward.com,3,609,kagi-smallweb hn-personal-blogs
+theleo.zone,3,609,kagi-smallweb
+dylan.gr,3,602,kagi-smallweb
+cgad.ski,3,601,kagi-smallweb
+kyrylo.org,3,598,kagi-smallweb
+shaneosullivan.wordpress.com,3,591,kagi-smallweb
+justin.searls.co,3,587,kagi-smallweb
+alexedwards.net,3,576,kagi-smallweb
+mwl.io,3,575,kagi-smallweb
+stylewarning.com,3,573,kagi-smallweb
+micahlerner.com,3,573,kagi-smallweb hn-popularity
+tomtunguz.com,3,573,kagi-smallweb
+farlow.dev,3,571,kagi-smallweb
+arnaud-carre.github.io,3,570,kagi-smallweb
+scholars-stage.org,3,568,kagi-smallweb
+akselmo.dev,3,568,kagi-smallweb
+changelog.complete.org,3,566,kagi-smallweb
+landaire.net,3,566,kagi-smallweb
+cyberdemon.org,3,563,kagi-smallweb
+blog.yoshuawuyts.com,3,563,kagi-smallweb
+vivianvoss.net,3,563,kagi-smallweb
+openstreetmap.org,3,562,kagi-smallweb
+arne.me,3,560,kagi-smallweb
+arun.is,3,558,kagi-smallweb
+blog.zarfhome.com,3,557,kagi-smallweb
+blog.lyc8503.net,3,557,kagi-smallweb
+trickster.dev,3,555,kagi-smallweb
+lucassifoni.info,3,553,kagi-smallweb
+johan.hal.se,3,546,kagi-smallweb
+pcloadletter.dev,3,546,kagi-smallweb
+binwang.me,3,545,kagi-smallweb
+timharford.com,3,543,hn-popularity
+nubero.ch,3,535,kagi-smallweb
+transactional.blog,3,532,kagi-smallweb
+seuros.com,3,532,kagi-smallweb
+colino.net,3,531,kagi-smallweb
+blog.sylver.dev,3,530,kagi-smallweb
+neurofrontiers.blog,3,527,kagi-smallweb
+tech.stonecharioteer.com,3,527,kagi-smallweb
+allendowney.com,3,522,kagi-smallweb
+sandordargo.com,3,521,kagi-smallweb
+sander.ai,3,519,kagi-smallweb
+jsgroth.dev,3,519,kagi-smallweb
+dylanbeattie.net,3,517,kagi-smallweb
+rjp.io,3,516,kagi-smallweb
+multiverseemployeehandbook.com,3,515,kagi-smallweb
+scopeofwork.net,3,513,kagi-smallweb
+jerf.org,3,511,kagi-smallweb
+angadh.com,3,509,kagi-smallweb
+transistor-man.com,3,508,kagi-smallweb hn-personal-blogs
+blog.information-superhighway.net,3,503,kagi-smallweb
+educatedguesswork.org,3,503,kagi-smallweb
+optoutproject.net,3,500,kagi-smallweb
+lflank.wordpress.com,3,499,kagi-smallweb
+blog.polybdenum.com,3,498,kagi-smallweb
+sicpers.info,3,495,kagi-smallweb hn-personal-blogs
+blog.danieljanus.pl,3,494,kagi-smallweb hn-personal-blogs
+interjectedfuture.com,3,494,kagi-smallweb
+esp32-open-mac.be,3,491,kagi-smallweb
+garyodernichts.blogspot.com,3,488,kagi-smallweb
+nedbatchelder.com,3,486,kagi-smallweb hn-popularity
+untested.sonnet.io,3,484,kagi-smallweb
+blog.nawaz.org,3,479,kagi-smallweb hn-personal-blogs
+liorsinai.github.io,3,478,kagi-smallweb hn-personal-blogs
+spakhm.com,3,469,kagi-smallweb
+artificialworlds.net,3,465,kagi-smallweb
+bigmessowires.com,3,462,kagi-smallweb hn-popularity
+chelseatroy.com,3,461,kagi-smallweb
+hannahilea.com,3,460,kagi-smallweb
+blog.xoria.org,3,460,kagi-smallweb
+jameshfisher.com,3,459,kagi-smallweb hn-popularity
+blog.stuffedcow.net,3,459,kagi-smallweb
+mabez.dev,3,457,kagi-smallweb
+mostlynerdless.de,3,456,kagi-smallweb
+rubick.com,3,451,kagi-smallweb
+seldo.com,3,450,kagi-smallweb
+a.wholelottanothing.org,3,450,kagi-smallweb
+hypirion.com,3,444,kagi-smallweb
+mattrighetti.com,3,438,kagi-smallweb hn-personal-blogs
+parentheticallyspeaking.org,3,438,kagi-smallweb
+pascal.hansotten.com,3,438,kagi-smallweb
+davidlattimore.github.io,3,432,kagi-smallweb
+divisbyzero.com,3,431,kagi-smallweb
+myme.no,3,430,kagi-smallweb
+pythonspeed.com,3,429,kagi-smallweb
+internals-for-interns.com,3,429,kagi-smallweb
+blog.codinghorror.com,3,426,kagi-smallweb hn-popularity
+jeremyong.com,3,421,kagi-smallweb
+pncnmnp.github.io,3,420,kagi-smallweb hn-personal-blogs
+brevzin.github.io,3,419,kagi-smallweb
+wiki.xxiivv.com,3,413,kagi-smallweb
+joelonsoftware.com,3,410,hn-popularity
+spicyweb.dev,3,403,kagi-smallweb
+val.packett.cool,3,401,kagi-smallweb
+cassidoo.co,3,399,kagi-smallweb
+blog.mattstuchlik.com,3,397,kagi-smallweb
+exple.tive.org,3,388,kagi-smallweb
+grepular.com,3,388,kagi-smallweb
+johnnysswlab.com,3,384,kagi-smallweb
+rhaas.blogspot.com,3,382,kagi-smallweb hn-popularity
+celso.io,3,381,kagi-smallweb
+bastian.rieck.me,3,379,kagi-smallweb hn-personal-blogs
+thisisimportant.net,3,379,kagi-smallweb
+stefan-marr.de,3,374,kagi-smallweb
+wcedmisten.fyi,3,371,hn-personal-blogs
+jonathan-frere.com,3,366,kagi-smallweb
+zeux.io,3,361,kagi-smallweb
+mathspp.com,3,355,kagi-smallweb
+maskray.me,3,355,kagi-smallweb hn-popularity
+amitp.blogspot.com,3,352,kagi-smallweb
+adamkarvonen.github.io,3,349,kagi-smallweb
+sporks.space,3,348,kagi-smallweb
+fgiesen.wordpress.com,3,336,kagi-smallweb hn-popularity
+tanelpoder.com,3,318,kagi-smallweb hn-personal-blogs
+mahadk.com,2,3808,kagi-smallweb
+noheger.at,2,3628,kagi-smallweb hn-popularity
+thereallo.dev,2,3113,kagi-smallweb
+saurabhs.org,2,2626,hn-popularity
+conduition.io,2,2456,kagi-smallweb hn-popularity
+jayd.ml,2,2425,kagi-smallweb hn-popularity
+blog.hopefullyuseful.com,2,2400,kagi-smallweb
+simone.org,2,2300,kagi-smallweb hn-popularity
+brutecat.com,2,2239,kagi-smallweb hn-popularity
+andreasjhkarlsson.github.io,2,2156,hn-popularity
+anthonyhobday.com,2,2146,hn-popularity
+brickexperimentchannel.wordpress.com,2,2123,kagi-smallweb hn-popularity
+bogdanthegeek.github.io,2,2078,kagi-smallweb hn-popularity
+dannorth.net,2,2065,kagi-smallweb hn-popularity
+jonready.com,2,2003,kagi-smallweb hn-popularity
+keygen.sh,2,1980,hn-popularity
+ericdraken.com,2,1954,hn-popularity

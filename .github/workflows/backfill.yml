@@ -1,0 +1,87 @@
+name: backfill
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: Parallel jobs (each gets its own IP and request budget)
+        default: '10'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backfill
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      shards: ${{ steps.plan.outputs.shards }}
+      count: ${{ steps.plan.outputs.count }}
+    steps:
+      - id: plan
+        run: |
+          n="${{ inputs.shards || '10' }}"
+          echo "count=$n" >> "$GITHUB_OUTPUT"
+          echo "shards=$(seq -s, 0 $((n - 1)) | sed 's/^/[/;s/$/]/')" >> "$GITHUB_OUTPUT"
+
+  wayback:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJson(needs.plan.outputs.shards) }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --filter fontsovertime
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: node pipeline/wayback.ts --shard ${{ matrix.shard }}/${{ needs.plan.outputs.count }} --concurrency 2 --rpm 30 --budget 300 --out out/wayback-${{ matrix.shard }}.jsonl
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: wayback-${{ matrix.shard }}
+          path: out/wayback-${{ matrix.shard }}.jsonl
+          if-no-files-found: ignore
+          retention-days: 7
+
+  commit:
+    needs: wayback
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --filter fontsovertime
+      - uses: actions/download-artifact@v5
+        with:
+          path: out
+          pattern: wayback-*
+          merge-multiple: true
+      - name: Merge
+        run: |
+          ls out/wayback-*.jsonl >/dev/null 2>&1 || exit 0
+          node pipeline/merge.ts --kind wayback out/wayback-*.jsonl
+      - name: Commit
+        run: |
+          git config user.name "fontsovertime-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/snapshots/wayback
+          git diff --cached --quiet && exit 0
+          git commit -m "Wayback backfill $(date -u +%F)"
+          git pull --rebase
+          git push

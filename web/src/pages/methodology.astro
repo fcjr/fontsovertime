@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { load, type CategorySummary, type Overview } from '../lib/data';
+import { pct } from '../lib/format';
+
+const o = load<Overview>('overview.json');
+const cats = load<CategorySummary[]>('categories.json');
+---
+
+<Layout title="How it works" description="How Fonts Over Time detects the typeface a website uses, what it can’t see, and how to opt out.">
+  <section class="wrap hero">
+    <h1>How it works</h1>
+    <p class="lede">What we measure, how, and where the numbers are weaker than they look.</p>
+  </section>
+
+  <article class="wrap">
+    <div class="prose">
+      <h2>What counts as a site’s font</h2>
+      <p>
+        Every Sunday we open each homepage in a real Chromium browser, wait for its web fonts to finish loading, and walk every visible piece of text
+        on the page. For each run of text we read the computed <code>font-family</code> and work out which family is actually drawing it: the first
+        one in the stack that has a loaded font file. If none has loaded and the stack starts with the operating system’s interface font, we record
+        <code>system-ui</code>. Otherwise we record the first family named.
+      </p>
+      <p>
+        The <strong>body font</strong> is the family covering the most characters on the page. The <strong>heading font</strong> is the same
+        calculation restricted to <code>h1</code> to <code>h3</code>. Text hidden from view, inside cookie banners and other dialogs, or smaller than
+        two pixels doesn’t count.
+      </p>
+
+      <h2>Why a browser, not the CSS</h2>
+      <p>
+        Stylesheets say which fonts a site declares, not which ones it uses. Next.js renames fonts to hashed names, CSS-in-JS injects styles at
+        runtime, and site builders load fonts late. When we checked the same homepages both ways, reading the CSS alone agreed with the browser only
+        about two times in three.
+      </p>
+
+      <h2>Names</h2>
+      <p>
+        Sites call the same typeface many things: <code>__Inter_a1b2c3</code>, <code>InterVariable</code>, <code>inter</code>. We fold these into one
+        name using a list of aliases that is part of the <a href="/data">public data</a>. Optical and weight variants of one family, like Text and
+        Display cuts, count as the same face.
+      </p>
+
+      <h2>Switches</h2>
+      <p>
+        A switch is recorded only when a site shows a new font in two browser crawls in a row, so an A/B test, a slow font server or a one-day
+        experiment doesn’t count. A few hundred of the best-known sites are crawled daily, which means their switches show up within two days; the rest take two
+        weeks.
+      </p>
+
+      <h2>History before our crawls</h2>
+      <p>
+        The shaded part of each trend chart comes from the Internet Archive’s copies of the same homepages, one per quarter back to 2021. We load each
+        archived page’s HTML and CSS in the same browser and run the same measurement, with scripts turned off to keep our load on the Archive
+        light. If that fails we read the archived CSS directly. Because the font files themselves often weren’t archived, we record the typeface
+        the page asks for rather than what an old copy manages to draw.
+      </p>
+      <p>
+        Fonts change rarely, so we don’t measure every quarter. We measure the first and last copy; if they match we fill in the quarters between,
+        and if they differ we split the range and measure again until we find the quarter it changed. A site that switched fonts and switched back
+        between two measurements would be missed. Filled-in quarters are marked in the data.
+      </p>
+      <p>
+        Pages that build their text with JavaScript, and sites whose CSS was never archived, can’t be read this way. Trend lines follow a fixed set
+        of homepages{o.trend_panel ? ` (currently ${o.trend_panel})` : ''} that have archive history, so a line moves only when sites change fonts,
+        not when the sample changes.
+      </p>
+
+      <h2>What we can’t see</h2>
+      <ul>
+        <li>Only homepages. Product pages, docs and apps often use different type.</li>
+        <li>Fonts loaded only after scrolling or clicking.</li>
+        <li>
+          Sites that block automated browsers. When that happens we fall back to reading the page’s CSS, and if that’s blocked too the site isn’t
+          counted that week. The block rate by category is below.
+        </li>
+        <li>
+          Our crawler runs from US data centers, so sites that serve different pages by country show us their US version.
+        </li>
+        <li>Commercial fonts can’t be displayed here, so their names are set in italics instead of in their own face.</li>
+      </ul>
+
+      <h3>Blocked this week</h3>
+      <table class="table num">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th class="r">Sites</th>
+            <th class="r">Blocked</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            cats.map((c) => (
+              <tr>
+                <td>{c.name}</td>
+                <td class="r">{c.n.toLocaleString()}</td>
+                <td class="r">{pct(c.blocked)}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+
+      <h2>The sites</h2>
+      <p>
+        The list is rebuilt from open sources, so anyone can reproduce it:
+      </p>
+      <ul>
+        <li>
+          <strong>Top sites</strong>: the 5,000 most visited origins in the Chrome UX Report, Google’s public data on real Chrome traffic. We fold
+          subdomains and country versions into one site per company and leave out adult sites.
+        </li>
+        <li><strong>Y Combinator</strong>: every active, public and acquired company in the YC directory that has a website.</li>
+        <li>
+          <strong>Unicorns</strong>: private companies valued at $1 billion or more. The starting point is Wikipedia’s list, with websites from
+          Wikidata; because that list has many gaps, over half the entries and websites were added or checked by hand. Each row records its source.
+        </li>
+        <li>
+          <strong>Indie blogs</strong>: personal sites pooled from the Kagi Small Web list, the HN Popularity Contest and a list of Hacker News
+          users’ blogs, then ranked by how many of their posts scored 100 points or more on Hacker News since 2023. We keep the top 1,000.
+        </li>
+        <li>
+          <strong>Hand-picked lists</strong> for news, government, universities, developer tools, SaaS, e-commerce and large companies, seeded from
+          Wikipedia, the US government’s list of .gov domains and a public list of university domains.
+        </li>
+      </ul>
+      <p>
+        Each site has one industry category, and can also be in any of the traffic and funding groups. Parked domains and sites that now redirect to
+        another site we already track are left out, which matters for acquired startups.
+      </p>
+
+      <h2 id="opt-out">Opting out</h2>
+      <p>
+        We load each homepage once per crawl, with a normal browser and no logins, and never follow links. If you run a site and would rather not be
+        included, open an issue or a pull request adding it to the exclusion list in the project’s repository. We remove it before the next crawl, and it stays out when the lists are rebuilt.
+      </p>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .hero {
+    padding-top: clamp(40px, 6vw, 88px);
+    padding-bottom: 24px;
+    display: grid;
+    gap: 16px;
+  }
+  .prose .table {
+    font-family: var(--sans);
+    font-size: 0.9375rem;
+    margin-top: 12px;
+  }
+  .prose h2 {
+    padding-top: 12px;
+  }
+</style>

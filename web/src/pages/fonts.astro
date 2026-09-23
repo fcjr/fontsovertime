@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FontName from '../components/FontName.astro';
+import { load, type FontIndexEntry } from '../lib/data';
+import { pct } from '../lib/format';
+import { glyphs } from '../lib/specimen';
+
+const fonts = load<FontIndexEntry[]>('fonts.json');
+const shown = fonts.slice(0, 120);
+const rest = fonts.slice(120);
+---
+
+<Layout title="All fonts" description="Every typeface found on the homepages we track, by number of sites." fonts={shown} specimenText={glyphs(...shown.map((f) => f.name))}>
+  <section class="wrap hero">
+    <h1>Every font we’ve found</h1>
+    <p class="lede">{fonts.length.toLocaleString()} typefaces across the homepages we track, most used first.</p>
+    <label class="filter">
+      <span class="sr-only">Filter fonts</span>
+      <input type="search" placeholder="Filter by name" data-font-filter />
+    </label>
+  </section>
+  <section class="wrap">
+    <ol class="grid" data-font-list>
+      {
+        shown.map((f) => (
+          <li data-q={f.name.toLowerCase()}>
+            <FontName font={f} />
+            <span class="num muted small">
+              {f.sites} {f.sites === 1 ? 'site' : 'sites'}
+            </span>
+          </li>
+        ))
+      }
+    </ol>
+    {
+      rest.length > 0 && (
+        <>
+          <h2 class="rest-h">Found on one or two sites</h2>
+          <ul class="rest" data-font-list>
+            {rest.map((f) => (
+              <li data-q={f.name.toLowerCase()}>
+                <a href={`/font/${f.slug}`}>{f.name}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+  </section>
+</Layout>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>('[data-font-filter]')!;
+  const items = [...document.querySelectorAll<HTMLElement>('[data-font-list] > li')];
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    for (const li of items) li.hidden = !!q && !li.dataset.q!.includes(q);
+  });
+</script>
+
+<style>
+  .hero {
+    padding-top: clamp(40px, 6vw, 88px);
+    padding-bottom: 32px;
+    display: grid;
+    gap: 16px;
+  }
+  .filter input {
+    width: min(100%, 24rem);
+    font: inherit;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 9px 12px;
+  }
+  .grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    gap: 0 32px;
+    border-top: 1px solid var(--ink);
+  }
+  .grid li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: 1.75rem;
+    line-height: 1.15;
+    min-width: 0;
+  }
+  .grid li :global(a) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .rest-h {
+    margin: 64px 0 16px;
+    font-size: 1.5rem;
+  }
+  .rest {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 4 12rem;
+    column-gap: 32px;
+    font-size: 0.9375rem;
+  }
+  .rest li {
+    padding: 3px 0;
+  }
+</style>

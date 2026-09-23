@@ -1,0 +1,183 @@
+---
+import '../styles/global.css';
+import { load, type FontRef, type Overview } from '../lib/data';
+import { fontLinks } from '../lib/specimen';
+import Wordmark from '../components/Wordmark.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  fonts?: (FontRef | null | undefined)[];
+  specimenText?: string;
+  fullSpecimen?: boolean;
+}
+
+const { title, description, fonts = [], specimenText, fullSpecimen = false } = Astro.props;
+const overview = load<Overview>('overview.json');
+const pageTitle = title ? `${title} | Fonts Over Time` : 'Fonts Over Time: what the web is set in';
+const desc =
+  description ??
+  'A weekly record of the typefaces the web’s homepages are set in, by category, with trends and a feed of who switched.';
+const links = fontLinks(fonts, { text: specimenText, full: fullSpecimen });
+const path = Astro.url.pathname;
+const nav = [
+  ['/fonts', 'Fonts'],
+  ['/categories', 'Categories'],
+  ['/changes', 'Switches'],
+  ['/pairings', 'Pairings'],
+  ['/compare', 'Compare'],
+  ['/methodology', 'Method'],
+  ['/data', 'Data'],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={new URL(path, Astro.site)} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={new URL('/og.png', Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="Font switches" href="/changes.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,50..150,100..900;1,50..150,100..900&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..700&display=swap"
+    />
+    {links.map((href) => <link rel="stylesheet" href={href} />)}
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="masthead">
+      <div class="wrap bar">
+        <a class="mark" href="/" aria-label="Fonts Over Time, home">
+          <Wordmark class="mark-name" />
+        </a>
+        <nav aria-label="Main">
+          <ul>
+            {
+              nav.map(([href, label]) => (
+                <li>
+                  <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>
+                    {label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="foot">
+      <div class="wrap foot-grid">
+        <p class="foot-note">
+          Fonts Over Time loads {overview?.n_sites?.toLocaleString() ?? 'a few thousand'} homepages every week in a real browser and records the
+          typeface doing the work. It runs on free infrastructure, and every snapshot is <a href="/data">downloadable</a>.
+        </p>
+        <ul class="foot-links">
+          <li><a href="/methodology">How it works</a></li>
+          <li><a href="/methodology#opt-out">Opt out</a></li>
+          <li><a href="/changes.xml">RSS</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .skip {
+    position: absolute;
+    left: -9999px;
+  }
+  .skip:focus {
+    left: 16px;
+    top: 16px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 8px 12px;
+    z-index: 10;
+  }
+  .masthead {
+    border-bottom: 2px solid var(--ink);
+  }
+  .bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 32px;
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .mark :global(.mark-name) {
+    font-size: 1.75rem;
+  }
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9375rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 500;
+    padding: 4px 0;
+  }
+  nav a:hover,
+  nav a[aria-current='page'] {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--signal);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+  }
+  .foot {
+    margin-top: clamp(80px, 10vw, 140px);
+    border-top: 2px solid var(--ink);
+    padding: 32px 0 48px;
+    font-size: 0.9375rem;
+    color: var(--ink-2);
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 36rem) auto;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .foot-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+  @media (max-width: 720px) {
+    .foot-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

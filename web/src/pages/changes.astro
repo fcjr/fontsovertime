@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Switches from '../components/Switches.astro';
+import { load, type Change } from '../lib/data';
+import { glyphs } from '../lib/specimen';
+
+const changes = load<Change[]>('changes.json');
+const fonts = changes.flatMap((c) => [c.from, c.to]);
+---
+
+<Layout title="Switches" description="Websites that changed their typeface, confirmed across two crawls." fonts={fonts} specimenText={glyphs(...fonts.map((f) => f.name))}>
+  <section class="wrap hero">
+    <h1>Who switched fonts</h1>
+    <p class="lede">
+      A switch is recorded once a site shows its new font in two crawls in a row, so a one-day experiment or a failed font load doesn’t count.
+    </p>
+    <p class="small"><a href="/changes.xml">Follow by RSS</a></p>
+  </section>
+  <section class="wrap">
+    <div class="rule"></div>
+    <Switches changes={changes} />
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding-top: clamp(40px, 6vw, 88px);
+    padding-bottom: 32px;
+    display: grid;
+    gap: 16px;
+  }
+  .rule {
+    border-top: 1px solid var(--ink);
+  }
+</style>

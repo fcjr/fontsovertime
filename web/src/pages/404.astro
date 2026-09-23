@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Not found">
+  <section class="wrap hero">
+    <h1>Nothing set here</h1>
+    <p class="lede">We don’t have a page at this address. If you were looking for a site or a font, it may not be in our lists yet.</p>
+    <p><a href="/fonts">Browse every font</a> or <a href="/">go to the front page</a>.</p>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding-top: clamp(64px, 10vw, 140px);
+    display: grid;
+    gap: 20px;
+  }
+</style>

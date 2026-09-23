@@ -1,0 +1,25 @@
+{
+  "name": "fontsovertime",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "crawl": "node crawler/crawl.ts",
+    "typecheck": "tsc",
+    "merge": "node pipeline/merge.ts",
+    "aggregate": "node pipeline/aggregate.ts",
+    "backfill": "node pipeline/wayback.ts",
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "test": "node --test pipeline/",
+    "lists": "node pipeline/indie.ts && node pipeline/sitelists.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "playwright": "^1.63.0",
+    "typescript": "^7.0.2"
+  },
+  "packageManager": "pnpm@10.28.0"
+}

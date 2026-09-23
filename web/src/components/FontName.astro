@@ -1,0 +1,42 @@
+---
+import type { FontRef } from '../lib/data';
+import { fontStack } from '../lib/specimen';
+
+interface Props {
+  font: FontRef | null | undefined;
+  link?: boolean;
+  class?: string;
+}
+const { font, link = true, class: cls } = Astro.props;
+const stack = fontStack(font);
+const style = stack ? `font-family: ${stack}, var(--display)` : undefined;
+---
+
+{
+  font ? (
+    link ? (
+      <a href={`/font/${font.slug}`} class:list={['fn', cls, { licensed: !stack }]} style={style}>
+        {font.name}
+      </a>
+    ) : (
+      <span class:list={['fn', cls, { licensed: !stack }]} style={style}>
+        {font.name}
+      </span>
+    )
+  ) : (
+    <span class="muted">–</span>
+  )
+}
+
+<style>
+  .fn {
+    text-decoration: none;
+  }
+  .fn:not(.licensed) {
+    font-variation-settings: normal;
+  }
+  a.fn:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+</style>

@@ -1,0 +1,198 @@
+---
+import type { FontRef } from '../lib/data';
+import { pct } from '../lib/format';
+import { fontStack } from '../lib/specimen';
+import { squarify } from '../lib/treemap';
+
+type Item = FontRef & { share: number; count: number };
+interface Props {
+  sets: { key: string; label: string; n: number; items: Item[] }[];
+}
+const { sets } = Astro.props;
+const W = 100;
+const H = 56;
+const laid = sets.map((set) => {
+  const shown = set.items.slice(0, 20);
+  const restShare = Math.max(0, 1 - shown.reduce((a, i) => a + i.share, 0));
+  const tiles = squarify(shown, (i) => i.share, W, H);
+  return { ...set, tiles, restShare };
+});
+---
+
+<div class="tm" data-typemap>
+  <div class="tm-tabs" role="tablist" aria-label="Kind of site">
+    {
+      laid.map((s, i) => (
+        <button type="button" role="tab" id={`tm-tab-${s.key}`} aria-controls={`tm-${s.key}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} data-key={s.key}>
+          {s.label}
+        </button>
+      ))
+    }
+  </div>
+  {
+    laid.map((s, i) => (
+      <div class="tm-set" id={`tm-${s.key}`} role="tabpanel" aria-labelledby={`tm-tab-${s.key}`} hidden={i !== 0}>
+        <div class="tm-area">
+          {s.tiles.map((t, k) => {
+            const stack = fontStack(t.item);
+            return (
+              <a
+                href={`/font/${t.item.slug}`}
+                class:list={['tile', { first: k === 0, licensed: !stack, tiny: t.w * t.h < 40 }]}
+                style={`left:${t.x}%;top:${(t.y / H) * 100}%;width:${t.w}%;height:${(t.h / H) * 100}%;--chars:${Math.max(t.item.name.length, 3)};--i:${k}`}
+                aria-label={`${t.item.name}: ${pct(t.item.share)} of ${s.label.toLowerCase()} homepages, ${t.item.count} sites`}
+              >
+                <span class="t-name" style={stack ? `font-family:${stack}, var(--sans)` : undefined}>
+                  {t.item.name}
+                </span>
+                <span class="t-meta num">
+                  <span>{pct(t.item.share)}</span>
+                  <span class="t-count">{t.item.count} sites</span>
+                </span>
+              </a>
+            );
+          })}
+        </div>
+        <p class="tm-note small muted num">
+          The 20 most used body fonts across {s.n.toLocaleString()} homepages, sized by share. The other {pct(s.restShare, 0)} use a long tail of
+          less common faces.
+        </p>
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-typemap]')) {
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role=tab]')];
+    const select = (tab: HTMLButtonElement) => {
+      for (const t of tabs) {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        const panel = root.querySelector<HTMLElement>(`#${t.getAttribute('aria-controls')}`)!;
+        panel.hidden = !on;
+        if (on) {
+          panel.classList.remove('enter');
+          void panel.offsetWidth;
+          panel.classList.add('enter');
+        }
+      }
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(t));
+      t.addEventListener('keydown', (e) => {
+        const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return;
+        const next = tabs[(i + d + tabs.length) % tabs.length];
+        next.focus();
+        select(next);
+      });
+    });
+  }
+</script>
+
+<style>
+  .tm-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 16px 0 14px;
+  }
+  .tm-tabs button {
+    font: inherit;
+    font-size: 0.875rem;
+    color: var(--ink);
+    background: none;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 6px 14px;
+    cursor: pointer;
+  }
+  .tm-tabs button:hover {
+    border-color: var(--ink);
+  }
+  .tm-tabs button[aria-selected='true'] {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--paper);
+  }
+  .tm-area {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 100 / 56;
+    min-height: 420px;
+  }
+  .tile {
+    position: absolute;
+    box-sizing: border-box;
+    border: 2px solid var(--paper);
+    background: var(--paper-2);
+    color: var(--ink);
+    text-decoration: none;
+    container-type: size;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(4px, 1.2cqmin, 14px);
+    transition: background-color 140ms, color 140ms;
+  }
+  .tile.first {
+    background: var(--signal);
+    color: var(--paper);
+  }
+  .tile:hover,
+  .tile:focus-visible {
+    background: var(--ink);
+    color: var(--paper);
+    outline: none;
+    z-index: 1;
+  }
+  .t-name {
+    font-size: min(46cqh, calc(165cqw / var(--chars)));
+    line-height: 1;
+    letter-spacing: -0.01em;
+    overflow-wrap: anywhere;
+  }
+  .t-meta {
+    font-style: normal;
+    font-variation-settings: normal;
+    display: flex;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: clamp(10px, 9cqmin, 15px);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .t-count {
+    font-weight: 400;
+    opacity: 0;
+    transition: opacity 140ms;
+  }
+  .tile:hover .t-count,
+  .tile:focus-visible .t-count {
+    opacity: 0.8;
+  }
+  .tile.tiny .t-meta {
+    display: none;
+  }
+  .tm-note {
+    margin-top: 12px;
+  }
+  .enter .tile {
+    animation: tile-in 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(var(--i) * 18ms);
+  }
+  @keyframes tile-in {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+  }
+  @media (max-width: 640px) {
+    .tm-area {
+      aspect-ratio: 3 / 4;
+    }
+  }
+</style>

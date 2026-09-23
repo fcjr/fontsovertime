@@ -1,0 +1,266 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrendChart from '../../components/TrendChart.astro';
+import Bars from '../../components/Bars.astro';
+import StackBar from '../../components/StackBar.astro';
+import Switches from '../../components/Switches.astro';
+import FontName from '../../components/FontName.astro';
+import SiteTable from '../../components/SiteTable.astro';
+import { load, type Breakdown, type Change, type FontIndexEntry, type FontRef, type Period, type SiteRow } from '../../lib/data';
+import { date, pct, SOURCE_LABELS } from '../../lib/format';
+import { fontStack } from '../../lib/specimen';
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+type Font = FontIndexEntry & {
+  first_seen: string;
+  periods: Period[];
+  series: { body: (number | null)[]; heading: (number | null)[] };
+  by_category: { slug: string; name: string; count: number; share: number }[];
+  sources: Breakdown;
+  pairs: (FontRef & { count: number })[];
+  using: (SiteRow & { roles: string[] })[];
+  switched_to: Change[];
+  switched_from: Change[];
+};
+
+export function getStaticPaths() {
+  return load<FontIndexEntry[]>('fonts.json').map((f) => ({ params: { slug: f.slug } }));
+}
+
+const f = load<Font>(`font/${Astro.params.slug}.json`);
+const stack = fontStack(f);
+const style = stack ? `font-family: ${stack}, var(--display)` : undefined;
+const marqueePath = join(process.cwd(), '..', 'sites', 'marquee.txt');
+const marquee = new Set(existsSync(marqueePath) ? readFileSync(marqueePath, 'utf8').split('\n').filter(Boolean) : []);
+const samples = [...f.using]
+  .sort((a, b) => Number(marquee.has(b.domain)) - Number(marquee.has(a.domain)))
+  .map((s) => ({ domain: s.domain, title: load<{ title: string | null }>(`site/${s.domain}.json`)?.title }))
+  .filter((s) => s.title && s.title.length > 12 && s.title.length < 90)
+  .slice(0, 3);
+const others = [...f.pairs, ...f.switched_to.map((c) => c.from), ...f.switched_from.map((c) => c.to)];
+const origin = f.specimen?.source === 'google' ? 'Google Fonts' : f.specimen?.source === 'fontshare' ? 'Fontshare' : null;
+---
+
+<Layout
+  title={f.name}
+  description={`${f.name} is used on ${f.sites} of the homepages we track. Adoption over time, by category, and the sites that use it.`}
+  fonts={[f]}
+  fullSpecimen
+>
+  <section class="wrap hero">
+    <p class="crumb small"><a href="/fonts">Fonts</a></p>
+    <h1 class:list={['specimen', { licensed: !stack }]} style={style}>{f.name}</h1>
+    <p class="about">
+      {
+        f.specimen?.source === 'local'
+          ? f.generic
+            ? 'A generic family: the site asked for whatever the visitor’s system provides.'
+            : 'A system font, installed with most operating systems. Shown here in your own copy.'
+          : origin
+            ? `Free to use, from ${origin}. The name above and the samples below are set in it.`
+            : 'A commercial or custom typeface. We can’t serve it, so this page is set in our text face.'
+      }
+    </p>
+  </section>
+
+  <section class="wrap">
+    <dl class="facts">
+      <div>
+        <dt>Body text on</dt>
+        <dd class="num">{f.body_count.toLocaleString()} <span>sites</span></dd>
+      </div>
+      <div>
+        <dt>Headings on</dt>
+        <dd class="num">{f.heading_count.toLocaleString()} <span>sites</span></dd>
+      </div>
+      <div>
+        <dt>Share of all homepages</dt>
+        <dd class="num">{pct(f.share)}</dd>
+      </div>
+      <div>
+        <dt>First seen</dt>
+        <dd class="num">{f.first_seen ? date(f.first_seen) : '–'}</dd>
+      </div>
+    </dl>
+  </section>
+
+  {
+    stack && samples.length > 0 && (
+      <section class="wrap section" aria-labelledby="inuse-h">
+        <div class="section-head">
+          <h2 id="inuse-h">In use</h2>
+          <p>Page titles from sites that set their text in {f.name}.</p>
+        </div>
+        <ul class="samples" style={style}>
+          {samples.map((s, i) => (
+            <li>
+              <p class:list={['sample', `w${i}`]}>{s.title}</p>
+              <a class="src small" href={`/site/${s.domain}`}>
+                {s.domain}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <section class="wrap section">
+    <TrendChart
+      periods={f.periods}
+      series={[
+        { label: 'Body text', values: f.series.body },
+        { label: 'Headings', values: f.series.heading },
+      ]}
+      title={`Share of homepages using ${f.name}`}
+    />
+  </section>
+
+  <section class="wrap section two">
+    <div>
+      <div class="section-head"><h2>By category</h2></div>
+      <Bars items={f.by_category.map((c) => ({ label: c.name, href: `/category/${c.slug}`, share: c.share, count: c.count }))} />
+    </div>
+    <div>
+      <div class="section-head"><h2>Paired with</h2></div>
+      {
+        f.pairs.length ? (
+          <ul class="pairs">
+            {f.pairs.map((p) => (
+              <li>
+                <FontName font={p} />
+                <span class="num muted small">
+                  {p.count} {p.count === 1 ? 'site' : 'sites'}
+                </span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="muted">Sites using {f.name} use it for everything.</p>
+        )
+      }
+    </div>
+  </section>
+
+  {
+    f.sources.length > 0 && (
+      <section class="wrap section">
+        <div class="narrow">
+          <StackBar data={f.sources} labels={SOURCE_LABELS} title={`How sites serve ${f.name}`} />
+        </div>
+      </section>
+    )
+  }
+
+  <section class="wrap section two">
+    <div>
+      <div class="section-head"><h2>Switched to it</h2></div>
+      <Switches changes={f.switched_to} empty={`No confirmed switches to ${f.name} yet.`} />
+    </div>
+    <div>
+      <div class="section-head"><h2>Switched away</h2></div>
+      <Switches changes={f.switched_from} empty={`No confirmed switches away from ${f.name} yet.`} />
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <div class="section-head"><h2>Sites using {f.name}</h2></div>
+    <SiteTable sites={f.using} showCategory />
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding-top: clamp(40px, 6vw, 88px);
+    padding-bottom: 40px;
+    display: grid;
+    gap: 20px;
+  }
+  .crumb a {
+    color: var(--ink-3);
+  }
+  .specimen {
+    font-size: clamp(3.5rem, 12vw, 10rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-variation-settings: normal;
+    overflow-wrap: anywhere;
+  }
+  .about {
+    color: var(--ink-2);
+    max-width: 36rem;
+  }
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .facts dt {
+    color: var(--ink-3);
+    font-size: 0.875rem;
+  }
+  .facts dd {
+    margin: 4px 0 0;
+    font-family: var(--display);
+    font-size: 2rem;
+  }
+  .facts dd span {
+    font-size: 1rem;
+    color: var(--ink-3);
+  }
+  .samples {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .samples li {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .sample {
+    font-size: clamp(1.5rem, 3.4vw, 2.75rem);
+    line-height: 1.15;
+    text-wrap: balance;
+    max-width: 22em;
+  }
+  .sample.w1 {
+    font-weight: 300;
+  }
+  .sample.w2 {
+    font-weight: 700;
+  }
+  .src {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: var(--sans);
+    color: var(--ink-3);
+  }
+  .two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 32px 64px;
+    align-items: start;
+  }
+  .narrow {
+    max-width: 32rem;
+  }
+  .pairs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .pairs li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: 1.5rem;
+  }
+</style>

@@ -1,0 +1,68 @@
+---
+import type { FontRef } from '../lib/data';
+import { pct } from '../lib/format';
+import FontName from './FontName.astro';
+
+interface Props {
+  items: { label?: string; href?: string; font?: FontRef | null; share: number; count?: number }[];
+  max?: number;
+  unit?: string;
+}
+const { items, max = Math.max(...items.map((i) => i.share), 0.0001), unit = 'sites' } = Astro.props;
+---
+
+<ul class="bars">
+  {
+    items.map((it) => (
+      <li>
+        <span class="label">
+          {it.font ? <FontName font={it.font} /> : it.href ? <a href={it.href}>{it.label}</a> : it.label}
+        </span>
+        <span class="track" aria-hidden="true">
+          <span class="fill" style={`width:${Math.max((it.share / max) * 100, 0.8)}%`} />
+        </span>
+        <span class="value num" title={it.count !== undefined ? `${it.count} ${unit}` : undefined}>
+          {pct(it.share)}
+        </span>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .bars {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 2px;
+  }
+  li {
+    display: grid;
+    grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 3.5rem;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 0;
+  }
+  .label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+  .track {
+    height: 10px;
+    display: block;
+  }
+  .fill {
+    display: block;
+    height: 100%;
+    background: var(--ink);
+    border-radius: 0 4px 4px 0;
+  }
+  .value {
+    text-align: right;
+    font-size: 0.875rem;
+    color: var(--ink-2);
+  }
+</style>

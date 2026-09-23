@@ -1,0 +1,255 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Leaderboard from '../components/Leaderboard.astro';
+import TrendChart from '../components/TrendChart.astro';
+import StackBar from '../components/StackBar.astro';
+import Bars from '../components/Bars.astro';
+import Switches from '../components/Switches.astro';
+import FontName from '../components/FontName.astro';
+import TypeMap from '../components/TypeMap.astro';
+import Heatmap from '../components/Heatmap.astro';
+import { load, type Overview, type Ranked } from '../lib/data';
+import { date, kb, pct, PLATFORM_LABELS, SOURCE_LABELS } from '../lib/format';
+import { glyphs } from '../lib/specimen';
+
+const o = load<Overview>('overview.json');
+const mapSets = [
+  { key: 'all', label: 'All sites', n: o.n_sites, items: o.body },
+  ...o.categories.map((c) => ({ key: c.slug, label: c.name, n: c.n, items: load<{ body: Ranked[] }>(`category/${c.slug}.json`).body })),
+];
+const fonts = [...mapSets.flatMap((m) => m.items.slice(0, 20)), ...o.matrix.fonts, ...o.body, ...o.heading, ...o.categories.flatMap((c) => c.top.slice(0, 3)), ...o.changes.flatMap((c) => [c.from, c.to]), ...o.pairings.flatMap((p) => [p.heading, p.body])];
+const text = glyphs(...fonts.map((f) => f?.name ?? ''));
+const topSix = o.body.filter((f) => !f.generic).slice(0, 6);
+---
+
+<Layout fonts={fonts} specimenText={text}>
+  <section class="wrap hero">
+    <h1>Type, tracked.</h1>
+    <div class="hero-side">
+      <p class="lede">
+        Every week we open {o.n_sites.toLocaleString()} homepages in a real browser and record the typeface doing the work. Here’s what the web is set
+        in{o.latest ? ` as of ${date(o.latest.date)}` : ''}.
+      </p>
+      <p class="key small">
+        Each name is set in its own typeface where the license allows. <span class="licensed">Italic names</span> are commercial faces we can’t serve.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap board-wrap" aria-labelledby="body-h">
+    <h2 id="body-h" class="sr-only">Most used body fonts</h2>
+    <Leaderboard fonts={o.body} feature={10} />
+  </section>
+
+  <section class="wrap section" aria-labelledby="trend-h">
+    <div class="section-head">
+      <h2 id="trend-h">Over time</h2>
+      <a class="more" href="/compare">Compare any fonts</a>
+      <p>The shaded years come from archived copies of each homepage, read from its CSS. Everything after is our weekly browser crawl.</p>
+    </div>
+    <TrendChart periods={o.periods} series={topSix.map((f) => ({ label: f.name, values: f.series, font: f }))} title="Share of homepages using each font for body text" caption={o.trend_panel ? `Follows the same ${o.trend_panel} homepages through time, so the lines show sites changing fonts rather than our sample changing. Hover a name to isolate it; click to hide it.` : 'Hover a name to isolate it; click to hide it.'} height={380} />
+  </section>
+
+  <section class="wrap section" aria-labelledby="map-h">
+    <div class="section-head">
+      <h2 id="map-h">The type map</h2>
+      <a class="more" href="/fonts">Every font</a>
+      <p>Every tile is a typeface, sized by how many homepages use it for body text. Switch between kinds of site to watch the map redraw.</p>
+    </div>
+    <TypeMap sets={mapSets} />
+  </section>
+
+  <section class="wrap section" aria-labelledby="cat-h">
+    <div class="section-head">
+      <h2 id="cat-h">Where each face lives</h2>
+      <a class="more" href="/categories">All categories</a>
+      <p>Darker cells mean a larger share of that category’s homepages. Select a category to sort by it.</p>
+    </div>
+    <Heatmap fonts={o.matrix.fonts} categories={o.matrix.categories} values={o.matrix.values} />
+  </section>
+
+  <section class="wrap section" aria-labelledby="serve-h">
+    <div class="section-head">
+      <h2 id="serve-h">How the type arrives</h2>
+      <p>Where the font files come from, and what the sites are built with.</p>
+    </div>
+    <div class="two">
+      <StackBar data={o.sources} labels={SOURCE_LABELS} title="Font source for body text" />
+      <div>
+        <p class="fig-title">Site platform</p>
+        <Bars items={o.platforms.slice(0, 7).map((p) => ({ label: PLATFORM_LABELS[p.key] ?? p.key, share: p.share, count: p.count }))} />
+      </div>
+    </div>
+    <dl class="facts">
+      <div>
+        <dt>Load at least one variable font</dt>
+        <dd class="num">{pct(o.variable, 0)}</dd>
+      </div>
+      <div>
+        <dt>Median font weight per homepage</dt>
+        <dd class="num">{kb(o.median_font_bytes)}</dd>
+      </div>
+      <div>
+        <dt>Distinct typefaces in use</dt>
+        <dd class="num">{o.n_fonts.toLocaleString()}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="wrap section" aria-labelledby="changes-h">
+    <div class="section-head">
+      <h2 id="changes-h">Recent switches</h2>
+      <a class="more" href="/changes">All switches</a>
+    </div>
+    <Switches changes={o.changes.slice(0, 8)} />
+  </section>
+
+  <section class="wrap section two-col" aria-labelledby="head-h">
+    <div>
+      <div class="section-head">
+        <h2 id="head-h">Headings</h2>
+      </div>
+      <Bars items={o.heading.slice(0, 10).map((f) => ({ font: f, share: f.share, count: f.count }))} />
+    </div>
+    <div>
+      <div class="section-head">
+        <h2>Pairings</h2>
+        <a class="more" href="/pairings">All pairings</a>
+      </div>
+      <ul class="pairs">
+        {
+          o.pairings.slice(0, 6).map((p) => (
+            <li>
+              <span class="pair-h">
+                <FontName font={p.heading} />
+              </span>
+              <span class="pair-b">
+                <FontName font={p.body} />
+              </span>
+              <span class="num muted small">
+                {p.count} {p.count === 1 ? 'site' : 'sites'}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding-top: clamp(48px, 8vw, 112px);
+    padding-bottom: 36px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    gap: 20px 48px;
+    align-items: end;
+  }
+  .hero-side {
+    display: grid;
+    gap: 14px;
+  }
+  .key {
+    color: var(--ink-3);
+    max-width: 36rem;
+  }
+  .key .licensed {
+    color: var(--ink);
+    font-size: 1.0625rem;
+  }
+  .board-wrap > :global(.podium) {
+    border-top: 2px solid var(--ink);
+  }
+  .cats {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 0 32px;
+  }
+  .cats > li {
+    padding: 20px 0 24px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .cats h3 a {
+    text-decoration: none;
+  }
+  .cats h3 a:hover {
+    text-decoration: underline;
+  }
+  .cats ol {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+    display: grid;
+    gap: 6px;
+  }
+  .cats ol li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 1.375rem;
+    line-height: 1.2;
+  }
+  .two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 48px;
+    padding-top: 24px;
+  }
+  .fig-title {
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 24px;
+    margin: 40px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .facts dt {
+    color: var(--ink-3);
+    font-size: 0.875rem;
+  }
+  .facts dd {
+    margin: 4px 0 0;
+    font-family: var(--display);
+    font-size: 2.25rem;
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 0 64px;
+  }
+  .pairs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .pairs li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    gap: 0 12px;
+  }
+  .pair-h {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .pair-b {
+    grid-row: 2;
+    font-size: 1.0625rem;
+    color: var(--ink-2);
+  }
+  .pairs .num {
+    grid-row: 1 / 3;
+    grid-column: 2;
+    align-self: center;
+  }
+</style>

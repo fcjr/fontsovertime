@@ -1,0 +1,76 @@
+---
+import type { Breakdown } from '../lib/data';
+import { pct } from '../lib/format';
+
+interface Props {
+  data: Breakdown;
+  labels: Record<string, string>;
+  title: string;
+}
+const { data, labels, title } = Astro.props;
+const top = data.slice(0, 5);
+const other = data.slice(5).reduce((a, b) => ({ key: 'other', count: a.count + b.count, share: a.share + b.share }), { key: 'other', count: 0, share: 0 });
+const parts = other.count ? [...top, other] : top;
+const label = (k: string) => labels[k] ?? (k === 'other' ? 'Other' : k);
+---
+
+<figure class="sb">
+  <figcaption>{title}</figcaption>
+  <div class="bar" role="img" aria-label={parts.map((p) => `${label(p.key)} ${pct(p.share)}`).join(', ')}>
+    {parts.map((p, i) => <span class="seg" style={`flex:${p.share} 0 0; background: var(--s${i + 1}, var(--ink-3))`} title={`${label(p.key)}: ${pct(p.share)}`} />)}
+  </div>
+  <ul class="legend">
+    {
+      parts.map((p, i) => (
+        <li>
+          <span class="sw" style={`background: var(--s${i + 1}, var(--ink-3))`} />
+          <span>{label(p.key)}</span>
+          <span class="num muted">{pct(p.share)}</span>
+        </li>
+      ))
+    }
+  </ul>
+</figure>
+
+<style>
+  .sb {
+    margin: 0;
+  }
+  figcaption {
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .bar {
+    display: flex;
+    gap: 2px;
+    height: 14px;
+  }
+  .seg {
+    min-width: 3px;
+  }
+  .seg:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+  .seg:last-child {
+    border-radius: 0 4px 4px 0;
+  }
+  .legend {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+    display: grid;
+    gap: 6px;
+    font-size: 0.9375rem;
+  }
+  .legend li {
+    display: grid;
+    grid-template-columns: 12px 1fr auto;
+    align-items: center;
+    gap: 10px;
+  }
+  .sw {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+</style>

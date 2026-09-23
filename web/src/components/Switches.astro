@@ -1,0 +1,82 @@
+---
+import type { Change } from '../lib/data';
+import { date } from '../lib/format';
+import FontName from './FontName.astro';
+
+interface Props {
+  changes: Change[];
+  empty?: string;
+}
+const { changes, empty = 'No confirmed switches yet. A switch counts once a site shows the new font in two crawls in a row.' } = Astro.props;
+---
+
+{
+  changes.length ? (
+    <ol class="sw-list">
+      {changes.map((c) => (
+        <li>
+          <time class="num" datetime={c.date}>
+            {date(c.date)}
+          </time>
+          <p>
+            <a class="dom" href={`/site/${c.domain}`}>
+              {c.domain}
+            </a>{' '}
+            <span class="verb">changed its {c.role === 'body' ? 'body text' : 'headings'} from</span> <FontName font={c.from} class="from" />{' '}
+            <span class="verb">to</span> <FontName font={c.to} class="to" />
+          </p>
+        </li>
+      ))}
+    </ol>
+  ) : (
+    <p class="none">{empty}</p>
+  )
+}
+
+<style>
+  .sw-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: baseline;
+  }
+  time {
+    color: var(--ink-3);
+    font-size: 0.875rem;
+  }
+  p {
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+  .dom {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .verb {
+    color: var(--ink-3);
+    font-size: 1rem;
+  }
+  p :global(.from) {
+    text-decoration: line-through;
+    text-decoration-color: var(--signal);
+    text-decoration-thickness: 1.5px;
+  }
+  .none {
+    color: var(--ink-3);
+    padding: 24px 0;
+    max-width: 36rem;
+  }
+  @media (max-width: 600px) {
+    li {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+  }
+</style>

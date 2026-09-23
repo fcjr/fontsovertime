@@ -1,0 +1,147 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Leaderboard from '../../components/Leaderboard.astro';
+import TrendChart from '../../components/TrendChart.astro';
+import StackBar from '../../components/StackBar.astro';
+import Bars from '../../components/Bars.astro';
+import Switches from '../../components/Switches.astro';
+import FontName from '../../components/FontName.astro';
+import SiteTable from '../../components/SiteTable.astro';
+import { load, type Breakdown, type CategorySummary, type Change, type Pairing, type Period, type Ranked, type SiteRow } from '../../lib/data';
+import { pct, PLATFORM_LABELS, SOURCE_LABELS } from '../../lib/format';
+import { glyphs } from '../../lib/specimen';
+
+type Category = CategorySummary & {
+  periods: Period[];
+  body: Ranked[];
+  heading: Ranked[];
+  sources: Breakdown;
+  platforms: Breakdown;
+  pairings: Pairing[];
+  changes: Change[];
+  sites: SiteRow[];
+};
+
+export function getStaticPaths() {
+  return load<CategorySummary[]>('categories.json').map((c) => ({ params: { slug: c.slug } }));
+}
+
+const c = load<Category>(`category/${Astro.params.slug}.json`);
+const fonts = [...c.body, ...c.heading, ...c.pairings.flatMap((p) => [p.heading, p.body]), ...c.changes.flatMap((x) => [x.from, x.to])];
+const topSix = c.body.filter((f) => !f.generic).slice(0, 6);
+---
+
+<Layout title={c.name} description={`The fonts ${c.name.toLowerCase()} sites use for body text and headings, tracked weekly.`} fonts={fonts} specimenText={glyphs(...fonts.map((f) => f.name))}>
+  <section class="wrap hero">
+    <p class="crumb small"><a href="/categories">Categories</a></p>
+    <h1>{c.name}</h1>
+    <p class="lede">{c.blurb}</p>
+    <p class="small muted num">
+      {c.n.toLocaleString()} sites{c.blocked !== null && c.blocked > 0 ? `. ${pct(c.blocked)} blocked our crawler this week and aren’t counted.` : '.'}
+    </p>
+  </section>
+
+  <section class="wrap" aria-labelledby="body-h">
+    <div class="section-head">
+      <h2 id="body-h">Body text</h2>
+    </div>
+    <Leaderboard fonts={c.body} feature={6} />
+  </section>
+
+  <section class="wrap section">
+    <TrendChart periods={c.periods} series={topSix.map((f) => ({ label: f.name, values: f.series, font: f }))} height={360} title={`Body text share among ${c.name.toLowerCase()} sites`} />
+  </section>
+
+  <section class="wrap section two" aria-labelledby="head-h">
+    <div>
+      <div class="section-head"><h2 id="head-h">Headings</h2></div>
+      <Bars items={c.heading.map((f) => ({ font: f, share: f.share, count: f.count }))} />
+    </div>
+    <div>
+      <div class="section-head"><h2>Pairings</h2></div>
+      {
+        c.pairings.length ? (
+          <ul class="pairs">
+            {c.pairings.slice(0, 8).map((p) => (
+              <li>
+                <span class="pair-h"><FontName font={p.heading} /></span>
+                <span class="pair-b"><FontName font={p.body} /></span>
+                <span class="num muted small">{p.examples.slice(0, 2).join(', ')}</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="muted">Every site here uses one family for both.</p>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="wrap section two">
+    <StackBar data={c.sources} labels={SOURCE_LABELS} title="Font source" />
+    <div>
+      <p class="fig-title">Platform</p>
+      <Bars items={c.platforms.slice(0, 6).map((p) => ({ label: PLATFORM_LABELS[p.key] ?? p.key, share: p.share, count: p.count }))} />
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="sw-h">
+    <div class="section-head"><h2 id="sw-h">Switches</h2></div>
+    <Switches changes={c.changes.slice(0, 10)} />
+  </section>
+
+  <section class="wrap section" aria-labelledby="sites-h">
+    <div class="section-head">
+      <h2 id="sites-h">Every site</h2>
+    </div>
+    <SiteTable sites={c.sites} />
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding-top: clamp(40px, 6vw, 88px);
+    padding-bottom: 40px;
+    display: grid;
+    gap: 16px;
+  }
+  .crumb a {
+    color: var(--ink-3);
+  }
+  .two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 32px 64px;
+    align-items: start;
+  }
+  .fig-title {
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .pairs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .pairs li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    gap: 0 12px;
+  }
+  .pair-h {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .pair-b {
+    grid-row: 2;
+    color: var(--ink-2);
+  }
+  .pairs .num {
+    grid-row: 1 / 3;
+    grid-column: 2;
+    align-self: center;
+    text-align: right;
+  }
+</style>

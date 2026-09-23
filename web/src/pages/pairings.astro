@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FontName from '../components/FontName.astro';
+import { load, type Pairing } from '../lib/data';
+import { glyphs } from '../lib/specimen';
+
+const { body_heading: pairs } = load<{ body_heading: Pairing[] }>('pairings.json');
+const fonts = pairs.flatMap((p) => [p.heading, p.body]);
+---
+
+<Layout title="Pairings" description="The heading and body typeface combinations websites use most." fonts={fonts} specimenText={glyphs(...fonts.map((f) => f.name))}>
+  <section class="wrap hero">
+    <h1>Pairings</h1>
+    <p class="lede">The heading and body combinations sites actually ship. Most sites use a single family for both; these are the ones that don’t.</p>
+  </section>
+  <section class="wrap">
+    <ol class="pairs">
+      {
+        pairs.map((p) => (
+          <li>
+            <div class="spec">
+              <p class="h">
+                <FontName font={p.heading} />
+              </p>
+              <p class="b">
+                <FontName font={p.body} />
+              </p>
+            </div>
+            <div class="meta small">
+              <span class="num">
+                {p.count} {p.count === 1 ? 'site' : 'sites'}
+              </span>
+              <span class="muted">
+                {p.examples.slice(0, 3).map((d, i) => (
+                  <>
+                    {i > 0 && ', '}
+                    <a href={`/site/${d}`}>{d}</a>
+                  </>
+                ))}
+              </span>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding-top: clamp(40px, 6vw, 88px);
+    padding-bottom: 32px;
+    display: grid;
+    gap: 16px;
+  }
+  .pairs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--ink);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    gap: 0 40px;
+  }
+  .pairs li {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    display: grid;
+    gap: 12px;
+  }
+  .h {
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+  .b {
+    font-size: 1.25rem;
+    color: var(--ink-2);
+    margin-top: 4px;
+  }
+  .meta {
+    display: grid;
+    gap: 2px;
+  }
+</style>

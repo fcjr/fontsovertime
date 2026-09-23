@@ -1,0 +1,113 @@
+---
+import { existsSync, readdirSync, statSync } from 'node:fs';
+import { join } from 'node:path';
+import Layout from '../layouts/Layout.astro';
+import { kb } from '../lib/format';
+
+const root = join(process.cwd(), '..', 'data', 'snapshots');
+const list = (kind: string) => {
+  const dir = join(root, kind);
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter((f) => f.endsWith('.jsonl.gz'))
+    .sort()
+    .reverse()
+    .map((f) => ({ name: f.replace('.jsonl.gz', ''), href: `/data/snapshots/${kind}/${f}`, size: statSync(join(dir, f)).size }));
+};
+const groups = [
+  { kind: 'weekly', title: 'Weekly crawls', note: 'Every tracked homepage, once a week.' },
+  { kind: 'daily', title: 'Daily crawls', note: 'A few hundred of the best-known sites, every day.' },
+  { kind: 'wayback', title: 'Archive backfill', note: 'One Internet Archive copy per site per quarter, read from CSS.' },
+].map((g) => ({ ...g, files: list(g.kind) }));
+---
+
+<Layout title="Data" description="Download every Fonts Over Time crawl as CSV or JSON Lines.">
+  <section class="wrap hero">
+    <h1>The data</h1>
+    <p class="lede">Everything behind this site is free to download and reuse. If you publish something with it, a link back is appreciated.</p>
+  </section>
+
+  <section class="wrap">
+    <div class="latest">
+      <div>
+        <h2>This week, as a spreadsheet</h2>
+        <p class="muted">One row per site: body font, heading font, platform, how the fonts are served, and when we saw it.</p>
+      </div>
+      <a class="button" href="/data/latest.csv" download>Download CSV</a>
+    </div>
+  </section>
+
+  {
+    groups.map((g) => (
+      <section class="wrap section">
+        <div class="section-head">
+          <h2>{g.title}</h2>
+          <p>{g.note} Gzipped JSON Lines, one object per site with the full detail: every font on the page and its share of the text, declared faces, font files and bytes.</p>
+        </div>
+        {g.files.length ? (
+          <ul class="files">
+            {g.files.map((f) => (
+              <li>
+                <a href={f.href} download class="num">
+                  {f.name}
+                </a>
+                <span class="muted small num">{kb(f.size)}</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="muted">None yet.</p>
+        )}
+      </section>
+    ))
+  }
+</Layout>
+
+<style>
+  .hero {
+    padding-top: clamp(40px, 6vw, 88px);
+    padding-bottom: 32px;
+    display: grid;
+    gap: 16px;
+  }
+  .latest {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px 40px;
+    padding: 28px 0;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .latest p {
+    margin-top: 8px;
+    max-width: 34rem;
+  }
+  .button {
+    display: inline-block;
+    background: var(--signal);
+    color: var(--paper);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 22px;
+  }
+  .button:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .files {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3 14rem;
+    column-gap: 32px;
+  }
+  .files li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    break-inside: avoid;
+  }
+</style>

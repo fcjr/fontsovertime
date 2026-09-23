@@ -1,0 +1,824 @@
+domain,name,country,source
+anthropic.com,Anthropic,United States,wikidata
+openai.com,OpenAI,United States,wikidata
+bytedance.com,ByteDance,China,wikidata
+databricks.com,Databricks,United States,wikidata
+stripe.com,Stripe,United States,wikidata
+binance.com,Binance,Canada,wikidata
+revolut.com,Revolut,United Kingdom,wikidata
+anduril.com,Anduril Industries,United States,wikidata
+cognition.com,Cognition AI,United States,manual
+canva.com,Canva,Australia,wikidata
+figure.ai,Figure AI,United States,wikidata
+ramp.com,Ramp,United States,wikidata
+ssi.inc,Safe Superintelligence,United States,wikidata
+vastdata.com,VAST Data,United States,wikidata
+telegram.org,Telegram,United Arab Emirates,wikidata
+scale.com,Scale AI,United States,wikidata
+fanaticsinc.com,Fanatics,United States,wikidata
+epicgames.com,Epic Games,United States,wikidata
+kalshi.com,Kalshi,United States,wikidata
+perplexity.ai,Perplexity AI,United States,wikidata
+chobani.com,Chobani,United States,wikidata
+groq.com,Groq,United States,wikidata
+miro.com,Miro,United States,wikidata
+rippling.com,Rippling,United States,manual
+harvey.ai,Harvey,United States,wikidata
+helionenergy.com,Helion Energy,United States,wikidata
+yuanfudao.com,Yuanfudao,China,manual
+discord.com,Discord,United States,wikidata
+dji.com,DJI,China,wikidata
+gopuff.com,GoPuff,United States,wikidata
+nscale.com,Nscale,United Kingdom,wikidata
+mistral.ai,Mistral AI,France,wikidata
+xiaohongshu.com,Xiaohongshu,China,wikidata
+helsing.ai,Helsing,Germany,wikidata
+skild.ai,Skild AI,United States,manual
+plaid.com,Plaid,United States,wikidata
+lovable.dev,Lovable,Sweden,wikidata
+opensea.io,OpenSea,United States,wikidata
+superhuman.com,Superhuman,Ukraine,manual
+shield.ai,Shield AI,United States,wikidata
+devoted.com,Devoted Health,United States,manual
+faire.com,Faire,United States,manual
+labscompanies.ai,Labs Companies,United States,wikidata
+ninjaone.com,NinjaOne,United States,manual
+cyera.com,Cyera,United States,manual
+thinkingmachines.ai,Thinking Machines Lab,United States,wikidata
+openevidence.com,OpenEvidence,United States,wikidata
+biosplice.com,Biosplice Therapeutics,United States,manual
+bitmain.com,Bitmain,China,wikidata
+goodleap.com,GoodLeap,United States,manual
+checkout.com,Checkout.com,United Kingdom,wikidata
+whatnot.com,Whatnot,United States,wikidata
+celonis.com,Celonis,Germany,wikidata
+elevenlabs.io,ElevenLabs,Poland,wikidata
+bilt.com,Bilt Rewards,United States,wikidata
+etched.com,Etched,United States,manual
+colossal.com,Colossal Biosciences,United States,wikidata
+alchemy.com,Alchemy,United States,manual
+whoop.com,WHOOP,United States,wikidata
+guazi.com,Chehaoduo,China,manual
+dcg.co,Digital Currency Group,United States,wikidata
+mercor.com,Mercor,United States,wikipedia
+gusto.com,Gusto,United States,wikidata
+kucoin.com,KuCoin,Seychelles,wikidata
+lalamove.com,Lalamove,Hong Kong,wikidata
+notion.com,Notion Labs,United States,wikidata
+polygon.technology,Polygon Technology,India,wikidata
+ripple.com,Ripple,United States,wikidata
+talkdesk.com,Talkdesk,Portugal,manual
+oyorooms.com,Oyo,India,wikidata
+outsystems.com,OutSystems,Portugal,wikidata
+vercel.com,Vercel,United States,wikidata
+xihaytea.com,HeyTea,China,wikidata
+neuralink.com,Neuralink,United States,wikidata
+replit.com,Replit,United States,wikidata
+tanium.com,Tanium,United States,wikidata
+kavak.com,Kavak,Mexico,wikidata
+rapyd.net,Rapyd,United Kingdom,wikidata
+nuro.ai,Nuro,United States,wikidata
+snyk.io,Snyk,United Kingdom,wikidata
+bolt.eu,Bolt,Estonia,wikidata
+together.ai,Together AI,United States,manual
+dream11.com,Dream11,India,wikidata
+flexport.com,Flexport,United States,wikidata
+airwallex.com,Airwallex,Australia,wikidata
+starkware.co,StarkWare Industries,Israel,wikidata
+dapperlabs.com,Dapper Labs,Canada,manual
+zipline.com,Zipline,United States,manual
+alpha-sense.com,AlphaSense,United States,manual
+razorpay.com,Razorpay,India,manual
+carta.com,Carta,United States,manual
+olacabs.com,Ola Consumer,India,wikidata
+gong.io,Gong,Israel,manual
+psiquantum.com,PsiQuantum,United States,wikidata
+automationanywhere.com,Automation Anywhere,United States,wikidata
+1password.com,1Password,Canada,wikidata
+wedoctor.com,WeDoctor,China,manual
+cohere.com,Cohere,Canada,wikidata
+yanolja.com,Yanolja,South Korea,manual
+ziroom.com,Ziroom,China,manual
+mollie.com,Mollie,Netherlands,manual
+cred.club,CRED,India,wikidata
+datarobot.com,DataRobot,United States,manual
+personio.de,Personio,Germany,wikidata
+doctolib.fr,Doctolib,France,manual
+icapital.com,iCapital,United States,manual
+xsyxsc.com,Xingsheng Youxuan,China,manual
+sandboxaq.com,SandboxAQ,United States,manual
+backmarket.com,Back Market,France,manual
+boringcompany.com,The Boring Company,United States,wikidata
+relexsolutions.com,Relex,Finland,manual
+contentsquare.com,Contentsquare,France,manual
+fivetran.com,Fivetran,United States,manual
+postman.com,Postman,India,wikidata
+phonepe.com,PhonePe,India,wikidata
+toss.im,Viva Republica,South Korea,wikidata
+higgsfield.ai,Higgsfield,United States,manual
+traderepublic.com,Trade Republic,Germany,wikidata
+rappi.com.mx,Rappi,Colombia,wikidata
+ouraring.com,Oura Health,Finland,wikidata
+blockchain.com,Blockchain.com,United Kingdom,wikidata
+onetrust.com,OneTrust,United Kingdom,wikidata
+sambanova.ai,SambaNova,United States,manual
+collibra.com,Collibra,Belgium,manual
+cloudkitchens.com,CloudKitchens,United States,wikidata
+hopper.com,Hopper,Canada,wikidata
+ofbusiness.com,OfBusiness,India,manual
+qonto.com,Qonto,France,wikidata
+ro.co,Ro,United States,wikidata
+wonderful.ai,Wonderful,Israel,manual
+zepz.io,Zepz,United Kingdom,manual
+animocabrands.com,Animoca Brands,Hong Kong,wikidata
+octopusenergy.group,Octopus Energy,United Kingdom,wikidata
+pleo.io,Pleo,Denmark,manual
+checkr.com,Checkr,United States,manual
+dataiku.com,Dataiku,France,wikidata
+getblock.io,GetBlock,Georgia,manual
+sorare.com,Sorare,France,wikidata
+magicleap.com,Magic Leap,United States,wikidata
+socure.com,Socure,United States,manual
+vinted.com,Vinted,Lithuania,wikidata
+quince.com,Quince,United States,wikipedia
+outreach.ai,Outreach,United States,manual
+arcticwolf.com,Arctic Wolf Networks,United States,wikidata
+chainalysis.com,Chainalysis,United States,wikidata
+relativityspace.com,Relativity Space,United States,wikidata
+bitpanda.com,Bitpanda,Austria,wikidata
+dataminr.com,Dataminr,United States,wikidata
+abnormal.ai,Abnormal Security,United States,manual
+branch.io,Branch Metrics,United States,wikidata
+browserstack.com,BrowserStack,India,wikidata
+clubhouse.com,Clubhouse,United States,wikidata
+houzz.com,Houzz,United States,wikidata
+megvii.com,Megvii,China,wikidata
+patreon.com,Patreon,United States,wikidata
+pointclickcare.com,PointClickCare,Canada,manual
+quintoandar.com.br,QuintoAndar,Brazil,manual
+stockx.com,StockX,United States,wikidata
+articulate.com,Articulate,United States,manual
+cohesity.com,Cohesity,United States,wikidata
+noom.com,Noom,United States,wikidata
+papayaglobal.com,PAPAYA Global,Israel,wikidata
+sharechat.com,ShareChat,India,wikipedia
+01zhuanche.com,Shouqi,China,wikipedia
+coalitioninc.com,Coalition,United States,manual
+commure.com,Commure,United States,manual
+mirakl.com,Mirakl,France,wikidata
+n26.com,N26,Germany,wikidata
+preferred.jp,Preferred Networks,Japan,wikidata
+cars24.com,CARS24,India,wikidata
+kurly.com,Kurly,South Korea,manual
+moonpay.com,MoonPay,United States,manual
+upstox.com,Upstox,India,manual
+plus.ai,Plus.ai,United States,wikipedia
+starburst.io,Starburst Data,United States,manual
+thumbtack.com,Thumbtack,United States,wikidata
+applyboard.com,ApplyBoard,Canada,wikidata
+blockstream.com,Blockstream,Canada,wikidata
+consensys.io,ConsenSys,United States,manual
+flutterwave.com,Flutterwave,Nigeria,wikipedia
+verkada.com,Verkada,United States,wikidata
+eruditus.com,Eruditus,India,manual
+spoton.com,SpotOn,United States,manual
+tiendanube.com,TiendaNube,Argentina,manual
+udaan.com,Udaan,India,manual
+wildlifestudios.com,Wildlife,Brazil,manual
+cmrsurgical.com,CMR Surgical,United Kingdom,wikidata
+traveloka.com,Traveloka,Indonesia,wikidata
+activecampaign.com,ActiveCampaign,United States,wikidata
+ageoflearning.com,Age of Learning Inc.,United States,manual
+automattic.com,Automattic,United States,wikidata
+calendly.com,Calendly,United States,wikidata
+contentful.com,Contentful,Germany,wikidata
+forter.com,Forter,Israel,wikidata
+grafana.com,Grafana Labs,United States,wikidata
+lucid.co,Lucid Software,United States,manual
+bird.com,MessageBird,Netherlands,manual
+seismic.com,Seismic,United States,manual
+skymavis.com,Sky Mavis,Vietnam,manual
+dasouche.com,Souche,China,manual
+tradingview.com,TradingView,United Kingdom,wikidata
+aiven.io,Aiven,Finland,manual
+vancl.com,VANCL,China,manual
+veepee.fr,Veepee,France,wikidata
+vipkid.com,VIPKID,China,wikidata
+wefox.com,Wefox,Germany,manual
+rigup.com,Workrise,United States,manual
+drivewealth.com,DriveWealth,United States,manual
+bharatpe.com,BharatPe,India,wikidata
+icertis.com,Icertis,India,wikidata
+oaknorth.co.uk,OakNorth,United Kingdom,wikidata
+astranis.com,Astranis,United States,wikidata
+abridge.com,Abridge,United States,manual
+illumio.com,Illumio,United States,wikidata
+masterclass.com,MasterClass,United States,wikidata
+dreamgames.com,Dream Games,Turkey,manual
+daangn.com,Daangn Market,South Korea,manual
+tridge.com,Tridge,South Korea,manual
+nextiva.com,Nextiva,United States,wikipedia
+tradeshift.com,Tradeshift,United States,wikidata
+odoo.com,Odoo,Belgium,wikidata
+amwins.com,AmWINS Group,United States,manual
+manomano.fr,ManoMano,France,manual
+pendo.io,Pendo,United States,manual
+sourcegraph.com,Sourcegraph,United States,wikidata
+jumpcloud.com,Jumpcloud,United States,manual
+catonetworks.com,Cato Networks,Israel,wikidata
+easya.io,EasyA,United Kingdom,manual
+infra.market,Infra.Market,India,manual
+drivenets.com,DriveNets,Israel,wikipedia
+mews.com,Mews (company),Czech Republic,wikipedia
+monzo.com,Monzo,United Kingdom,wikidata
+suno.com,Suno,United States,wikidata
+uala.com.ar,Ualá,Argentina,wikidata
+honeybook.com,HoneyBook,Israel,wikidata
+bitsight.com,BitSight,United States,wikidata
+exabeam.com,Exabeam,United States,wikipedia
+paxos.com,Paxos,United States,wikidata
+mozido.com,Mozido,United States,wikidata
+headway.co,Headway,United States,manual
+mpl.live,MPL,India,manual
+uzum.com,Uzum,Uzbekistan,wikidata
+uptake.com,Uptake,United States,wikidata
+algolia.com,Algolia,France,wikidata
+gomotive.com,KeepTruckin,United States,manual
+acorns.com,Acorns,United States,wikidata
+bitso.com,Bitso,Mexico,manual
+wellhub.com,Gympass,Brazil,manual
+transmitsecurity.com,Transmit Security,Israel,wikipedia
+addepar.com,Addepar,United States,wikidata
+eightfold.ai,Eightfold.ai,United States,manual
+gamma.app,Gamma,United States,manual
+payfit.com,PayFit,France,manual
+6sense.com,6sense,United States,manual
+c6bank.com.br,C6 Bank,Brazil,manual
+mambu.com,Mambu,Germany,wikidata
+webflow.com,Webflow,United States,wikipedia
+bkash.com,bKash,Bangladesh,wikidata
+manypets.com,Bought By Many,United Kingdom,manual
+flixbus.com,FlixMobility,Germany,wikidata
+tipalti.com,Tipalti,United States,wikidata
+thehive.ai,Hive,United States,wikidata
+mural.co,Mural,Argentina,manual
+appsflyer.com,AppsFlyer,Israel,wikidata
+blablacar.com,BlaBlaCar,France,wikidata
+calm.com,Calm,United States,wikidata
+clickhouse.com,ClickHouse,United States,wikidata
+clip.mx,Clip,Mexico,manual
+cockroachlabs.com,Cockroach Labs,United States,wikidata
+druva.com,Druva,India,wikidata
+exotec.com,Exotec,France,wikidata
+formlabs.com,Formlabs,United States,wikidata
+huimin.cn,Huimin.cn,China,manual
+iterable.com,Iterable,United States,manual
+kry.se,Kry,Sweden,manual
+meicai.cn,Meicai.cn,China,manual
+mynt.xyz,Mynt,Philippines,manual
+opayweb.com,OPay,Nigeria,manual
+pixverse.ai,PixVerse,Singapore,manual
+simile.com,Simile,United States,manual
+sword.com,Sword Health,Portugal,wikipedia
+trendy-global.com,Trendy International Group,China,manual
+unqork.com,Unqork,United States,wikipedia
+zerodha.com,Zerodha,India,wikidata
+instabase.com,Instabase,United States,wikidata
+zilch.com,Zilch,United Kingdom,wikipedia
+akulaku.com,Akulaku,Indonesia,manual
+ankorstore.com,Ankorstore,France,manual
+avant.com,Avant,United States,manual
+thoughtspot.com,ThoughtSpot,United States,wikidata
+sanpowergroup.com,Sanpower Group,China,manual
+zigbang.com,ZigBang,South Korea,manual
+bunq.com,Bunq,Netherlands,wikidata
+coinswitch.co,CoinSwitch Kuber,India,manual
+dfinity.org,Dfinity,Switzerland,manual
+prosper.com,Prosper Marketplace,United States,wikidata
+musinsa.com,Musinsa,South Korea,wikipedia
+apusapps.com,Apus Group,China,manual
+megazone.com,MEGAZONE,South Korea,manual
+landanano.com,Landa Digital Printing,Israel,manual
+lightricks.com,Lightricks,Israel,wikidata
+nantomics.com,NantOmics,United States,wikipedia
+orca.security,Orca Security,Israel,manual
+quora.com,Quora,United States,wikidata
+radiantnuclear.com,Radiant Nuclear,United States,wikipedia
+zocdoc.com,Zocdoc,United States,wikidata
+creditas.com,Creditas,Brazil,manual
+spinny.com,Spinny,India,manual
+trulioo.com,Trulioo,Canada,wikidata
+productboard.com,Productboard,Czech Republic,manual
+advasa.co.jp,ADVASA,Japan,manual
+carsome.my,Carsome,Malaysia,wikipedia
+dragos.com,Dragos,United States,manual
+dutchie.com,Dutchie.com,United States,manual
+harness.io,Harness,United States,manual
+pax.com,PAX Labs,United States,manual
+vestiairecollective.com,Vestiaire Collective,France,wikidata
+voodoo.io,Voodoo,France,wikidata
+workato.com,Workato,United States,wikipedia
+alan.com,Alan,France,manual
+incrediblehealth.com,Incredible Health,United States,manual
+hibob.com,HiBob,Israel,wikidata
+solarisgroup.com,Solarisbank,Germany,wikidata
+wayflyer.com,Wayflyer,Ireland,wikipedia
+ai-ways.com,Aiways,China,wikidata
+cresta.com,Cresta,United States,manual
+clio.com,Clio,Canada,wikidata
+cognite.com,Cognite,Norway,wikidata
+homelight.com,HomeLight,United States,wikidata
+nordsecurity.com,Nord Security,Lithuania,manual
+mitti.com,SafetyCulture,Australia,manual
+smarthr.co.jp,SmartHR,Japan,manual
+uniteus.com,Unite Us,United States,manual
+vanta.com,Vanta,United States,wikipedia
+cult.fit,CureFit,India,manual
+kreditbee.in,KreditBee,India,manual
+airbyte.com,Airbyte,United States,manual
+andela.com,Andela,Nigeria,wikidata
+cultureamp.com,Culture Amp,Australia,wikipedia
+devo.com,Devo Inc.,Spain,manual
+granola.ai,Granola,United Kingdom,manual
+id.me,ID.me,United States,wikidata
+ledger.com,Ledger,France,manual
+matillion.com,Matillion,United Kingdom,manual
+moloco.com,MOLOCO,United States,manual
+molbiodiagnostics.com,Molbio Diagnostics,India,wikidata
+mu-sigma.com,Mu Sigma,India,wikidata
+nextsilicon.com,NextSilicon,Israel,manual
+podium.com,Podium,United States,wikidata
+remote.com,Remote,Portugal,manual
+render.com,Render,United States,manual
+starlingbank.com,Starling Bank,United Kingdom,wikidata
+tujia.com,Tujia.com,China,manual
+zbj.com,ZBJ.com,China,manual
+ascendcorp.com,Ascend Money,Thailand,wikipedia
+hellobike.com,Hellobike,China,wikidata
+weidian.com,Koudai Gouwu,China,manual
+m1.com,M1 Finance,United States,manual
+odyssey.systems,Odyssey,United States,manual
+zeta.tech,Zeta,India,manual
+einride.tech,Einride,Sweden,wikidata
+eucalyptus.health,Eucalyptus Health,Australia,wikidata
+deliverect.com,Deliverect,Belgium,manual
+awaytravel.com,Away,United States,wikidata
+getonecard.app,OneCard,India,manual
+bucketplace.com,Bucketplace,South Korea,manual
+cabify.com,Cabify,Spain,wikidata
+chargebee.com,Chargebee,India,manual
+epidemicsound.com,Epidemic Sound,Sweden,wikidata
+fivestargroup.in,Five Star Finance,India,manual
+iadfrance.fr,IAD,France,manual
+netdocuments.com,NetDocuments,United States,wikidata
+panther.com,Panther Labs Inc.,United States,manual
+pristyncare.com,Pristyn Care,India,wikipedia
+rebelfoods.com,Rebel Foods,India,wikidata
+slash.com,Slash,United States,wikipedia
+stash.com,Stash,United States,wikidata
+symphony.com,Symphony,United States,wikidata
+maya.ph,Voyager,Philippines,manual
+yotpo.com,Yotpo,Israel,manual
+ridibooks.com,RIDI,South Korea,manual
+zetwerk.com,Zetwerk,India,manual
+corgi.insure,Corgi,United States,wikidata
+distrokid.com,DistroKid,United States,wikidata
+etcp.cn,ETCP,China,manual
+feedzai.com,Feedzai,Portugal,wikidata
+g2.com,G2,United States,wikidata
+innovaccer.com,Innovaccer,India,wikidata
+konfio.mx,Konfio,Mexico,manual
+yugabyte.com,Yugabyte,United States,wikidata
+airtable.com,Airtable,United States,wikidata
+cart.com,Cart.com,United States,wikidata
+incode.com,Incode,Mexico,manual
+appliedintuition.com,Applied Intuition,United States,manual
+bigid.com,BigID,Israel,manual
+deel.com,Deel,Israel,manual
+ezcater.com,ezCater,United States,wikidata
+marshmallow.com,Marshmallow,United Kingdom,manual
+recroom.com,Rec Room,United States,wikidata
+spiber.inc,Spiber,Japan,manual
+insiderone.com,Insider,Turkey,manual
+ada.cx,Ada,Canada,manual
+alation.com,Alation,United States,wikipedia
+axonius.com,Axonius,Israel,manual
+cardekho.com,CarDekho,India,manual
+copado.com,Copado,Spain,manual
+droom.in,Droom,India,manual
+floqast.com,FloQast,United States,wikidata
+forto.com,Forto,Germany,manual
+intercom.com,Intercom,United States,wikidata
+kyriba.com,Kyriba,France,manual
+mindtickle.com,Mindtickle,India,manual
+rohlik.group,Rohlik,Czech Republic,wikipedia
+upgrad.com,upGrad,India,manual
+workhuman.com,Workhuman,Ireland,manual
+happyrobot.ai,HappyRobot,United States,manual
+sysdig.com,Sysdig,United States,manual
+starcloud.com,Starcloud,United States,wikidata
+deputy.com,Deputy,Australia,wikidata
+acko.com,Acko,India,wikidata
+apna.co,Apna,India,manual
+carousell.com,Carousell,Singapore,wikidata
+coindcx.com,CoinDCX,India,manual
+purplle.com,Purplle,India,manual
+globalbees.com,GlobalBees,India,manual
+nexthink.com,Nexthink,Switzerland,wikipedia
+sisense.com,Sisense,Israel,wikidata
+drools.com,Drools,India,manual
+smartnews.com,SmartNews,Japan,manual
+substack.com,Substack,United States,wikidata
+traxretail.com,Trax,Singapore,wikidata
+virtahealth.com,Virta Health,United States,manual
+younited.com,YouniteD,France,manual
+benevity.com,Benevity,Canada,wikidata
+zego.com,Zego,United Kingdom,manual
+substrate.com,Substrate,United States,manual
+aikido.dev,Aikido Security,Belgium,wikipedia
+character.ai,Character.ai,United States,wikidata
+pentera.io,Pentera,Israel,wikidata
+vectorbuilder.com,VectorBuilder Inc.,United States,manual
+emplifi.io,Emplifi,United States,wikidata
+gymshark.com,Gymshark,United Kingdom,wikidata
+kopikenangan.com,Kopi Kenangan,Indonesia,wikidata
+clara.com,Clara,Mexico,manual
+classdojo.com,ClassDojo,United States,wikidata
+daojia.com,58 Daojia,China,manual
+acronis.com,Acronis,Singapore,wikidata
+aircall.io,Aircall,France,manual
+ajaib.co.id,Ajaib,Indonesia,manual
+ambergroup.io,Amber Group,Hong Kong,manual
+appdirect.com,AppDirect,United States,manual
+aquasec.com,Aqua Security,Israel,manual
+assent.com,Assent Compliance,Canada,manual
+olakrutrim.com,Krutrim,India,manual
+bluecore.com,Bluecore,United States,manual
+bringg.com,Bringg,Israel,manual
+cadence.care,Cadence Solutions Inc.,United States,manual
+carro.co,Carro,Singapore,manual
+upbit.com,Dunamu,South Korea,wikidata
+dxy.cn,DXY,China,manual
+earnix.com,Earnix,Israel,manual
+ebanx.com,Ebanx,Brazil,manual
+esentire.com,eSentire,Canada,manual
+flashexpress.co.th,Flash Express,Thailand,manual
+flexe.com,Flexe,United States,manual
+freshbooks.com,FreshBooks,Canada,wikidata
+fxiaoke.com,FXiaoKe,China,manual
+gelato.com,Gelato,Norway,manual
+geocomply.com,GeoComply,Canada,manual
+getyourguide.com,GetYourGuide,Germany,wikidata
+glance.com,Glance,India,wikidata
+go1.com,Go1,Australia,manual
+gousto.co.uk,Gousto,United Kingdom,wikidata
+grover.com,Grover,Germany,manual
+hailo.ai,Hailo,Israel,manual
+highradius.com,HighRadius,India,manual
+flo.health,Flo Health,Lithuania,wikipedia
+icarbonx.com,iCarbonX,China,wikidata
+ifood.com.br,IFood,Brazil,wikidata
+igaworks.com,IGAWorks,South Korea,manual
+improbable.io,Improbable,United Kingdom,wikidata
+infobip.com,Infobip,Croatia,wikidata
+injective.com,Injective,United States,wikipedia
+inmobi.com,InMobi,India,wikidata
+ivalua.com,Ivalua,France,manual
+hellosimply.com,JoyTunes,Israel,wikidata
+justsalad.com,Just Salad,United States,wikidata
+kendrascott.com,Kendra Scott LLC,United States,manual
+kitopi.com,Kitopi,United Arab Emirates,manual
+klook.com,Klook,Hong Kong,wikipedia
+letsgetchecked.com,LetsGetChecked,Ireland,manual
+sumeria.eu,Lydia,France,manual
+lmax.com,LMAX Group,United Kingdom,wikidata
+locusrobotics.com,Locus Robotics,United States,manual
+loft.com.br,Loft Brazil Technology,Brazil,manual
+lunar.app,Lunar,Denmark,manual
+loggi.com,Loggi,Brazil,manual
+lookout.com,Lookout,United States,manual
+madeiramadeira.com.br,MadeiraMadeira,Brazil,manual
+maimai.cn,Maimai,China,manual
+masterworks.com,Masterworks,United States,wikidata
+meero.com,Meero,France,manual
+brndme.in,Mensa Brands,India,manual
+mindmazetherapeutics.com,MindMaze,Switzerland,manual
+sentz.com,MobileCoin,United States,manual
+moglix.com,Moglix,India,wikidata
+morningconsult.com,Morning Consult,United States,wikidata
+ninjavan.co,Ninja Van,Singapore,wikidata
+nium.com,Nium,Singapore,wikidata
+nobroker.in,NoBroker,India,wikidata
+kredivo.com,Kredivo,Indonesia,manual
+ocsial.com,OCSiAl,Luxembourg,wikidata
+omise.co,Opn (Synqa),Japan,manual
+orcam.com,OrCam,Israel,wikidata
+pandadoc.com,PandaDoc,United States,wikidata
+pantheon.io,Pantheon Systems,United States,wikidata
+patsnap.com,PatSnap,Singapore,manual
+picsart.com,Picsart,Armenia,wikidata
+redis.io,Redis Labs,Israel,manual
+reeftechnology.com,REEF Technology,United States,manual
+quizlet.com,Quizlet,United States,wikidata
+sennder.com,Sennder,Germany,manual
+shift-technology.com,Shift Technology,France,manual
+goshippo.com,Shippo,United States,wikidata
+sift.com,Sift,United States,manual
+slice.bank.in,Slice,India,wikipedia
+smartasset.com,SmartAsset,United States,wikidata
+smartmore.com,SmartMore,China,manual
+snapdeal.com,Snapdeal,India,wikidata
+socket.dev,Socket,United States,manual
+spendesk.com,Spendesk,France,manual
+splashtop.com,Splashtop,United States,wikidata
+staffbase.com,Staffbase,Germany,manual
+swile.co,Swile,France,manual
+synthesia.io,Synthesia,United Kingdom,wikidata
+taxfix.de,Taxfix,Germany,manual
+tekion.com,Tekion,United States,manual
+tenstorrent.com,Tenstorrent,Canada,manual
+tezign.com,Tezign,China,manual
+thatch.com,Thatch,United States,manual
+xiaodun.com,Tongdun Technology,China,manual
+tractable.ai,Tractable,United Kingdom,wikipedia
+tresata.ai,Tresata,United States,manual
+truelayer.com,TrueLayer,United Kingdom,manual
+trustly.com,Trustly,Sweden,wikidata
+turo.com,Turo,United States,wikidata
+vagaro.com,Vagaro,United States,wikidata
+verse.in,VerSe Innovation,India,manual
+visier.com,Visier,Canada,manual
+volocopter.com,volocopter,Germany,wikidata
+voxmedia.com,Vox Media,United States,wikidata
+vts.com,VTS,United States,manual
+wacai.com,Wacai.com,China,manual
+welab.co,WeLab,Hong Kong,wikidata
+womai.com,Womai,China,manual
+xendit.co,Xendit,Indonesia,manual
+xiaozhu.com,Xiaozhu.com,China,wikidata
+yhglobal.com,YH Global,China,manual
+yidianzixun.com,Yidian Zixun,China,manual
+yitutech.com,Yitu Technology,China,wikidata
+zenoti.com,Zenoti,India,manual
+zhuanzhuan.com,Zhuanzhuan,China,manual
+zuoyebang.com,Zuoyebang,China,manual
+efishery.com,eFishery,Indonesia,wikipedia
+wongnai.com,LINE MAN Wongnai,Thailand,wikidata
+reliaquest.com,ReliaQuest,United States,wikipedia
+dana.id,DANA,Indonesia,wikidata
+nagad.com.bd,Nagad,Bangladesh,wikidata
+ecovadis.com,Ecovadis,France,manual
+scandit.com,Scandit,Switzerland,wikipedia
+bluevoyant.com,BlueVoyant,United States,manual
+payhawk.com,Payhawk,Bulgaria,manual
+voi.com,Voi,Sweden,manual
+neofinancial.com,Neo Financial,Canada,wikipedia
+stytch.com,Stytch,United States,manual
+epassi.fi,Epassi,Finland,manual
+hmd.com,HMD Global,Finland,wikidata
+iqm.tech,IQM,Finland,wikidata
+hostaway.com,Hostaway,Finland,manual
+mnt-halan.com,MNT-Halan,Egypt,manual
+glean.com,Glean,United States,manual
+sierra.ai,Sierra,United States,manual
+decagon.ai,Decagon,United States,manual
+hebbia.com,Hebbia,United States,manual
+runway.com,Runway,United States,manual
+pi.website,Physical Intelligence,United States,manual
+worldlabs.ai,World Labs,United States,manual
+poolside.ai,Poolside,United States,manual
+magic.dev,Magic,United States,manual
+sakana.ai,Sakana AI,Japan,manual
+moonshot.cn,Moonshot AI,China,manual
+stepfun.com,StepFun,China,manual
+baichuan-ai.com,Baichuan,China,manual
+writer.com,Writer,United States,manual
+jasper.ai,Jasper,United States,manual
+clay.com,Clay,United States,manual
+ambiencehealthcare.com,Ambience Healthcare,United States,manual
+hippocraticai.com,Hippocratic AI,United States,manual
+supabase.com,Supabase,United States,manual
+pinecone.io,Pinecone,United States,manual
+modal.com,Modal,United States,manual
+baseten.co,Baseten,United States,manual
+fireworks.ai,Fireworks AI,United States,manual
+lambda.ai,Lambda,United States,manual
+crusoe.ai,Crusoe,United States,manual
+lightmatter.co,Lightmatter,United States,manual
+ayarlabs.com,Ayar Labs,United States,manual
+d-matrix.ai,d-Matrix,United States,manual
+huggingface.co,Hugging Face,United States,manual
+snorkel.ai,Snorkel AI,United States,manual
+anyscale.com,Anyscale,United States,manual
+evenuplaw.com,EvenUp,United States,manual
+lumalabs.ai,Luma AI,United States,manual
+bfl.ai,Black Forest Labs,Germany,manual
+genspark.ai,Genspark,United States,manual
+uniphore.com,Uniphore,United States,manual
+n8n.io,n8n,Germany,manual
+speak.com,Speak,United States,manual
+pennylane.com,Pennylane,France,manual
+owkin.com,Owkin,France,manual
+chainguard.dev,Chainguard,United States,manual
+island.io,Island,United States,manual
+claroty.com,Claroty,United States,manual
+huntress.com,Huntress,United States,manual
+drata.com,Drata,United States,manual
+torq.io,Torq,United States,manual
+upwind.io,Upwind,United States,manual
+cyberhaven.com,Cyberhaven,United States,manual
+withpersona.com,Persona,United States,manual
+material.security,Material Security,United States,manual
+tailscale.com,Tailscale,Canada,manual
+temporal.io,Temporal,United States,manual
+planetscale.com,PlanetScale,United States,manual
+dremio.com,Dremio,United States,manual
+sigmacomputing.com,Sigma Computing,United States,manual
+framer.com,Framer,Netherlands,manual
+retool.com,Retool,United States,manual
+zapier.com,Zapier,United States,manual
+konghq.com,Kong,United States,manual
+launchdarkly.com,LaunchDarkly,United States,manual
+circleci.com,CircleCI,United States,manual
+cribl.io,Cribl,United States,manual
+demandbase.com,Demandbase,United States,manual
+attentive.com,Attentive,United States,manual
+goat.com,GOAT,United States,manual
+goflink.com,Flink,Germany,manual
+getir.com,Getir,Turkey,manual
+picnic.app,Picnic,Netherlands,manual
+rapido.bike,Rapido,India,manual
+darwinbox.com,Darwinbox,India,manual
+perfios.ai,Perfios,India,manual
+porter.in,Porter,India,manual
+jumbotail.com,Jumbotail,India,manual
+juspay.io,Juspay,India,manual
+games24x7.com,Games24x7,India,manual
+pocketfm.com,Pocket FM,India,manual
+unacademy.com,Unacademy,India,manual
+leadsquared.com,LeadSquared,India,manual
+licious.in,Licious,India,manual
+shiprocket.in,Shiprocket,India,manual
+xpressbees.com,Xpressbees,India,manual
+mercury.com,Mercury,United States,manual
+oysterhr.com,Oyster,United States,manual
+betterment.com,Betterment,United States,manual
+public.com,Public,United States,manual
+upgrade.com,Upgrade,United States,manual
+bolt.com,Bolt Financial,United States,manual
+sumup.com,SumUp,United Kingdom,manual
+paddle.com,Paddle,United Kingdom,manual
+scalable.capital,Scalable Capital,Germany,manual
+raisin.com,Raisin,Germany,manual
+pigment.com,Pigment,France,manual
+brevo.com,Brevo,France,manual
+motorway.co.uk,Motorway,United Kingdom,manual
+zopa.com,Zopa,United Kingdom,manual
+gocardless.com,GoCardless,United Kingdom,manual
+thoughtmachine.net,Thought Machine,United Kingdom,manual
+quantexa.com,Quantexa,United Kingdom,manual
+clearscore.com,ClearScore,United Kingdom,manual
+lendable.co.uk,Lendable,United Kingdom,manual
+multiverse.io,Multiverse,United Kingdom,manual
+wayve.ai,Wayve,United Kingdom,manual
+physicsx.ai,PhysicsX,United Kingdom,manual
+tide.co,Tide,United Kingdom,manual
+deepl.com,DeepL,Germany,manual
+enpal.de,Enpal,Germany,manual
+1komma5.com,1KOMMA5,Germany,manual
+isaraerospace.com,Isar Aerospace,Germany,manual
+quantum-systems.com,Quantum Systems,Germany,manual
+parloa.com,Parloa,Germany,manual
+choco.com,Choco,Germany,manual
+commercetools.com,commercetools,Germany,manual
+egym.com,EGYM,Germany,manual
+billie.io,Billie,Germany,manual
+clark.de,Clark,Germany,manual
+agile-robots.com,Agile Robots,Germany,manual
+neura-robotics.com,NEURA Robotics,Germany,manual
+legora.com,Legora,Sweden,manual
+stegra.com,Stegra,Sweden,manual
+rimac-automobili.com,Rimac Group,Croatia,manual
+ai21.com,AI21 Labs,Israel,manual
+coralogix.com,Coralogix,Israel,manual
+fireblocks.com,Fireblocks,United States,manual
+guesty.com,Guesty,Israel,manual
+hotmart.com,Hotmart,Brazil,manual
+cloudwalk.io,CloudWalk,Brazil,manual
+neon.com.br,Neon,Brazil,manual
+unico.io,Unico,Brazil,manual
+dock.tech,Dock,Brazil,manual
+plata.com.mx,Plata,Mexico,manual
+kushkipagos.com,Kushki,Ecuador,manual
+employmenthero.com,Employment Hero,Australia,manual
+linktr.ee,Linktree,Australia,manual
+immutable.com,Immutable,Australia,manual
+rokt.com,Rokt,United States,manual
+rebellions.ai,Rebellions,South Korea,manual
+advance.ai,ADVANCE.AI,Singapore,manual
+coda.co,Coda Payments,Singapore,manual
+momo.vn,MoMo,Vietnam,manual
+tabby.ai,Tabby,United Arab Emirates,manual
+tamara.co,Tamara,Saudi Arabia,manual
+moniepoint.com,Moniepoint,Nigeria,manual
+wave.com,Wave,Senegal,manual
+tyme.com,TymeBank,South Africa,manual
+wealthsimple.com,Wealthsimple,Canada,manual
+polymarket.com,Polymarket,United States,manual
+anchorage.com,Anchorage Digital,United States,manual
+uniswap.org,Uniswap Labs,United States,manual
+phantom.com,Phantom,United States,manual
+layerzero.network,LayerZero Labs,Canada,manual
+mystenlabs.com,Mysten Labs,United States,manual
+magiceden.io,Magic Eden,United States,manual
+headspace.com,Headspace,United States,manual
+skims.com,SKIMS,United States,manual
+glossier.com,Glossier,United States,manual
+liquiddeath.com,Liquid Death,United States,manual
+athleticbrewing.com,Athletic Brewing,United States,manual
+drinkolipop.com,Olipop,United States,manual
+vuoriclothing.com,Vuori,United States,manual
+tonal.com,Tonal,United States,manual
+strava.com,Strava,United States,manual
+kajabi.com,Kajabi,United States,manual
+coursehero.com,Course Hero,United States,manual
+linear.app,Linear,United States,manual
+clickup.com,ClickUp,United States,manual
+shipbob.com,ShipBob,United States,manual
+project44.com,project44,United States,manual
+springhealth.com,Spring Health,United States,manual
+lyrahealth.com,Lyra Health,United States,manual
+cityblock.com,Cityblock Health,United States,manual
+komodohealth.com,Komodo Health,United States,manual
+cedar.com,Cedar,United States,manual
+transcarent.com,Transcarent,United States,manual
+includedhealth.com,Included Health,United States,manual
+functionhealth.com,Function Health,United States,manual
+alto.com,Alto Pharmacy,United States,manual
+color.com,Color Health,United States,manual
+garnerhealth.com,Garner Health,United States,manual
+strivehealth.com,Strive Health,United States,manual
+flocksafety.com,Flock Safety,United States,manual
+saronic.com,Saronic,United States,manual
+sierraspace.com,Sierra Space,United States,manual
+axiomspace.com,Axiom Space,United States,manual
+cfs.energy,Commonwealth Fusion Systems,United States,manual
+redwoodmaterials.com,Redwood Materials,United States,manual
+formenergy.com,Form Energy,United States,manual
+silanano.com,Sila Nanotechnologies,United States,manual
+group14.technology,Group14 Technologies,United States,manual
+fervoenergy.com,Fervo Energy,United States,manual
+skydio.com,Skydio,United States,manual
+lattice.com,Lattice,United States,manual
+joinhandshake.com,Handshake,United States,manual
+turing.com,Turing,United States,manual
+montecarlo.ai,Monte Carlo,United States,manual
+sentry.io,Sentry,United States,manual
+sonarsource.com,Sonar,Switzerland,manual
+tricentis.com,Tricentis,United States,manual
+anaconda.com,Anaconda,United States,manual
+moonactive.com,Moon Active,Israel,manual
+perk.com,Perk,Spain,manual
+pacaso.com,Pacaso,United States,manual
+benchling.com,Benchling,United States,manual
+earnin.com,EarnIn,United States,manual
+kin.com,Kin Insurance,United States,manual
+weee.com,Weee!,United States,manual
+wonder.com,Wonder,United States,manual
+printful.com,Printful,Latvia,manual
+semperis.com,Semperis,United States,manual
+astronomer.io,Astronomer,United States,manual
+docker.com,Docker,United States,manual
+fullstory.com,FullStory,United States,manual
+justworks.com,Justworks,United States,manual
+beamery.com,Beamery,United Kingdom,manual
+invisibletech.ai,Invisible Technologies,United States,manual
+labelbox.com,Labelbox,United States,manual
+typeface.ai,Typeface,United States,manual
+reflection.ai,Reflection AI,United States,manual
+1x.tech,1X,Norway,manual
+apptronik.com,Apptronik,United States,manual
+agilityrobotics.com,Agility Robotics,United States,manual
+fieldai.com,Field AI,United States,manual
+aptoslabs.com,Aptos Labs,United States,manual
+toolsforhumanity.com,Tools for Humanity,United States,manual
+offchain.io,Offchain Labs,United States,manual
+seatgeek.com,SeatGeek,United States,manual
+fabletics.com,Fabletics,United States,manual
+savagex.com,Savage X Fenty,United States,manual
+harrys.com,Harry's,United States,manual
+zwift.com,Zwift,United States,manual
+guild.com,Guild,United States,manual
+gostudent.org,GoStudent,Austria,manual
+entrata.com,Entrata,United States,manual
+placer.ai,Placer.ai,United States,manual
+eliseai.com,EliseAI,United States,manual
+getbuilt.com,Built Technologies,United States,manual
+junipersquare.com,Juniper Square,United States,manual
+stord.com,Stord,United States,manual
+flockfreight.com,Flock Freight,United States,manual
+mavenclinic.com,Maven Clinic,United States,manual
+truveta.com,Truveta,United States,manual
+insitro.com,insitro,United States,manual
+generatebiomedicines.com,Generate Biomedicines,United States,manual
+lila.ai,Lila Sciences,United States,manual

@@ -1,0 +1,231 @@
+---
+import type { Ranked } from '../lib/data';
+import { pct, points } from '../lib/format';
+import FontName from './FontName.astro';
+import Sparkline from './Sparkline.astro';
+
+interface Props {
+  fonts: Ranked[];
+  feature?: number;
+  role?: 'body' | 'heading';
+}
+const { fonts, feature = 10, role = 'body' } = Astro.props;
+const podium = fonts.slice(0, 3);
+const top = fonts.slice(3, feature);
+const rest = fonts.slice(feature);
+const lead = fonts[0]?.share || 1;
+const noun = role === 'body' ? 'body text' : 'headings';
+---
+
+<ol class="podium">
+  {
+    podium.map((f, i) => (
+      <li>
+        <span class="p-rank num" aria-hidden="true">
+          {i + 1}
+        </span>
+        <div class="p-name">
+          <FontName font={f} />
+        </div>
+        <span class="p-track" aria-hidden="true">
+          <span class:list={['p-fill', { first: i === 0 }]} style={`width:${(f.share / lead) * 100}%`} />
+        </span>
+        <div class="p-stats">
+          <span class="p-share num">{pct(f.share)}</span>
+          <span class="count num">
+            {f.count.toLocaleString()} {f.count === 1 ? 'site' : 'sites'}
+            {f.delta !== null && Math.abs(f.delta) >= 0.0005 && <span class="delta">{points(f.delta)}</span>}
+          </span>
+        </div>
+        <Sparkline values={f.series} width={160} label={`${f.name} share of ${noun} over time`} />
+      </li>
+    ))
+  }
+</ol>
+<ol class="board" start="4">
+  {
+    top.map((f, i) => (
+      <li class="row">
+        <span class="rank num" aria-hidden="true">
+          {i + 4}
+        </span>
+        <div class="name">
+          <FontName font={f} />
+        </div>
+        <div class="stats">
+          <span class="share num">{pct(f.share)}</span>
+          <span class="count num">
+            {f.count.toLocaleString()} {f.count === 1 ? 'site' : 'sites'}
+          </span>
+          {f.delta !== null && Math.abs(f.delta) >= 0.0005 && <span class:list={['delta num', f.delta > 0 ? 'up' : 'down']}>{points(f.delta)}</span>}
+        </div>
+        <div class="trend">
+          <Sparkline values={f.series} label={`${f.name} share of ${noun} over time`} />
+        </div>
+      </li>
+    ))
+  }
+</ol>
+{
+  rest.length > 0 && (
+    <ol class="compact" start={feature + 1}>
+      {rest.map((f) => (
+        <li>
+          <FontName font={f} />
+          <span class="num muted">{pct(f.share)}</span>
+        </li>
+      ))}
+    </ol>
+  )
+}
+
+<style>
+  .podium {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .podium li {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 28px 24px 28px 0;
+    min-width: 0;
+  }
+  .podium li + li {
+    padding-left: 24px;
+    border-left: 1px solid var(--rule-soft);
+  }
+  .p-rank {
+    font-weight: 600;
+    font-size: 0.9375rem;
+  }
+  .p-name {
+    font-size: clamp(2.5rem, 5.4vw, 4.75rem);
+    line-height: 1;
+    min-height: 2.1em;
+    display: flex;
+    align-items: flex-end;
+    overflow-wrap: anywhere;
+  }
+  .p-track {
+    display: block;
+    height: 10px;
+    background: var(--rule-soft);
+  }
+  .p-fill {
+    display: block;
+    height: 100%;
+    background: var(--ink);
+  }
+  .p-fill.first {
+    background: var(--signal);
+  }
+  .p-stats {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .p-share {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .p-stats .count {
+    display: grid;
+    justify-items: end;
+  }
+  .board {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr) 10rem 120px;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .rank {
+    color: var(--ink-3);
+    font-size: 0.9375rem;
+    align-self: baseline;
+    padding-top: 0.6em;
+  }
+  .name {
+    font-size: clamp(1.75rem, 3.6vw, 2.75rem);
+    line-height: 1.1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .stats {
+    display: grid;
+    justify-items: end;
+    gap: 2px;
+    text-align: right;
+  }
+  .share {
+    font-size: 1.375rem;
+    font-weight: 600;
+  }
+  .count {
+    font-size: 0.8125rem;
+    color: var(--ink-3);
+  }
+  .delta {
+    font-size: 0.8125rem;
+    color: var(--signal);
+  }
+  .compact {
+    columns: 3 14rem;
+    column-gap: 32px;
+    margin: 24px 0 0;
+    padding: 0 0 0 2.5rem;
+    font-size: 1.125rem;
+  }
+  .compact li {
+    break-inside: avoid;
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .compact li::marker {
+    color: var(--ink-3);
+    font-size: 0.875rem;
+    font-family: var(--sans);
+  }
+  .compact .num {
+    font-size: 0.875rem;
+    font-family: var(--sans);
+  }
+  @media (max-width: 760px) {
+    .podium {
+      grid-template-columns: 1fr;
+    }
+    .podium li + li {
+      padding-left: 0;
+      border-left: 0;
+      border-top: 1px solid var(--rule-soft);
+    }
+    .p-name {
+      min-height: 0;
+    }
+    .row {
+      grid-template-columns: 1.75rem minmax(0, 1fr) auto;
+      gap: 4px 12px;
+    }
+    .trend {
+      grid-column: 2 / -1;
+    }
+    .compact {
+      padding-left: 1.75rem;
+    }
+  }
+</style>

@@ -1,0 +1,121 @@
+---
+import type { SiteRow } from '../lib/data';
+import { PLATFORM_LABELS } from '../lib/format';
+import FontName from './FontName.astro';
+
+interface Props {
+  sites: SiteRow[];
+  showCategory?: boolean;
+}
+const { sites, showCategory = false } = Astro.props;
+const PAGE = 50;
+---
+
+<div class="st">
+  <label class="filter">
+    <span class="sr-only">Filter sites</span>
+    <input type="search" placeholder={`Filter ${sites.length.toLocaleString()} sites by domain or font`} data-filter />
+  </label>
+  <div class="table-scroll">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Site</th>
+          {showCategory && <th>Category</th>}
+          <th>Body</th>
+          <th>Headings</th>
+          <th>Platform</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          sites.map((s, i) => (
+            <tr hidden={i >= PAGE} data-rest={i >= PAGE ? '' : undefined} data-q={`${s.domain} ${s.body?.name ?? ''} ${s.heading?.name ?? ''} ${s.platform ?? ''}`.toLowerCase()}>
+              <td>
+                <a href={`/site/${s.domain}`}>{s.domain}</a>
+              </td>
+              {showCategory && <td class="muted">{s.category}</td>}
+              <td class="font">
+                <FontName font={s.body} />
+              </td>
+              <td class="font">
+                <FontName font={s.heading} />
+              </td>
+              <td class="muted">{s.platform ? (PLATFORM_LABELS[s.platform] ?? s.platform) : ''}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+  <p class="none muted" hidden data-none>No sites match that filter.</p>
+  {sites.length > PAGE && (
+    <button type="button" class="more-btn" data-more>
+      Show all {sites.length.toLocaleString()} sites
+    </button>
+  )}
+</div>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('.st')) {
+    const input = root.querySelector<HTMLInputElement>('[data-filter]')!;
+    const rows = [...root.querySelectorAll<HTMLTableRowElement>('tr[data-q]')];
+    const none = root.querySelector<HTMLElement>('[data-none]')!;
+    const more = root.querySelector<HTMLButtonElement>('[data-more]');
+    let expanded = false;
+    more?.addEventListener('click', () => {
+      expanded = true;
+      more.remove();
+      rows.forEach((r) => (r.hidden = false));
+    });
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      let shown = 0;
+      for (const r of rows) {
+        const hit = q ? r.dataset.q!.includes(q) : expanded || !('rest' in r.dataset);
+        r.hidden = !hit;
+        if (hit) shown++;
+      }
+      none.hidden = shown > 0;
+    });
+  }
+</script>
+
+<style>
+  .filter input {
+    width: min(100%, 28rem);
+    font: inherit;
+    font-size: 0.9375rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 9px 12px;
+    margin: 12px 0 8px;
+  }
+  .filter input:focus {
+    border-color: var(--ink-2);
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--cyan) 30%, transparent);
+  }
+  .font {
+    font-size: 1.125rem;
+  }
+  .none {
+    padding: 16px 0;
+  }
+  .more-btn {
+    margin-top: 16px;
+    font: inherit;
+    font-weight: 600;
+    color: var(--ink);
+    background: none;
+    border: 2px solid var(--ink);
+    padding: 10px 18px;
+    cursor: pointer;
+  }
+  .more-btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+</style>

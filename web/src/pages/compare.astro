@@ -1,0 +1,212 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { load, type FontIndexEntry, type Overview } from '../lib/data';
+
+const fonts = load<FontIndexEntry[]>('fonts.json').map((f) => ({ name: f.name, slug: f.slug, sites: f.sites, specimen: f.specimen }));
+const overview = load<Overview>('overview.json');
+const defaults = overview.body.filter((f) => !f.generic).slice(0, 3).map((f) => f.slug);
+const periods = overview.periods;
+---
+
+<Layout title="Compare fonts" description="Compare how the share of homepages using each font has changed over time.">
+  <section class="wrap hero">
+    <h1>Compare</h1>
+    <p class="lede">Pick up to four typefaces to see how their share of homepages has moved.</p>
+  </section>
+
+  <section class="wrap" data-compare data-fonts={JSON.stringify(fonts)} data-periods={JSON.stringify(periods)} data-defaults={JSON.stringify(defaults)}>
+    <div class="picker">
+      <ul class="chosen" aria-live="polite"></ul>
+      <div class="add">
+        <label for="font-search" class="sr-only">Add a font</label>
+        <input id="font-search" type="search" placeholder="Add a font" autocomplete="off" list="font-options" />
+        <datalist id="font-options">
+          {fonts.map((f) => <option value={f.name} />)}
+        </datalist>
+      </div>
+      <p class="hint small muted" hidden>Four is the most one chart can show clearly. Remove one to add another.</p>
+    </div>
+    <div class="role">
+      <label><input type="radio" name="role" value="body" checked /> Body text</label>
+      <label><input type="radio" name="role" value="heading" /> Headings</label>
+    </div>
+    <div class="tc-plot"></div>
+    <p class="empty muted" hidden>Choose a font to start.</p>
+  </section>
+</Layout>
+
+<script>
+  import { mountTrend, type Payload } from '../lib/trend';
+
+  type F = { name: string; slug: string; sites: number; specimen: { source: string; family: string; id?: string } | null };
+  type P = { id: string; date: string; kind: string };
+  const root = document.querySelector<HTMLElement>('[data-compare]')!;
+  const fonts: F[] = JSON.parse(root.dataset.fonts!);
+  const periods: P[] = JSON.parse(root.dataset.periods!);
+  const bySlug = new Map(fonts.map((f) => [f.slug, f]));
+  const byName = new Map(fonts.map((f) => [f.name.toLowerCase(), f]));
+  const input = root.querySelector<HTMLInputElement>('#font-search')!;
+  const chosenEl = root.querySelector<HTMLUListElement>('.chosen')!;
+  const plot = root.querySelector<HTMLElement>('.tc-plot')!;
+  const empty = root.querySelector<HTMLElement>('.empty')!;
+  const hint = root.querySelector<HTMLElement>('.hint')!;
+  let seriesData: Record<string, [(number | null)[], (number | null)[]]> | null = null;
+
+  const fromUrl = new URLSearchParams(location.search).get('fonts')?.split(',').filter((s) => bySlug.has(s));
+  let chosen: string[] = (fromUrl?.length ? fromUrl : JSON.parse(root.dataset.defaults!)).slice(0, 4);
+  let role: 'body' | 'heading' = 'body';
+
+  function loadFace(f: F) {
+    const s = f.specimen;
+    if (!s || s.source === 'local') return;
+    const href =
+      s.source === 'google'
+        ? `https://fonts.googleapis.com/css2?family=${encodeURIComponent(s.family).replace(/%20/g, '+')}&text=${encodeURIComponent(f.name)}&display=swap`
+        : `https://api.fontshare.com/v2/css?f[]=${s.id}@400&display=swap`;
+    if (document.querySelector(`link[href="${href}"]`)) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    document.head.appendChild(link);
+  }
+
+  function nameEl(f: F) {
+    const a = document.createElement('a');
+    a.href = `/font/${f.slug}`;
+    a.textContent = f.name;
+    if (f.specimen) a.style.fontFamily = `${f.specimen.family === 'system-ui' ? 'system-ui' : `"${f.specimen.family}"`}, var(--display)`;
+    else a.className = 'licensed';
+    return a;
+  }
+
+  async function draw() {
+    history.replaceState(null, '', chosen.length ? `?fonts=${chosen.join(',')}` : location.pathname);
+    chosenEl.replaceChildren(
+      ...chosen.map((slug, i) => {
+        const f = bySlug.get(slug)!;
+        loadFace(f);
+        const li = document.createElement('li');
+        const sw = document.createElement('span');
+        sw.className = 'swatch';
+        sw.style.background = `var(--s${i + 1})`;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = 'Remove';
+        btn.setAttribute('aria-label', `Remove ${f.name}`);
+        btn.onclick = () => {
+          chosen = chosen.filter((s) => s !== slug);
+          draw();
+        };
+        li.append(sw, nameEl(f), btn);
+        return li;
+      }),
+    );
+    input.disabled = chosen.length >= 4;
+    hint.hidden = chosen.length < 4;
+    seriesData ??= await (await fetch('/agg/series.json')).json();
+    empty.hidden = chosen.length > 0;
+    plot.hidden = chosen.length === 0;
+    if (!chosen.length) return;
+    const payload: Payload = {
+      dates: periods.map((p) => p.date),
+      kinds: periods.map((p) => p.kind),
+      labels: periods.map((p) => (p.kind === 'wayback' ? p.id.replace('-', ' ') : `Week of ${p.date}`)),
+      series: chosen.map((s) => {
+        const f = bySlug.get(s)!;
+        return { label: f.name, values: seriesData![s]?.[role === 'body' ? 0 : 1] ?? [], family: f.specimen ? (f.specimen.family === 'system-ui' ? 'system-ui' : `"${f.specimen.family}"`) : null };
+      }),
+      height: 340,
+    };
+    mountTrend(plot, payload);
+  }
+
+  input.addEventListener('change', () => {
+    const f = byName.get(input.value.trim().toLowerCase());
+    if (f && !chosen.includes(f.slug) && chosen.length < 4) {
+      chosen.push(f.slug);
+      input.value = '';
+      draw();
+    }
+  });
+  root.querySelectorAll<HTMLInputElement>('input[name=role]').forEach((r) =>
+    r.addEventListener('change', () => {
+      role = r.value as 'body' | 'heading';
+      draw();
+    }),
+  );
+  draw();
+</script>
+
+<style>
+  .hero {
+    padding-top: clamp(40px, 6vw, 88px);
+    padding-bottom: 32px;
+    display: grid;
+    gap: 16px;
+  }
+  .picker {
+    border-top: 1px solid var(--ink);
+    padding-top: 16px;
+  }
+  .chosen {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: grid;
+    gap: 4px;
+  }
+  .chosen :global(li) {
+    display: grid;
+    grid-template-columns: 14px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    line-height: 1.15;
+  }
+  .chosen :global(a) {
+    text-decoration: none;
+  }
+  .chosen :global(.swatch) {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+  }
+  .chosen :global(button) {
+    font: inherit;
+    font-family: var(--sans);
+    font-size: 0.875rem;
+    color: var(--ink-2);
+    background: none;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+  .chosen :global(button:hover) {
+    border-color: var(--ink-2);
+    color: var(--ink);
+  }
+  .add input {
+    font: inherit;
+    width: min(100%, 22rem);
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 9px 12px;
+  }
+  .hint {
+    margin-top: 8px;
+  }
+  .role {
+    display: flex;
+    gap: 20px;
+    margin: 28px 0 16px;
+    font-size: 0.9375rem;
+  }
+  .role input {
+    accent-color: var(--ink);
+  }
+</style>

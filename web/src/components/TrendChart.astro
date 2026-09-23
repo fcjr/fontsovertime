@@ -1,0 +1,101 @@
+---
+import type { FontRef, Period } from '../lib/data';
+import { date, pct } from '../lib/format';
+import { fontStack } from '../lib/specimen';
+
+interface Props {
+  periods: Period[];
+  series: { label: string; values: (number | null)[]; font?: FontRef | null }[];
+  title: string;
+  caption?: string;
+  height?: number;
+}
+const { periods, series, title, caption, height = 300 } = Astro.props;
+const hasData = series.some((s) => s.values.filter((v) => v !== null).length >= 2);
+const payload = JSON.stringify({
+  dates: periods.map((p) => p.date),
+  kinds: periods.map((p) => p.kind),
+  labels: periods.map((p) => (p.kind === 'wayback' ? p.id.replace('-', ' ') : `Week of ${date(p.date)}`)),
+  series: series.slice(0, 6).map((x) => ({ label: x.label, values: x.values, family: x.font ? fontStack(x.font) : null })),
+  height,
+});
+---
+
+<figure class="tc">
+  <figcaption>
+    <span class="tc-title">{title}</span>
+    {caption && <span class="tc-cap">{caption}</span>}
+  </figcaption>
+  {
+    hasData ? (
+      <div class="tc-plot" data-trend={payload} aria-label={`${title}. Interactive line chart; a table view follows.`} role="figure" />
+    ) : (
+      <p class="tc-empty">
+        Trend lines appear once there are at least two crawls to compare. The first weekly crawl is in; the next lands on Sunday.
+      </p>
+    )
+  }
+  <details class="tc-table">
+    <summary>Show as table</summary>
+    <div class="table-scroll">
+      <table class="table num">
+        <thead>
+          <tr>
+            <th>Period</th>
+            {series.map((s) => <th class="r">{s.label}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {
+            periods.map((p, i) => (
+              <tr>
+                <td>{p.kind === 'wayback' ? `${p.id} (archive)` : date(p.date)}</td>
+                {series.map((s) => (
+                  <td class="r">{pct(s.values[i])}</td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </details>
+</figure>
+
+<script>
+  import { mountTrend } from '../lib/trend';
+  for (const root of document.querySelectorAll<HTMLElement>('[data-trend]')) mountTrend(root, JSON.parse(root.dataset.trend!));
+</script>
+
+<style>
+  .tc {
+    margin: 0;
+  }
+  figcaption {
+    display: grid;
+    gap: 2px;
+    margin-bottom: 12px;
+  }
+  .tc-title {
+    font-weight: 500;
+  }
+  .tc-cap {
+    color: var(--ink-3);
+    font-size: 0.875rem;
+  }
+  .tc-empty {
+    padding: 32px 0;
+    color: var(--ink-3);
+    border-top: 1px solid var(--rule-soft);
+    border-bottom: 1px solid var(--rule-soft);
+    max-width: 40rem;
+  }
+  .tc-table {
+    margin-top: 12px;
+    font-size: 0.875rem;
+  }
+  .tc-table summary {
+    cursor: pointer;
+    color: var(--ink-2);
+  }
+</style>
