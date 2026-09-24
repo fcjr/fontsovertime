@@ -157,7 +157,7 @@ const laid = sets.map((set) => {
     z-index: 1;
   }
   .t-name {
-    font-size: min(46cqh, calc(165cqw / var(--chars)));
+    font-size: max(0.75rem, min(46cqh, calc(165cqw / var(--chars))));
     line-height: 1;
     letter-spacing: -0.01em;
     overflow-wrap: anywhere;
@@ -168,7 +168,7 @@ const laid = sets.map((set) => {
     display: flex;
     gap: 8px;
     font-family: var(--sans);
-    font-size: clamp(10px, 9cqmin, 15px);
+    font-size: clamp(11px, 9cqmin, 15px);
     font-weight: 600;
     white-space: nowrap;
   }
