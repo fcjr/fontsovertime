@@ -122,7 +122,7 @@ fi
 
 cp "$HOME_DIR/release/deploy/systemd/"* /etc/systemd/system/
 systemctl daemon-reload
-systemctl enable --now fontsovertime-weekly.timer fontsovertime-daily.timer fontsovertime-backfill.timer
+systemctl enable --now fontsovertime-weekly.timer fontsovertime-daily.timer fontsovertime-hn.timer fontsovertime-backfill.timer
 
 echo
 echo "Done. Settings live in /etc/fontsovertime.env."

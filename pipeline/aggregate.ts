@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { normalizeFamily, unaliased } from './normalize.ts';
-import { listSnapshots, readJsonl, ROOT, type Kind, type Row } from './snapshots.ts';
+import { listSnapshots, readJsonl, ROOT, weekStart, type Kind, type Row } from './snapshots.ts';
 import { hostOf, registrable } from './psl.ts';
 
 const OUT = join(ROOT, 'data/agg');
@@ -22,6 +22,10 @@ const CATEGORIES: Record<string, { name: string; blurb: string }> = {
   universities: { name: 'Universities', blurb: 'Research universities and colleges.' },
   indie: { name: 'Indie blogs', blurb: 'Personal sites and one-person publications, ranked by how often they reach the Hacker News front page.' },
   popular: { name: 'Popular sites', blurb: 'Heavily visited sites that don’t fit another category: media, tools, forums and portals.' },
+};
+const HN = 'hacker-news';
+const FEEDS: Record<string, { name: string; blurb: string }> = {
+  [HN]: { name: 'Hacker News', blurb: 'The articles behind the week’s 1,000 highest-scoring Hacker News stories, measured on the page each story links to.' },
 };
 const COHORTS: Record<string, { name: string; blurb: string }> = {
   'top-1k': { name: 'Top 1,000', blurb: 'The 1,000 most visited sites, ranked by Chrome traffic data.' },
@@ -74,10 +78,12 @@ function quarterDate(id: string) {
 const bare = (d: string) => d.toLowerCase().replace(/^www\./, '');
 const siteMeta = loadSites();
 const excludePath = join(ROOT, 'sites', 'exclude.txt');
+const excluded = new Set<string>();
 if (existsSync(excludePath))
   for (const line of readFileSync(excludePath, 'utf8').split('\n')) {
     const d = bare(line.trim());
     if (d && !d.startsWith('#')) {
+      excluded.add(d);
       siteMeta.delete(d);
       siteMeta.delete(`www.${d}`);
     }
@@ -150,6 +156,37 @@ for (const kind of ['wayback', 'weekly', 'daily'] as Kind[]) {
     }
   }
 }
+
+// Hacker News: each week's list of articles, kept apart from the site panel.
+const hnPeriods: Period[] = [];
+const hnObs: Obs[] = [];
+const hnFailed = new Map<string, number>();
+for (const snap of listSnapshots('hn')) {
+  const rows = readJsonl(snap.path).filter((r) => !excluded.has(bare(r.domain)));
+  const period: Period = { id: snap.id, date: new Date(weekStart(snap.id)).toISOString().slice(0, 10), kind: 'weekly', n: 0 };
+  hnPeriods.push(period);
+  hnFailed.set(snap.id, rows.length ? rows.filter((r) => r.status !== 'ok').length / rows.length : 0);
+  for (const r of rows) {
+    if (r.status !== 'ok' || !r.body_font) continue;
+    const body = normalizeFamily(r.body_font);
+    if (!body || body.name === 'Unknown') continue;
+    period.n++;
+    hnObs.push({
+      domain: r.domain,
+      kind: 'hn',
+      period: snap.id,
+      date: r.crawled_at.slice(0, 10),
+      method: r.method ?? 'browser',
+      body,
+      heading: ((h) => (h && h.slug !== 'unknown' ? h : body))(normalizeFamily(r.heading_font)),
+      sources: r.sources ?? [],
+      platform: r.platform ?? null,
+      raw: r,
+    });
+  }
+}
+const hnLatest = hnPeriods.at(-1);
+const hnCurrent = hnObs.filter((o) => o.period === hnLatest?.id);
 
 const PANEL_MIN = 40;
 const panel = new Set(observations.filter((o) => o.kind === 'wayback').map((o) => o.domain));
@@ -233,31 +270,40 @@ function tally(obs: Obs[], role: 'body' | 'heading') {
   return counts;
 }
 
-function series(obs: Obs[], role: 'body' | 'heading', slugs: string[]) {
-  const perPeriod = trendPeriods.map(() => ({ n: 0, counts: new Map<string, number>() }));
+function series(obs: Obs[], role: 'body' | 'heading', slugs: string[], ps = trendPeriods) {
+  const index = ps === trendPeriods ? periodIndex : new Map(ps.map((p, i) => [p.id, i]));
+  const perPeriod = ps.map(() => ({ n: 0, counts: new Map<string, number>() }));
   for (const o of obs) {
-    const i = periodIndex.get(o.period);
+    const i = index.get(o.period);
     if (i === undefined || o.kind === 'daily') continue;
     perPeriod[i].n++;
     const f = o[role];
     if (f) perPeriod[i].counts.set(f.slug, (perPeriod[i].counts.get(f.slug) ?? 0) + 1);
   }
   const result: Record<string, (number | null)[]> = {};
-  for (const slug of slugs) result[slug] = perPeriod.map((p, i) => (p.n >= (trendPeriods[i].kind === 'wayback' ? 30 : 5) ? round((p.counts.get(slug) ?? 0) / p.n) : null));
+  for (const slug of slugs) result[slug] = perPeriod.map((p, i) => (p.n >= (ps[i].kind === 'wayback' ? 30 : 5) ? round((p.counts.get(slug) ?? 0) / p.n) : null));
   return result;
 }
 
-function ranking(currentObs: Obs[], historyObs: Obs[], role: 'body' | 'heading', limit = TOP) {
+function ranking(currentObs: Obs[], historyObs: Obs[], role: 'body' | 'heading', limit = TOP, ps = trendPeriods) {
   const counts = [...tally(currentObs, role).values()].sort((a, b) => b.count - a.count || a.font.name.localeCompare(b.font.name));
   const top = counts.slice(0, limit);
-  const s = series(historyObs, role, top.map((c) => c.font.slug));
+  const s = series(historyObs, role, top.map((c) => c.font.slug), ps);
   const domains = new Set(currentObs.map((o) => o.domain));
-  const w = series(weeklyObs.filter((o) => domains.has(o.domain)), role, top.map((c) => c.font.slug));
+  const w = ps === trendPeriods ? series(weeklyObs.filter((o) => domains.has(o.domain)), role, top.map((c) => c.font.slug)) : s;
   return top.map((c) => {
     const pts = s[c.font.slug];
-    const weekly = w[c.font.slug].filter((p, i): p is number => p !== null && trendPeriods[i].kind === 'weekly');
+    const weekly = w[c.font.slug].filter((p, i): p is number => p !== null && ps[i].kind === 'weekly');
     const prev = weekly.length > 1 ? weekly[Math.max(0, weekly.length - 5)] : null;
     const share = round(c.count / currentObs.length);
+    if (ps !== trendPeriods) {
+      // A new set of articles every week: compare the last four weeks with the four before.
+      const avg = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
+      const recent = weekly.slice(-4);
+      const before = weekly.slice(-8, -4);
+      const delta = before.length ? round(avg(recent) - avg(before)) : null;
+      return { name: c.font.name, slug: c.font.slug, specimen: specimen(c.font.slug), generic: c.font.generic, count: c.count, share, delta, series: pts };
+    }
     return { name: c.font.name, slug: c.font.slug, specimen: specimen(c.font.slug), generic: c.font.generic, count: c.count, share, delta: prev === null ? null : round(share - prev), series: pts };
   });
 }
@@ -308,8 +354,10 @@ rmSync(OUT, { recursive: true, force: true });
 const currentObs = [...current.values()];
 const liveCurrent = currentObs.filter((o) => o.kind !== 'wayback');
 const baseObs = liveCurrent.length ? liveCurrent : currentObs;
+const groupObs = (slug: string) => (slug === HN ? hnCurrent : baseObs.filter((o) => inGroup(o.domain, slug, o)));
 const categories = [
   ...Object.keys(COHORTS).filter((slug) => cohortMembers.get(slug)?.size),
+  ...(hnCurrent.length ? [HN] : []),
   ...[...new Set(baseObs.map((o) => categoryOf(o.domain, o)))].sort(
     (a, b) => Object.keys(CATEGORIES).indexOf(a) - Object.keys(CATEGORIES).indexOf(b),
   ),
@@ -317,22 +365,23 @@ const categories = [
 const periodsOut = trendPeriods.map((p) => ({ id: p.id, date: p.date, kind: p.kind, n: p.n }));
 
 const categoryList = categories.map((slug) => {
-  const obs = baseObs.filter((o) => inGroup(o.domain, slug, o));
-  const meta = COHORTS[slug] ?? CATEGORIES[slug];
+  const obs = groupObs(slug);
+  const meta = COHORTS[slug] ?? FEEDS[slug] ?? CATEGORIES[slug];
   const top = [...tally(obs, 'body').values()].sort((a, b) => b.count - a.count).slice(0, 5);
   return {
     slug,
-    kind: COHORTS[slug] ? 'cohort' : 'category',
+    kind: COHORTS[slug] ? 'cohort' : FEEDS[slug] ? 'feed' : 'category',
     name: meta?.name ?? slug,
     blurb: meta?.blurb ?? '',
     n: obs.length,
     top: top.map((t) => ({ name: t.font.name, slug: t.font.slug, specimen: specimen(t.font.slug), share: round(t.count / obs.length) })),
-    blocked: blocked.get(slug) ? round(blocked.get(slug)!.blocked / blocked.get(slug)!.total) : null,
+    blocked: slug === HN ? round(hnFailed.get(hnLatest!.id) ?? 0) : blocked.get(slug) ? round(blocked.get(slug)!.blocked / blocked.get(slug)!.total) : null,
   };
 });
 
+const siteGroups = categoryList.filter((c) => c.kind !== 'feed');
 const allFonts = new Map<string, Font>();
-for (const o of baseObs) for (const f of [o.body, o.heading]) if (f && f.slug !== 'unknown') allFonts.set(f.slug, f);
+for (const o of [...hnCurrent, ...baseObs]) for (const f of [o.body, o.heading]) if (f && f.slug !== 'unknown') allFonts.set(f.slug, f);
 
 write('overview.json', {
   generated_at: new Date().toISOString(),
@@ -359,10 +408,10 @@ write('overview.json', {
       .slice(0, 18);
     return {
       fonts: fonts.map((c) => fontRef(c.font)),
-      categories: categoryList.map((c) => ({ slug: c.slug, name: c.name })),
+      categories: siteGroups.map((c) => ({ slug: c.slug, name: c.name })),
       values: fonts.map((c) =>
-        categoryList.map((cat) => {
-          const obs = baseObs.filter((o) => inGroup(o.domain, cat.slug, o));
+        siteGroups.map((cat) => {
+          const obs = groupObs(cat.slug);
           const n = obs.filter((o) => o.body?.slug === c.font.slug).length;
           return { share: obs.length ? round(n / obs.length) : 0, count: n };
         }),
@@ -374,7 +423,30 @@ write('overview.json', {
 });
 
 for (const cat of categoryList) {
-  const obs = baseObs.filter((o) => inGroup(o.domain, cat.slug, o));
+  if (cat.slug === HN) {
+    write(`category/${HN}.json`, {
+      ...cat,
+      trend_panel: null,
+      periods: hnPeriods,
+      body: ranking(hnCurrent, hnObs, 'body', 16, hnPeriods),
+      heading: ranking(hnCurrent, hnObs, 'heading', 10, hnPeriods),
+      sources: breakdown(hnCurrent.map(sourceClass)),
+      platforms: breakdown(hnCurrent.map((o) => o.platform)),
+      pairings: pairings(hnCurrent, 10),
+      changes: [],
+      domains: (() => {
+        const m = new Map<string, number>();
+        for (const o of hnCurrent) m.set(o.domain, (m.get(o.domain) ?? 0) + 1);
+        const top = [...m].sort((a, b) => b[1] - a[1]).slice(0, 5);
+        return { distinct: m.size, top: top.map(([domain, count]) => ({ domain, count, share: round(count / hnCurrent.length) })) };
+      })(),
+      sites: hnCurrent
+        .sort((a, b) => b.raw.hn_points - a.raw.hn_points)
+        .map((o) => ({ ...siteRow(o), category: HN, url: o.raw.url, title: o.raw.hn_title, points: o.raw.hn_points, hn_id: o.raw.hn_id })),
+    });
+    continue;
+  }
+  const obs = groupObs(cat.slug);
   const catPanel = [...panel].filter((d) => inGroup(d, cat.slug)).length;
   const hist = (catPanel >= PANEL_MIN ? trendObs : weeklyObs).filter((o) => inGroup(o.domain, cat.slug, o));
   write(`category/${cat.slug}.json`, {
@@ -427,7 +499,8 @@ for (const font of allFonts.values()) {
     share: round(using.length / baseObs.length),
     categories: byCategory.map((c) => c.slug),
   };
-  fontIndex.push(entry);
+  if (entry.sites) fontIndex.push(entry);
+  const hnUsing = hnCurrent.filter((o) => o.body?.slug === font.slug || o.heading?.slug === font.slug);
   write(`font/${font.slug}.json`, {
     ...entry,
     first_live: firstLive,
@@ -435,6 +508,7 @@ for (const font of allFonts.values()) {
     periods: periodsOut,
     series: { body: s, heading: sh },
     by_category: byCategory,
+    hn: hnCurrent.length ? { week: hnLatest!.id, count: hnUsing.length, share: round(hnUsing.length / hnCurrent.length) } : null,
     sources: breakdown(using.map(sourceClass)),
     pairs: [...partners.values()].sort((a, b) => b.count - a.count).slice(0, 10).map((p) => ({ ...fontRef(p.font), count: p.count })),
     using: using
@@ -452,6 +526,7 @@ fontIndex.sort((a, b) => b.sites - a.sites || a.name.localeCompare(b.name));
   write('series.json', Object.fromEntries(slugs.map((slug) => [slug, [body[slug], heading[slug]]])));
 }
 write('fonts.json', fontIndex);
+write('font-slugs.json', [...allFonts.keys()]);
 
 const unknown = [...unaliased].sort((a, b) => b[1] - a[1]).slice(0, 40);
 const siteIndex = [];

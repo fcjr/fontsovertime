@@ -20,13 +20,13 @@ const cats = load<CategorySummary[]>('categories.json');
       <p>
         Every Sunday we open each homepage in a real Chromium browser, wait for its web fonts to finish loading, and walk every visible piece of text
         on the page. For each run of text we read the computed <code>font-family</code> and find which family draws it, which is the first
-        one in the stack with a loaded font file. If none has loaded and the stack starts with the operating system’s interface font, we record
+        one in the stack with a loaded font file. If the stack names the operating system’s interface font before any loaded file, we record
         <code>system-ui</code>. Otherwise we record the first family named.
       </p>
       <p>
         The <strong>body font</strong> is the family covering the most characters on the page. The <strong>heading font</strong> is the same
         calculation restricted to <code>h1</code> to <code>h3</code>. Text hidden from view, inside cookie banners and other dialogs, or smaller than
-        two pixels doesn’t count.
+        two pixels doesn’t count. Neither do code samples, unless a page is mostly code.
       </p>
 
       <h2>Why a browser, not the CSS</h2>
@@ -78,7 +78,7 @@ const cats = load<CategorySummary[]>('categories.json');
 
       <h2>What we can’t see</h2>
       <ul>
-        <li>Only homepages. Product pages, docs and apps often use different type.</li>
+        <li>Only homepages, apart from the Hacker News articles. Product pages, docs and apps often use different type.</li>
         <li>Fonts loaded only after scrolling or clicking.</li>
         <li>
           Sites that block automated browsers. When that happens we fall back to reading the page’s CSS, and if that’s blocked too the site isn’t
@@ -87,7 +87,10 @@ const cats = load<CategorySummary[]>('categories.json');
         <li>
           Our crawler runs from US data centers, so sites that serve different pages by country show us their US version.
         </li>
-        <li>We can’t license commercial fonts for this site, so their names are shown in grey in our own typeface.</li>
+        <li>
+          We can’t license commercial fonts for this site, so their names are shown in grey in our own typeface, marked with a lock. System fonts,
+          marked with a screen, are shown in whatever copy your device has, so they can look different from device to device.
+        </li>
       </ul>
 
       <h3>Blocked this week</h3>
@@ -103,7 +106,7 @@ const cats = load<CategorySummary[]>('categories.json');
           {
             cats.map((c) => (
               <tr>
-                <td>{c.name}</td>
+                <td>{c.name}{c.kind === 'feed' ? ' (articles)' : ''}</td>
                 <td class="r">{c.n.toLocaleString()}</td>
                 <td class="r">{pct(c.blocked)}</td>
               </tr>
@@ -140,11 +143,24 @@ const cats = load<CategorySummary[]>('categories.json');
         another site we already track are left out, which matters for acquired startups.
       </p>
 
+      <h2>Hacker News</h2>
+      <p>
+        One category works differently. Every Tuesday we take the 1,000 highest-scoring stories posted to Hacker News the week before (Monday to
+        Sunday, UTC), from the public Hacker News search API, and measure the page each story links to. Posts without a link, and links to PDFs,
+        images and other files, are left out.
+      </p>
+      <p>
+        It counts articles, not sites. A site linked ten times that week counts ten times, because the question is what people reading Hacker News
+        actually saw. Each week is a new set of articles, so its trend line compares weeks rather than following the same pages, and the change
+        figures compare the last four weeks with the four before. Articles aren’t part of the site totals, switches, rising and falling fonts, the
+        category heatmap or the downloads, and there’s no archive history: pages are measured once, the week after they were posted.
+      </p>
+
       <h2 id="opt-out">Opting out</h2>
       <p>
-        We load each homepage once per crawl, with a normal browser and no logins, and never follow links. If you run a site and would rather not be
+        We load each homepage once per crawl, and each article a top Hacker News story links to once, with a normal browser and no logins. We never follow links from those pages. If you run a site and would rather not be
         included, open an opt-out request. It asks you to confirm you run the site, either with a DNS TXT record or a small file on the site, and a bot
-        checks it automatically. Once confirmed, the site is never crawled again and its data is removed from this site and the current downloads. Older versions of the data files remain in the repository’s history.
+        checks it automatically. Once confirmed, the site and its articles are never crawled again and its data is removed from this site and the current downloads. Older versions of the data files remain in the repository’s history.
       </p>
       <p class="actions">
         <a class="button" href={optOutUrl()}>Request an opt-out</a>

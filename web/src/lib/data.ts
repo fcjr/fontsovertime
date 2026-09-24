@@ -10,8 +10,8 @@ export type Period = { id: string; date: string; kind: string; n: number };
 export type Change = { date: string; domain: string; category: string; role: 'body' | 'heading'; from: FontRef; to: FontRef };
 export type Breakdown = { key: string; count: number; share: number }[];
 export type Pairing = { heading: FontRef; body: FontRef; count: number; share: number; examples: string[] };
-export type SiteRow = { domain: string; category: string; body: FontRef | null; heading: FontRef | null; platform: string | null; method: string; date: string };
-export type CategorySummary = { slug: string; kind: 'cohort' | 'category'; name: string; blurb: string; n: number; top: (FontRef & { share: number })[]; blocked: number | null };
+export type SiteRow = { domain: string; category: string; body: FontRef | null; heading: FontRef | null; platform: string | null; method: string; date: string; url?: string; title?: string; points?: number; hn_id?: number };
+export type CategorySummary = { slug: string; kind: 'cohort' | 'category' | 'feed'; name: string; blurb: string; n: number; top: (FontRef & { share: number })[]; blocked: number | null };
 
 const cache = new Map<string, unknown>();
 export function load<T>(path: string): T {

@@ -6,6 +6,7 @@ import { load, type Change, type FontRef, type SiteRow } from '../../lib/data';
 import { date, kb, pct, PLATFORM_LABELS, SOURCE_LABELS } from '../../lib/format';
 import { glyphs } from '../../lib/specimen';
 import { optOutUrl } from '../../lib/site';
+import ExternalLink from '@lucide/astro/icons/external-link';
 
 type Detail = { family: string; share: number; stack: string; weights: Record<string, number>; font: FontRef | null };
 type Site = SiteRow & {
@@ -52,6 +53,12 @@ const weightList = (w: Record<string, number>) =>
     </p>
     <h1 class="domain">{s.domain}</h1>
     {s.title && <p class="title muted">{s.title}</p>}
+    <p>
+      <a class="visit" href={s.final_url ?? `https://${s.domain}/`} rel="noopener nofollow">
+        Visit {s.domain}
+        <ExternalLink size={15} aria-hidden="true" />
+      </a>
+    </p>
     {
       s.cohorts.length > 0 && (
         <ul class="cohorts">
@@ -225,6 +232,12 @@ const weightList = (w: Record<string, number>) =>
   }
   .crumb a {
     color: var(--ink-3);
+  }
+  .visit {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
   }
   .domain {
     overflow-wrap: anywhere;

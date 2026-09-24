@@ -1,7 +1,7 @@
-import { LICENSED_TIP } from './specimen';
+import { LICENSED_TIP, SYSTEM_TIP } from './specimen';
 
-export type Series = { label: string; values: (number | null)[]; family?: string | null; licensed?: boolean; href?: string };
-export type Payload = { dates: string[]; kinds: string[]; labels: string[]; ns?: number[]; series: Series[]; height: number };
+export type Series = { label: string; values: (number | null)[]; family?: string | null; licensed?: boolean; system?: boolean; href?: string };
+export type Payload = { dates: string[]; kinds: string[]; labels: string[]; ns?: number[]; series: Series[]; height: number; unit?: string };
 
 const NS = 'http://www.w3.org/2000/svg';
 const RANGES = [
@@ -12,6 +12,7 @@ const RANGES = [
 ];
 const reduceMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 const color = (i: number, single: boolean) => (single ? 'var(--ink)' : `var(--s${i + 1})`);
+const markClass = (s: Series) => (s.licensed ? ' licensed' : s.system ? ' sysfont' : '');
 const fam = (s: Series) => (s.family ? `${s.family}, var(--sans)` : 'var(--display)');
 
 function el<K extends keyof SVGElementTagNameMap>(tag: K, attrs: Record<string, string | number>, parent?: Element) {
@@ -77,9 +78,10 @@ export function mountTrend(root: HTMLElement, data: Payload) {
     btn.setAttribute('aria-pressed', 'true');
     const sw = html('span', 'sw');
     sw.style.background = color(i, single);
-    const name = html('span', s.licensed ? 'tc-key-name licensed' : 'tc-key-name', s.label);
+    const name = html('span', 'tc-key-name' + markClass(s), s.label);
     name.style.fontFamily = fam(s);
     if (s.licensed) btn.dataset.tip = LICENSED_TIP;
+    if (s.system) btn.dataset.tip = SYSTEM_TIP;
     btn.append(sw, name);
     btn.addEventListener('click', () => {
       if (hidden.has(i)) hidden.delete(i);
@@ -226,9 +228,22 @@ export function mountTrend(root: HTMLElement, data: Payload) {
       for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 18) ends[k].y = ends[k - 1].y + 18;
       for (const e of ends) {
         const s = data.series[e.i];
-        const t = el('text', { x: width - m.right + 12, y: e.y + 5, class: s.licensed ? 'direct licensed' : 'direct', 'data-i': e.i, style: `font-family:${fam(s)}` }, svg);
+        const marked = s.licensed || s.system;
+        if (marked) {
+          const icon = el('svg', { x: width - m.right + 12, y: e.y - 6, width: 12, height: 12, viewBox: '0 0 24 24', class: 'mark' + markClass(s), 'data-i': e.i }, svg);
+          if (s.licensed) {
+            el('rect', { width: 18, height: 11, x: 3, y: 11, rx: 2 }, icon);
+            el('path', { d: 'M7 11V7a5 5 0 0 1 10 0v4' }, icon);
+          } else {
+            el('rect', { width: 20, height: 14, x: 2, y: 3, rx: 2 }, icon);
+            el('path', { d: 'M8 21h8M12 17v4' }, icon);
+          }
+          labels.push(icon as unknown as SVGTextElement);
+        }
+        const t = el('text', { x: width - m.right + (marked ? 28 : 12), y: e.y + 5, class: 'direct' + (s.licensed ? ' licensed' : ''), 'data-i': e.i, style: `font-family:${fam(s)}` }, svg);
         if (s.licensed) t.dataset.tip = LICENSED_TIP;
-        t.textContent = s.label.length > 16 ? s.label.slice(0, 15) + '…' : s.label;
+        if (s.system) t.dataset.tip = SYSTEM_TIP;
+        t.textContent = s.label.length > (marked ? 14 : 16) ? s.label.slice(0, marked ? 13 : 15) + '…' : s.label;
         labels.push(t);
       }
     }
@@ -269,17 +284,17 @@ export function mountTrend(root: HTMLElement, data: Payload) {
       });
       tip.replaceChildren(html('div', 'tip-h', data.labels[j]));
       const n = data.ns?.[j];
-      tip.append(html('div', 'tip-src', `${data.kinds[j] === 'wayback' ? 'Web archive estimate' : 'Our crawl'}${n ? `, ${n.toLocaleString()} sites` : ''}`));
+      tip.append(html('div', 'tip-src', `${data.kinds[j] === 'wayback' ? 'Web archive estimate' : 'Our crawl'}${n ? `, ${n.toLocaleString()} ${data.unit ?? 'sites'}` : ''}`));
       for (const r of rows) {
         const row = html('div', 'tip-r');
         const sw = html('span', 'sw');
         sw.style.background = color(r.i, single);
-        const name = html('span', r.s.licensed ? 'tip-name licensed' : 'tip-name', r.s.label);
+        const name = html('span', 'tip-name' + markClass(r.s), r.s.label);
         name.style.fontFamily = fam(r.s);
         row.append(sw, name, html('b', undefined, `${(r.v! * 100).toFixed(1)}%`));
         tip.append(row);
       }
-      if (!rows.length) tip.append(html('div', 'tip-empty', 'Too few sites sampled'));
+      if (!rows.length) tip.append(html('div', 'tip-empty', `Too few ${data.unit ?? 'sites'} sampled`));
       tip.hidden = false;
       const tw = tip.offsetWidth;
       tip.style.left = `${cx + 16 + tw > width ? cx - tw - 16 : cx + 16}px`;

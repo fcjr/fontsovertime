@@ -45,7 +45,7 @@ if [ "$changed" = 1 ]; then
   systemctl daemon-reload
   echo "systemd units updated"
 fi
-systemctl enable --now fontsovertime-weekly.timer fontsovertime-daily.timer fontsovertime-backfill.timer >/dev/null 2>&1
+systemctl enable --now fontsovertime-weekly.timer fontsovertime-daily.timer fontsovertime-hn.timer fontsovertime-backfill.timer >/dev/null 2>&1
 
 install -m 755 "$release/deploy/deploy.sh" /usr/local/sbin/fontsovertime-deploy
 systemctl list-timers 'fontsovertime-*' --no-pager

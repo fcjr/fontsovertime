@@ -11,6 +11,7 @@ import { date, pct, SOURCE_LABELS, trendText } from '../../lib/format';
 import { load as loadAgg, type Overview } from '../../lib/data';
 import { fontStack, LICENSED_TIP } from '../../lib/specimen';
 import Lock from '@lucide/astro/icons/lock';
+import Monitor from '@lucide/astro/icons/monitor';
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -20,6 +21,7 @@ type Font = FontIndexEntry & {
   periods: Period[];
   series: { body: (number | null)[]; heading: (number | null)[] };
   by_category: { slug: string; name: string; count: number; share: number }[];
+  hn: { week: string; count: number; share: number } | null;
   sources: Breakdown;
   pairs: (FontRef & { count: number })[];
   using: (SiteRow & { roles: string[] })[];
@@ -28,7 +30,7 @@ type Font = FontIndexEntry & {
 };
 
 export function getStaticPaths() {
-  return load<FontIndexEntry[]>('fonts.json').map((f) => ({ params: { slug: f.slug } }));
+  return load<string[]>('font-slugs.json').map((slug) => ({ params: { slug } }));
 }
 
 const f = load<Font>(`font/${Astro.params.slug}.json`);
@@ -57,6 +59,7 @@ const origin = f.specimen?.source === 'google' ? 'Google Fonts' : f.specimen?.so
     <h1 class:list={['specimen', { licensed: !stack }]} style={style} data-tip={stack ? undefined : LICENSED_TIP}>{f.name}</h1>
     <p class="about">
       {!stack && <Lock size={16} aria-hidden="true" class="lock" />}
+      {f.specimen?.source === 'local' && <Monitor size={16} aria-hidden="true" class="lock" />}
       {
         f.specimen?.source === 'local'
           ? f.generic
@@ -83,6 +86,18 @@ const origin = f.specimen?.source === 'google' ? 'Google Fonts' : f.specimen?.so
         <dt>Share of all homepages</dt>
         <dd class="num">{pct(f.share)}</dd>
       </div>
+      {
+        f.hn && f.hn.count > 0 && (
+          <div>
+            <dt>
+              <a href="/category/hacker-news">Top Hacker News articles</a>
+            </dt>
+            <dd class="num">
+              {pct(f.hn.share)} <span>this week</span>
+            </dd>
+          </div>
+        )
+      }
       <div>
         <dt>In our crawl since</dt>
         <dd class="num">{f.first_live ? date(f.first_live) : '–'}</dd>

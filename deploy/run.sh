@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Runs one scheduled job on the crawl server: weekly, daily or backfill.
+# Runs one scheduled job on the crawl server: weekly, daily, hn or backfill.
 set -euo pipefail
 
-kind="${1:?usage: run.sh weekly|daily|backfill}"
+kind="${1:?usage: run.sh weekly|daily|hn|backfill}"
 case "$kind" in
-  weekly | daily) dir="$HOME/crawl" ;;
+  weekly | daily | hn) dir="$HOME/crawl" ;;
   backfill) dir="$HOME/backfill" ;;
   *) echo "unknown job: $kind" >&2; exit 2 ;;
 esac
@@ -46,6 +46,15 @@ case "$kind" in
     mkdir -p data/runs && cp out/daily.summary.json "data/runs/daily-$today.json"
     paths=(data/snapshots/daily data/exports data/runs)
     message="Crawl: daily $today"
+    ;;
+  hn)
+    week="$(node pipeline/hn.ts --out out/hn-list.json)"
+    node crawler/crawl.ts --list out/hn-list.json --out out/hn.jsonl --concurrency "${CRAWL_CONCURRENCY:-6}"
+    node pipeline/merge.ts --kind hn --id "$week" out/hn.jsonl
+    node pipeline/aggregate.ts
+    mkdir -p data/runs && cp out/hn.summary.json "data/runs/hn-$week.json"
+    paths=(data/snapshots/hn data/exports data/runs)
+    message="Crawl: Hacker News $week"
     ;;
   backfill)
     nice -n 10 node pipeline/wayback.ts --redo-old --years "${BACKFILL_YEARS:-10}" --concurrency 3 --rpm "${BACKFILL_RPM:-15}" --max-rpm "${BACKFILL_MAX_RPM:-30}" --budget 350 --status data/runs/backfill-status.json

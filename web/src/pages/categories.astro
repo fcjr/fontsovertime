@@ -9,6 +9,7 @@ const all = load<CategorySummary[]>('categories.json');
 const fonts = all.flatMap((c) => c.top);
 const sections = [
   { title: 'By traffic and funding', note: 'These overlap. A site can be in the top 1,000 and a Y Combinator company.', items: all.filter((c) => c.kind === 'cohort') },
+  { title: 'By audience', note: 'Refreshed weekly from what people are reading, not from a fixed list of sites.', items: all.filter((c) => c.kind === 'feed') },
   { title: 'By industry', note: 'Every site belongs to exactly one of these.', items: all.filter((c) => c.kind === 'category') },
 ].filter((x) => x.items.length);
 ---
@@ -32,7 +33,7 @@ const sections = [
                 <h3>
                   <a href={`/category/${c.slug}`}>{c.name}</a>
                 </h3>
-                <p class="small muted num">{c.n.toLocaleString()} sites</p>
+                <p class="small muted num">{c.n.toLocaleString()} {c.kind === 'feed' ? 'articles this week' : 'sites'}</p>
                 <p class="blurb">{c.blurb}</p>
               </div>
               <ol class="top">

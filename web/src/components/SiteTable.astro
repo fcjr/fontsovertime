@@ -9,18 +9,21 @@ interface Props {
 }
 const { sites, showCategory = false } = Astro.props;
 const PAGE = 50;
+const articles = sites.some((s) => s.url);
+const noun = articles ? 'articles' : 'sites';
 ---
 
 <div class="st">
   <label class="filter">
-    <span class="sr-only">Filter sites</span>
-    <input type="search" placeholder={`Filter ${sites.length.toLocaleString()} sites by domain or font`} data-filter />
+    <span class="sr-only">Filter {noun}</span>
+    <input type="search" placeholder={`Filter ${sites.length.toLocaleString()} ${noun} by ${articles ? 'title, domain' : 'domain'} or font`} data-filter />
   </label>
   <div class="table-scroll">
     <table class="table">
       <thead>
         <tr>
-          <th>Site</th>
+          <th>{articles ? 'Article' : 'Site'}</th>
+          {articles && <th class="pts">Points</th>}
           {showCategory && <th>Category</th>}
           <th>Body</th>
           <th>Headings</th>
@@ -30,10 +33,22 @@ const PAGE = 50;
       <tbody>
         {
           sites.map((s, i) => (
-            <tr hidden={i >= PAGE} data-rest={i >= PAGE ? '' : undefined} data-q={`${s.domain} ${s.body?.name ?? ''} ${s.heading?.name ?? ''} ${s.platform ?? ''}`.toLowerCase()}>
+            <tr hidden={i >= PAGE} data-rest={i >= PAGE ? '' : undefined} data-q={`${s.title ?? ''} ${s.domain} ${s.body?.name ?? ''} ${s.heading?.name ?? ''} ${s.platform ?? ''}`.toLowerCase()}>
               <td>
-                <a href={`/site/${s.domain}`}>{s.domain}</a>
+                {s.url ? (
+                  <>
+                    <a href={s.url} rel="noopener nofollow">{s.title}</a>
+                    <span class="dom muted small">{s.domain}</span>
+                  </>
+                ) : (
+                  <a href={`/site/${s.domain}`}>{s.domain}</a>
+                )}
               </td>
+              {articles && (
+                <td class="pts num muted">
+                  {s.hn_id ? <a href={`https://news.ycombinator.com/item?id=${s.hn_id}`}>{s.points?.toLocaleString()}</a> : s.points}
+                </td>
+              )}
               {showCategory && <td class="muted">{s.category}</td>}
               <td class="font">
                 <FontName font={s.body} />
@@ -48,10 +63,10 @@ const PAGE = 50;
       </tbody>
     </table>
   </div>
-  <p class="none muted" hidden data-none>No sites match that filter.</p>
+  <p class="none muted" hidden data-none>No {noun} match that filter.</p>
   {sites.length > PAGE && (
     <button type="button" class="more-btn" data-more>
-      Show all {sites.length.toLocaleString()} sites
+      Show all {sites.length.toLocaleString()} {noun}
     </button>
   )}
 </div>
@@ -100,6 +115,15 @@ const PAGE = 50;
   }
   .font {
     font-size: 1.125rem;
+  }
+  .dom {
+    display: block;
+  }
+  .pts {
+    text-align: right;
+  }
+  .pts a {
+    color: inherit;
   }
   .none {
     padding: 16px 0;

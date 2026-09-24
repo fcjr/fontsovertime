@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import FontName from '../components/FontName.astro';
 import { load, type FontIndexEntry } from '../lib/data';
 import { pct } from '../lib/format';
-import { glyphs, LICENSED_TIP } from '../lib/specimen';
+import { fontKind, glyphs, tipFor } from '../lib/specimen';
 
 const fonts = load<FontIndexEntry[]>('fonts.json');
 const shown = fonts.slice(0, 120);
@@ -39,7 +39,7 @@ const rest = fonts.slice(120);
           <ul class="rest" data-font-list>
             {rest.map((f) => (
               <li data-q={f.name.toLowerCase()}>
-                <a href={`/font/${f.slug}`} class:list={{ licensed: !f.specimen }} data-tip={f.specimen ? undefined : LICENSED_TIP}>
+                <a href={`/font/${f.slug}`} class:list={{ licensed: fontKind(f) === 'licensed', sysfont: fontKind(f) === 'system' }} data-tip={tipFor(fontKind(f))}>
                   {f.name}
                 </a>
               </li>

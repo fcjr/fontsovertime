@@ -12,6 +12,7 @@ import { pct, PLATFORM_LABELS, SOURCE_LABELS, trendText } from '../../lib/format
 import { glyphs } from '../../lib/specimen';
 
 type Category = CategorySummary & {
+  domains?: { distinct: number; top: { domain: string; count: number; share: number }[] };
   periods: Period[];
   trend_panel: number | null;
   body: Ranked[];
@@ -30,7 +31,10 @@ export function getStaticPaths() {
 const c = load<Category>(`category/${Astro.params.slug}.json`);
 const fonts = [...c.body, ...c.heading, ...c.pairings.flatMap((p) => [p.heading, p.body]), ...c.changes.flatMap((x) => [x.from, x.to])];
 const topSix = c.body.filter((f) => !f.generic).slice(0, 6);
-const trend = trendText(c.periods, c.trend_panel, `${c.name.toLowerCase()} homepages using each font`);
+const feed = c.kind === 'feed';
+const trend = feed
+  ? { title: `Share of each week’s ${c.name} articles using each font`, caption: 'Each point is a different set of articles: that week’s top stories, measured when the week ended.' }
+  : trendText(c.periods, c.trend_panel, `${c.name.toLowerCase()} homepages using each font`);
 ---
 
 <Layout title={c.name} description={`The fonts ${c.name.toLowerCase()} sites use for body text and headings, tracked weekly.`} fonts={fonts} specimenText={glyphs(...fonts.map((f) => f.name))}>
@@ -39,7 +43,11 @@ const trend = trendText(c.periods, c.trend_panel, `${c.name.toLowerCase()} homep
     <h1>{c.name}</h1>
     <p class="lede">{c.blurb}</p>
     <p class="small muted num">
-      {c.n.toLocaleString()} sites{c.blocked !== null && c.blocked > 0 ? `. ${pct(c.blocked)} blocked our crawler this week and aren’t counted.` : '.'}
+      {
+        feed
+          ? `${c.n.toLocaleString()} articles measured this week, from ${c.domains?.distinct.toLocaleString()} sites. Each article counts once, so sites linked often weigh more${c.domains?.top[0] ? `: ${c.domains.top[0].domain} is ${pct(c.domains.top[0].share)} of them` : ''}.${c.blocked ? ` ${pct(c.blocked)} of the linked pages blocked our crawler or didn’t load, and aren’t counted.` : ''}`
+          : `${c.n.toLocaleString()} sites${c.blocked !== null && c.blocked > 0 ? `. ${pct(c.blocked)} blocked our crawler this week and aren’t counted.` : '.'}`
+      }
     </p>
   </section>
 
@@ -47,17 +55,17 @@ const trend = trendText(c.periods, c.trend_panel, `${c.name.toLowerCase()} homep
     <div class="section-head">
       <h2 id="body-h">Body text</h2>
     </div>
-    <Leaderboard fonts={c.body} feature={6} kinds={c.periods.map((p) => p.kind)} />
+    <Leaderboard fonts={c.body} feature={6} kinds={c.periods.map((p) => p.kind)} unit={feed ? ['article', 'articles'] : undefined} />
   </section>
 
   <section class="wrap section">
-    <TrendChart periods={c.periods} series={topSix.map((f) => ({ label: f.name, values: f.series, font: f }))} height={360} title={trend.title} caption={trend.caption} />
+    <TrendChart periods={c.periods} series={topSix.map((f) => ({ label: f.name, values: f.series, font: f }))} height={360} title={trend.title} caption={trend.caption} unit={feed ? 'articles' : undefined} />
   </section>
 
   <section class="wrap section two" aria-labelledby="head-h">
     <div>
       <div class="section-head"><h2 id="head-h">Headings</h2></div>
-      <Bars items={c.heading.map((f) => ({ font: f, share: f.share, count: f.count }))} />
+      <Bars items={c.heading.map((f) => ({ font: f, share: f.share, count: f.count }))} unit={feed ? 'articles' : undefined} />
     </div>
     <div>
       <div class="section-head"><h2>Pairings</h2></div>
@@ -83,18 +91,22 @@ const trend = trendText(c.periods, c.trend_panel, `${c.name.toLowerCase()} homep
     <StackBar data={c.sources} labels={SOURCE_LABELS} title="Font source" />
     <div>
       <p class="fig-title">Platform</p>
-      <Bars items={c.platforms.slice(0, 6).map((p) => ({ label: PLATFORM_LABELS[p.key] ?? p.key, share: p.share, count: p.count }))} />
+      <Bars items={c.platforms.slice(0, 6).map((p) => ({ label: PLATFORM_LABELS[p.key] ?? p.key, share: p.share, count: p.count }))} unit={feed ? 'articles' : undefined} />
     </div>
   </section>
 
-  <section class="wrap section" aria-labelledby="sw-h">
-    <div class="section-head"><h2 id="sw-h">Switches</h2></div>
-    <Switches changes={c.changes.slice(0, 10)} />
-  </section>
+  {
+    !feed && (
+      <section class="wrap section" aria-labelledby="sw-h">
+        <div class="section-head"><h2 id="sw-h">Switches</h2></div>
+        <Switches changes={c.changes.slice(0, 10)} />
+      </section>
+    )
+  }
 
   <section class="wrap section" aria-labelledby="sites-h">
     <div class="section-head">
-      <h2 id="sites-h">Every site</h2>
+      <h2 id="sites-h">{feed ? 'This week’s articles' : 'Every site'}</h2>
     </div>
     <SiteTable sites={c.sites} />
   </section>

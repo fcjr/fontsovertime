@@ -1,6 +1,6 @@
 ---
 import type { FontRef } from '../lib/data';
-import { fontStack, LICENSED_TIP } from '../lib/specimen';
+import { fontKind, fontStack, tipFor } from '../lib/specimen';
 
 interface Props {
   font: FontRef | null | undefined;
@@ -10,17 +10,18 @@ interface Props {
 const { font, link = true, class: cls } = Astro.props;
 const stack = fontStack(font);
 const style = stack ? `font-family: ${stack}, var(--display)` : undefined;
-const tip = stack ? undefined : LICENSED_TIP;
+const kind = fontKind(font);
+const tip = tipFor(kind);
 ---
 
 {
   font ? (
     link ? (
-      <a href={`/font/${font.slug}`} class:list={['fn', cls, { licensed: !stack }]} style={style} data-tip={tip}>
+      <a href={`/font/${font.slug}`} class:list={['fn', cls, { licensed: kind === 'licensed', sysfont: kind === 'system' }]} style={style} data-tip={tip}>
         {font.name}
       </a>
     ) : (
-      <span class:list={['fn', cls, { licensed: !stack }]} style={style} data-tip={tip}>
+      <span class:list={['fn', cls, { licensed: kind === 'licensed', sysfont: kind === 'system' }]} style={style} data-tip={tip}>
         {font.name}
       </span>
     )

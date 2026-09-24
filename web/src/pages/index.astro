@@ -11,8 +11,7 @@ import Heatmap from '../components/Heatmap.astro';
 import Momentum, { type MomentumData } from '../components/Momentum.astro';
 import { load, type Overview, type Ranked } from '../lib/data';
 import { date, kb, pct, PLATFORM_LABELS, SOURCE_LABELS, trendText } from '../lib/format';
-import { glyphs, LICENSED_TIP } from '../lib/specimen';
-import Lock from '@lucide/astro/icons/lock';
+import { glyphs, LICENSED_TIP, SYSTEM_TIP } from '../lib/specimen';
 
 const o = load<Overview>('overview.json');
 const momentum = load<MomentumData>('momentum.json');
@@ -35,7 +34,7 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
         Every week we load {o.n_sites.toLocaleString()} homepages in a real browser and record which fonts they use{o.latest ? `. Last crawl: ${date(o.latest.date)}` : ''}.
       </p>
       <p class="key small">
-        Names are set in their own font when it’s free to use. <span class="licensed" data-tip={LICENSED_TIP} tabindex="0"><Lock size={13} aria-hidden="true" /> Grey names</span> are commercial fonts we can’t license.
+        Names are set in their own font when it’s free to use. <span class="licensed" data-tip={LICENSED_TIP} tabindex="0">Grey names</span> are commercial fonts we can’t license. <span class="sysfont" data-tip={SYSTEM_TIP} tabindex="0">System fonts</span> are shown in your device’s own copy.
         {o.trend_panel && ` Sparklines show the trend across ${o.trend_panel} sites we can trace back in time, dashed where estimated from web archives.`}
       </p>
     </div>
@@ -68,7 +67,7 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
     <div class="section-head">
       <h2 id="map-h">The type map</h2>
       <a class="more" href="/fonts">Every font</a>
-      <p>Each tile is a font, sized by how many homepages use it for body text. Pick a kind of site to filter.</p>
+      <p>Each tile is a font, sized by how many homepages use it for body text. Pick a kind of site to filter. The Hacker News tab counts the week’s top articles instead of sites.</p>
     </div>
     <TypeMap sets={mapSets} />
   </section>
@@ -168,7 +167,7 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
     color: var(--ink-3);
     max-width: 36rem;
   }
-  .key .licensed {
+  .key :is(.licensed, .sysfont) {
     display: inline-flex;
     align-items: center;
     gap: 4px;

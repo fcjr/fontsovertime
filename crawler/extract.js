@@ -34,10 +34,15 @@
     const fams = parseStack(stack);
     const lower = fams.map((f) => f.toLowerCase());
     let r;
-    let i = lower.findIndex((f) => loaded.has(f));
-    if (i < 0 && window.__fotIntended) i = lower.findIndex((f) => declared.has(f));
+    const sys = lower.findIndex((f) => SYSTEM.has(f));
+    const first = (has) => {
+      const j = lower.findIndex((f) => has(f));
+      return j >= 0 && (sys < 0 || j < sys) ? j : -1;
+    };
+    let i = first((f) => loaded.has(f));
+    if (i < 0 && window.__fotIntended) i = first((f) => declared.has(f));
     if (i >= 0) r = fams[i];
-    else if (SYSTEM.has(lower[0])) r = 'system-ui';
+    else if (sys === 0) r = 'system-ui';
     else {
       i = lower.findIndex((f) => !declared.has(f));
       r = i < 0 ? fams[0] : SYSTEM.has(lower[i]) ? 'system-ui' : fams[i];
@@ -48,7 +53,9 @@
   };
 
   const newTally = () => ({ chars: 0, by: new Map() });
+  // Code samples are content, not the page's type, so body text leaves them out unless there's little else.
   const all = newTally();
+  const withCode = newTally();
   const headings = newTally();
   const bump = (m, k, n) => m.set(k, (m.get(k) || 0) + n);
   const add = (t, family, info, n) => {
@@ -78,7 +85,7 @@
           !el.closest('[role=dialog],[aria-modal=true]')
         ) {
           const cs = getComputedStyle(el);
-          info = { stack: cs.fontFamily, weight: weightOf(cs.fontWeight), heading: !!el.closest('h1,h2,h3') };
+          info = { stack: cs.fontFamily, weight: weightOf(cs.fontWeight), heading: !!el.closest('h1,h2,h3'), code: !!el.closest('pre,code,kbd,samp') };
         }
         styleCache.set(el, info);
       }
@@ -88,7 +95,8 @@
       if (rect.width < 2 || rect.height < 2) continue;
       nodes++;
       const family = effective(info.stack);
-      add(all, family, info, text.length);
+      add(withCode, family, info, text.length);
+      if (!info.code) add(all, family, info, text.length);
       if (info.heading) add(headings, family, info, text.length);
     }
   }
@@ -135,9 +143,9 @@
         return false;
       }
     }).length,
-    text_chars: all.chars,
+    text_chars: withCode.chars,
     text_nodes: nodes,
-    dominant: summarize(all),
+    dominant: summarize(all.chars >= 200 || all.chars >= withCode.chars / 2 ? all : withCode),
     heading: summarize(headings),
     declared: [...declared.values()].map((d) => ({
       family: d.family,

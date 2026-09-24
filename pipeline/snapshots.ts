@@ -5,7 +5,7 @@ import { gunzipSync, gzipSync } from 'node:zlib';
 export const ROOT = new URL('..', import.meta.url).pathname;
 export const SNAPSHOTS = join(ROOT, 'data/snapshots');
 
-export type Kind = 'weekly' | 'daily' | 'wayback';
+export type Kind = 'weekly' | 'daily' | 'wayback' | 'hn';
 export type Row = Record<string, any> & { domain: string; status: string; crawled_at: string };
 
 export function isoWeek(d: Date) {
@@ -15,6 +15,12 @@ export function isoWeek(d: Date) {
   const year = t.getUTCFullYear();
   const week = Math.ceil(((t.getTime() - Date.UTC(year, 0, 1)) / 86400000 + 1) / 7);
   return `${year}-W${String(week).padStart(2, '0')}`;
+}
+
+export function weekStart(id: string) {
+  const [y, w] = id.split('-W').map(Number);
+  const jan4 = Date.UTC(y, 0, 4);
+  return jan4 - ((new Date(jan4).getUTCDay() || 7) - 1) * 86400000 + (w - 1) * 7 * 86400000;
 }
 
 export function readJsonl(path: string): Row[] {
@@ -29,10 +35,11 @@ export function readJsonl(path: string): Row[] {
 export function writeSnapshot(kind: Kind, id: string, rows: Row[]) {
   const path = join(SNAPSHOTS, kind, `${id}.jsonl.gz`);
   mkdirSync(dirname(path), { recursive: true });
-  const byDomain = new Map<string, Row>();
-  if (existsSync(path)) for (const r of readJsonl(path)) byDomain.set(r.domain, r);
-  for (const r of rows) byDomain.set(r.domain, r);
-  const sorted = [...byDomain.values()].sort((a, b) => a.domain.localeCompare(b.domain));
+  const key = (r: Row) => (r.hn_id ? String(r.hn_id) : r.domain);
+  const byKey = new Map<string, Row>();
+  if (existsSync(path)) for (const r of readJsonl(path)) byKey.set(key(r), r);
+  for (const r of rows) byKey.set(key(r), r);
+  const sorted = [...byKey.values()].sort((a, b) => a.domain.localeCompare(b.domain) || key(a).localeCompare(key(b)));
   writeFileSync(path, gzipSync(sorted.map((r) => JSON.stringify(r)).join('\n') + '\n', { level: 9 }));
   return { path, count: sorted.length };
 }

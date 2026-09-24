@@ -6,7 +6,8 @@ import { staticCrawl } from './static.ts';
 import { launch, loadExtract, measurePage, sourceOf, withTimeout } from './page.ts';
 import { robotsAllows } from './robots.ts';
 
-type Site = { domain: string; category: string };
+type Site = { domain: string; category: string; url?: string };
+const keyOf = (s: { domain: string; url?: string }) => s.url ?? s.domain;
 const { values, positionals } = parseArgs({
   allowPositionals: true,
   allowNegative: true,
@@ -16,6 +17,7 @@ const { values, positionals } = parseArgs({
     concurrency: { type: 'string', default: '5' },
     limit: { type: 'string' },
     only: { type: 'string' },
+    list: { type: 'string' },
     retry: { type: 'boolean', default: true },
   },
 });
@@ -76,11 +78,10 @@ async function loadSites(files: string[]): Promise<Site[]> {
 const GENERIC = /^(serif|sans-serif|monospace|system-ui|cursive|fantasy)$/i;
 
 async function staticFallback(site: Site, failed: { status: string; error?: string }) {
-  const s = await staticCrawl(`https://${site.domain}/`).catch(() => null);
+  const s = await staticCrawl(site.url ?? `https://${site.domain}/`).catch(() => null);
   if (!s || s.http_status >= 400 || !s.body_font || GENERIC.test(s.body_font)) return null;
   return {
-    domain: site.domain,
-    category: site.category,
+    ...site,
     crawled_at: new Date().toISOString(),
     method: 'static',
     status: 'ok',
@@ -94,16 +95,16 @@ async function staticFallback(site: Site, failed: { status: string; error?: stri
 type Opts = { proxy?: NonNullable<typeof proxy>; navTimeout?: number };
 
 async function crawlSite(browser: Awaited<ReturnType<typeof launch>>, extract: string, site: Site, progress: { step: string }, opts: Opts) {
-  const base = { domain: site.domain, category: site.category, crawled_at: new Date().toISOString(), method: 'browser' };
-  const urls = [`https://${site.domain}/`];
-  if (!site.domain.startsWith('www.')) urls.push(`https://www.${site.domain}/`);
-  urls.push(`http://${site.domain}/`);
+  const base = { ...site, crawled_at: new Date().toISOString(), method: 'browser' };
+  const urls = site.url ? [site.url] : [`https://${site.domain}/`];
+  if (!site.url && !site.domain.startsWith('www.')) urls.push(`https://www.${site.domain}/`);
+  if (!site.url) urls.push(`http://${site.domain}/`);
   return { ...base, ...(await measurePage(browser, extract, urls, progress, opts.proxy ? { ...opts, proxy: stickyProxy(opts.proxy) } : opts)) };
 }
 
 const [shardIndex, shardCount] = values.shard.split('/').map(Number);
 const files = positionals.length ? positionals : ['sites'];
-let sites = await loadSites(files);
+let sites: Site[] = values.list ? JSON.parse(await readFile(values.list, 'utf8')) : await loadSites(files);
 if (values.only) {
   const only = new Set((await readFile(values.only, 'utf8')).split('\n').map((l) => l.trim().toLowerCase()).filter(Boolean));
   sites = sites.filter((s) => only.has(s.domain));
@@ -115,7 +116,7 @@ const extract = await loadExtract();
 
 await mkdir(dirname(values.out), { recursive: true });
 const out = createWriteStream(values.out);
-type Result = { domain: string; status: string; error?: string; http_status?: number | null; body_font?: string | null; transfer_bytes?: number };
+type Result = { domain: string; url?: string; status: string; error?: string; http_status?: number | null; body_font?: string | null; transfer_bytes?: number };
 
 async function runPass(label: string, list: Site[], concurrency: number, opts: Opts) {
   const results = new Map<string, Result>();
@@ -132,18 +133,17 @@ async function runPass(label: string, list: Site[], concurrency: number, opts: O
           browser = await launch();
         }
         return {
-          domain: site.domain,
-          category: site.category,
+          ...site,
           crawled_at: new Date().toISOString(),
           method: 'browser',
           status: timedOut ? 'timeout' : 'error',
           error: `${String(e.message ?? e).split('\n')[0]} (during ${progress.step})`,
         };
       })) as Result;
-      results.set(site.domain, result);
+      results.set(keyOf(site), result);
       out.write(JSON.stringify(result) + '\n');
       done++;
-      console.error(`${label} [${done}/${list.length}] ${result.status.padEnd(10)} ${site.domain.padEnd(28)} ${result.body_font ?? ''}`);
+      console.error(`${label} [${done}/${list.length}] ${result.status.padEnd(10)} ${keyOf(site).slice(0, 60).padEnd(28)} ${result.body_font ?? ''}`);
     }
     await browser.close();
   };
@@ -153,7 +153,7 @@ async function runPass(label: string, list: Site[], concurrency: number, opts: O
 
 const DEAD = /ERR_NAME_NOT_RESOLVED|ERR_ADDRESS_UNREACHABLE|ERR_CERT_/;
 const BOT_WALL = /ERR_CONNECTION_RESET|ERR_CONNECTION_CLOSED|ERR_HTTP2_PROTOCOL_ERROR|ERR_EMPTY_RESPONSE/;
-const bySite = new Map(sites.map((s) => [s.domain, s]));
+const bySite = new Map(sites.map((s) => [keyOf(s), s]));
 const final = new Map<string, Result>();
 const summary: Record<string, unknown> = { sites: sites.length, started: new Date().toISOString() };
 const t0 = Date.now();
@@ -161,7 +161,7 @@ const t0 = Date.now();
 for (const [d, r] of await runPass('direct', sites, Number(values.concurrency), {})) final.set(d, r);
 
 if (values.retry) {
-  const retry = [...final.values()].filter((r) => (r.status === 'timeout' || r.status === 'error') && !DEAD.test(r.error ?? '')).map((r) => bySite.get(r.domain)!);
+  const retry = [...final.values()].filter((r) => (r.status === 'timeout' || r.status === 'error') && !DEAD.test(r.error ?? '')).map((r) => bySite.get(keyOf(r))!);
   summary.retried = retry.length;
   let recovered = 0;
   for (const [d, r] of await runPass('retry', retry, Math.max(1, Math.floor(Number(values.concurrency) / 2)), { navTimeout: 45_000 })) {
@@ -180,10 +180,10 @@ if (proxy) {
   for (const r of candidates) {
     if (respectRobots && !(await robotsAllows(r.domain))) {
       robotsSkipped++;
-      final.set(r.domain, { ...r, error: `${r.error ?? r.status}; robots.txt disallows crawling, not retried through proxy` });
+      final.set(keyOf(r), { ...r, error: `${r.error ?? r.status}; robots.txt disallows crawling, not retried through proxy` });
       continue;
     }
-    allowed.push(bySite.get(r.domain)!);
+    allowed.push(bySite.get(keyOf(r))!);
   }
   const maxBytes = Number(process.env.PROXY_MAX_MB ?? 2000) * 1e6;
   let recovered = 0;
@@ -212,10 +212,10 @@ if (proxy) {
 
 let staticRecovered = 0;
 for (const r of [...final.values()].filter((r) => r.status !== 'ok')) {
-  const fallback = await staticFallback(bySite.get(r.domain)!, r);
+  const fallback = await staticFallback(bySite.get(keyOf(r))!, r);
   if (fallback) {
     staticRecovered++;
-    final.set(r.domain, fallback as Result);
+    final.set(keyOf(r), fallback as Result);
     out.write(JSON.stringify(fallback) + '\n');
   }
 }

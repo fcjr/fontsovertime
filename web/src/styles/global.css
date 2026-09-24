@@ -5,6 +5,7 @@
   --ink: #000000;
   --ink-2: #3f3f46;
   --ink-3: #5c5c66;
+  --ink-4: #71717a;
   --rule: #d4d4d8;
   --rule-soft: #ececee;
   --signal: #2f3dff;
@@ -30,6 +31,7 @@
     --ink: #ffffff;
     --ink-2: #c4c4cc;
     --ink-3: #9d9da8;
+    --ink-4: #85858f;
     --rule: #3a3a42;
     --rule-soft: #1f1f24;
     --signal: #8a93ff;
@@ -49,6 +51,7 @@
   --ink: #ffffff;
   --ink-2: #c4c4cc;
   --ink-3: #9d9da8;
+  --ink-4: #85858f;
   --rule: #3a3a42;
   --rule-soft: #1f1f24;
   --signal: #8a93ff;
@@ -203,7 +206,29 @@ p {
 .licensed {
   font-family: var(--display);
   font-variation-settings: 'wght' 420, 'wdth' 100;
-  color: var(--ink-3);
+  color: var(--ink-4);
+}
+/* Commercial and system fonts carry an icon, so the difference never rests on color alone. */
+.licensed,
+.sysfont {
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='18' height='11' x='3' y='11' rx='2'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'/%3E%3C/svg%3E");
+}
+.sysfont {
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='14' x='2' y='3' rx='2'/%3E%3Cpath d='M8 21h8M12 17v4'/%3E%3C/svg%3E");
+}
+:is(.licensed, .sysfont):not(.no-mark, .tile, .specimen)::before,
+:is(.tile.licensed, .tile.sysfont) .t-name::before {
+  content: '';
+  display: inline-block;
+  flex: none;
+  width: min(0.62em, 1.1rem);
+  height: min(0.62em, 1.1rem);
+  margin-right: 0.3em;
+  vertical-align: baseline;
+  background: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+  opacity: 0.85;
 }
 [data-tip] {
   cursor: help;
@@ -401,7 +426,8 @@ a[data-tip] {
   transition: opacity 160ms, stroke-width 160ms;
 }
 .tc-stage .series.dim,
-.tc-stage .direct.dim {
+.tc-stage .direct.dim,
+.tc-stage .mark.dim {
   opacity: 0.18;
 }
 .tc-stage .archive-line {
@@ -460,7 +486,17 @@ a[data-tip] {
   transition: opacity 160ms;
 }
 .tc-stage .direct.licensed {
-  fill: var(--ink-3);
+  fill: var(--ink-4);
+}
+.tc-stage .mark {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--ink);
+}
+.tc-stage .mark.licensed {
+  stroke: var(--ink-4);
 }
 .tc-stage .cross {
   stroke: var(--ink);

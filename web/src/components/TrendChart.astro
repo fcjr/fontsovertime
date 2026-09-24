@@ -1,7 +1,7 @@
 ---
 import type { FontRef, Period } from '../lib/data';
 import { date, pct } from '../lib/format';
-import { fontStack } from '../lib/specimen';
+import { fontKind, fontStack } from '../lib/specimen';
 
 interface Props {
   periods: Period[];
@@ -9,15 +9,17 @@ interface Props {
   title: string;
   caption?: string;
   height?: number;
+  unit?: string;
 }
-const { periods, series, title, caption, height = 300 } = Astro.props;
+const { periods, series, title, caption, height = 300, unit = 'sites' } = Astro.props;
 const hasData = series.some((s) => s.values.filter((v) => v !== null).length >= 2);
 const payload = JSON.stringify({
   dates: periods.map((p) => p.date),
   kinds: periods.map((p) => p.kind),
   labels: periods.map((p) => (p.kind === 'wayback' ? p.id.replace('-', ' ') : `Week of ${date(p.date)}`)),
   ns: periods.map((p) => p.n),
-  series: series.slice(0, 6).map((x) => ({ label: x.label, values: x.values, family: x.font ? fontStack(x.font) : null, licensed: !!x.font && !fontStack(x.font) })),
+  series: series.slice(0, 6).map((x) => ({ label: x.label, values: x.values, family: x.font ? fontStack(x.font) : null, licensed: !!x.font && fontKind(x.font) === 'licensed', system: !!x.font && fontKind(x.font) === 'system' })),
+  unit,
   height,
 });
 ---

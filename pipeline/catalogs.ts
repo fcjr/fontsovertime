@@ -33,7 +33,7 @@ for (let page = 1; page < 20; page++) {
 
 const renamed: Record<string, string> = { 'source-sans': 'Source Sans 3', 'source-serif': 'Source Serif 4', 'franklin-gothic': 'Libre Franklin' };
 for (const [slug, family] of Object.entries(renamed)) if (catalog[slugify(family)] && slug !== 'franklin-gothic') catalog[slug] = catalog[slugify(family)];
-for (const family of ['Arial', 'Helvetica', 'Helvetica Neue', 'Georgia', 'Times New Roman', 'Verdana', 'Tahoma', 'Trebuchet MS', 'Courier New', 'system-ui', 'sans-serif', 'serif', 'monospace'])
+for (const family of ['Arial', 'Helvetica', 'Helvetica Neue', 'Georgia', 'Times New Roman', 'Verdana', 'Tahoma', 'Trebuchet MS', 'Courier New', 'system-ui', 'sans-serif', 'serif', 'monospace', 'ui-monospace', 'ui-serif', 'ui-sans-serif', 'ui-rounded', 'cursive', 'fantasy'])
   catalog[slugify(family)] = { source: 'local', family, category: 'system' };
 
 writeFileSync(join(ROOT, 'pipeline/catalog.json'), JSON.stringify(catalog));

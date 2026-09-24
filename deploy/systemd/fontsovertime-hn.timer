@@ -1,0 +1,10 @@
+[Unit]
+Description=Weekly crawl of the articles behind the top Hacker News stories
+
+[Timer]
+OnCalendar=Tue *-*-* 12:00:00 UTC
+Persistent=true
+Unit=fontsovertime@hn.service
+
+[Install]
+WantedBy=timers.target

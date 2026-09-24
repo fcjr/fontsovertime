@@ -9,8 +9,9 @@ interface Props {
   feature?: number;
   role?: 'body' | 'heading';
   kinds?: string[];
+  unit?: [string, string];
 }
-const { fonts, feature = 10, role = 'body', kinds = [] } = Astro.props;
+const { fonts, feature = 10, role = 'body', kinds = [], unit = ['site', 'sites'] } = Astro.props;
 const podium = fonts.slice(0, 3);
 const top = fonts.slice(3, feature);
 const rest = fonts.slice(feature);
@@ -34,7 +35,7 @@ const noun = role === 'body' ? 'body text' : 'headings';
         <div class="p-stats">
           <span class="p-share num">{pct(f.share)}</span>
           <span class="count num">
-            {f.count.toLocaleString()} {f.count === 1 ? 'site' : 'sites'}
+            {f.count.toLocaleString()} {f.count === 1 ? unit[0] : unit[1]}
             {f.delta !== null && Math.abs(f.delta) >= 0.0005 && <span class="delta">{points(f.delta)}</span>}
           </span>
         </div>
@@ -56,7 +57,7 @@ const noun = role === 'body' ? 'body text' : 'headings';
         <div class="stats">
           <span class="share num">{pct(f.share)}</span>
           <span class="count num">
-            {f.count.toLocaleString()} {f.count === 1 ? 'site' : 'sites'}
+            {f.count.toLocaleString()} {f.count === 1 ? unit[0] : unit[1]}
           </span>
           {f.delta !== null && Math.abs(f.delta) >= 0.0005 && <span class:list={['delta num', f.delta > 0 ? 'up' : 'down']}>{points(f.delta)}</span>}
         </div>

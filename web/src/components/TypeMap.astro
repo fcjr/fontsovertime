@@ -1,7 +1,7 @@
 ---
 import type { FontRef } from '../lib/data';
 import { pct } from '../lib/format';
-import { fontStack, LICENSED_TIP } from '../lib/specimen';
+import { fontKind, fontStack, tipFor } from '../lib/specimen';
 import { squarify } from '../lib/treemap';
 
 type Item = FontRef & { share: number; count: number };
@@ -35,27 +35,29 @@ const laid = sets.map((set) => {
         <div class="tm-area">
           {s.tiles.map((t, k) => {
             const stack = fontStack(t.item);
+            const kind = fontKind(t.item);
+            const unit = s.key === 'hacker-news' ? ['articles', 'top Hacker News articles'] : ['sites', `${s.label.toLowerCase()} homepages`];
             return (
               <a
                 href={`/font/${t.item.slug}`}
-                class:list={['tile', { first: k === 0, licensed: !stack, tiny: t.w * t.h < 40 }]}
+                class:list={['tile', { first: k === 0, licensed: kind === 'licensed', sysfont: kind === 'system', tiny: t.w * t.h < 40 }]}
                 style={`left:${t.x}%;top:${(t.y / H) * 100}%;width:${t.w}%;height:${(t.h / H) * 100}%;--chars:${Math.max(t.item.name.length, 3)};--i:${k}`}
-                aria-label={`${t.item.name}: ${pct(t.item.share)} of ${s.label.toLowerCase()} homepages, ${t.item.count} sites`}
-                data-tip={stack ? undefined : LICENSED_TIP}
+                aria-label={`${t.item.name}: ${pct(t.item.share)} of ${unit[1]}, ${t.item.count} ${unit[0]}`}
+                data-tip={tipFor(kind)}
               >
                 <span class="t-name" style={stack ? `font-family:${stack}, var(--sans)` : undefined}>
                   {t.item.name}
                 </span>
                 <span class="t-meta num">
                   <span>{pct(t.item.share)}</span>
-                  <span class="t-count">{t.item.count} sites</span>
+                  <span class="t-count">{t.item.count} {unit[0]}</span>
                 </span>
               </a>
             );
           })}
         </div>
         <p class="tm-note small muted num">
-          The 20 most used body fonts across {s.n.toLocaleString()} homepages, sized by share. The other {pct(s.restShare, 0)} use a long tail of
+          The 20 most used body fonts across {s.n.toLocaleString()} {s.key === 'hacker-news' ? 'of the week’s top Hacker News articles' : 'homepages'}, sized by share. The other {pct(s.restShare, 0)} use a long tail of
           less common faces.
         </p>
       </div>
@@ -144,7 +146,7 @@ const laid = sets.map((set) => {
     color: var(--paper);
   }
   .tile.licensed {
-    color: var(--ink-3);
+    color: var(--ink-4);
   }
   .tile.first.licensed {
     color: color-mix(in srgb, var(--paper) 70%, transparent);
