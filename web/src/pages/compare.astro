@@ -11,7 +11,7 @@ const periods = overview.periods;
 <Layout title="Compare fonts" description="Compare how the share of homepages using each font has changed over time.">
   <section class="wrap hero">
     <h1>Compare</h1>
-    <p class="lede">Pick up to four typefaces to see how their share of homepages has moved.</p>
+    <p class="lede">Share of homepages over time, up to four fonts at once.</p>
   </section>
 
   <section class="wrap" data-compare data-fonts={JSON.stringify(fonts)} data-periods={JSON.stringify(periods)} data-defaults={JSON.stringify(defaults)}>
@@ -24,7 +24,7 @@ const periods = overview.periods;
           {fonts.map((f) => <option value={f.name} />)}
         </datalist>
       </div>
-      <p class="hint small muted" hidden>Four is the most one chart can show clearly. Remove one to add another.</p>
+      <p class="hint small muted" hidden>Four at most. Remove one to add another.</p>
     </div>
     <div class="role">
       <label><input type="radio" name="role" value="body" checked /> Body text</label>

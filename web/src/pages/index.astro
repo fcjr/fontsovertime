@@ -34,7 +34,7 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
         Every week we load {o.n_sites.toLocaleString()} homepages in a real browser and record which fonts they use{o.latest ? `. Last crawl: ${date(o.latest.date)}` : ''}.
       </p>
       <p class="key small">
-        Names are set in their own font when it’s free to use. <span class="licensed" data-tip={LICENSED_TIP} tabindex="0">Grey names</span> are commercial fonts we can’t license. <span class="sysfont" data-tip={SYSTEM_TIP} tabindex="0">System fonts</span> are shown in your device’s own copy.
+        Free fonts appear in their own typeface. <span class="licensed" data-tip={LICENSED_TIP} tabindex="0">Grey names</span> are commercial fonts we can’t license. <span class="sysfont" data-tip={SYSTEM_TIP} tabindex="0">System fonts</span> use your device’s copy.
         {o.trend_panel && ` Sparklines show the trend across ${o.trend_panel} sites we can trace back in time, dashed where estimated from web archives.`}
       </p>
     </div>
@@ -49,7 +49,7 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
     <div class="section-head">
       <h2 id="trend-h">Over time</h2>
       <a class="more" href="/compare">Compare any fonts</a>
-      <p>Body text share over time. Hover a name to isolate it; click to hide it.</p>
+      <p>Share of homepages, body text.</p>
     </div>
     <TrendChart periods={o.periods} series={topSix.map((f) => ({ label: f.name, values: f.series, font: f }))} title={trend.title} caption={trend.caption} height={380} />
   </section>
@@ -58,7 +58,7 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
     <div class="section-head">
       <h2 id="move-h">Rising and falling</h2>
       <a class="more" href="/trends">All movers</a>
-      <p>Fonts sites are switching to and away from. Hover a row for example sites.</p>
+      <p>Fonts sites are switching to and away from.</p>
     </div>
     <Momentum data={momentum} id="home" limit={6} flows={false} />
   </section>
@@ -67,7 +67,7 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
     <div class="section-head">
       <h2 id="map-h">The type map</h2>
       <a class="more" href="/fonts">Every font</a>
-      <p>Each tile is a font, sized by how many homepages use it for body text. Pick a kind of site to filter. The Hacker News tab counts the week’s top articles instead of sites.</p>
+      <p>Body fonts, sized by share of homepages.</p>
     </div>
     <TypeMap sets={mapSets} />
   </section>
@@ -76,7 +76,7 @@ const trend = trendText(o.periods, o.trend_panel, 'homepages using each font for
     <div class="section-head">
       <h2 id="cat-h">By category</h2>
       <a class="more" href="/categories">All categories</a>
-      <p>Darker cells mean a larger share of that category’s homepages. Click a category to sort by it.</p>
+      <p>Body font share by kind of site.</p>
     </div>
     <Heatmap fonts={o.matrix.fonts} categories={o.matrix.categories} values={o.matrix.values} />
   </section>

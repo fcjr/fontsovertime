@@ -10,15 +10,14 @@ const fonts = [m.crawl, m.archive].flatMap((s) => Object.values(s.windows).flatM
 
 <Layout
   title="Rising and falling"
-  description="Which typefaces websites are switching to and away from, not just which are most used."
+  description="Which typefaces websites are switching to and away from."
   fonts={fonts}
   specimenText={glyphs(...fonts.map((f) => f.name))}
 >
   <section class="wrap hero">
     <h1>Rising and falling</h1>
     <p class="lede">
-      Each bar counts sites that changed their body font to or away from a font. A small font gaining a few sites can outrank a popular one that
-      isn’t moving.
+      Sites that changed their body font, counted by the font they moved to or away from.
     </p>
   </section>
   <section class="wrap">
@@ -27,8 +26,8 @@ const fonts = [m.crawl, m.archive].flatMap((s) => Object.values(s.windows).flatM
   <section class="wrap section">
     <div class="prose small-prose">
       <p>
-        A switch counts only when a site shows the new font twice in a row. We drop switches that reverse within a year. Our crawl and the web
-        archive history are kept separate because the archive estimates use a different method on a smaller set of sites, so treat them as rougher.
+        A switch counts only when a site shows the new font twice in a row. We drop switches that reverse within a year. We count web archive
+        estimates separately. They’re rougher.
         <a href="/methodology">How the data is collected</a>.
       </p>
     </div>

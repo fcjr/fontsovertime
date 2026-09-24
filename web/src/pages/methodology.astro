@@ -11,7 +11,7 @@ const cats = load<CategorySummary[]>('categories.json');
 <Layout title="How it works" description="How Fonts Over Time detects the typeface a website uses, what it can’t see, and how to opt out.">
   <section class="wrap hero">
     <h1>How it works</h1>
-    <p class="lede">What we measure, how we measure it, and where the numbers are weak.</p>
+    <p class="lede">What we measure and where the numbers are weak.</p>
   </section>
 
   <article class="wrap">
@@ -19,7 +19,7 @@ const cats = load<CategorySummary[]>('categories.json');
       <h2>What counts as a site’s font</h2>
       <p>
         Every Sunday we open each homepage in a real Chromium browser, wait for its web fonts to finish loading, and walk every visible piece of text
-        on the page. For each run of text we read the computed <code>font-family</code> and find which family draws it, which is the first
+        on the page. For each run of text we read the computed <code>font-family</code> and find the family that draws it. That’s the first
         one in the stack with a loaded font file. If the stack names the operating system’s interface font before any loaded file, we record
         <code>system-ui</code>. Otherwise we record the first family named.
       </p>
@@ -45,8 +45,8 @@ const cats = load<CategorySummary[]>('categories.json');
 
       <h2>Switches</h2>
       <p>
-        A switch is recorded only when a site shows a new font in two browser crawls in a row, so an A/B test, a slow font server or a one-day
-        experiment doesn’t count. We crawl a few hundred of the best-known sites daily, so their switches show up within two days. The rest take two weeks.
+        A switch counts only when a site shows a new font in two browser crawls in a row. That rules out A/B tests, slow font servers and
+        one-day experiments. We crawl a few hundred of the best-known sites daily, so their switches show up within two days. The rest take two weeks.
       </p>
 
       <h2>How far back the data goes</h2>
@@ -61,17 +61,17 @@ const cats = load<CategorySummary[]>('categories.json');
       <p>
         The shaded part of each trend chart comes from copies of the same homepages saved by the Internet Archive and by Arquivo.pt, Portugal’s
         national web archive, one per quarter. We load each archived page’s HTML and CSS in the same browser and run the same measurement, with
-        scripts turned off and every request paced to stay well within each archive’s limits. Because the font files themselves often weren’t
+        scripts turned off and every request paced to stay within each archive’s limits. Because the font files themselves often weren’t
         archived, we record the typeface the page asks for rather than what an old copy manages to draw. When a copy’s stylesheets weren’t
         archived, we try another copy from the same quarter, and leave the quarter out if none works, rather than guess.
       </p>
       <p>
         Fonts change rarely, so we don’t measure every quarter. We measure the first and last copy; if they match we fill in the quarters between,
-        and if they differ we split the range and measure again until we find the quarter it changed. A site that switched fonts and switched back
-        between two measurements would be missed. Filled-in quarters are marked in the data.
+        and if they differ we split the range and measure again until we find the quarter it changed. We miss a site that switched fonts and switched back
+        between two measurements. The data marks which quarters we filled in.
       </p>
       <p>
-        Pages that build their text with JavaScript, and sites whose CSS was never archived, can’t be read this way. Trend lines follow a fixed set
+        This can’t read pages that build their text with JavaScript, or sites whose CSS was never archived. Trend lines follow a fixed set
         of homepages{o.trend_panel ? ` (currently ${o.trend_panel})` : ''} that have archive history, so a line moves only when sites change fonts,
         not when the sample changes.
       </p>
@@ -88,8 +88,8 @@ const cats = load<CategorySummary[]>('categories.json');
           Our crawler runs from US data centers, so sites that serve different pages by country show us their US version.
         </li>
         <li>
-          We can’t license commercial fonts for this site, so their names are shown in grey in our own typeface, marked with a lock. System fonts,
-          marked with a screen, are shown in whatever copy your device has, so they can look different from device to device.
+          Commercial fonts we can’t license. Their names are grey, in our own typeface, with a lock. System fonts, marked with a screen, use your
+          device’s copy.
         </li>
       </ul>
 
@@ -117,7 +117,7 @@ const cats = load<CategorySummary[]>('categories.json');
 
       <h2>The sites</h2>
       <p>
-        We build the list from open sources, so anyone can reproduce it.
+        The lists come from open sources.
       </p>
       <ul>
         <li>
@@ -127,7 +127,7 @@ const cats = load<CategorySummary[]>('categories.json');
         <li><strong>Y Combinator.</strong> Every active, public and acquired company in the YC directory that has a website.</li>
         <li>
           <strong>Unicorns.</strong> Private companies valued at $1 billion or more. The starting point is Wikipedia’s list, with websites from
-          Wikidata. That list has many gaps, so over half the entries and websites were added or checked by hand. Each row records its source.
+          Wikidata. That list has many gaps, so we added or checked over half the entries and websites by hand. Each row records its source.
         </li>
         <li>
           <strong>Indie blogs.</strong> Personal sites pooled from the Kagi Small Web list, the HN Popularity Contest and a list of Hacker News
@@ -139,28 +139,27 @@ const cats = load<CategorySummary[]>('categories.json');
         </li>
       </ul>
       <p>
-        Each site has one industry category, and can also be in any of the traffic and funding groups. Parked domains and sites that now redirect to
-        another site we already track are left out, which matters for acquired startups.
+        Each site has one industry category, and can also be in any of the traffic and funding groups. We leave out parked domains and sites that now
+        redirect to another site we already track.
       </p>
 
       <h2>Hacker News</h2>
       <p>
-        One category works differently. Every Tuesday we take the 1,000 highest-scoring stories posted to Hacker News the week before (Monday to
-        Sunday, UTC), from the public Hacker News search API, and measure the page each story links to. Posts without a link, and links to PDFs,
-        images and other files, are left out.
+        Every Tuesday we take the 1,000 highest-scoring stories posted to Hacker News the week before (Monday to
+        Sunday, UTC), from the public Hacker News search API, and measure the page each story links to. We skip posts without a link, and links to PDFs,
+        images and other files.
       </p>
       <p>
-        It counts articles, not sites. A site linked ten times that week counts ten times, because the question is what people reading Hacker News
-        actually saw. Each week is a new set of articles, so its trend line compares weeks rather than following the same pages, and the change
+        It counts articles, not sites. A site linked ten times that week counts ten times. Each week is a new set of articles, so its trend line compares weeks rather than following the same pages, and the change
         figures compare the last four weeks with the four before. Articles aren’t part of the site totals, switches, rising and falling fonts, the
-        category heatmap or the downloads, and there’s no archive history: pages are measured once, the week after they were posted.
+        category heatmap or the downloads, and there’s no archive history. We measure each page once, the week after it was posted.
       </p>
 
       <h2 id="opt-out">Opting out</h2>
       <p>
         We load each homepage once per crawl, and each article a top Hacker News story links to once, with a normal browser and no logins. We never follow links from those pages. If you run a site and would rather not be
         included, open an opt-out request. It asks you to confirm you run the site, either with a DNS TXT record or a small file on the site, and a bot
-        checks it automatically. Once confirmed, the site and its articles are never crawled again and its data is removed from this site and the current downloads. Older versions of the data files remain in the repository’s history.
+        checks it automatically. Once confirmed, the site and its articles are never crawled again and we remove its data from this site and the current downloads. Older versions of the data files remain in the repository’s history.
       </p>
       <p class="actions">
         <a class="button" href={optOutUrl()}>Request an opt-out</a>
@@ -168,8 +167,8 @@ const cats = load<CategorySummary[]>('categories.json');
 
       <h2>Source</h2>
       <p>
-        The crawler, the site lists and every snapshot are on <a href={REPO_URL}>GitHub</a>. Corrections to the lists and font names are welcome as
-        pull requests.
+        The crawler, the site lists and every snapshot are on <a href={REPO_URL}>GitHub</a>. Send corrections to the lists and font names as pull
+        requests.
       </p>
     </div>
   </article>

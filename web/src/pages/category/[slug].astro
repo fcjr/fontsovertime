@@ -33,7 +33,7 @@ const fonts = [...c.body, ...c.heading, ...c.pairings.flatMap((p) => [p.heading,
 const topSix = c.body.filter((f) => !f.generic).slice(0, 6);
 const feed = c.kind === 'feed';
 const trend = feed
-  ? { title: `Share of each week’s ${c.name} articles using each font`, caption: 'Each point is a different set of articles: that week’s top stories, measured when the week ended.' }
+  ? { title: `Share of each week’s ${c.name} articles using each font`, caption: 'Each point is that week’s top stories.' }
   : trendText(c.periods, c.trend_panel, `${c.name.toLowerCase()} homepages using each font`);
 ---
 
@@ -45,8 +45,8 @@ const trend = feed
     <p class="small muted num">
       {
         feed
-          ? `${c.n.toLocaleString()} articles measured this week, from ${c.domains?.distinct.toLocaleString()} sites. Each article counts once, so sites linked often weigh more${c.domains?.top[0] ? `: ${c.domains.top[0].domain} is ${pct(c.domains.top[0].share)} of them` : ''}.${c.blocked ? ` ${pct(c.blocked)} of the linked pages blocked our crawler or didn’t load, and aren’t counted.` : ''}`
-          : `${c.n.toLocaleString()} sites${c.blocked !== null && c.blocked > 0 ? `. ${pct(c.blocked)} blocked our crawler this week and aren’t counted.` : '.'}`
+          ? `${c.n.toLocaleString()} articles measured this week, from ${c.domains?.distinct.toLocaleString()} sites${c.domains?.top[0] ? `. ${c.domains.top[0].domain} is ${pct(c.domains.top[0].share)} of them` : ''}.${c.blocked ? ` ${pct(c.blocked)} of the linked pages blocked our crawler or didn’t load.` : ''}`
+          : `${c.n.toLocaleString()} sites${c.blocked !== null && c.blocked > 0 ? `. ${pct(c.blocked)} blocked our crawler this week.` : '.'}`
       }
     </p>
   </section>

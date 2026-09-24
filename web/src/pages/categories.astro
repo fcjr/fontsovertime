@@ -8,9 +8,9 @@ import { glyphs } from '../lib/specimen';
 const all = load<CategorySummary[]>('categories.json');
 const fonts = all.flatMap((c) => c.top);
 const sections = [
-  { title: 'By traffic and funding', note: 'These overlap. A site can be in the top 1,000 and a Y Combinator company.', items: all.filter((c) => c.kind === 'cohort') },
-  { title: 'By audience', note: 'Refreshed weekly from what people are reading, not from a fixed list of sites.', items: all.filter((c) => c.kind === 'feed') },
-  { title: 'By industry', note: 'Every site belongs to exactly one of these.', items: all.filter((c) => c.kind === 'category') },
+  { title: 'By traffic and funding', note: 'A site can be in more than one.', items: all.filter((c) => c.kind === 'cohort') },
+  { title: 'By audience', note: 'Refreshed weekly.', items: all.filter((c) => c.kind === 'feed') },
+  { title: 'By industry', note: 'Each site is in one.', items: all.filter((c) => c.kind === 'category') },
 ].filter((x) => x.items.length);
 ---
 

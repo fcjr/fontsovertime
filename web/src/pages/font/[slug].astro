@@ -50,7 +50,7 @@ const origin = f.specimen?.source === 'google' ? 'Google Fonts' : f.specimen?.so
 
 <Layout
   title={f.name}
-  description={`${f.name} is used on ${f.sites} of the homepages we track. Adoption over time, by category, and the sites that use it.`}
+  description={`${f.sites} of the homepages we track use ${f.name}. Adoption over time, by category, and the sites that use it.`}
   fonts={[f]}
   fullSpecimen
 >
@@ -64,10 +64,10 @@ const origin = f.specimen?.source === 'google' ? 'Google Fonts' : f.specimen?.so
         f.specimen?.source === 'local'
           ? f.generic
             ? 'A generic family. The site asked for the visitor’s default font.'
-            : 'A system font, installed with most operating systems. Shown here in your own copy.'
+            : 'A system font, installed with most operating systems. This page uses your device’s copy.'
           : origin
             ? `Free to use, from ${origin}. The name and samples on this page are set in it.`
-            : 'A commercial or custom font. We can’t license it for this site, so the name is shown in our own typeface.'
+            : 'A commercial or custom font, shown in our own typeface.'
       }
     </p>
   </section>

@@ -46,6 +46,6 @@ export function glyphs(...strings: string[]) {
   return [...new Set(strings.join('') + '0123456789')].sort().join('');
 }
 
-export const LICENSED_TIP = 'Commercial font. We can’t license it for this site, so the name is shown in our own typeface.';
-export const SYSTEM_TIP = 'System font. It comes with your device, so the name is shown in your copy, which may differ from other devices.';
+export const LICENSED_TIP = 'Commercial font, shown in our own typeface.';
+export const SYSTEM_TIP = 'System font, shown in your device’s copy.';
 export const tipFor = (kind: string) => (kind === 'licensed' ? LICENSED_TIP : kind === 'system' ? SYSTEM_TIP : undefined);
