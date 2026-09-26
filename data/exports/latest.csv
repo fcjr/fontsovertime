@@ -31,6 +31,7 @@ domain,category,body_font,heading_font,platform,sources,method,observed
 1password.com,saas,agile Sans,agile Sans,nextjs,self,browser,2026-09-23
 1stcollab.com,startups,Roobert,Roobert,framer,self,browser,2026-09-23
 1tamilmv.ing,popular,Open Sans,Open Sans,,google self,browser,2026-09-23
+1x.tech,startups,ABCDiatype,ABCDiatype,nextjs,,wayback-browser,2025-08-15
 20min.ch,popular,Matter,Matter,nextjs,self,browser,2026-09-23
 20minutes.fr,popular,Source Serif,Source Serif,,self,browser,2026-09-23
 20minutos.es,popular,Source Serif,Source Serif,nextjs,self,browser,2026-09-23
@@ -52,7 +53,7 @@ domain,category,body_font,heading_font,platform,sources,method,observed
 365scores.com,popular,365 Sans,365 Sans,,self,browser,2026-09-23
 3blue1brown.com,indie,Figtree,Figtree,,self,browser,2026-09-23
 3bmeteo.com,popular,Inter,Inter,,self,browser,2026-09-23
-3m.com,enterprise,3MCircular,3MCircular,,self,browser,2026-09-25
+3m.com,enterprise,3MCircular,3MCircular,,self,browser,2026-09-26
 404media.co,news,Inter,Space Grotesk,,google self,browser,2026-09-23
 405kk.com,popular,system-ui,system-ui,,,browser,2026-09-23
 42floors.com,startups,Mulish,Mulish,,google self,browser,2026-09-23
@@ -118,7 +119,7 @@ abbott.com,enterprise,Wallace Sans,Wallace Serif,,self,browser,2026-09-23
 abbvie.com,enterprise,Roboto,F37 Lineca,,self,browser,2026-09-23
 abc.es,news,ABC Display,ABC Display,,self,browser,2026-09-23
 abc.net.au,news,Abcsans,Abcserif,nextjs,google self,browser,2026-09-23
-abcnews.go.com,news,Post Grotesk,Post Grotesk,,self,browser,2026-09-25
+abcnews.go.com,news,Post Grotesk,Post Grotesk,,self,browser,2026-09-26
 abczdrowie.pl,popular,Roboto,Roboto,,self,browser,2026-09-23
 abelpolice.com,startups,Geist,Geist,framer,google self,browser,2026-09-23
 abema.tv,popular,Copy Right,Copy Right,,,browser,2026-09-23
@@ -161,7 +162,7 @@ acoup.blog,indie,Georgia,Fondamento,wordpress,self,browser,2026-09-23
 acrely.ai,startups,ui-monospace,ui-monospace,nextjs,self,browser,2026-09-23
 acronis.com,startups,Open Sans,Open Sans,,,wayback-browser,2021-02-15
 action.com,popular,Ubuntu,Ubuntu,nextjs,self,browser,2026-09-23
-actiondesk.io,startups,Calibre,Calibre,webflow,,wayback-browser,2023-02-15
+actiondesk.io,startups,Times New Roman,Times New Roman,webflow,,wayback-browser,2024-02-15
 actipulseneuroscience.com,startups,Montserrat,Montserrat,,google self,browser,2026-09-23
 activecampaign.com,startups,IBM Plex Sans,IBM Plex Sans,,,static,2026-09-23
 activeloop.ai,startups,Proxima Nova,Proxima Nova,gatsby,self,browser,2026-09-23
@@ -199,7 +200,7 @@ administracionelectronica.gob.es,popular,WorkSans,WorkSans,,google self,browser,
 admiralcloudberg.medium.com,indie,Söhne,Söhne,,google self,browser,2026-09-23
 adni.co,startups,Inter,Inter,,self,browser,2026-09-23
 adnkronos.com,popular,Nunito Sans,Nunito Sans,,self,browser,2026-09-23
-adobe.com,saas,Adobe Clean,Adobe Clean,,adobe,browser,2026-09-25
+adobe.com,saas,Adobe Clean,Adobe Clean,,adobe,browser,2026-09-26
 adp.com,saas,TaubSans,TaubSans,,self,browser,2026-09-23
 adra.ai,startups,Inter,Inter,wix,self,browser,2026-09-23
 adriano.fyi,indie,Fira Code,Fira Code,,self,browser,2026-09-23
@@ -278,18 +279,18 @@ aikido.dev,startups,Newgrotesk,Newgrotesk,webflow,inline self,static,2026-09-23
 aiosmedical.com,startups,Jura,Jura,nextjs,self,browser,2026-09-23
 aiou.edu.pk,popular,Poppins,Poppins,,google self,browser,2026-09-23
 aiprise.com,startups,Satoshi,Articulat,webflow,self,browser,2026-09-23
-airbnb.com,enterprise,Airbnb Cereal,Airbnb Cereal,,self,browser,2026-09-25
+airbnb.com,enterprise,Airbnb Cereal,Airbnb Cereal,,self,browser,2026-09-26
 airbus.com,enterprise,Inter,Inter,,self,browser,2026-09-23
 airbyte.com,startups,Booton,Booton,,self,browser,2026-09-23
 aircall.io,startups,Fellix,Fellix,nextjs,,static,2026-09-23
 aircaps.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 airfordable.com,startups,Inter,Inter,gatsby,self,browser,2026-09-23
-airfrance.com,enterprise,Open Sans,Eim,,,wayback-browser,2020-08-15
+airfrance.com,enterprise,Open Sans,Eim,,,wayback-browser,2020-11-15
 airgoods.com,startups,Linear Sans,PolySans,nextjs,self,browser,2026-09-23
 airhartaero.com,startups,Helvetica Now Display,Helvetica Now Display,framer,self,browser,2026-09-23
 airhelp.com,startups,lab Grotesque,lab Grotesque,nextjs,self,browser,2026-09-23
 airmyne.com,startups,Suisse Intl,Suisse Intl,wordpress,self,browser,2026-09-23
-airtable.com,saas,Season Sans,Season Sans,nextjs,google self,browser,2026-09-25
+airtable.com,saas,Season Sans,Season Sans,nextjs,google self,browser,2026-09-26
 airtel.in,popular,Tondo,Tondo,,self,browser,2026-09-23
 airthium.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 airwallex.com,startups,Ax LLCircular,Ax LLCircular,nextjs,self,static,2026-09-23
@@ -370,12 +371,12 @@ alicesw.com,popular,Microsoft YaHei,Microsoft YaHei,,self,browser,2026-09-23
 aliexpress.com,ecommerce,TT Norms Pro,TT Norms Pro,,self,browser,2026-09-23
 alinea-invest.com,startups,Suisseintl,Instrumentsans Semicondensed,webflow,self,browser,2026-09-23
 alixia.com,startups,Nova,Dm,,google self,browser,2026-09-23
-aljazeera.com,news,Roboto,Roboto,wordpress,self,browser,2026-09-25
+aljazeera.com,news,Roboto,Roboto,wordpress,self,browser,2026-09-26
 alkali.engineering,startups,system-ui,system-ui,nextjs,self,browser,2026-09-23
 alkera.ai,startups,Instrument Sans,Instrument Sans,nextjs,self,browser,2026-09-23
 alkosto.com,popular,Arial,Arial,,self,browser,2026-09-23
 allahabadhighcourt.in,popular,Verdana,Verdana,,,browser,2026-09-23
-allbirds.com,ecommerce,Geograph,Geograph,shopify,google self,browser,2026-09-25
+allbirds.com,ecommerce,Geograph,Geograph,shopify,google self,browser,2026-09-26
 alldatasheet.com,popular,Tahoma,Tahoma,,,browser,2026-09-23
 allegro.pl,ecommerce,Open Sans,Roboto,,,wayback-browser,2020-08-15
 allendowney.com,indie,Non Breaking Space Override,system-ui,wordpress,,browser,2026-09-23
@@ -393,7 +394,7 @@ allrecipes.com,popular,Source Sans,Copper Pot,,self,browser,2026-09-23
 allsectech.com,popular,Proxima Nova,Outfit,wordpress,self,browser,2026-09-23
 allstate.com,enterprise,Allstate,Allstate,nextjs,self,browser,2026-09-23
 allthingsdistributed.com,indie,system-ui,system-ui,,self,browser,2026-09-23
-alluresystems.com,startups,Montserrat,Montserrat,wix,,wayback-browser,2020-08-15
+alluresystems.com,startups,Montserrat,Montserrat,wix,,wayback-browser,2021-08-15
 allus.ai,startups,Manrope,Newsreader,,google,browser,2026-09-23
 allwyn.cz,popular,Roboto Condensed,Pangram Sans,,self,browser,2026-09-23
 almasryalyoum.com,popular,AlMasry Stretched,AlMasry Stretched,,self,browser,2026-09-23
@@ -424,7 +425,7 @@ amalinvest.com,startups,Inter,font Ambit,nextjs,self,browser,2026-09-23
 amanvir.com,indie,Inter,Inter,,google,browser,2026-09-23
 amarujala.com,popular,Noto Sans Devanagari,Noto Sans Devanagari,,self,browser,2026-09-23
 amazingcto.com,indie,system-ui,system-ui,,,browser,2026-09-23
-amazon.com,ecommerce,Arial,Amazon Ember,,self,browser,2026-09-24
+amazon.com,ecommerce,Arial,Arial,,,browser,2026-09-26
 amberbox.com,startups,AvenirNext,AvenirNext,,self,browser,2026-09-23
 ambergroup.io,startups,Amber,Amber,nextjs,,wayback-browser,2025-11-15
 ambiencehealthcare.com,startups,Inter,Inter,framer,,wayback-browser,2026-02-15
@@ -432,14 +433,14 @@ ambient.ai,startups,Inter Variablefont Opsz Wght,Chakrapetch,webflow,self,browse
 ambition.com,startups,Poppins,Poppins,webflow,self,browser,2026-09-23
 amboras.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 ambral.com,startups,DM Sans,DM Sans,framer,google self,browser,2026-09-23
-amd.com,enterprise,Open Sans,Klavika,,self,browser,2026-09-25
+amd.com,enterprise,Open Sans,Klavika,,self,browser,2026-09-26
 amd.online,popular,Circe,Gotham Pro,,self,browser,2026-09-23
 ameba.jp,popular,sans-serif,sans-serif,,self,browser,2026-09-23
 ameblo.jp,popular,Hiragino Sans,Hiragino Sans,nextjs,self,browser,2026-09-23
 ameli.fr,popular,Raleway,Raleway,,,wayback-browser,2021-08-15
 amenli.com,startups,Roboto,Roboto,,google,static,2026-09-23
 amerahealthsolutions.com,startups,Source Sans,Playfair Display,framer,google self,browser,2026-09-23
-americanexpress.com,enterprise,Helvetica Neue,Helvetica Neue,,self,static,2026-09-25
+americanexpress.com,enterprise,Helvetica Neue,Helvetica Neue,,self,static,2026-09-26
 americorps.gov,government,Circular Std,Circular Std,,self,browser,2026-09-23
 amgen.com,enterprise,Poppins,Poppins,,adobe self,browser,2026-09-23
 amherst.edu,universities,Setimo,Tiempos,,adobe google self,browser,2026-09-23
@@ -524,7 +525,7 @@ answerthis.io,startups,Geist,Geist,framer,google self,browser,2026-09-23
 antena3.ro,popular,Inter,Inter,,self,browser,2026-09-23
 anthonyhobday.com,indie,ui-monospace,ui-monospace,,,browser,2026-09-23
 anthrogen.com,startups,Inter,JetBrains Mono,,self,browser,2026-09-23
-anthropic.com,saas,Anthropic Sans,Anthropic Sans,webflow,self,browser,2026-09-25
+anthropic.com,saas,Anthropic Sans,Anthropic Sans,webflow,self,browser,2026-09-26
 anthropologie.com,ecommerce,Avenir,Avenir,,self,browser,2026-09-23
 antigen.sh,startups,lay Grotesk,lay Grotesk,nextjs,self,browser,2026-09-23
 antimattr.one,startups,Geist Mono,Geist Mono,framer,google,browser,2026-09-23
@@ -566,7 +567,7 @@ apozy.com,startups,Inter,Oswald,nextjs,google self,browser,2026-09-23
 app.com,news,Helvetica Neue,Helvetica Neue,,,browser,2026-09-23
 appcanary.com,startups,Proxima Nova,Myriad Pro,,adobe,browser,2026-09-23
 appdirect.com,startups,Inter,Inter,,self,static,2026-09-23
-apple.com,enterprise,SF Pro,SF Pro,,self,browser,2026-09-25
+apple.com,enterprise,SF Pro,SF Pro,,self,browser,2026-09-26
 appliedintuition.com,startups,Times New Roman,Times New Roman,webflow,,wayback-browser,2025-11-15
 appliedkinetics.ai,startups,Inter Tight,Inter Tight,nextjs,self,browser,2026-09-23
 applyboard.com,startups,Roboto,Roboto,wordpress,google inline,static,2026-09-23
@@ -644,21 +645,23 @@ arketa.com,startups,supreme LLTT,supreme LLTT,nextjs,self,browser,2026-09-23
 arlo1.com,startups,Share Tech Mono,Share Tech Mono,nextjs,self,browser,2026-09-23
 armature.tech,startups,DM Sans,Stack Sans Notch,,google self,browser,2026-09-23
 armilla.ai,startups,Arial,Poppins,webflow,google,browser,2026-09-23
-armory.io,startups,Open Sans,AmpleSoftPro,wordpress,,wayback-browser,2023-08-15
+armory.io,startups,Open Sans,AmpleSoftPro,wordpress,,wayback-browser,2023-11-15
 arnata.com,startups,Satoshi,Switzer,framer,self,browser,2026-09-23
 arnaud-carre.github.io,indie,Open Sans,Open Sans,,google self,browser,2026-09-23
 arne.me,indie,Rebond Grotesque,Rebond Grotesque,,self,browser,2026-09-23
 arnon.dk,indie,system-ui,Recoleta,wordpress,self,browser,2026-09-23
 arpari.com,startups,Satoshi,Satoshi,webflow,self,browser,2026-09-23
+arpeggiobio.com,startups,Times New Roman,Times New Roman,webflow,,wayback-browser,2025-11-15
 arpio.io,startups,Figtree,Figtree,wordpress,google self,browser,2026-09-23
 arpitbhayani.me,indie,Assistant,Assistant,,google,browser,2026-09-23
 arqfinance.com,startups,Beausite Classic,Beausite Fit,,self,browser,2026-09-23
 arraylabs.io,startups,Manrope,Manrope,nextjs,self,browser,2026-09-23
 arroyo.dev,startups,Inter,Inter,,self,browser,2026-09-23
 arslan.io,indie,Switzer,Switzer,,self,browser,2026-09-23
-arstechnica.com,news,Source Sans,Faustina,wordpress,self,browser,2026-09-25
+arstechnica.com,news,Source Sans,Faustina,wordpress,self,browser,2026-09-26
 artemis.sh,indie,sans-serif,sans-serif,,,browser,2026-09-23
 artfight.net,popular,Roboto,Roboto,,self,browser,2026-09-23
+arthena.com,startups,Times New Roman,Times New Roman,nextjs,,wayback-browser,2021-11-15
 article.com,ecommerce,Proxima Nova,Proxima Nova,,self,browser,2026-09-23
 articulate.com,startups,Graphik,GT Walsheim,wordpress,self,browser,2026-09-23
 artie.com,startups,Manrope,power Grotesk,nextjs,self,browser,2026-09-23
@@ -693,6 +696,7 @@ asim-group.com,startups,Rethink Sans,Instrument Serif,nextjs,self,browser,2026-0
 asim.sh,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 askbron.ai,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 askclara.com,startups,Inter,Source Serif,nextjs,self,browser,2026-09-23
+askdata.com,startups,Gothic A1,Roboto,webflow,,wayback-browser,2021-11-15
 askjo.ai,startups,Geist,DM Serif Display,,self,browser,2026-09-23
 askkyber.com,startups,Inter,Arimo,webflow,google,browser,2026-09-23
 askonestop.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,nextjs,self,browser,2026-09-23
@@ -720,7 +724,7 @@ astralcodexten.com,indie,SF Pro,SF Pro,,,browser,2026-09-23
 astranis.com,startups,Proxima Nova,Eurostile,webflow,adobe google self,browser,2026-09-23
 astrazeneca.com,enterprise,Lexia,Lexia,,adobe self,browser,2026-09-23
 astro-seek.com,popular,Verdana,Verdana,,,browser,2026-09-23
-astro.build,devtools,system-ui,Obviously,,self,browser,2026-09-25
+astro.build,devtools,system-ui,Obviously,,self,browser,2026-09-26
 astro.com,popular,Open Sans,Source Sans,,self,browser,2026-09-23
 astroenergy.ai,startups,Inter,Inter,,,browser,2026-09-23
 astroforge.io,startups,ABC Oracle,Space Mono,framer,google self,browser,2026-09-23
@@ -743,7 +747,7 @@ atlas.so,startups,Monument Grotesk,Monument Grotesk,nuxt,google self,browser,202
 atlascard.com,startups,ApercuMono Pro,ApercuMono Pro,,self,browser,2026-09-23
 atlasdiscovery.bio,startups,EB Garamond,EB Garamond,,self,browser,2026-09-23
 atlasgrid.ai,startups,Geist,Geist,nextjs,self,browser,2026-09-23
-atlassian.com,saas,Charlie,Charlie,,google self,browser,2026-09-25
+atlassian.com,saas,Charlie,Charlie,,google self,browser,2026-09-26
 atlaswork.ai,startups,Hanken Grotesk,Newsreader,nextjs,self,browser,2026-09-23
 atlia.com,startups,Inter,Inter,,google,browser,2026-09-23
 atlog.ai,startups,e Ukraine Head,e Ukraine Head,nextjs,google self,browser,2026-09-23
@@ -758,7 +762,7 @@ atopile.io,startups,JetBrains Mono,Barlow,,google,browser,2026-09-23
 atptour.com,popular,Roboto,Roboto,,,wayback-browser,2019-05-15
 atratopago.com,startups,Dehinted Subset Mabrypro,Dehinted Subset Mabrypro,webflow,google self,browser,2026-09-23
 atrisa.ai,startups,DM Mono,DM Mono,,google,browser,2026-09-23
-att.com,enterprise,Font,Font,nextjs,self,browser,2026-09-25
+att.com,enterprise,Font,Font,nextjs,self,browser,2026-09-26
 attacheatableoverlabor.com,popular,Helvetica Neue,Helvetica Neue,,,browser,2026-09-23
 attack.capital,startups,system-ui,system-ui,nextjs,self,browser,2026-09-23
 attentive.com,startups,Diatype,Academica,webflow,self,browser,2026-09-23
@@ -771,8 +775,10 @@ atum.works,startups,IBM Plex Mono,IBM Plex Mono,nextjs,self,browser,2026-09-23
 au.com,popular,Noto Sans JP,Noto Sans JP,,google,browser,2026-09-23
 aucey.com,popular,Plus Jakarta Sans,Plus Jakarta Sans,,google,browser,2026-09-23
 auchan.fr,popular,Sana Sans Alt,Sana Sans Black,,self,browser,2026-09-23
+auckland.ac.nz,universities,National,National,,,wayback-browser,2024-08-15
 audible.com,popular,Audible Sans,Audible Sans,,self,browser,2026-09-23
 audio.com,popular,Muse Sans,MuseDisplay Harmony,nextjs,self,browser,2026-09-23
+audm.com,startups,Montserrat,Montserrat,,,wayback-browser,2023-05-15
 audun.co,startups,Instrument Sans,Ranade,,self,browser,2026-09-23
 auntymaza.pw,popular,Arial,Arial,wordpress,google self,browser,2026-09-23
 auone.jp,popular,system-ui,system-ui,nextjs,,browser,2026-09-23
@@ -780,6 +786,7 @@ aurabeattech.com,startups,Avenire next,Avenire next,wordpress,google self,browse
 auravision.ai,startups,Questrial,Questrial,,google,browser,2026-09-23
 aurelian.com,startups,Roboto Mono,neue Montreal,nextjs,self,browser,2026-09-23
 auricle.com,startups,system-ui,system-ui,,,browser,2026-09-23
+auro.ai,startups,Times New Roman,Times New Roman,wordpress,,wayback-browser,2020-02-15
 aurorincad.com,startups,system-ui,system-ui,nextjs,,browser,2026-09-23
 austinhenley.com,indie,Helvetica,Helvetica,,,browser,2026-09-23
 austintexas.gov,government,Geist,Geist,,google self,browser,2026-09-23
@@ -796,6 +803,7 @@ autodidacts.io,indie,PT Serif,PT Sans,,self,browser,2026-09-23
 autogidas.lt,popular,Roboto,Roboto,,google,browser,2026-09-23
 autohero.com,popular,Lato,Lato,,self,browser,2026-09-23
 autohub.io,startups,Inter,Inter,wordpress,google,browser,2026-09-23
+automatic.com,startups,Times New Roman,Times New Roman,,,wayback-browser,2022-02-15
 automationanywhere.com,startups,Museo Sans,Museo Sans,,adobe self,browser,2026-09-23
 automattic.com,startups,Source Serif,Source Serif,wordpress,google self,browser,2026-09-23
 automax.ai,startups,Inter,Inter,nextjs,self,browser,2026-09-23
@@ -814,6 +822,7 @@ autumnlabs.io,startups,Plus Jakarta Sans,Plus Jakarta Sans,nextjs,self,browser,2
 av-th.io,popular,Kanit,Kanit,wordpress,self,browser,2026-09-23
 av19t.com,popular,Helvetica Neue,Malgun Gothic,,self,browser,2026-09-23
 avallon.ai,startups,Manrope,Manrope,framer,google self,browser,2026-09-23
+avametric.com,startups,Times New Roman,Times New Roman,,,wayback-browser,2019-05-15
 avant.com,startups,Ceraproregular,Ceraprobold,gatsby,self,browser,2026-09-23
 avearobotics.com,startups,Space Grotesk,Space Grotesk,nextjs,self,browser,2026-09-23
 avelishealth.com,startups,Satoshi,Satoshi,framer,google self,browser,2026-09-23
@@ -850,6 +859,7 @@ aws.amazon.com,devtools,Amazon Ember Display,Amazon Ember Display,,self,browser,
 awtomic.com,startups,Inter,N 27,webflow,adobe google self,browser,2026-09-23
 axa.com,enterprise,Source Sans,Publico Headline,nextjs,self,browser,2026-09-23
 axal.ai,startups,IBM Plex Sans,IBM Plex Sans,nextjs,self,browser,2026-09-23
+axdraft.com,startups,system-ui,system-ui,wordpress,,wayback-browser,2022-08-15
 axelrodlabs.com,startups,SF Mono,SF Mono,,,browser,2026-09-23
 axialcompute.com,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 axiom.ai,startups,Geist,Archivo,nuxt,google,browser,2026-09-23
@@ -921,6 +931,7 @@ bankjoy.com,startups,Poppins,Poppins,webflow,google,browser,2026-09-23
 bankofamerica.com,enterprise,Roboto,Cnx,,self,browser,2026-09-23
 bankofbaroda.bank.in,popular,Arial,Arial,,self,browser,2026-09-23
 baomoi.com,popular,Lexend,Lexend,nextjs,self,browser,2026-09-23
+barrons.com,news,Arial,Georgia,,,wayback-browser,2016-05-15
 basalam.com,popular,Dana,Dana,nextjs,self,browser,2026-09-23
 basalt.space,startups,DM Sans,DM Sans,,google,browser,2026-09-23
 baseball-reference.com,popular,Helvetica Neue,Helvetica Neue,,self,browser,2026-09-23
@@ -939,13 +950,14 @@ baubap.com,startups,Onest,Onest,framer,google self,browser,2026-09-23
 baudlabs.ai,startups,Plus Jakarta Sans,Plus Jakarta Sans,nextjs,self,browser,2026-09-23
 baycrews.jp,popular,Hiragino Kaku Gothic,Hiragino Kaku Gothic,,self,browser,2026-09-23
 bayer.com,enterprise,Bayer Sans,Bayer Sans,nextjs,self,browser,2026-09-23
+bayes.com,startups,PX Grotesk,Px Grotesk,nextjs,,wayback-browser,2021-08-15
 bayesimpact.org,startups,Inter,Titling Gothic FB,,self,browser,2026-09-23
 bayesline.com,startups,National2,National2,,self,browser,2026-09-23
 baylor.edu,universities,Bio Sans,Bio Sans,,adobe,browser,2026-09-23
 bazel.build,devtools,Inter,Inter,nextjs,self,browser,2026-09-23
 bazos.sk,popular,Verdana,Verdana,,,browser,2026-09-23
 bbc.co.uk,news,Arial,Arial,,,wayback-browser,2016-02-15
-bbc.com,news,BBC Reith Serif,BBC Reith Serif,nextjs,self,browser,2026-09-25
+bbc.com,news,BBC Reith Serif,BBC Reith Serif,nextjs,self,browser,2026-09-26
 bblaa.com,popular,system-ui,system-ui,,,browser,2026-09-23
 bbva.mx,popular,Times New Roman,Times New Roman,,,wayback-browser,2022-11-15
 bbycroft.net,indie,serif,serif,nextjs,,browser,2026-09-23
@@ -973,6 +985,7 @@ beforward.jp,popular,Verdana,Verdana,,,static,2026-09-23
 beglaubigt.de,startups,Selecta,Selecta,nextjs,self,browser,2026-09-23
 bego.ai,startups,Poppins,Poppins,,google self,browser,2026-09-23
 behance.net,popular,Acumin Pro,Acumin Pro Wide,,adobe,browser,2026-09-23
+belgium.be,government,Lato,Lato,,,wayback-browser,2019-02-15
 belkadan.com,indie,Lucida Grande,Copperplate,,,browser,2026-09-23
 bellabeat.com,startups,Rethink Sans,Open Sans,wordpress,google self,browser,2026-09-23
 bellard.org,indie,Times New Roman,Times New Roman,,,browser,2026-09-23
@@ -998,7 +1011,7 @@ bep.gov,government,Source Sans,Merriweather,,self,browser,2026-09-23
 beparallel.com,startups,Instrument Sans,Instrument Sans,framer,google,browser,2026-09-23
 berbix.com,startups,Roboto,sans-serif,wordpress,google,browser,2026-09-23
 bergfex.at,popular,Alte Haas Grotesk,Vonnes Cond,,,wayback-browser,2020-05-15
-berkeley.edu,universities,Inter,Inter,wordpress,google self,browser,2026-09-25
+berkeley.edu,universities,Inter,Inter,wordpress,google self,browser,2026-09-26
 berkshirehathaway.com,enterprise,Times New Roman,Times New Roman,,,browser,2026-09-23
 bernardhq.com,startups,Inter,Inter,framer,self,browser,2026-09-23
 bernsteinbear.com,indie,serif,serif,,,browser,2026-09-23
@@ -1008,7 +1021,7 @@ besimple.ai,startups,Suisse Intl,NType 82,,self,browser,2026-09-23
 besoccer.com,popular,Asap Condensed,Asap Condensed,,google,browser,2026-09-23
 bessstillman.substack.com,indie,system-ui,Lora,,google,browser,2026-09-23
 best-hit.tv,popular,Noto Sans JP,Noto Sans JP,,google,browser,2026-09-23
-bestbuy.com,ecommerce,Human BBY,Human BBY,nextjs,self,browser,2026-09-25
+bestbuy.com,ecommerce,Human BBY,Human BBY,nextjs,self,browser,2026-09-26
 bet365.bet.br,popular,system-ui,system-ui,,self,browser,2026-09-23
 bet9ja.com,popular,Helvetica,Helvetica,,,browser,2026-09-23
 betclic.ci,popular,Roboto,Roboto,,,wayback-browser,2025-11-15
@@ -1071,6 +1084,7 @@ binwang.me,indie,mix Font,mix Font,,,browser,2026-09-23
 biobiochile.cl,popular,Open Sans,Open Sans,,google self,browser,2026-09-23
 biobot.io,startups,system-ui,system-ui,wordpress,google self,browser,2026-09-23
 biocartesian.com,startups,Inter,Inter,framer,self,browser,2026-09-23
+biocogniv.com,startups,Times New Roman,Times New Roman,webflow,,wayback-browser,2023-11-15
 biodock.ai,startups,system-ui,system-ui,webflow,google,browser,2026-09-23
 biomaze.ir,popular,Iran Sans X,Iran Sans X,nuxt,self,browser,2026-09-23
 biomejs.dev,devtools,Geist,Geist,,self,browser,2026-09-23
@@ -1106,6 +1120,7 @@ bitwarden.com,saas,Inter,Inter,,self,browser,2026-09-23
 bizimhesap.com,popular,Inter,Poppins,nextjs,self,browser,2026-09-23
 bizmark.ai,startups,Inter,Inter,,google,browser,2026-09-23
 bizmation.io,popular,Manrope,Inter,,google self,browser,2026-09-23
+bizzy.io,startups,Colfax,Colfax,gatsby,,wayback-browser,2021-08-15
 bkash.com,startups,Roboto,Roboto,,google self,browser,2026-09-23
 bkn.go.id,popular,Roboto,Roboto,,google self,browser,2026-09-23
 blablacar.com,startups,Gt Eesti,Gt Eesti,,self,browser,2026-09-23
@@ -1192,6 +1207,7 @@ blog.nuclearsecrecy.com,indie,PT Serif,Roboto Condensed,wordpress,google,browser
 blog.persistent.info,indie,Verdana,Verdana,,google,browser,2026-09-23
 blog.phronemophobic.com,indie,system-ui,system-ui,,,browser,2026-09-23
 blog.pkh.me,indie,ui-monospace,ui-monospace,,,browser,2026-09-23
+blog.plover.com,indie,Verdana,Verdana,,,wayback-browser,2024-11-15
 blog.polybdenum.com,indie,system-ui,system-ui,,,browser,2026-09-23
 blog.regehr.org,indie,system-ui,Source Serif,wordpress,self,browser,2026-09-23
 blog.reverberate.org,indie,Helvetica Neue,Helvetica Neue,,,browser,2026-09-23
@@ -1216,9 +1232,11 @@ blogsystem5.substack.com,indie,SF Pro,SF Pro,,google,browser,2026-09-23
 blooket.com,popular,Nunito,Nunito,,google,browser,2026-09-23
 bloom.diy,startups,Inter,Inter,nextjs,adobe,browser,2026-09-23
 bloomapp.com,startups,Inter,Inter,webflow,google self,browser,2026-09-23
-bloomberg.com,news,BWHaas Grotesk,BWHaas Grotesk,nextjs,google self,browser,2026-09-25
+bloomberg.com,news,BWHaas Grotesk,BWHaas Grotesk,nextjs,google self,browser,2026-09-26
+bloomingdales.com,ecommerce,Avenir,Avenir,,,wayback-browser,2018-05-15
 bloomtech.com,startups,Open Sans,Titillium Web,webflow,google self,browser,2026-09-23
 bloomtext.com,startups,Proxima Soft,Proxima Soft,nextjs,adobe,browser,2026-09-23
+bloomthat.com,startups,Proxima Nova,Proxima Nova,,,wayback-browser,2022-05-15
 bloomylearning.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 bls.gov,government,Source Sans,Arial,,self,browser,2026-09-23
 blueberrypediatrics.com,startups,Inter,Poppins,webflow,google,browser,2026-09-23
@@ -1245,7 +1263,7 @@ bobaedream.co.kr,popular,Malgun Gothic,Malgun Gothic,,,browser,2026-09-23
 bobdahacker.com,indie,JetBrains Mono,JetBrains Mono,,google,browser,2026-09-23
 bodyport.com,startups,Value,Value,webflow,google self,browser,2026-09-23
 boehs.org,indie,Crimson,Crimson,,self,browser,2026-09-23
-boeing.com,enterprise,Meso,Meso,,self,browser,2026-09-25
+boeing.com,enterprise,Meso,Meso,,self,browser,2026-09-26
 bokepindo13.llc,popular,sans-serif,sans-serif,wordpress,self,browser,2026-09-23
 bokeplot.com,popular,sans-serif,sans-serif,wordpress,self,browser,2026-09-23
 bol.com,ecommerce,Graphik,Produkt,,,wayback-browser,2021-02-15
@@ -1272,9 +1290,13 @@ booklive.jp,popular,Helvetica Neue,Helvetica Neue,,,browser,2026-09-23
 bookmyshow.com,popular,Roboto,Roboto,,google,browser,2026-09-23
 bookoapp.com,startups,stack Sans Text,stack Sans Display,nextjs,self,browser,2026-09-23
 boomsupersonic.com,startups,Styrene A,Styrene A,nextjs,self,browser,2026-09-23
+boostable.com,startups,Montserrat,Montserrat,,,wayback-browser,2024-11-15
+boostedboards.com,startups,Acumin Pro,Acumin Pro Extra Condensed,nextjs,,wayback-browser,2020-02-15
 boostly.com,startups,Figtree,Figtree,framer,google,browser,2026-09-23
 boostrobotics.ai,startups,Open Sans,Saira,nextjs,self,browser,2026-09-23
+booth.ai,startups,Product Sans,Product Sans,,,wayback-browser,2026-02-15
 bootloop.ai,startups,Geist,Geist,framer,google self,browser,2026-09-23
+bop.fm,startups,Titillium Web,Titillium Web,wordpress,,wayback-browser,2025-11-15
 boringcompany.com,startups,PP Supply Mono,PP Supply Mono,nextjs,self,browser,2026-09-23
 boringsql.com,indie,Inter,Inter,,self,browser,2026-09-23
 borischerny.com,indie,Palatino,Palatino,,,browser,2026-09-23
@@ -1326,6 +1348,7 @@ braze.com,saas,aribau Grotesk,aribau Grotesk,nextjs,self,browser,2026-09-23
 brazino777.bet.br,popular,Roboto,Roboto,,self,browser,2026-09-23
 breadcrumbs.io,startups,Roboto,Roboto,wordpress,self,browser,2026-09-23
 breadfast.com,startups,Work Sans,Faro BoldLucky,wordpress,google self,browser,2026-09-23
+breakaway.app,startups,Inter,Barlow,webflow,,wayback-browser,2025-05-15
 breaker.audio,startups,Arial,Arial,,,browser,2026-09-23
 breezeful.com,startups,Inter,Helvetica Now,,self,browser,2026-09-23
 breezlabs.com,startups,general Sans,Instrument Sans,nextjs,self,browser,2026-09-23
@@ -1337,7 +1360,7 @@ brevy.com,startups,rethink Sans,rethink Sans,nextjs,self,browser,2026-09-23
 brevzin.github.io,indie,Source Sans,Lato,,google self,browser,2026-09-23
 brew.sh,devtools,system-ui,system-ui,,,browser,2026-09-23
 brewit.ai,startups,Uncut Sans,Uncut Sans,framer,self,browser,2026-09-23
-brex.com,saas,Inter,Inter,nextjs,self,browser,2026-09-25
+brex.com,saas,Inter,Inter,nextjs,self,browser,2026-09-26
 brianmckenna.org,indie,sans-serif,sans-serif,,,browser,2026-09-23
 brickanta.com,startups,Platypi,Platypi,framer,google self,browser,2026-09-23
 brickexperimentchannel.wordpress.com,indie,Open Sans,Open Sans,wordpress,self,browser,2026-09-23
@@ -1359,7 +1382,7 @@ broadcom.com,enterprise,Inter,Inter,,self,browser,2026-09-23
 broccoli.com,startups,Inter,font Heading,nextjs,google self,browser,2026-09-23
 bronco.ai,startups,system-ui,system-ui,,,browser,2026-09-23
 brooker.co.za,indie,Times New Roman,Times New Roman,,,browser,2026-09-23
-brooklinen.com,ecommerce,BrandonTextWeb,ToledoTS,shopify,self,browser,2026-09-25
+brooklinen.com,ecommerce,BrandonTextWeb,ToledoTS,shopify,self,browser,2026-09-26
 brown.edu,universities,Times New Roman,Minion Pro,,adobe self,browser,2026-09-23
 browse.dev,startups,system-ui,system-ui,nextjs,,browser,2026-09-23
 browser-use.com,startups,Geist,Geist,nextjs,self,browser,2026-09-23
@@ -1400,8 +1423,10 @@ bukuwarung.com,saas,Helvetica Neue,Roboto,wordpress,google self,browser,2026-09-
 bulbagarden.net,popular,Segoe UI,Segoe UI,,self,browser,2026-09-23
 bulkmro.com,startups,Inter,Inter,wordpress,google self,browser,2026-09-23
 bulldozair.com,startups,Ubuntu,Poppins,wordpress,google self,browser,2026-09-23
+bulletin.co,startups,Teodor,Teodor,,,wayback-browser,2025-11-15
 bumbershootsoft.wordpress.com,indie,Open Sans,Open Sans,wordpress,self,browser,2026-09-23
-bun.sh,devtools,system-ui,Archivo,,self,browser,2026-09-25
+bun.sh,devtools,system-ui,Archivo,,self,browser,2026-09-26
+bund.de,government,Fira Sans,Fira Sans,,,wayback-browser,2025-11-15
 bundesregierung.de,government,Bundes Sans,Bundes Sans,,self,browser,2026-09-23
 bunge.com,enterprise,Lato,Lato,,self,browser,2026-09-23
 bunkerhillhealth.com,startups,Roobert,Roobert,nextjs,self,browser,2026-09-23
@@ -1414,7 +1439,7 @@ burberry.com,ecommerce,Burberry Serif,Burberry Serif,nextjs,self,browser,2026-09
 burodeingresos.com,startups,Familjen Grotesk,Familjen Grotesk,nextjs,self,browser,2026-09-23
 burrow.com,ecommerce,Suisse Intl,Suisse Intl,shopify,self,browser,2026-09-23
 burthq.com,startups,DM Sans,Host Grotesk,framer,google self,browser,2026-09-23
-businessinsider.com,news,Garnett,Garnett,,self,browser,2026-09-25
+businessinsider.com,news,Garnett,Garnett,,self,browser,2026-09-26
 businessonbot.com,startups,Inter,Inter,webflow,google,browser,2026-09-23
 bussimulator.id,popular,Source Sans,Source Sans,wordpress,google self,browser,2026-09-23
 bustimes.org,popular,system-ui,system-ui,,,browser,2026-09-23
@@ -1430,9 +1455,11 @@ buzzfeed.com,popular,Proxima Nova,Proxima Nova,nextjs,google self,browser,2026-0
 buzzfeednews.com,news,Pensum,Pensum,,self,browser,2026-09-23
 buzzvil.com,popular,Pretendard,Pretendard,nextjs,self,browser,2026-09-23
 bvisness.me,indie,system-ui,system-ui,,,browser,2026-09-23
+bxblue.com.br,startups,Times New Roman,Times New Roman,wordpress,,wayback-browser,2022-05-15
 byd.com,enterprise,Montserrat,Montserrat,,self,browser,2026-09-23
 byjus.com,popular,Roboto,Roboto,wordpress,self,browser,2026-09-23
 bymason.com,startups,Proxima Nova,Gotham,webflow,adobe self,browser,2026-09-23
+bynorth.com,startups,Times New Roman,Times New Roman,,,wayback-browser,2022-08-15
 byroot.github.io,indie,system-ui,system-ui,,,browser,2026-09-23
 bystreet.com,startups,Switzer,Halant,framer,self,browser,2026-09-23
 byteask.ai,startups,Satoshi,Satoshi,,self,browser,2026-09-23
@@ -1460,7 +1487,7 @@ caj.al,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 cal.com,saas,Cal Sans UI,Cal Sans,framer,google self,browser,2026-09-23
 calciomercato.com,popular,Satoshi,Satoshi,nextjs,self,browser,2026-09-23
 calculator.net,popular,Arial,Arial,,,browser,2026-09-23
-calendly.com,saas,Geist,Calendly Sans,,self,browser,2026-09-25
+calendly.com,saas,Geist,Geist,,self,browser,2026-09-26
 caliente.mx,popular,Arial,Montserrat,,google,browser,2026-09-23
 calii.com,startups,system-ui,system-ui,nextjs,self,browser,2026-09-23
 callab.ai,startups,Manrope,Quattrocento,framer,google self,browser,2026-09-23
@@ -1472,19 +1499,20 @@ calmatters.org,news,Source Sans,Source Sans,wordpress,google,browser,2026-09-23
 calnewport.com,indie,Montserrat,Fira Sans,wordpress,self,browser,2026-09-23
 calpaterson.com,indie,Times New Roman,Times New Roman,,,browser,2026-09-23
 calpoly.edu,universities,Utopia Std Subhead,Abolition,,adobe google self,browser,2026-09-23
-caltech.edu,universities,Helvetica,Helvetica,,,browser,2026-09-25
+caltech.edu,universities,Helvetica,Helvetica,,,browser,2026-09-26
 calv.info,indie,Outfit,Outfit,nextjs,google,browser,2026-09-23
 calvinklein.com,ecommerce,Klein,Klein,,google self,browser,2026-09-23
-cam.ac.uk,universities,Lato,Lato,,google,browser,2026-09-25
+cam.ac.uk,universities,Lato,Lato,,google,browser,2026-09-26
 camber.health,startups,Inter,Inter,,google self,browser,2026-09-23
 cambio.ai,startups,Inter,Tiempos Headline 300,webflow,google self,browser,2026-09-23
 cambly.com,startups,system-ui,GT Super,nextjs,self,browser,2026-09-23
 cambridge.org,popular,Cambridge Sans,Cambridge Sans,,self,browser,2026-09-23
 camelai.com,startups,Figtree,Camel Cool,,google self,browser,2026-09-23
+camlist.com,startups,Poppins,Poppins,wordpress,,wayback-browser,2025-05-15
 campfire.ai,startups,Denim,Denim,nextjs,self,browser,2026-09-23
 camscanner.com,popular,system-ui,system-ui,nuxt,self,browser,2026-09-23
 can.az,popular,monospace,monospace,,,wayback-browser,2019-05-15
-canada.ca,government,Noto Sans,Lato,,google self,browser,2026-09-25
+canada.ca,government,Noto Sans,Lato,,google self,browser,2026-09-26
 canadiantire.ca,popular,Lato,Lato,,google self,browser,2026-09-23
 canalturf.com,popular,Roboto,Roboto Condensed,,google self,browser,2026-09-23
 canarytechnologies.com,startups,Poppins,Poppins,webflow,self,browser,2026-09-23
@@ -1495,7 +1523,7 @@ candoriq.com,startups,Instrument Sans,Instrument Sans,webflow,self,browser,2026-
 caniuse.com,devtools,Open Sans,Open Sans,,self,browser,2026-09-23
 canix.com,startups,Basisgrotesquepro,Basisgrotesquepro,webflow,google self,browser,2026-09-23
 canlidoviz.com,popular,Open Sans,Open Sans,,self,browser,2026-09-23
-canva.com,saas,Canva Sans,Canva Sans,,self,browser,2026-09-25
+canva.com,saas,Canva Sans,Canva Sans,,self,browser,2026-09-26
 canvas.inc,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 capacitive.ai,startups,ui-monospace,ui-monospace,,,browser,2026-09-23
 capcut.com,popular,Inter,Inter,,self,browser,2026-09-23
@@ -1511,6 +1539,7 @@ capveon.ai,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 capy.ai,startups,abc Social Mono,bebas Neue,nextjs,self,browser,2026-09-23
 car.gr,popular,IBM Plex Sans,IBM Plex Sans,nuxt,,wayback-browser,2021-11-15
 caraway.com,ecommerce,sans-serif,sans-serif,,self,browser,2026-09-23
+carbic.com,startups,Gibson,Gibson,gatsby,,wayback-browser,2021-08-15
 carbonchain.com,startups,Mulish,Mulish,webflow,google,browser,2026-09-23
 carbonfact.com,startups,Codec Pro,Codec Pro,,self,browser,2026-09-23
 cardamon.ai,startups,Sarabun,Sarabun,nextjs,self,browser,2026-09-23
@@ -1519,9 +1548,11 @@ cardda.com,startups,Inter,Inter,,google,browser,2026-09-23
 cardekho.com,startups,Lato,Lato,,self,browser,2026-09-23
 cardgames.io,popular,Arial,Arial,,self,browser,2026-09-23
 cardiff.ac.uk,universities,Marr Sans Reg,Marr Sans Med,,self,browser,2026-09-23
+cardinalapp.io,startups,Inter,Inter Display ExtraBold,framer,,wayback-browser,2024-11-15
 cardinalgray.com,startups,system-ui,system-ui,nextjs,self,browser,2026-09-23
 cardinalhealth.com,enterprise,Myriad Pro,Myriad Pro,,adobe self,browser,2026-09-23
 cardmarket.com,popular,system-ui,system-ui,,,wayback-browser,2025-11-15
+cardpool.com,startups,Raleway,Raleway,,,wayback-browser,2019-05-15
 cardtrader.com,popular,Work Sans,Work Sans,,google self,browser,2026-09-23
 carecycle.ai,startups,Aktiv Grotesk,Aktiv Grotesk,,adobe,browser,2026-09-23
 careerist.cc,startups,TT Hoves,TT Hoves,,google self,browser,2026-09-23
@@ -1541,7 +1572,9 @@ carleton.edu,universities,Proximanova,Surveyor Display,wordpress,google monotype
 carlypso.com,startups,Roboto,Roboto,,self,browser,2026-09-23
 carmax.com,popular,Lato,CarMaxSharpSansDisp,,self,browser,2026-09-23
 carnival.com,popular,Open Sans,Open Sans,,google self,browser,2026-09-23
+carousell.com,startups,system-ui,system-ui,,,wayback-browser,2022-02-15
 carrefour.es,popular,Source Sans,Source Sans,,,wayback-browser,2019-11-15
+carro.co,startups,Kanit,Kanit,nextjs,,wayback-browser,2019-11-15
 cars.com,popular,Apercu Pro,DM Sans,,self,browser,2026-09-23
 cars24.com,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 carsensor.net,popular,Arial,Arial,,self,browser,2026-09-23
@@ -1571,7 +1604,7 @@ cashflowportal.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 cashfree.com,startups,DM Sans,DM Sans,webflow,self,browser,2026-09-23
 cashify.in,popular,Inter,Inter,nextjs,self,browser,2026-09-23
 casio.com,popular,Helvetica Neue,Helvetica Neue,,,wayback-browser,2021-11-15
-casper.com,ecommerce,Calibre,NewKansas,shopify,google self,browser,2026-09-25
+casper.com,ecommerce,Calibre,NewKansas,shopify,google self,browser,2026-09-26
 cassandra.apache.org,devtools,Open Sans,Red Hat Display,,,browser,2026-09-23
 cassidoo.co,indie,iA Writer Mono,iA Writer Mono,,self,browser,2026-09-23
 castle-engine.io,indie,system-ui,system-ui,,self,browser,2026-09-23
@@ -1589,12 +1622,13 @@ catskull.net,indie,system-ui,system-ui,,,browser,2026-09-23
 caution.co,startups,Plus Jakarta Sans,Plus Jakarta Sans,,self,browser,2026-09-23
 cbc.ca,news,Radio Canada,Radio Canada,,google,browser,2026-09-23
 cbl.gov.ly,popular,Gulf,Gulf,wordpress,self,browser,2026-09-23
+cbo.gov,government,sans-serif,sans-serif,,,wayback-browser,2019-02-15
 cbp.gov,government,Source Sans,Source Sans,,self,browser,2026-09-23
 cbr.com,popular,Roboto,Khand,wordpress,self,browser,2026-09-23
-cbsnews.com,news,Proxima Nova,Publico Headline,,self,browser,2026-09-25
+cbsnews.com,news,Proxima Nova,Publico Headline,,self,browser,2026-09-26
 cbssports.com,popular,TT Norms,TT Norms,nextjs,self,browser,2026-09-23
 cbthera.com,startups,Inter,Inter,,self,browser,2026-09-23
-cdc.gov,government,Nunito,Poppins,,self,browser,2026-09-25
+cdc.gov,government,Nunito,Poppins,,self,browser,2026-09-26
 cdiscount.com,popular,Hind Madurai,Hind Madurai,nextjs,self,browser,2026-09-23
 cedalio.com,startups,Urbanist,Urbanist,,google,browser,2026-09-23
 cedana.ai,startups,IBM Plex Mono,IBM Plex Sans,nextjs,self,browser,2026-09-23
@@ -1644,6 +1678,7 @@ challenge.gov,government,Source Sans,Merriweather,,self,browser,2026-09-23
 championat.com,popular,Roboto,Roboto,,,wayback-browser,2018-11-15
 chanel.com,ecommerce,Abchanel 2022,Abchanel 2022,nextjs,self,browser,2026-09-23
 change.org,popular,Commissioner,Commissioner,,google,browser,2026-09-23
+changelog.complete.org,indie,Source Sans,Bitter,wordpress,,wayback-browser,2025-11-15
 channelnewsasia.com,news,Delegate,Delegate,,self,browser,2026-09-23
 chaosgenius.io,startups,Source Sans,Source Sans,,self,browser,2026-09-23
 char.com,startups,Geist,Besley,,google self,browser,2026-09-23
@@ -1653,6 +1688,7 @@ chargebee.com,saas,Sora,Sora,wordpress,self,browser,2026-09-23
 chargehound.com,startups,Verdana,Avenir Next Demi,,google self,browser,2026-09-23
 chargerobotics.com,startups,DM Sans,DM Sans,nextjs,self,browser,2026-09-23
 chari.com,startups,Inter,Plus Jakarta Sans,nextjs,self,browser,2026-09-23
+chariot.com,startups,Lato,Avenir,,,wayback-browser,2023-11-15
 charity.wtf,indie,system-ui,SF Pro,,google,browser,2026-09-23
 charlespetzold.com,indie,Segoe UI,Segoe UI,,,browser,2026-09-23
 charlotteobserver.com,news,Noto Sans,Noto Sans,,google,browser,2026-09-23
@@ -1666,6 +1702,7 @@ chatfuel.com,startups,Manrope,Geist,nextjs,,static,2026-09-23
 chatgpt.com,popular,Söhne,Söhne,nextjs,,wayback-browser,2024-02-15
 chatwoot.com,startups,Haskoy,Haskoy,nuxt,self,browser,2026-09-23
 chavesnamao.com.br,popular,Cnmfont,Cnmfont,nextjs,self,browser,2026-09-23
+checkfragment.com,startups,Inter,Inter,framer,,wayback-browser,2025-08-15
 checkout.com,startups,Inter,Inter,webflow,self,browser,2026-09-23
 checkr.com,startups,National 2,National 2 Narrow,nextjs,self,browser,2026-09-23
 cheers.tech,startups,Inter,Anton,nextjs,self,browser,2026-09-23
@@ -1675,7 +1712,7 @@ cheq.money,startups,Cabinet Grotesk,Cabinet Grotesk,,fontshare,browser,2026-09-2
 chess-results.com,popular,Segoe UI,Segoe UI,,,browser,2026-09-23
 chess.com,popular,system-ui,Chess Sans,,self,browser,2026-09-23
 chevron.com,enterprise,Gotham Narrow,Gotham Black,,google self,browser,2026-09-23
-chewy.com,ecommerce,Gordita,Gordita,wordpress,self,browser,2026-09-25
+chewy.com,ecommerce,Gordita,Gordita,wordpress,self,browser,2026-09-26
 chiark.greenend.org.uk,indie,Times New Roman,Times New Roman,,,browser,2026-09-23
 chicago.gov,government,Lora,Roboto,,google self,browser,2026-09-23
 chicagotribune.com,news,Noto Serif,Noto Serif,wordpress,google self,browser,2026-09-23
@@ -1734,7 +1771,7 @@ circuitlab.com,startups,Helvetica Neue,Helvetica Neue,,google,browser,2026-09-23
 circumventpharmaceuticals.com,startups,Futura Lt W01,Futura Lt W01,wix,self,browser,2026-09-23
 ciro.io,startups,Plus Jakarta Sans,Plus Jakarta Display,nextjs,self,browser,2026-09-23
 cisa.gov,government,Source Sans,Source Sans,,self,browser,2026-09-23
-cisco.com,enterprise,Inter,Inter,,self,browser,2026-09-25
+cisco.com,enterprise,Inter,Inter,,self,browser,2026-09-26
 cisf.gov.in,popular,Roboto,Lexend Deca,,,wayback-browser,2025-11-15
 cisternabx.com,startups,DM Sans,DM Sans,webflow,google,browser,2026-09-23
 citi.com,enterprise,Interstate,Interstate,,self,browser,2026-09-23
@@ -1770,6 +1807,7 @@ claytonwramsey.com,indie,Inter,Avenir,,,browser,2026-09-23
 cleanly.com,startups,Hanken Grotesk,Hanken Grotesk,wordpress,self,browser,2026-09-23
 clear-guide.org,popular,Inter,Inter,,google,browser,2026-09-23
 clear.in,startups,Gilroy,Gilroy,nextjs,self,browser,2026-09-23
+clearbrain.com,startups,Times New Roman,Times New Roman,webflow,,wayback-browser,2025-08-15
 clearesthealth.com,startups,Inter,Inter,,google,browser,2026-09-23
 cleargene.com,startups,Gilroy,Gilroy,webflow,self,browser,2026-09-23
 cleargenetics.com,startups,Futura Allele,Futura Allele,nextjs,self,browser,2026-09-23
@@ -1778,11 +1816,14 @@ clearscore.com,startups,CSClarity,CSClarity,gatsby,self,browser,2026-09-23
 clearspace.org,startups,Pangea Text,TT Bakers,nextjs,google self,browser,2026-09-23
 clerked.ai,startups,Inter,Inter,,self,browser,2026-09-23
 clerky.com,startups,Graphik Clerky,Graphik Clerky,webflow,self,browser,2026-09-23
+cleveland.com,news,Benton Sans,Benton Sans,,,wayback-browser,2018-05-15
 clevelandclinic.org,popular,Roboto,Roboto,nextjs,self,browser,2026-09-23
 clever.com,startups,Messina Sans,ABCArizona Mix,wordpress,google self,browser,2026-09-23
 cleverdeck.com,startups,Slabo 27px,Slabo 27px,,google self,browser,2026-09-23
+clew.ai,startups,system-ui,system-ui,gatsby,,wayback-browser,2021-08-15
 clickfacts.com,startups,Nunito Sans,Inter,wordpress,self,browser,2026-09-23
 clickhouse.com,devtools,Inter,Basier,nextjs,self,browser,2026-09-23
+clickpass.com,startups,Times New Roman,Times New Roman,wordpress,,wayback-browser,2017-05-15
 clickpe.ai,startups,Nohemi,Nohemi,nextjs,self,browser,2026-09-23
 clickpetroleoegas.com.br,popular,Open Sans,Open Sans,wordpress,google,browser,2026-09-23
 clickup.com,saas,Inter,Plus Jakarta Sans,nextjs,self,browser,2026-09-23
@@ -1806,13 +1847,15 @@ closure-intel.com,startups,Avenir,Avenir,nextjs,self,browser,2026-09-23
 cloud.google.com,devtools,Google Sans,Google Sans,,google,browser,2026-09-23
 cloud.microsoft,popular,Segoe Sans,Segoe Sans,,self,browser,2026-09-23
 cloudanix.com,startups,Satoshi,Clash Grotesk,,self,browser,2026-09-23
+cloudant.com,startups,Montserrat,Montserrat,wordpress,,wayback-browser,2016-05-15
 cloudchipr.com,startups,Poppins,Poppins,webflow,google,browser,2026-09-23
 cloudcruise.com,startups,Google Sans,Google Sans,framer,google self,browser,2026-09-23
-cloudflare.com,saas,FT Kunst Grotesk,FT Kunst Grotesk,,self,browser,2026-09-25
+cloudflare.com,saas,FT Kunst Grotesk,FT Kunst Grotesk,,self,browser,2026-09-26
 cloudglue.dev,startups,Inter,Urbanist,framer,self,browser,2026-09-23
 cloudhumans.com,startups,Inter,Inter,framer,self,browser,2026-09-23
 cloudkitchens.com,startups,suisse Intl,suisse Intl,nextjs,self,browser,2026-09-23
 cloudstitch.com,startups,Gdsherpa,Gdsherpa,nextjs,self,browser,2026-09-23
+cloudthread.io,startups,Poppins,Poppins,,,wayback-browser,2025-11-15
 cloudwalk.io,startups,Cerapro,Cerapro,webflow,google self,browser,2026-09-23
 clubhouse.com,startups,Nunito,Nunito,,google,browser,2026-09-23
 clubready.com,popular,Roboto,Poppins,wordpress,google self,browser,2026-09-23
@@ -1825,12 +1868,12 @@ cmjornal.pt,popular,CorreioSans,CorreioSans ExtraBold,,self,browser,2026-09-23
 cmoa.jp,popular,Meiryo,Meiryo,,,wayback-browser,2025-02-15
 cmrsurgical.com,startups,Open Sans,Open Sans,wordpress,google self,browser,2026-09-23
 cms.gov,government,Public Sans,Lexend,,self,browser,2026-09-23
-cmu.edu,universities,Open Sans,Open Sans,,adobe,browser,2026-09-25
+cmu.edu,universities,Open Sans,Open Sans,,adobe,browser,2026-09-26
 cmux.com,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 cnbc.com,news,Proxima Nova,Proxima Nova,,self,browser,2026-09-23
 cnbcindonesia.com,popular,Figtree,Figtree,,google self,browser,2026-09-23
 cnews.fr,popular,CNews Light Romain,CNews Bold Romain,,self,browser,2026-09-23
-cnn.com,news,Cnn Sans Display,Cnn Sans Display,,self,browser,2026-09-25
+cnn.com,news,Cnn Sans Display,Cnn Sans Display,,self,browser,2026-09-26
 cnnbrasil.com.br,popular,cnn Sans,cnn Sans,nextjs,google self,browser,2026-09-23
 cnnindonesia.com,popular,CNNsans,CNNsans,,self,browser,2026-09-23
 co.dev,startups,Inter,Inter,,self,browser,2026-09-23
@@ -1840,11 +1883,12 @@ coarena.ai,startups,Space Grotesk,Space Grotesk,nextjs,self,browser,2026-09-23
 coba.ai,startups,JetBrains Mono,Bricolage Grotesque,,google,browser,2026-09-23
 cobbery.com,startups,Manrope,PT Serif,,self,browser,2026-09-23
 coca-cola.com,popular,TCCC UnityText,TCCC UnityText,,self,browser,2026-09-23
-coca-colacompany.com,enterprise,TCCCUnity head,TCCCUnity head,,self,browser,2026-09-25
+coca-colacompany.com,enterprise,TCCCUnity head,TCCCUnity head,,self,browser,2026-09-26
 cocacola.co.jp,popular,TCCC UnityText,TCCC UnityText,,,wayback-browser,2023-11-15
 coches.net,popular,Poppins Motor,Poppins Motor,,self,browser,2026-09-23
 cockroachlabs.com,devtools,Geist,Geist,nextjs,self,browser,2026-09-23
 cococart.co,startups,Graphik,Graphik,framer,self,browser,2026-09-23
+cocoon.com,startups,Times New Roman,Times New Roman,webflow,,wayback-browser,2022-05-15
 cocowallet.app,startups,Poppins,Poppins,nextjs,self,browser,2026-09-23
 cocrafter.com,startups,Montserrat,Plus Jakarta Sans,webflow,google,browser,2026-09-23
 cocreate.so,startups,Sora,Georgia,nextjs,self,browser,2026-09-23
@@ -1869,6 +1913,7 @@ codepen.io,devtools,Lato,SF Mono,nextjs,self,browser,2026-09-23
 coderhouse.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,framer,self,browser,2026-09-23
 codesandbox.io,devtools,Inter,Inter,nextjs,self,browser,2026-09-23
 codeshealth.com,startups,Figtree,IvyPresto Text,framer,google self,browser,2026-09-23
+codestream.com,startups,Times New Roman,Times New Roman,webflow,,wayback-browser,2023-11-15
 codevisor.dev,startups,system-ui,system-ui,,,browser,2026-09-23
 codeviz.ai,startups,system-ui,system-ui,nextjs,self,browser,2026-09-23
 codewisp.ai,startups,Geist Mono,Geist,,google,browser,2026-09-23
@@ -1888,7 +1933,8 @@ cohere.com,saas,Unica77 Cohere,Unica77 Cohere,nextjs,self,browser,2026-09-23
 cohere.io,startups,Inter,Inter,nextjs,google self,browser,2026-09-23
 cohesionplatform.com,startups,Lexend Deca Local,Lexend Deca Local,,self,browser,2026-09-23
 cohesity.com,startups,Klavika,Klavika,,google self,browser,2026-09-23
-coinbase.com,startups,Coinbase Text,Coinbase Display,,self,browser,2026-09-25
+coinbase.com,startups,Coinbase Text,Coinbase Display,,self,browser,2026-09-26
+coindcx.com,startups,Inter,Inter,wordpress,,wayback-browser,2025-11-15
 coingecko.com,popular,Inter,Inter,,self,browser,2026-09-23
 coinrule.com,startups,Lato,Lato,,google self,browser,2026-09-23
 coinswitch.co,startups,Nexa,Nexa,nextjs,self,browser,2026-09-23
@@ -1917,7 +1963,9 @@ comena.ai,startups,DM Sans,Host Grotesk,framer,google self,browser,2026-09-23
 comfy.ua,popular,Inter,Inter,,self,browser,2026-09-23
 comfydeploy.com,startups,Outfit,Outfit,framer,google self,browser,2026-09-23
 comix.to,popular,Poppins,Poppins,,google,browser,2026-09-23
+command.ai,startups,Times New Roman,Times New Roman,,,wayback-browser,2025-11-15
 commbank.com.au,enterprise,CBABeacon Sans,CBABeacon Sans,,self,browser,2026-09-23
+commerce.gov,government,Source Sans,Merriweather,,,wayback-browser,2020-05-15
 commercetools.com,startups,TT Commons Pro,PP Right Grotesk,webflow,self,browser,2026-09-23
 commodityai.io,startups,Inter,Display,nextjs,self,browser,2026-09-23
 commonpaper.com,startups,Inter,Inter,wordpress,google self,browser,2026-09-23
@@ -1932,6 +1980,7 @@ complir.io,startups,Circular,Lora,nextjs,self,browser,2026-09-23
 complydo.io,startups,Inter Tight,Inter Tight,webflow,google self,browser,2026-09-23
 compose.ai,startups,Inter Compose,Inter Compose,nextjs,google self,browser,2026-09-23
 comprarapida.co,startups,Lato,Lato,,self,browser,2026-09-23
+comprehend.com,startups,Century Gothic,Century Gothic,wordpress,,wayback-browser,2021-08-15
 compresr.ai,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 compup.io,startups,Open Sans,Open Sans,nextjs,self,browser,2026-09-23
 computer.rip,indie,U001,U001,,self,browser,2026-09-23
@@ -1960,6 +2009,7 @@ conocophillips.com,enterprise,Public Sans,Public Sans,,google,browser,2026-09-23
 consensys.io,startups,Atyp Text,Atyp Text,,self,browser,2026-09-23
 constellation.space,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 constructable.ai,startups,Inter,Inter,,google,browser,2026-09-23
+construction-physics.com,indie,system-ui,system-ui,,,wayback-browser,2025-11-15
 consumerfinance.gov,government,Source Sans,Source Sans,,self,browser,2026-09-23
 consus.io,startups,Helvetica Neue,Helvetica Neue,,google,browser,2026-09-23
 contalink.com,startups,sans-serif,Lexend,,google,browser,2026-09-23
@@ -2004,11 +2054,11 @@ corgea.com,startups,Manrope,Space Grotesk,,google self,browser,2026-09-23
 corgi.insure,startups,Geist,f37Bolton,nextjs,self,browser,2026-09-23
 corgilabs.ai,startups,Inter,Cal Sans,,google,browser,2026-09-23
 coris.ai,startups,Inter,Satoshi,webflow,google self,browser,2026-09-23
-cornell.edu,universities,Freight Sans Pro,Freight Text Pro,,adobe self,browser,2026-09-25
+cornell.edu,universities,Freight Sans Pro,Freight Text Pro,,adobe self,browser,2026-09-26
 correio24horas.com.br,popular,Roboto,Roboto,,,wayback-browser,2018-05-15
 correios.com.br,popular,Trebuchet MS,Trebuchet MS,,self,browser,2026-09-23
 correoargentino.com.ar,popular,Cabin Condensed,Cabin Condensed,,,wayback-browser,2025-02-15
-corriere.it,news,SolferinoText,SolferinoText,,google self,browser,2026-09-25
+corriere.it,news,SolferinoText,SolferinoText,,google self,browser,2026-09-26
 corrode.dev,indie,Inter,Bebas Neue,,self,browser,2026-09-23
 corsair.dev,startups,Host Grotesk,Host Grotesk,nextjs,self,browser,2026-09-23
 corsix.org,indie,Merriweather,Open Sans,,google,browser,2026-09-23
@@ -2024,7 +2074,7 @@ cosmicjs.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 cosmicrobotics.com,startups,Montserrat,Montserrat,,google,browser,2026-09-23
 cosmopolitan.com,popular,Basis Grotesque Pro,Basis Grotesque Pro,nextjs,self,browser,2026-09-23
 cossunex.com,popular,Inter,Inter,nextjs,self,browser,2026-09-23
-costco.com,ecommerce,Costco Sans,Costco Sans,nextjs,self,browser,2026-09-25
+costco.com,ecommerce,Costco Sans,Costco Sans,nextjs,self,browser,2026-09-26
 costplusdrugs.com,startups,Manrope,Manrope,nextjs,google self,browser,2026-09-23
 costream.ai,startups,Geist,Playfair Display,nextjs,self,browser,2026-09-23
 cotera.co,startups,Inter,Fraunces,nextjs,self,browser,2026-09-23
@@ -2131,14 +2181,14 @@ curocharging.com,startups,Neue Haas Grotesk Display Pro,Neue Haas Grotesk Displa
 curri.com,startups,Inter,Laygrotesk,nextjs,self,browser,2026-09-23
 currys.co.uk,ecommerce,Currys Sans,Currys Sans Headline,,self,browser,2026-09-23
 curseforge.com,popular,lato Local Font,montserrat Local Font,nextjs,self,browser,2026-09-23
-cursor.com,devtools,Cursor Gothic,Cursor Gothic,nextjs,self,browser,2026-09-25
+cursor.com,devtools,Cursor Gothic,Cursor Gothic,nextjs,self,browser,2026-09-26
 curtsyapp.com,startups,Moderat,Curtsy Clasica,nextjs,self,browser,2026-09-23
 curvenote.com,startups,Standard,Standard,,self,browser,2026-09-23
 customer.io,saas,saans Font,saans Font,nextjs,self,browser,2026-09-23
 customily.com,startups,Inter,Inter,webflow,google self,browser,2026-09-23
 cutr.ai,startups,Averta standard,Averta standard,webflow,google self,browser,2026-09-23
 cuyana.com,ecommerce,StyreneA,StyreneA,shopify,self,browser,2026-09-23
-cvs.com,ecommerce,CVS Health Sans,CVS Health Sans,nextjs,google self,browser,2026-09-25
+cvs.com,ecommerce,CVS Health Sans,CVS Health Sans,nextjs,google self,browser,2026-09-26
 cvshealth.com,enterprise,CVS Sans,CVS Sans,,self,browser,2026-09-23
 cybercrime.gov.in,popular,Lato,Open Sans,,self,browser,2026-09-23
 cybercultural.com,indie,Inter,Redhat,,self,browser,2026-09-23
@@ -2223,9 +2273,9 @@ dashlabs.ai,startups,DM Sans,DM Sans,nextjs,google self,browser,2026-09-23
 dashworks.ai,startups,Manrope,Victor Serif,webflow,google self,browser,2026-09-23
 dasouche.com,startups,SF NS Display,SF NS Display,nuxt,self,browser,2026-09-23
 data.gov,government,system-ui,system-ui,,,browser,2026-09-23
-databricks.com,saas,DM Sans,DM Sans,gatsby,self,browser,2026-09-25
+databricks.com,saas,DM Sans,DM Sans,gatsby,self,browser,2026-09-26
 datacurve.ai,startups,suisse Intl,Exposure,nextjs,self,browser,2026-09-23
-datadoghq.com,saas,National,National,,self,browser,2026-09-25
+datadoghq.com,saas,National,National,,self,browser,2026-09-26
 datadrivenbioscience.com,startups,Sarabun,Sarabun,squarespace,google self,browser,2026-09-23
 datafold.com,startups,Aspekta 400,Aspekta 400,,self,browser,2026-09-23
 datafruit.ai,startups,Golos Text,Platypi,nextjs,self,browser,2026-09-23
@@ -2286,7 +2336,7 @@ decohere.ai,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 decolar.com,popular,Rubik,Rubik,,,wayback-browser,2019-05-15
 dedaluslabs.ai,startups,Nacelle,Nacelle,nextjs,google self,browser,2026-09-23
 dedeman.ro,popular,Open Sans,Sofia Sans,,self,browser,2026-09-23
-deel.com,saas,Inter,Bagoss Condensed Font,nextjs,self,browser,2026-09-25
+deel.com,saas,Inter,Bagoss Condensed Font,nextjs,self,browser,2026-09-26
 deep24.com,startups,Inter,Fraunces,,google,browser,2026-09-23
 deepgram.com,startups,Inter,Roobert,nextjs,self,browser,2026-09-23
 deepgrove.ai,startups,IBM Plex Sans,IBM Plex Sans,,google,browser,2026-09-23
@@ -2319,7 +2369,7 @@ delineate.pro,startups,Plus Jakarta Sans,Plus Jakarta Sans,nextjs,self,browser,2
 delish.com,popular,TT Commons Pro,TT Commons Pro,nextjs,self,browser,2026-09-23
 delishkitchen.tv,popular,system-ui,system-ui,nuxt,,browser,2026-09-23
 deliverect.com,startups,Proxima Nova,Proxima Nova,nextjs,self,browser,2026-09-23
-dell.com,enterprise,Roboto,Roboto,,self,browser,2026-09-25
+dell.com,enterprise,Roboto,Roboto,,self,browser,2026-09-26
 deloitte.com,enterprise,Open Sans,Open Sans,,self,browser,2026-09-23
 delt.ai,startups,Barlow,Quicksand,webflow,google self,browser,2026-09-23
 delta-executor.com,popular,system-ui,system-ui,wordpress,google,browser,2026-09-23
@@ -2336,7 +2386,7 @@ den.dev,indie,Inter,Inter,,self,browser,2026-09-23
 dench.com,startups,Inter,Display,nextjs,self,browser,2026-09-23
 denki.ai,startups,system-ui,system-ui,nextjs,self,browser,2026-09-23
 denmark.dk,government,Body Font,Body Font,,self,browser,2026-09-23
-deno.com,devtools,Inter,Inter,,self,browser,2026-09-25
+deno.com,devtools,Inter,Inter,,self,browser,2026-09-26
 denta.com,startups,Atkinson Hyperlegible Next,Plus Jakarta Sans,nextjs,self,browser,2026-09-23
 denverpost.com,news,Noto Sans,Noto Sans,wordpress,google self,browser,2026-09-23
 deped.gov.ph,popular,Gill Sans,Gill Sans,wordpress,,wayback-browser,2025-11-15
@@ -2433,7 +2483,7 @@ discord.com,startups,Abcgintodiscord,Abcgintodiscordnord,webflow,self,browser,20
 discoveredmaterials.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 discoverpilgrim.com,popular,Inter,Inter,shopify,self,browser,2026-09-23
 diskwala.com,popular,Public Sans,Public Sans,,google,browser,2026-09-23
-disney.com,enterprise,Inspire TWDC,Inspire TWDC,,self,browser,2026-09-25
+disney.com,enterprise,Inspire TWDC,Inspire TWDC,,self,browser,2026-09-26
 disneyplus.com,popular,Inspire,Inspire,nextjs,self,browser,2026-09-23
 dispatch.com,news,Unify Sans,Unify Sans,,,browser,2026-09-23
 dispatch.space,startups,Zalando Sans,Zalando Sans,,google,browser,2026-09-23
@@ -2474,7 +2524,7 @@ dns-shop.ru,popular,PT Sans,PT Sans,,,wayback-browser,2021-02-15
 docbot.co,startups,Libre Franklin,Libre Franklin,wordpress,google self,browser,2026-09-23
 dochord.com,popular,Kanit,Kanit,wordpress,google self,browser,2026-09-23
 dock.tech,startups,Raleway,Raleway,wordpress,google,browser,2026-09-23
-docker.com,devtools,Inter,ABC Repro,wordpress,google self,browser,2026-09-25
+docker.com,devtools,Inter,ABC Repro,wordpress,google self,browser,2026-09-26
 docketqa.com,startups,Inter,Inter,webflow,google self,browser,2026-09-23
 docomo.ne.jp,popular,Hiragino Kaku Gothic,Hiragino Kaku Gothic,,,wayback-browser,2024-11-15
 docsum.ai,startups,Outfit,Outfit,framer,google self,browser,2026-09-23
@@ -2482,7 +2532,7 @@ doctolib.fr,startups,Roboto,Montserrat,,self,browser,2026-09-23
 doctoreto.com,popular,iran Sans,iran Sans,nextjs,self,browser,2026-09-23
 docurahealth.com,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 docusaurus.io,devtools,system-ui,system-ui,,,browser,2026-09-23
-docusign.com,saas,DSIndigo,DSIndigo,nextjs,google self,browser,2026-09-25
+docusign.com,saas,DSIndigo,DSIndigo,nextjs,google self,browser,2026-09-26
 docvita.com,startups,Noto Sans,Noto Sans,,google,browser,2026-09-23
 dodo.ai,startups,SF Pro,SF Pro,,,browser,2026-09-23
 doe.so,startups,Buch,Buch,nextjs,self,browser,2026-09-23
@@ -2501,7 +2551,7 @@ donkey.trade,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 donya-e-eqtesad.com,popular,Iran Yekan,Iran Yekan,,self,browser,2026-09-23
 doola.com,startups,Inter,Inter,wordpress,self,browser,2026-09-23
 doomersion.com,startups,system-ui,system-ui,,,browser,2026-09-23
-doordash.com,ecommerce,DD Norms,DD Norms,nextjs,self,browser,2026-09-25
+doordash.com,ecommerce,DD Norms,DD Norms,nextjs,self,browser,2026-09-26
 dopa.go.th,popular,Kanit Master,Kanit Master,,,wayback-browser,2023-08-15
 doppler.com,startups,Doppler Repro,Doppler Repro,nextjs,self,browser,2026-09-23
 dorama.land,popular,Blogger Sans,Blogger Sans,,self,browser,2026-09-23
@@ -2575,7 +2625,7 @@ drom.ru,popular,Arial,Arial,,,browser,2026-09-23
 drools.com,startups,D Din Exp New,D Din Exp New,wordpress,self,browser,2026-09-23
 droom.in,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 dropback.com,startups,Figtree,Figtree,nextjs,self,browser,2026-09-23
-dropbox.com,saas,Atlas Grotesk,Atlas Grotesk,,self,browser,2026-09-25
+dropbox.com,saas,Atlas Grotesk,Atlas Grotesk,,self,browser,2026-09-26
 dropboxsign.com,saas,Atlas Grotesk,Sharp Grotesk DB20,webflow,self,browser,2026-09-23
 dropgame.jp,popular,Lucida Grande,Lucida Grande,,google,browser,2026-09-23
 dropprintgen.com,startups,system-ui,system-ui,,,browser,2026-09-23
@@ -2704,7 +2754,7 @@ ekholabs.com,startups,Work Sans,Work Sans,,self,browser,2026-09-23
 eki-net.com,popular,Noto Serif Japanese,Noto Serif Japanese,,,wayback-browser,2024-02-15
 ekitan.com,popular,Open Sans,Open Sans,,google self,browser,2026-09-23
 eksisozluk.com,popular,Source Sans,Source Sans,,google self,browser,2026-09-23
-elastic.co,devtools,Inter,Mier B,nextjs,self,browser,2026-09-25
+elastic.co,devtools,Inter,Mier B,nextjs,self,browser,2026-09-26
 elayne.com,startups,Lato,Charis SIL,webflow,google self,browser,2026-09-23
 elbalad.news,popular,Arial,Arial,,,browser,2026-09-23
 elcinema.com,popular,Droid Arabic Kufi,Droid Arabic Kufi,,self,browser,2026-09-23
@@ -2742,7 +2792,7 @@ elmundo.es,news,Mundo,Mundo,,self,browser,2026-09-23
 elnacional.cat,popular,AG Black,AG Black,,self,browser,2026-09-23
 elodin.systems,startups,IBM Plex Sans,IBM Plex Sans,webflow,google self,browser,2026-09-23
 eloquentai.co,startups,Geist,Erode,nextjs,self,browser,2026-09-23
-elpais.com,news,Majrit Tx,Majrit Tx,,self,browser,2026-09-25
+elpais.com,news,Majrit Tx,Majrit Tx,,self,browser,2026-09-26
 elpalaciodehierro.com,popular,Times New Roman,Times New Roman,,,wayback-browser,2023-08-15
 elphinstone.com.pk,startups,Arial Nova,Arial Nova,wordpress,adobe google self,browser,2026-09-23
 elster.de,popular,Open Sans,Open Sans,,self,browser,2026-09-23
@@ -2879,7 +2929,7 @@ etched.com,startups,Söhne,Söhne,nextjs,self,browser,2026-09-23
 eternalmangas.org,popular,Segoe UI,Segoe UI,,self,browser,2026-09-23
 ethos-space.com,startups,Montserrat,Montserrat,wordpress,self,browser,2026-09-23
 ethosx.finance,startups,Roboto,Roboto,wordpress,google self,browser,2026-09-23
-ethz.ch,universities,DINPro,DINPro,,self,browser,2026-09-25
+ethz.ch,universities,DINPro,DINPro,,self,browser,2026-09-26
 etleap.com,startups,Inter,Gilroy,framer,self,browser,2026-09-23
 etrade.com,popular,Graphik ETRADE,Graphik ETRADE,,self,browser,2026-09-23
 etrain.info,popular,Arial,Arial,,,browser,2026-09-23
@@ -2891,14 +2941,14 @@ eugittx.com,startups,Poppins,Poppins,squarespace,google self,browser,2026-09-23
 eukaryotewritesblog.com,indie,Libre Baskerville,Ubuntu,wordpress,self,browser,2026-09-23
 euro.com.pl,popular,Lato,Lato,,google,browser,2026-09-23
 euronews.com,news,Inter,Inter,,google self,browser,2026-09-23
-europa.eu,government,Arial,Arial,,,browser,2026-09-25
+europa.eu,government,Arial,Arial,,,browser,2026-09-26
 eurosport.fr,popular,Aeonik Eurosport,Aeonik Eurosport,nextjs,self,browser,2026-09-23
 evalapply.org,indie,Gentium Book Plus,Gentium Book Plus,,self,browser,2026-09-23
 evanhahn.com,indie,Noto Sans,Noto Sans,,,browser,2026-09-23
 evenuplaw.com,startups,Inter,PT Serif,wordpress,google,browser,2026-09-23
 everestagi.com,startups,IBM Plex Mono,Space Mono,,google,browser,2026-09-23
 evergrovelabs.com,startups,Figtree,EB Garamond,,google,browser,2026-09-23
-everlane.com,ecommerce,Maison Neue,Maison Neue,shopify,google self,browser,2026-09-25
+everlane.com,ecommerce,Maison Neue,Maison Neue,shopify,google self,browser,2026-09-26
 evernote.com,saas,Inter,Figtree,nextjs,self,browser,2026-09-23
 every.io,startups,Neue Montreal,Neue Montreal,webflow,self,browser,2026-09-23
 evidence.dev,startups,Geist,Geist,,google self,browser,2026-09-23
@@ -2938,7 +2988,7 @@ experimental-history.com,indie,system-ui,SF Pro,,google,browser,2026-09-23
 exple.tive.org,indie,Times New Roman,Times New Roman,,,browser,2026-09-23
 explo.co,startups,DM Sans,Manrope,webflow,google self,browser,2026-09-23
 explorex.co,startups,Inter,Sora,,google,browser,2026-09-23
-expo.dev,devtools,Inter,Inter,nextjs,self,browser,2026-09-25
+expo.dev,devtools,Inter,Inter,nextjs,self,browser,2026-09-26
 express.co.uk,news,Cardo,Cardo,,self,browser,2026-09-23
 expressbuilding.ph,startups,Montserrat,Montserrat,nextjs,self,browser,2026-09-23
 expressen.se,popular,Siri,Siri,,self,browser,2026-09-23
@@ -3028,7 +3078,7 @@ fec.gov,government,Karla,Gandhi,,self,browser,2026-09-23
 fed10.ai,startups,Geist,Atacama,,google self,browser,2026-09-23
 federalregister.gov,government,Paragraph Symbols,Paragraph Symbols,,google self,browser,2026-09-23
 federalreserve.gov,government,Arial,Georgia,,self,browser,2026-09-23
-fedex.com,enterprise,Fed Ex Sans,Fed Ex Sans,,self,browser,2026-09-24
+fedex.com,enterprise,Fed Ex Sans,Fed Ex Sans,,self,browser,2026-09-26
 fedoraproject.org,devtools,Open Sans,Montserrat,nuxt,self,browser,2026-09-23
 feedzai.com,startups,Geist,Geist,wordpress,self,browser,2026-09-23
 feldy.ai,startups,General Sans,General Sans,framer,google self,browser,2026-09-23
@@ -3063,7 +3113,7 @@ fieldguide.com,startups,Aeonik,arizona Mix,nextjs,self,browser,2026-09-23
 fieldproxy.com,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 fieltorcedor.com.br,popular,Thin,Media,,,wayback-browser,2018-05-15
 fifthdoor.com,startups,Instrument Sans,Bungee,,google,browser,2026-09-23
-figma.com,saas,Figma Sans,Figma Sans,nextjs,self,browser,2026-09-25
+figma.com,saas,Figma Sans,Figma Sans,nextjs,self,browser,2026-09-26
 figure.ai,startups,Neue Haas Grot Text,Pp Neue Machina Plain,nextjs,google self,browser,2026-09-23
 file770.com,indie,Georgia,Helvetica Neue,wordpress,,browser,2026-09-23
 filfre.net,indie,Lucida Grande,Trebuchet MS,wordpress,self,browser,2026-09-23
@@ -3190,7 +3240,7 @@ flutter.dev,devtools,Google Sans Flex,Google Sans Flex,,google,browser,2026-09-2
 flutterflow.io,startups,Inter,Urbanist,,self,browser,2026-09-23
 flutterwave.com,startups,Moderat,Millik,nuxt,self,browser,2026-09-23
 fluxauto.ai,startups,Inter,Plus Jakarta Sans,,google,browser,2026-09-23
-fly.io,devtools,Fricolage Grotesque,Mackinac,,self,browser,2026-09-25
+fly.io,devtools,Fricolage Grotesque,Mackinac,,self,browser,2026-09-26
 flycode.com,startups,Manrope,Manrope,framer,google self,browser,2026-09-23
 flyingpenguin.com,indie,sans-serif,sans-serif,wordpress,self,browser,2026-09-23
 flypyka.com,startups,Manrope,Manrope,webflow,google self,browser,2026-09-23
@@ -3216,8 +3266,8 @@ fondo.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,webflow,google self,brows
 fontawesome.com,startups,Cera Round Pro,Cera Round Pro,,google self,browser,2026-09-23
 football.com,popular,Roboto,Roboto,nuxt,self,browser,2026-09-23
 footmercato.net,popular,Archivo,Archivo,,self,browser,2026-09-23
-forbes.com,news,Graphik,Georgia,nextjs,self,browser,2026-09-25
-ford.com,enterprise,Ford Font,Ford Font,,self,browser,2026-09-25
+forbes.com,news,Graphik,Georgia,nextjs,self,browser,2026-09-26
+ford.com,enterprise,Ford Font,Ford Font,,self,browser,2026-09-26
 fordham.edu,universities,Modern Gothic,Modern Gothic,,adobe google self,browser,2026-09-23
 forebet.com,popular,Lato,Lato,,google,browser,2026-09-23
 foreca.fi,popular,system-ui,system-ui,,,browser,2026-09-23
@@ -3238,7 +3288,7 @@ fortnite.gg,popular,Fn,Fn,,self,browser,2026-09-23
 fortnitetracker.com,popular,Roboto,Roboto,,adobe google self,browser,2026-09-23
 forto.com,startups,Inter,Raleway,wordpress,self,browser,2026-09-23
 fortunahealth.com,startups,Gtwalsheimpro,Gtwalsheimpro,webflow,self,browser,2026-09-23
-fortune.com,news,Inria Serif,Inria Serif,nextjs,self,browser,2026-09-25
+fortune.com,news,Inria Serif,Inria Serif,nextjs,self,browser,2026-09-26
 forum.market,startups,IBM Plex Sans,IBM Plex Sans,,self,browser,2026-09-23
 foster.co,startups,Source Sans,Libre Baskerville,webflow,google,browser,2026-09-23
 fotocasa.es,popular,Open Sans,Open Sans,,self,browser,2026-09-23
@@ -3246,13 +3296,13 @@ fotomac.com.tr,popular,system-ui,system-ui,,self,browser,2026-09-23
 fountain.com,startups,Circularxx,Circularxx,wordpress,self,browser,2026-09-23
 fourgrowers.com,startups,Montserrat,Montserrat,wordpress,google,browser,2026-09-23
 foxconn.com,enterprise,Noto Sans,Noto Sans,nuxt,,browser,2026-09-23
-foxnews.com,news,Roboto,Roboto,,google,browser,2026-09-25
+foxnews.com,news,Roboto,Roboto,,google,browser,2026-09-26
 fr.de,popular,Roboto,Roboto,,google self,browser,2026-09-23
 fractal-labs.gg,startups,Space Grotesk,Space Grotesk,framer,google,browser,2026-09-23
 fractalfir.github.io,indie,Arial,Arial,,,browser,2026-09-23
 fractional.app,startups,Söhne,Söhne,,self,browser,2026-09-23
 fragrantica.com,popular,system-ui,system-ui,,,browser,2026-09-23
-framer.com,saas,Inter,GT Walsheim,framer,self,browser,2026-09-25
+framer.com,saas,Inter,GT Walsheim,framer,self,browser,2026-09-26
 framewisehealth.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,,google,browser,2026-09-23
 france24.com,news,Inter,Inter,,self,browser,2026-09-23
 franceconnect.gouv.fr,popular,Marianne,Marianne,,self,browser,2026-09-23
@@ -3575,8 +3625,8 @@ gismeteo.ru,popular,PTRoot,PTRoot,,self,browser,2026-09-23
 gisomusic.com,popular,Gsans,Gsans,wordpress,self,browser,2026-09-23
 git-scm.com,devtools,Adelle,Adelle,,,browser,2026-09-23
 git.cafe,startups,Geist,Geist,,self,browser,2026-09-23
-github.com,devtools,Mona Sans,Mona Sans,,self,browser,2026-09-25
-gitlab.com,saas,GitLab Sans,GitLab Sans,nuxt,self,browser,2026-09-25
+github.com,devtools,Mona Sans,Mona Sans,,self,browser,2026-09-26
+gitlab.com,saas,GitLab Sans,GitLab Sans,nuxt,self,browser,2026-09-26
 gitpod.io,devtools,system-ui,system-ui,,,browser,2026-09-23
 gitstart.com,startups,Mona Sans,Mona Sans,,self,browser,2026-09-23
 giuliomagnifico.blog,indie,system-ui,system-ui,,,browser,2026-09-23
@@ -3603,10 +3653,10 @@ globe.exchange,startups,Open Sans,Open Sans,nextjs,google,browser,2026-09-23
 globo.com,popular,Globotipo UI,Globotipo UI,,self,browser,2026-09-23
 gloglo.com,startups,Nunito,Nunito,nextjs,self,browser,2026-09-23
 glorioushop.com,popular,Segoe UI,Segoe UI,,,browser,2026-09-23
-glossier.com,ecommerce,Apercu,Apercu,shopify,self,browser,2026-09-25
+glossier.com,ecommerce,Apercu,Apercu,shopify,self,browser,2026-09-26
 glowing.io,startups,Manrope,Manrope,webflow,google,browser,2026-09-23
 glthr.com,indie,Inter,Geist,nextjs,self,browser,2026-09-23
-gm.com,enterprise,Overpass,Overpass,,self,browser,2026-09-25
+gm.com,enterprise,Overpass,Overpass,,self,browser,2026-09-26
 gmarket.co.kr,popular,Noto Sans KR,Noto Sans KR,nextjs,self,browser,2026-09-23
 gmays.com,indie,Cardo,Cardo,wordpress,self,browser,2026-09-23
 gmu.edu,universities,Open Sans,Figtree,,google self,browser,2026-09-23
@@ -3614,7 +3664,7 @@ gmx.net,popular,Verdana,Verdana,,,wayback-browser,2018-08-15
 gnavi.co.jp,popular,Yaku Han JP,Yaku Han JP,,self,browser,2026-09-23
 gnome.org,devtools,Inter,Inter,,self,browser,2026-09-23
 go-manga.com,popular,Poppins,Poppins,wordpress,self,browser,2026-09-23
-go.dev,devtools,system-ui,system-ui,,google,browser,2026-09-25
+go.dev,devtools,system-ui,system-ui,,google,browser,2026-09-26
 go1.com,startups,Enduro,enduro Narrow,nextjs,self,browser,2026-09-23
 goal.com,popular,Satoshi,Satoshi,nextjs,self,browser,2026-09-23
 goal7.co,popular,Helvetica Neue,Kunlasatri,,self,browser,2026-09-23
@@ -3648,7 +3698,7 @@ gokarsa.com,startups,Open Sauce Sans,Open Sauce Sans,nextjs,self,browser,2026-09
 goldbelly.com,startups,Cabin,Instrument Serif,nextjs,self,browser,2026-09-23
 goldbridgebanking.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,nextjs,self,browser,2026-09-23
 goldfishouncereburial.com,popular,Helvetica Neue,Helvetica Neue,,,browser,2026-09-23
-goldmansachs.com,enterprise,GS Sans,GS Sans,nextjs,self,browser,2026-09-25
+goldmansachs.com,enterprise,GS Sans,GS Sans,nextjs,self,browser,2026-09-26
 goldprice.org,popular,Open Sans,Open Sans,,google self,browser,2026-09-23
 golf.dev,startups,Manrope,Manrope,webflow,google,browser,2026-09-23
 golinks.io,startups,Manrope,Manrope,,google self,browser,2026-09-23
@@ -3666,7 +3716,7 @@ goodleap.com,startups,Sofia Pro,Roc Grotesk,nextjs,self,browser,2026-09-23
 goodreads.com,popular,Lato,Lato,,self,browser,2026-09-23
 goodreturns.in,popular,Arial,Arial,,,browser,2026-09-23
 goodybag.com,startups,Gdsherpa,Gdsherpa,nextjs,self,browser,2026-09-23
-google.com,enterprise,sans-serif,sans-serif,,,browser,2026-09-25
+google.com,enterprise,sans-serif,sans-serif,,,browser,2026-09-26
 googleblog.blogspot.com,startups,Google Sans Flex,Google Sans Flex,,google,browser,2026-09-23
 goojara.to,popular,Tahoma,Tahoma,,,browser,2026-09-23
 gooseworks.ai,startups,Geist,Aeonik,nextjs,self,browser,2026-09-23
@@ -3691,7 +3741,7 @@ gov.br,government,Rawline,Rawline,,self,browser,2026-09-23
 gov.ie,government,Lato,Lato,,self,browser,2026-09-23
 gov.pl,government,Open Sans,Open Sans,,self,browser,2026-09-23
 gov.sg,government,Inter,Inter,nextjs,self,browser,2026-09-23
-gov.uk,government,GDS Transport,GDS Transport,,self,browser,2026-09-25
+gov.uk,government,GDS Transport,GDS Transport,,self,browser,2026-09-26
 gov.uz,popular,Montserrat,Montserrat,nextjs,self,browser,2026-09-23
 govdash.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 goveagle.com,startups,Inter Tight,Cambon,nextjs,self,browser,2026-09-23
@@ -3708,7 +3758,7 @@ gpo.gov,government,Arial,Arial,,google self,browser,2026-09-23
 gprocurement.go.th,popular,CSChat Thai UI,CSChat Thai UI,,,wayback-browser,2019-02-15
 gradia.com,startups,Onest,Onest,webflow,self,browser,2026-09-23
 gradle.org,devtools,Lato,Lato,,google self,browser,2026-09-23
-grafana.com,saas,Inter,Poppins,nextjs,self,browser,2026-09-25
+grafana.com,saas,Inter,Poppins,nextjs,self,browser,2026-09-26
 grailed.com,ecommerce,Helvetica,Helvetica,nextjs,self,browser,2026-09-23
 grammarly.com,saas,Glyph,Matter,nextjs,self,browser,2026-09-23
 granbluefantasy.jp,popular,Yaku Han JPs,Telop Mincho,,google self,browser,2026-09-23
@@ -3778,16 +3828,16 @@ gujarat.gov.in,popular,Arial,Arial,,,wayback-browser,2019-11-15
 gulfnews.com,news,Roboto Serif,Roboto Serif,,google,browser,2026-09-23
 gullak.money,startups,Poppins,Poppins,nextjs,self,browser,2026-09-23
 gumloop.com,startups,Geist,Gellix,nextjs,self,browser,2026-09-23
-gumroad.com,saas,ABC Favorit,ABC Favorit,,self,browser,2026-09-25
+gumroad.com,saas,ABC Favorit,ABC Favorit,,self,browser,2026-09-26
 gunbroker.com,popular,Times New Roman,Times New Roman,,,wayback-browser,2023-05-15
 guruhotel.com,startups,DM Sans,DM Sans,nextjs,self,browser,2026-09-23
 gustedt.wordpress.com,indie,Alegreya,Alegreya,wordpress,self,browser,2026-09-23
-gusto.com,saas,Matter,Matter,nextjs,self,browser,2026-09-25
+gusto.com,saas,Matter,Matter,nextjs,self,browser,2026-09-26
 gutgutgoose.com,startups,Figtree,Figtree,framer,google self,browser,2026-09-23
 gwars.io,popular,Tahoma,Tahoma,,,browser,2026-09-23
 gwern.net,indie,Source Serif,Source Serif,,self,browser,2026-09-23
 gymclass.com,startups,Red Hat Display,Red Hat Display,webflow,google,browser,2026-09-23
-gymshark.com,ecommerce,SN Skandia,Plaak,nextjs,self,browser,2026-09-25
+gymshark.com,ecommerce,SN Skandia,Plaak,nextjs,self,browser,2026-09-26
 gzone.ph,popular,Open Sans,Open Sans,,,wayback-browser,2026-02-15
 h1.co,startups,Gilroy,Gilroy,wordpress,self,browser,2026-09-23
 h3x.tech,startups,Alliance No 2,Alliance No 1,webflow,self,browser,2026-09-23
@@ -3835,7 +3885,7 @@ harness.io,saas,Geist,Stkbureauserif,webflow,self,browser,2026-09-23
 harperinsure.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,,google,browser,2026-09-23
 harrys.com,ecommerce,TTCommons Pro,TTCommons Pro,shopify,monotype self,browser,2026-09-23
 hartfordcourant.com,news,Noto Serif,Noto Serif,wordpress,google self,browser,2026-09-23
-harvard.edu,universities,GT America,Canela,wordpress,self,browser,2026-09-25
+harvard.edu,universities,GT America,Canela,wordpress,self,browser,2026-09-26
 harvey.ai,saas,Harvey Sans Font,Harvey Sans Font,nextjs,self,browser,2026-09-23
 haryana.gov.in,popular,Open Sans,Open Sans,wordpress,self,browser,2026-09-23
 hashicorp.com,saas,system-ui,hashicorp Sans,nextjs,self,browser,2026-09-23
@@ -3924,7 +3974,7 @@ herman.bearblog.dev,indie,Verdana,Verdana,,,browser,2026-09-23
 hermes-robotics.com,startups,Open Sans,Open Sans,wix,self,browser,2026-09-23
 heroeswm.ru,popular,Georgia,Georgia,nextjs,,browser,2026-09-23
 heroiclabs.com,startups,Inter,Inter,,self,browser,2026-09-23
-heroku.com,devtools,Salesforce Sans,Avant Garde,wordpress,google self,browser,2026-09-25
+heroku.com,devtools,Salesforce Sans,Avant Garde,wordpress,google self,browser,2026-09-26
 herondata.io,startups,Season Sans,Season Sans,webflow,self,browser,2026-09-23
 heroui.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 heru.app,startups,Lexend Deca,Lexend Deca,,self,browser,2026-09-23
@@ -4016,7 +4066,7 @@ holoo13.com,popular,Isw L,Isw L,,self,browser,2026-09-23
 holygrail.ai,startups,Helvetica Neue,Helvetica Neue,,,browser,2026-09-23
 home.barclays,enterprise,Barclays Effra,Barclays Effra,,self,browser,2026-09-23
 homecenter.com.co,popular,Lato,Lato,nextjs,google self,browser,2026-09-23
-homedepot.com,ecommerce,Helvetica Neue,Helvetica Neue 75,,self,browser,2026-09-25
+homedepot.com,ecommerce,Helvetica Neue,Helvetica Neue 75,,self,browser,2026-09-26
 homejoy.com,startups,Figtree,Figtree,nextjs,self,browser,2026-09-23
 homelight.com,startups,Open Sans,Open Sans,,google,browser,2026-09-23
 homes.com,popular,Outfit,Outfit,,self,browser,2026-09-23
@@ -4055,7 +4105,7 @@ houstonchronicle.com,news,Rubik,Archivo,nextjs,self,browser,2026-09-23
 houzz.com,startups,Figtree,Figtree,,self,browser,2026-09-23
 hover.to,popular,Diatype,Diatype,,self,browser,2026-09-23
 howdy.com,startups,Inter,Inter,nextjs,google self,browser,2026-09-23
-hp.com,enterprise,Forma Djr Micro,Forma Djr Micro,,self,browser,2026-09-25
+hp.com,enterprise,Forma Djr Micro,Forma Djr Micro,,self,browser,2026-09-26
 hpcl.co.in,popular,Montserrat,Montserrat,,,wayback-browser,2023-05-15
 hpe.com,enterprise,HPE Graphik,HPE Graphik,,self,browser,2026-09-23
 hrsa.gov,government,Source Sans,Source Sans,,self,browser,2026-09-23
@@ -4071,7 +4121,7 @@ hubble.ai,startups,Public Sans,Fraunces,,google,browser,2026-09-23
 hubble.com,startups,Instrument Sans,Instrument Sans,framer,google self,browser,2026-09-23
 hubcloud.cx,popular,Inter,Space Grotesk,,google self,browser,2026-09-23
 hublo.com,startups,Season Sans,Season Mix,webflow,self,browser,2026-09-23
-hubspot.com,saas,HubSpot Sans,HubSpot Serif,,self,browser,2026-09-25
+hubspot.com,saas,HubSpot Sans,HubSpot Serif,,self,browser,2026-09-26
 hubuc.com,startups,Open Sans,Open Sans,,google,browser,2026-09-23
 hud.ai,startups,Geist,Geist,nextjs,adobe self,browser,2026-09-23
 hud.gov,government,Poppins,Poppins,,google,browser,2026-09-23
@@ -4079,8 +4129,8 @@ hudl.com,popular,Barlow,Barlow,,google,browser,2026-09-23
 hudson-labs.com,startups,Inter,Source Serif,nextjs,self,browser,2026-09-23
 hudu.com,startups,Poppins,Poppins,nextjs,self,browser,2026-09-23
 huel.com,ecommerce,suisse Intl,suisse Intl,shopify,self,browser,2026-09-23
-huffpost.com,news,Proxima Nova Cond,Proxima Nova Cond,,google self,browser,2026-09-25
-huggingface.co,saas,Source Sans,Source Sans,,self,browser,2026-09-25
+huffpost.com,news,Proxima Nova Cond,Proxima Nova Cond,,google self,browser,2026-09-26
+huggingface.co,saas,Source Sans,Source Sans,,self,browser,2026-09-26
 huimin.cn,startups,Arial,Arial,,,browser,2026-09-23
 humaans.io,startups,system-ui,STKBureau Serif,nextjs,self,browser,2026-09-23
 humanarchive.ai,startups,JetBrains Mono,JetBrains Mono,,google,browser,2026-09-23
@@ -4139,7 +4189,7 @@ iastate.edu,universities,Arial,Arial,,google,browser,2026-09-23
 iau.ir,popular,IRANSans,IRANSans,,,wayback-browser,2023-08-15
 ib-game.jp,popular,Meiryo,Meiryo,,,browser,2026-09-23
 ibispaint.com,popular,Lucida Grande,Lucida Grande,,,browser,2026-09-23
-ibm.com,enterprise,IBM Plex Sans,IBM Plex Sans,,self,browser,2026-09-25
+ibm.com,enterprise,IBM Plex Sans,IBM Plex Sans,,self,browser,2026-09-26
 ibps.in,popular,Times New Roman,Times New Roman,wordpress,,wayback-browser,2024-02-15
 ic3.gov,government,Source Sans,Source Sans,,self,browser,2026-09-23
 icapital.com,startups,Roboto,Avenir Next LT Pro,wordpress,google self,browser,2026-09-23
@@ -4179,7 +4229,7 @@ ihg.com,popular,Graphik,Graphik,,google self,browser,2026-09-23
 ihs.gov,government,Arial,Arial,,self,browser,2026-09-23
 iisc.ac.in,universities,Source Sans,Playfair Display,wordpress,google self,browser,2026-09-23
 iitd.ac.in,universities,Titillium Web,Titillium Web,,google self,browser,2026-09-23
-ikea.com,ecommerce,Noto IKEA,Noto IKEA,,self,browser,2026-09-24
+ikea.com,ecommerce,Noto IKEA,Noto IKEA,,self,browser,2026-09-26
 ikman.lk,popular,Open Sans,Open Sans,,google,browser,2026-09-23
 ilabservice.ai,startups,Inter,Inter,,google,browser,2026-09-23
 ilbe.com,popular,Verdana,Verdana,,self,browser,2026-09-23
@@ -4223,7 +4273,7 @@ impact-drones.com,startups,Hanken Grotesk,Hanken Grotesk,,google,browser,2026-09
 impactive.io,startups,Basic Sans,Basic Sans,webflow,adobe google,browser,2026-09-23
 impacto.google,popular,Google Sans Text,Google Sans,,google,browser,2026-09-23
 imperfect.co,startups,Inter,Rink,nextjs,self,browser,2026-09-23
-imperial.ac.uk,universities,Imperial Text,Imperial Text,,self,browser,2026-09-25
+imperial.ac.uk,universities,Imperial Text,Imperial Text,,self,browser,2026-09-26
 imperialviolet.org,indie,serif,sans-serif,,google,browser,2026-09-23
 impossiblemetals.com,startups,Inter,Inter,wordpress,google self,browser,2026-09-23
 impots.gouv.fr,popular,Marianne,Marianne,,self,browser,2026-09-23
@@ -4252,7 +4302,7 @@ incrediblehealth.com,startups,Manrope,Bricolage Grotesque,webflow,google,browser
 indeed.com,popular,Noto Sans,Noto Sans,,self,browser,2026-09-23
 indeelabs.com,startups,PT Sans,Lato,squarespace,self,browser,2026-09-23
 indemni.com,startups,Instrument Sans,Instrument Sans,nextjs,self,browser,2026-09-23
-independent.co.uk,news,Indy Serif,Indy Serif,,self,browser,2026-09-25
+independent.co.uk,news,Indy Serif,Indy Serif,,self,browser,2026-09-26
 independent.ie,news,Nuacht Serif Text WEBX,Nuacht Serif Text WEBX,nextjs,self,browser,2026-09-23
 index.hr,popular,Roboto,Roboto,,self,browser,2026-09-23
 india.gov.in,government,Noto Sans,Noto Sans,nextjs,google,browser,2026-09-23
@@ -4348,13 +4398,13 @@ int10h.org,indie,Big Blue Term,Big Blue Term,,self,browser,2026-09-23
 intacttherapeutics.com,startups,Open Sans,Open Sans,wordpress,google,browser,2026-09-23
 integrated-reasoning.com,startups,PP Neue Montreal,PP Neue Montreal,,self,browser,2026-09-23
 integuru.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
-intel.com,enterprise,Intel One Body Text,Intel One Display,,self,browser,2026-09-25
+intel.com,enterprise,Intel One Body Text,Intel One Display,,self,browser,2026-09-26
 intellect.co,startups,Inter,Merriweather,wordpress,google,browser,2026-09-23
 intelligence-factory.com,startups,Geist,Source Serif,nextjs,self,browser,2026-09-23
 intelline.ca,startups,Helvetica W01 Roman,Helvetica W01 Roman,wix,self,browser,2026-09-23
 interbet.co.za,popular,Segoe UI,Segoe UI,,,browser,2026-09-23
 intercars.eu,popular,Lato,Lato,nextjs,,wayback-browser,2023-11-15
-intercom.com,saas,Saans,Saans,nextjs,self,browser,2026-09-25
+intercom.com,saas,Saans,Saans,nextjs,self,browser,2026-09-26
 interconnected.org,indie,system-ui,system-ui,,,browser,2026-09-23
 interfaze.ai,startups,Geist Mono,Lora,nextjs,self,browser,2026-09-23
 interfere.com,startups,Inter,Inter,,self,browser,2026-09-23
@@ -4413,7 +4463,7 @@ irna.ir,popular,Vazir,Vazir,,self,browser,2026-09-23
 ironcladapp.com,saas,Moderat,Moderat,wordpress,self,browser,2026-09-23
 ironicsans.ghost.io,indie,system-ui,system-ui,,,browser,2026-09-23
 ironledger.ai,startups,Inter,Inter,nextjs,self,browser,2026-09-23
-irs.gov,government,Source Sans,Source Sans,,,static,2026-09-25
+irs.gov,government,Source Sans,Source Sans,,self,browser,2026-09-26
 is.fi,popular,Source Sans,Graphik Condensed,nextjs,self,browser,2026-09-23
 isabl.io,startups,Roboto Flex,Roboto Flex,nextjs,google inline,static,2026-09-23
 isaidub.asia,popular,Inter,Inter,,google,browser,2026-09-23
@@ -4523,7 +4573,7 @@ jestjs.io,devtools,system-ui,Monaco,,,browser,2026-09-23
 jestor.com,startups,Roobert,Roobert,,self,browser,2026-09-23
 jet2holidays.com,popular,Open Sans,Open Sans,,google,browser,2026-09-23
 jetadmin.io,startups,Maison Neue,Maison Neue,webflow,self,browser,2026-09-23
-jetbrains.com,devtools,JetBrains Sans,JetBrains Sans,,self,browser,2026-09-25
+jetbrains.com,devtools,JetBrains Sans,JetBrains Sans,,self,browser,2026-09-26
 jetdocs.io,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 jetpackaviation.com,startups,Raleway,Raleway,wordpress,google self,browser,2026-09-23
 jetpunk.com,popular,Arial,Arial,,self,browser,2026-09-23
@@ -4545,7 +4595,7 @@ jitx.com,startups,Open Sans,Montserrat,webflow,google,browser,2026-09-23
 jkanime.net,popular,Mulish,Oswald,,google self,browser,2026-09-23
 jmmv.dev,indie,IBM Plex Sans,Montserrat,,self,browser,2026-09-23
 jmu.edu,universities,Arial,Arvo,,self,browser,2026-09-23
-jnj.com,enterprise,Johnson Text,Johnson Display,,self,browser,2026-09-25
+jnj.com,enterprise,Johnson Text,Johnson Display,,self,browser,2026-09-26
 joanwestenberg.com,indie,system-ui,SF Pro,,google,browser,2026-09-23
 jobbmintatv.pro,popular,system-ui,system-ui,,self,browser,2026-09-23
 jobcan.jp,popular,Noto Sans JP,Noto Sans JP,wordpress,,wayback-browser,2023-05-15
@@ -4875,7 +4925,7 @@ kth.se,universities,Figtree,Figtree,,self,browser,2026-09-23
 ktrmr.com,popular,Kantar Brown,Kantar Brown,,self,browser,2026-09-23
 ku.dk,universities,Inter,Inter,,self,browser,2026-09-23
 ku.edu,universities,Halyard Text,Roc Grotesk,,adobe,browser,2026-09-23
-kubernetes.io,devtools,Open Sans,Open Sans,,google self,browser,2026-09-25
+kubernetes.io,devtools,Open Sans,Open Sans,,google self,browser,2026-09-26
 kubesail.com,startups,system-ui,system-ui,,,browser,2026-09-23
 kucoin.com,startups,Kufox Sans,Kufox Sans,nextjs,self,browser,2026-09-23
 kugelaudio.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
@@ -4965,7 +5015,7 @@ latchel.com,startups,GT Walsheim,GT Walsheim,wordpress,self,browser,2026-09-23
 latenthealth.com,startups,FK Grotesk,FK Grotesk,,self,browser,2026-09-23
 latentspace.sh,startups,monospace,monospace,nextjs,,browser,2026-09-23
 later.com,saas,Inter Tight,Inter Tight,gatsby,self,browser,2026-09-23
-latimes.com,news,FBKis Display,FBKis Display,,self,browser,2026-09-25
+latimes.com,news,FBKis Display,FBKis Display,,self,browser,2026-09-26
 latolabs.io,startups,Lato,Lato,,self,browser,2026-09-23
 latted.com,startups,Geist,Geist,,self,browser,2026-09-23
 lattice.com,saas,Matter,Matter,webflow,self,browser,2026-09-23
@@ -5025,7 +5075,7 @@ legora.com,startups,CUSTOMV2;Aktiv Grotesk,CUSTOMV2;Aktiv Grotesk,framer,self,br
 lehigh.edu,universities,Inter,Dopis,,adobe self,browser,2026-09-23
 lemfi.com,startups,Degular,Degular,nuxt,self,browser,2026-09-23
 lemire.me,indie,Noto Serif,Noto Serif,wordpress,self,browser,2026-09-23
-lemonde.fr,news,The Antiqua B,The Antiqua B,,self,browser,2026-09-25
+lemonde.fr,news,The Antiqua B,The Antiqua B,,self,browser,2026-09-26
 lemonlime.com,startups,Parabolica Text,Parabolica,nextjs,self,browser,2026-09-23
 lemonslice.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 lemonsqueezy.com,saas,Inter,Circularpro,webflow,self,browser,2026-09-23
@@ -5106,7 +5156,7 @@ lina.sh,indie,Consolas,Consolas,,,browser,2026-09-23
 linc-ai.com,startups,Geist,Arial,nextjs,self,browser,2026-09-23
 lindependant.fr,popular,Hind Siliguri,Hind Siliguri,,self,browser,2026-09-23
 line.me,popular,SF Pro,LINESeed,,self,browser,2026-09-23
-linear.app,saas,Inter,Inter,nextjs,self,browser,2026-09-25
+linear.app,saas,Inter,Inter,nextjs,self,browser,2026-09-26
 lineleap.com,startups,Apercu Pro,Shape,webflow,self,browser,2026-09-23
 lingo.dev,startups,Space Grotesk,Space Grotesk,,self,browser,2026-09-23
 lingt.com,startups,Slabo 27px,Slabo 27px,,google,browser,2026-09-23
@@ -5180,7 +5230,7 @@ localyze.com,startups,Moderat,Moderat,nextjs,self,browser,2026-09-23
 locatahealth.com,startups,DM Sans,DM Sans,webflow,google,browser,2026-09-23
 lock.cmpxchg8b.com,indie,Inconsolata,Inconsolata,,google,browser,2026-09-23
 locke.inc,startups,Geist,Geist,nextjs,self,browser,2026-09-23
-lockheedmartin.com,enterprise,DIN W01,DIN 2014 W01,,self,browser,2026-09-25
+lockheedmartin.com,enterprise,DIN W01,DIN 2014 W01,,self,browser,2026-09-26
 locusrobotics.com,startups,Roboto,Roboto,wordpress,google self,browser,2026-09-23
 lodash.com,devtools,Segoe UI,Segoe UI,,self,browser,2026-09-23
 loft.com.br,startups,Inter,Inter,nextjs,google,browser,2026-09-23
@@ -5200,7 +5250,7 @@ longform.asmartbear.com,indie,Helvetica Neue,Charter,,,browser,2026-09-23
 loobygamesonline.com,popular,system-ui,system-ui,,,browser,2026-09-23
 lookmovie2.to,popular,Poppins,Dosis,,google self,browser,2026-09-23
 lookout.com,startups,Moderat,Moderat,webflow,self,browser,2026-09-23
-loom.com,saas,Charlie,Charlie,nextjs,self,browser,2026-09-25
+loom.com,saas,Charlie,Charlie,nextjs,self,browser,2026-09-26
 loombotic.com,startups,Geist,Outfit,,google,browser,2026-09-23
 loopfour.com,startups,IBM Plex Sans,IBM Plex Sans,nextjs,self,browser,2026-09-23
 loophealth.com,startups,Work sans,Work sans,webflow,self,browser,2026-09-23
@@ -5230,7 +5280,7 @@ lovable.dev,startups,Camera Plain,Camera Plain,,self,browser,2026-09-23
 lover938.net,popular,Open Sans,Open Sans,,self,browser,2026-09-23
 loveread.ec,popular,Verdana,Georgia,,,browser,2026-09-23
 lovesac.com,ecommerce,Neue Haas Grotesk Display Fallback,Neue Haas Grotesk Display Fallback,,,browser,2026-09-23
-lowes.com,ecommerce,Fellix,Fellix,,self,browser,2026-09-25
+lowes.com,ecommerce,Fellix,Fellix,,self,browser,2026-09-26
 lpga.or.jp,popular,Noto Sans JP,JLPGA,,adobe google self,browser,2026-09-23
 lpu.in,popular,Plus Jakarta Sans,Plus Jakarta Sans,nextjs,self,browser,2026-09-23
 lr0.org,indie,Times Or Tinos,IM Fell English,,self,browser,2026-09-23
@@ -5260,7 +5310,7 @@ luel.ai,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 lufthansa.com,enterprise,Lufthansa Text,Lufthansa Head,,self,browser,2026-09-23
 lugg.com,startups,Circular,Circular,nextjs,self,browser,2026-09-23
 lukeplant.me.uk,indie,Sans,Alegreya,,google,browser,2026-09-23
-lululemon.com,ecommerce,Saans,Saans,nextjs,self,browser,2026-09-25
+lululemon.com,ecommerce,Saans,Saans,nextjs,self,browser,2026-09-26
 lumalabs.ai,startups,Graphik,Graphik,nextjs,self,browser,2026-09-23
 lumari.ai,startups,Manrope,Fraunces,,self,browser,2026-09-23
 lume.ai,startups,Geist,Geist,,google,browser,2026-09-23
@@ -5334,7 +5384,7 @@ mahacet.org,popular,Open Sans,Open Sans,wordpress,google self,browser,2026-09-23
 mahadk.com,indie,IBM Plex Sans,IBM Plex Sans,,self,browser,2026-09-23
 mahindra.com,enterprise,Georama,Quantum Rise,,self,browser,2026-09-23
 mail.ru,popular,Helvetica Neue,Helvetica Neue,,,wayback-browser,2018-08-15
-mailchimp.com,saas,Graphik,Means,,self,browser,2026-09-25
+mailchimp.com,saas,Graphik,Means,,self,browser,2026-09-26
 mailgun.net,startups,Host Grotesk,Host Grotesk,wordpress,self,browser,2026-09-23
 mailmodo.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 mailtime.com,startups,Inter,Inter,nextjs,google,browser,2026-09-23
@@ -5443,7 +5493,7 @@ mass.gov,government,Noto Sans,Noto Sans,,self,browser,2026-09-23
 massdriver.cloud,startups,JetBrains Mono,Bebas Neue,nextjs,google self,browser,2026-09-23
 massmagnetics.com,startups,Euro Style,Euro Style,,google self,browser,2026-09-23
 masstamilan.dev,popular,Roboto,Roboto,,,browser,2026-09-23
-mastercard.com,enterprise,Mccom,Mccom,,self,browser,2026-09-25
+mastercard.com,enterprise,Mccom,Mccom,,self,browser,2026-09-26
 masterclass.com,startups,Söhne,Söhne,nextjs,self,browser,2026-09-23
 masteredu.ai,popular,Inter,Inter,,google self,browser,2026-09-23
 masteringemacs.org,indie,Transat Text,Magister,,adobe,browser,2026-09-23
@@ -5510,7 +5560,7 @@ mbodi.ai,startups,Geist,Geist,framer,google self,browser,2026-09-23
 mbuffett.com,indie,Inter UI,Inter UI,,self,browser,2026-09-23
 mca.gov.in,popular,Poppins,Poppins,,self,browser,2026-09-23
 mcc.gov,government,Proxima Nova,Proxima Nova,,adobe self,browser,2026-09-23
-mcdonalds.com,enterprise,Speedee,Speedee,,self,browser,2026-09-25
+mcdonalds.com,enterprise,Speedee,Speedee,,self,browser,2026-09-26
 mcdvoice.com,popular,Verdana,Verdana,,,browser,2026-09-23
 mceglowski.substack.com,indie,SF Pro,SF Pro,,google,browser,2026-09-23
 mcgill.ca,universities,McGillSans,McGillSans,,self,browser,2026-09-23
@@ -5539,7 +5589,7 @@ mediamarkt.de,popular,Noto Sans Display,Noto Sans Display,,self,browser,2026-09-
 mediapart.fr,news,Atlas Grotesk,Pensum Pro,,self,browser,2026-09-23
 mediaset.it,popular,next Local Font,next Local Font,nextjs,self,browser,2026-09-23
 medicaid.gov,government,Source Sans,Source Sans,,self,browser,2026-09-23
-medicare.gov,government,Inter,Inter,,self,browser,2026-09-25
+medicare.gov,government,Inter,Inter,,self,browser,2026-09-26
 medigram.com,startups,IBM Plex Sans,Libre Baskerville,,self,browser,2026-09-23
 medisearch.io,startups,Inter,Inter,nextjs,,static,2026-09-23
 medium.bio,startups,DM Sans,DM Sans,,google,browser,2026-09-23
@@ -5567,7 +5617,7 @@ mehrnews.com,popular,Vazir,Vazir,,self,browser,2026-09-23
 meinbezirk.at,popular,Poppins,Poppins,,self,browser,2026-09-23
 meitre.com,startups,Inter,Visa Dialect,,google self,browser,2026-09-23
 mejorcdt.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,,self,browser,2026-09-23
-mejuri.com,ecommerce,Syndicat Grotesk,Syndicat Grotesk,shopify,bunny self,browser,2026-09-25
+mejuri.com,ecommerce,Syndicat Grotesk,Syndicat Grotesk,shopify,self,browser,2026-09-26
 melbetegypt.com,popular,Roboto,Roboto,,self,browser,2026-09-23
 melder.io,startups,Inter,Inter,,google,browser,2026-09-23
 meldium.com,startups,Roboto,Roboto,wordpress,self,browser,2026-09-23
@@ -5597,7 +5647,7 @@ merck.com,enterprise,Invention,Invention,wordpress,self,browser,2026-09-23
 mercoa.com,startups,system-ui,system-ui,nextjs,,browser,2026-09-23
 mercor.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 mercura.ai,startups,Inter,Inter,framer,google self,browser,2026-09-23
-mercury.com,saas,Arcadia,arcadia Display,nextjs,self,browser,2026-09-25
+mercury.com,saas,Arcadia,arcadia Display,nextjs,self,browser,2026-09-26
 mercurynews.com,news,Noto Sans,Noto Sans,wordpress,google self,browser,2026-09-23
 mergent.co,startups,Inter,Geist,nextjs,self,browser,2026-09-23
 meripehchaan.gov.in,popular,system-ui,system-ui,,self,browser,2026-09-23
@@ -5613,7 +5663,7 @@ meslibertines.com,popular,Arial,Arial,,self,browser,2026-09-23
 mesmer.co,startups,Inter Tight,Inter Tight,nextjs,self,browser,2026-09-23
 mesrs.dz,popular,Open Sans,Open Sans,,,wayback-browser,2021-08-15
 messenger.com,popular,Facebook Sans,Facebook Sans,,self,browser,2026-09-23
-meta.com,enterprise,Optimistic,Optimistic,,self,browser,2026-09-25
+meta.com,enterprise,Optimistic,Optimistic,,self,browser,2026-09-26
 metabase.com,saas,Lato,Lato,,google,browser,2026-09-23
 metal-archives.com,popular,Verdana,Verdana,,,browser,2026-09-23
 metal.ai,startups,STK Bureau Sans,STK Bureau Serif,framer,self,browser,2026-09-23
@@ -5662,7 +5712,7 @@ michigan.gov,government,Montserrat,Montserrat,,google,browser,2026-09-23
 micora.com,startups,Montserrat,Montserrat,,google,browser,2026-09-23
 microhealth.com,startups,Onest,Safiro,nextjs,self,browser,2026-09-23
 micron.com,enterprise,MicronBasis,MicronBasis,,self,browser,2026-09-23
-microsoft.com,enterprise,Segoe UI,Segoe UI,,self,browser,2026-09-25
+microsoft.com,enterprise,Segoe UI,Segoe UI,,self,browser,2026-09-26
 microverse.org,startups,Montserrat,Domine,webflow,google,browser,2026-09-23
 microworkers.com,popular,Roboto,Roboto,,self,browser,2026-09-23
 micsi.co,startups,Inter,IBM Plex Sans,wordpress,self,browser,2026-09-23
@@ -5723,7 +5773,7 @@ miolilin.com,popular,Mulish,Mulish,,google self,browser,2026-09-23
 miracleml.com,startups,Inter,Inter,webflow,google,browser,2026-09-23
 mirakl.com,startups,Open Sans,Roboto Serif,,self,browser,2026-09-23
 mireye.com,startups,Geist,Geist,nextjs,self,browser,2026-09-23
-miro.com,saas,Noto Sans,Roobert PRO,framer,google self,browser,2026-09-25
+miro.com,saas,Noto Sans,Roobert PRO,framer,google self,browser,2026-09-26
 mirror.co.uk,news,apercu,apercu,nextjs,self,browser,2026-09-23
 mirurobotics.com,startups,Inter,Inter,,google,browser,2026-09-23
 misa.vn,popular,GoogleSans,GoogleSans,wordpress,self,browser,2026-09-23
@@ -5734,9 +5784,9 @@ misolabs.ai,startups,Space Mono,Geist,nextjs,self,browser,2026-09-23
 misprint.com,startups,Geist,Geist,nextjs,google self,browser,2026-09-23
 missouri.edu,universities,Open Sans,Manuka,,self,browser,2026-09-23
 mistle.dev,startups,Plus Jakarta Sans,Plus Jakarta Sans,,google self,browser,2026-09-23
-mistral.ai,saas,ALTMistral,Inter,,self,browser,2026-09-25
+mistral.ai,saas,ALTMistral,Inter,,self,browser,2026-09-26
 mistys-internet.website,indie,DOS,DOS,,self,browser,2026-09-23
-mit.edu,universities,Neue Haas Grotesk,Neue Haas Grotesk,,adobe,browser,2026-09-25
+mit.edu,universities,Neue Haas Grotesk,Neue Haas Grotesk,,adobe,browser,2026-09-26
 mitchellh.com,indie,PT Serif,Nimbus Sans,nextjs,self,browser,2026-09-23
 mitohealth.com,startups,Aktiv Grotesk,Season Mix,,google self,browser,2026-09-23
 mitti.com,startups,Geist,funnel Display,nextjs,self,browser,2026-09-23
@@ -5805,7 +5855,7 @@ momo.vn,startups,system-ui,system-ui,nextjs,self,browser,2026-09-23
 momomedical.com,startups,Open Sans,Open Sans,nextjs,google,browser,2026-09-23
 monarcha.ai,startups,Manrope,Manrope,nextjs,self,browser,2026-09-23
 monash.edu,universities,Roboto,Roboto Condensed,,google,browser,2026-09-23
-monday.com,saas,Poppins,Poppins,webflow,self,browser,2026-09-25
+monday.com,saas,Poppins,Poppins,webflow,self,browser,2026-09-26
 mondelezinternational.com,enterprise,Calibri,MDLZ BITE TYPE,gatsby,self,browser,2026-09-23
 mondosanita.it,popular,Inter,Inter,,google self,browser,2026-09-23
 moneco.app,startups,Outfit,Outfit,nextjs,google self,browser,2026-09-23
@@ -5813,7 +5863,7 @@ monet.com.co,startups,Montserrat,Montserrat,wordpress,google self,browser,2026-0
 money.pl,popular,Roboto,Roboto,,google self,browser,2026-09-23
 moneycontrol.com,popular,Lato,Lato,nextjs,google self,browser,2026-09-23
 moneyforward.com,popular,Mfw Paotogothicstdn,Mfw Paotogothicstdn,,google self,browser,2026-09-23
-mongodb.com,devtools,Söhne,Sohne Condensed,nextjs,self,browser,2026-09-25
+mongodb.com,devtools,Söhne,Sohne Condensed,nextjs,self,browser,2026-09-26
 moniepoint.com,startups,Inter,Aventa,nextjs,self,browser,2026-09-23
 monkeytype.com,popular,Roboto Mono,Roboto Mono,,self,browser,2026-09-23
 mono.co,startups,DM Sans,Duplicate Sans,nextjs,google self,browser,2026-09-23
@@ -6007,7 +6057,7 @@ napkinmath.club,startups,DM Sans,Syne,nextjs,self,browser,2026-09-23
 napthe.vn,popular,Roboto,Roboto,,google,browser,2026-09-23
 naqs.gov.ng,popular,Rubik,Rubik,wordpress,google self,browser,2026-09-23
 narto-drama.com,popular,Segoe UI,Segoe UI,,self,browser,2026-09-23
-nasa.gov,government,Public Sans,Inter,wordpress,google self,browser,2026-09-25
+nasa.gov,government,Public Sans,Inter,wordpress,self,browser,2026-09-26
 natalie.mu,popular,Times New Roman,Times New Roman,,,wayback-browser,2026-02-15
 nate.com,popular,system-ui,system-ui,,,browser,2026-09-23
 natesilver.net,indie,Roboto,Roboto,,google,browser,2026-09-23
@@ -6030,7 +6080,7 @@ navi.com,popular,TT Firs Neue,TT Firs Neue,,,wayback-browser,2025-11-15
 navier.ai,startups,Inter,Instrument Serif,,google self,browser,2026-09-23
 navima.jp,popular,Roboto Condensed,Roboto Condensed,,google,browser,2026-09-23
 navitime.co.jp,popular,system-ui,system-ui,,,browser,2026-09-23
-nbcnews.com,news,Founders Grotesk Cond,Founders Grotesk Cond,nextjs,self,browser,2026-09-25
+nbcnews.com,news,Founders Grotesk Cond,Founders Grotesk Cond,nextjs,self,browser,2026-09-26
 nc.gov,government,Source Sans,Source Sans,,self,browser,2026-09-23
 ncert.nic.in,popular,system-ui,system-ui,,,wayback-browser,2025-11-15
 ncl.ac.uk,universities,Helvetica Neue,Derailed ExtraBold,,self,browser,2026-09-23
@@ -6063,7 +6113,7 @@ nelson.cloud,indie,Commit Mono,Commit Mono,,self,browser,2026-09-23
 neo4j.com,devtools,Public Sans,Syne Neo,wordpress,google self,browser,2026-09-23
 neodocs.in,startups,resist Sans Text,resist Sans Text,nextjs,self,browser,2026-09-23
 neofinancial.com,startups,Tt Commons Pro,Owners,nextjs,self,browser,2026-09-23
-neon.com,devtools,Inter,Inter,nextjs,self,browser,2026-09-25
+neon.com,devtools,Inter,Inter,nextjs,self,browser,2026-09-26
 neon.com.br,startups,Inter,Palo,,google monotype,browser,2026-09-23
 neoncoral.inc,startups,Special Gothic Expanded One,Special Gothic Expanded One,,google,browser,2026-09-23
 neopets.com,popular,Montserrat,Cafeteria Black,,google self,browser,2026-09-23
@@ -6081,9 +6131,9 @@ net-empregos.com,popular,Nunito,Nunito,,google self,browser,2026-09-23
 net.hr,popular,Proxima Nova,Proxima Nova,,adobe self,browser,2026-09-23
 netbeez.net,startups,DM Sans,GRIFTER,wordpress,google self,browser,2026-09-23
 netdocuments.com,startups,Neue Haas Grotesk,PP Mori,wordpress,adobe self,browser,2026-09-23
-netflix.com,enterprise,Netflix Sans,Netflix Sans,,google self,browser,2026-09-25
+netflix.com,enterprise,Netflix Sans,Netflix Sans,,google self,browser,2026-09-26
 netkeiba.com,popular,Meiryo,Meiryo,,,browser,2026-09-23
-netlify.com,devtools,Instrument Sans,Figtree,,google self,browser,2026-09-25
+netlify.com,devtools,Instrument Sans,Figtree,,google self,browser,2026-09-26
 netmaker.io,startups,Inter,Inter,webflow,self,browser,2026-09-23
 netmeister.org,indie,Myriad Pro,Myriad Pro,,,browser,2026-09-23
 netmirror.center,popular,Inter,Inter,,,browser,2026-09-23
@@ -6123,9 +6173,9 @@ newsnow.co.uk,popular,Roboto,Heebo,,google,browser,2026-09-23
 newsobserver.com,news,Noto Sans,Noto Sans,,google,browser,2026-09-23
 newstatesman.com,news,Canela,Canela,wordpress,self,browser,2026-09-23
 newstoryhomes.org,startups,Mint Grotesk Display,Mint Grotesk Display,webflow,adobe google self,browser,2026-09-23
-newsweek.com,news,Playfair Display,Playfair Display,nextjs,self,browser,2026-09-25
+newsweek.com,news,Playfair Display,Playfair Display,nextjs,self,browser,2026-09-26
 newtoki1.org,popular,Nanum Gothic,Nanum Gothic,,google self,browser,2026-09-23
-newyorker.com,news,TNYAdobe Caslon Pro,TNYAdobe Caslon Pro,,self,browser,2026-09-25
+newyorker.com,news,TNYAdobe Caslon Pro,TNYAdobe Caslon Pro,,self,browser,2026-09-26
 nex.ai,startups,Inter,Inter,framer,self,browser,2026-09-23
 nexa.farm,startups,Times New Roman,Times New Roman,framer,google self,browser,2026-09-23
 nexon.com,popular,Arial,Arial,,self,browser,2026-09-23
@@ -6135,7 +6185,7 @@ nextdoor.com,popular,Saans,Saans,,self,browser,2026-09-23
 nexterarobotics.com,startups,Interface,Interface,squarespace,adobe,browser,2026-09-23
 nexthink.com,startups,Vazirmatn,Vazirmatn,nextjs,self,browser,2026-09-23
 nextiva.com,startups,Space Grotesk,Space Grotesk,wordpress,google self,browser,2026-09-23
-nextjs.org,devtools,Geist,Geist,nextjs,self,browser,2026-09-25
+nextjs.org,devtools,Geist,Geist,nextjs,self,browser,2026-09-26
 nextmv.io,startups,L10,L10,webflow,google self,browser,2026-09-23
 nextpay.world,startups,Geist,Plus Jakarta Sans,,self,browser,2026-09-23
 nextsilicon.com,startups,NeueHaasGroteskText W01,Barlow Condensed,,google self,browser,2026-09-23
@@ -6148,7 +6198,7 @@ ngt.academy,startups,Suisseintl,Suisseintl,webflow,self,browser,2026-09-23
 nguoiquansat.vn,popular,Merriweather,Merriweather,,google self,browser,2026-09-23
 nh.gov,government,Proxima Nova,Proxima Nova,,adobe self,browser,2026-09-23
 nha.gov.in,popular,Poppins,Raleway,,,wayback-browser,2025-11-15
-nhk.jp,popular,system-ui,system-ui,,,wayback-browser,2020-08-15
+nhk.jp,popular,Times New Roman,Times New Roman,,,wayback-browser,2022-05-15
 nhs.uk,government,Frutiger W01,Frutiger W01,,self,browser,2026-09-23
 nhtsa.gov,government,Roboto,Roboto,,self,browser,2026-09-23
 nibblestew.blogspot.com,indie,Arial,Arial,,google,browser,2026-09-23
@@ -6161,8 +6211,8 @@ nicole.express,indie,Helvetica Neue,Comfortaa,,self,browser,2026-09-23
 nicovideo.jp,popular,Avenir,Avenir,,google,browser,2026-09-23
 nidw.gov.bd,popular,Verdana,Arial,,,browser,2026-09-23
 nieuwsblad.be,popular,Roboto,Roboto,nextjs,self,browser,2026-09-23
-nih.gov,government,Source Sans,Merriweather,,self,browser,2026-09-25
-nike.com,ecommerce,Helvetica Now Text,Nike Futura ND,nextjs,self,browser,2026-09-25
+nih.gov,government,Source Sans,Merriweather,,self,browser,2026-09-26
+nike.com,ecommerce,Helvetica Now Text,Nike Futura ND,nextjs,self,browser,2026-09-26
 nikkansports.com,popular,Hiragino Kaku Gothic,Hiragino Kaku Gothic,,self,browser,2026-09-23
 nikkei.com,news,Hiragino Sans JP,Hiragino Sans JP,,,browser,2026-09-23
 nikkei225jp.com,popular,Arial,Arial,,,browser,2026-09-23
@@ -6202,7 +6252,7 @@ noahpinion.blog,indie,system-ui,SF Pro,,google,browser,2026-09-23
 nobat.ir,popular,IRANSans,IRANSans,,self,browser,2026-09-23
 nobroker.in,startups,Source Sans,Source Sans,,google,browser,2026-09-23
 nocap.so,startups,Sora,Sora,,google,browser,2026-09-23
-nodejs.org,devtools,Open Sans,Open Sans,nextjs,self,browser,2026-09-25
+nodejs.org,devtools,Open Sans,Open Sans,nextjs,self,browser,2026-09-26
 nodienergy.com,startups,ABC Repro,ABC Repro,framer,google self,browser,2026-09-23
 nodus-compute.ai,startups,Inter,Source Serif,,google self,browser,2026-09-23
 nofeu.com,popular,Inter,Inter,,self,browser,2026-09-23
@@ -6245,7 +6295,7 @@ notes.eatonphil.com,indie,Merriweather,Merriweather,,google,browser,2026-09-23
 notesbylex.com,indie,Canva Sans,Canva Sans,,self,browser,2026-09-23
 notgull.net,indie,System Ui,System Ui,,,browser,2026-09-23
 noticiasaominuto.com,popular,Roboto,Alfa Slab One,,google,browser,2026-09-23
-notion.com,saas,Inter,Inter,nextjs,self,browser,2026-09-25
+notion.com,saas,Inter,Inter,nextjs,self,browser,2026-09-26
 notitimba.com,popular,Verdana,Verdana,,,browser,2026-09-23
 notte.cc,startups,Inter,Playfair Display,nextjs,self,browser,2026-09-23
 nottingham.ac.uk,universities,Circular,Circular,,self,browser,2026-09-23
@@ -6277,9 +6327,9 @@ noxmetals.co,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 noya.io,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 nozomio.com,startups,JetBrains Mono,JetBrains Mono,nextjs,self,browser,2026-09-23
 npci.org.in,popular,Montserrat,Montserrat,,,wayback-browser,2025-08-15
-npmjs.com,devtools,Arimo,Poppins,,google,browser,2026-09-25
-npr.org,news,NPRSans,NPRSans,,inline,static,2026-09-25
-nps.gov,government,Inter,Inter,,,browser,2026-09-25
+npmjs.com,devtools,Arimo,Poppins,,google,browser,2026-09-26
+npr.org,news,NPRSans,NPRSans,,,browser,2026-09-26
+nps.gov,government,Inter,Inter,,,browser,2026-09-26
 nptel.ac.in,popular,Inter,Inter,,google self,browser,2026-09-23
 nrc.gov,government,Source Sans,Source Sans,,self,browser,2026-09-23
 nrc.nl,news,Guardian Egyptian,Guardian Egyptian,,self,browser,2026-09-23
@@ -6324,7 +6374,7 @@ nuxt.com,devtools,Public Sans,Public Sans,nuxt,self,browser,2026-09-23
 nuxx.net,indie,Geist,Geist,wordpress,self,browser,2026-09-23
 nv.gov,government,IBM Plex Sans,IBM Plex Serif,,self,browser,2026-09-23
 nv.ua,popular,Noto Serif,Noto Sans,,self,browser,2026-09-23
-nvidia.com,enterprise,NVIDIA NALA,NVIDIA NALA,,self,browser,2026-09-25
+nvidia.com,enterprise,NVIDIA NALA,NVIDIA NALA,,self,browser,2026-09-26
 nwu.ac.za,popular,Helvetica Neue,Helvetica Neue,,,wayback-browser,2025-11-15
 nx.dev,devtools,Inter,Inter,framer,google,browser,2026-09-23
 nxtcure.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,,self,browser,2026-09-23
@@ -6337,10 +6387,10 @@ nyckel.com,startups,Inter,Inter,,google self,browser,2026-09-23
 nykaa.com,popular,Inter,Inter,,self,browser,2026-09-23
 nykaafashion.com,popular,Inter,Inter,,self,browser,2026-09-23
 nypost.com,news,Neue Haas Grotesk,Neue Haas Grotesk,wordpress,adobe google self,browser,2026-09-23
-nytimes.com,news,Franklin Gothic,Franklin Gothic,,self,browser,2026-09-25
-nyu.edu,universities,NYUPerstare,NYUPerstare,,self,browser,2026-09-25
+nytimes.com,news,Imperial,Franklin Gothic,,self,browser,2026-09-26
+nyu.edu,universities,NYUPerstare,NYUPerstare,,self,browser,2026-09-26
 nzherald.co.nz,news,Inter,Inter,,self,browser,2026-09-23
-nzz.ch,news,NZZ Sans,NZZ Serif,,self,browser,2026-09-25
+nzz.ch,news,NZZ Sans,NZZ Serif,,self,browser,2026-09-26
 o11.ai,startups,PP Neue Montreal,PP Neue Montreal,,self,browser,2026-09-23
 o2.pl,popular,Roboto Condensed,Roboto Condensed,,self,browser,2026-09-23
 oaed.gr,popular,system-ui,system-ui,,,browser,2026-09-23
@@ -6413,7 +6463,7 @@ okibi.ai,startups,Geist,Geist,,self,browser,2026-09-23
 okihome.ai,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 oklahoma.gov,government,Open Sans,Montserrat,,self,browser,2026-09-23
 oklo.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
-okta.com,saas,Aeonik,Season Mix,,self,browser,2026-09-25
+okta.com,saas,Aeonik,Season Mix,,self,browser,2026-09-26
 okteto.com,startups,Circular XXWeb,Circular XXWeb,gatsby,google self,browser,2026-09-23
 olacabs.com,startups,Gentonabook,Gentonamedium,,self,browser,2026-09-23
 olaclick.com,startups,Roboto,Roboto,wordpress,self,browser,2026-09-23
@@ -6507,7 +6557,7 @@ opalitehealth.com,startups,Figtree,Figtree,nextjs,self,browser,2026-09-23
 opayweb.com,startups,Graphik,Graphik,nuxt,self,browser,2026-09-23
 opearlo.com,startups,Poppins,Poppins,,google,browser,2026-09-23
 open.cx,startups,Inter,PP Neue Montreal,nextjs,self,browser,2026-09-23
-openai.com,saas,OpenAI Sans,OpenAI Sans,nextjs,self,browser,2026-09-25
+openai.com,saas,OpenAI Sans,OpenAI Sans,nextjs,self,browser,2026-09-26
 openapis.org,devtools,Verdana,Verdana,wordpress,self,browser,2026-09-23
 openbenchmarks.com,startups,STIX Two Text,STIX Two Text,nextjs,self,browser,2026-09-23
 openbiome.org,startups,Montserrat,Montserrat,wordpress,self,browser,2026-09-23
@@ -6753,7 +6803,7 @@ party.build,startups,Inter,Inter,,self,browser,2026-09-23
 paryajlakay.com,popular,Roboto,Roboto,,google,browser,2026-09-23
 pasito.ai,startups,DM Sans,Newsreader,webflow,google self,browser,2026-09-23
 passo.uno,indie,Fira Sans,Fira Sans Condensed,,self,browser,2026-09-23
-patagonia.com,ecommerce,Ridgeway Sans,Ridgeway Sans,,self,browser,2026-09-25
+patagonia.com,ecommerce,Ridgeway Sans,Ridgeway Sans,,self,browser,2026-09-26
 patched.codes,startups,monospace,monospace,,google,browser,2026-09-23
 patentwatch.ai,startups,Inter Tight,Source Serif,,google,browser,2026-09-23
 patientdesk.ai,startups,Karla,Rubik,nextjs,self,browser,2026-09-23
@@ -6787,7 +6837,7 @@ paymaya.com,popular,Montserrat,Montserrat,,,wayback-browser,2021-11-15
 paymetrust.net,popular,Inter,Lausanne,framer,self,browser,2026-09-23
 paymongo.com,startups,Banana Grotesk,Lora,nextjs,self,browser,2026-09-23
 payna.com,startups,DM Sans,EB Garamond,nextjs,self,browser,2026-09-23
-paypal.com,enterprise,PayPal Pro Text,PayPal Pro,,self,browser,2026-09-25
+paypal.com,enterprise,PayPal Pro Text,PayPal Pro,,self,browser,2026-09-26
 paysponge.com,startups,Inter,Inter,nextjs,,browser,2026-09-23
 paystack.com,startups,Graphik,Boing,,google self,browser,2026-09-23
 paywithflux.com,startups,Lato,Lato,webflow,google,browser,2026-09-23
@@ -6823,7 +6873,7 @@ people.csail.mit.edu,indie,Basis Grotesque,Basis Grotesque,,self,browser,2026-09
 people.kernel.org,indie,Lora,Lora,,self,browser,2026-09-23
 peoplebox.ai,startups,Roboto,Roboto Serif,wordpress,self,browser,2026-09-23
 peoplecq.com,startups,Inter,Inter,,self,browser,2026-09-23
-pepsico.com,enterprise,Gilroy,Pressural,nextjs,self,browser,2026-09-25
+pepsico.com,enterprise,Gilroy,Pressural,nextjs,self,browser,2026-09-26
 perceptive.io,startups,Acid Grotesk,Acid Grotesk,,self,browser,2026-09-23
 perceptronml.com,startups,Satoshi,Switzer,,fontshare,browser,2026-09-23
 perchance.org,popular,Cousine,Cousine,,,wayback-browser,2025-11-15
@@ -6942,12 +6992,12 @@ pla3.com,popular,Plus Jakarta Sans,Plus Jakarta Sans,,google,browser,2026-09-23
 placardefutebol.com.br,popular,system-ui,system-ui,,,wayback-browser,2025-11-15
 placer.ai,startups,Open Sans,Open Sans,webflow,google self,browser,2026-09-23
 plai.io,startups,Space Grotesk,Space Grotesk,webflow,google,browser,2026-09-23
-plaid.com,saas,Plaid Sans,Plaid Sans,nextjs,self,browser,2026-09-25
+plaid.com,saas,Plaid Sans,Plaid Sans,nextjs,self,browser,2026-09-26
 plan0.ai,startups,Sora,Sora,nextjs,google,browser,2026-09-23
 plane.com,startups,Inter,Roobert,framer,google self,browser,2026-09-23
 planet-a-foods.com,startups,Lato,RF Dewi,nuxt,self,browser,2026-09-23
 planetminecraft.com,popular,Roboto,Roboto,,self,browser,2026-09-23
-planetscale.com,devtools,ui-monospace,ui-monospace,,,browser,2026-09-25
+planetscale.com,devtools,ui-monospace,ui-monospace,,,browser,2026-09-26
 planetwin365.it,popular,Roboto,Roboto,,,wayback-browser,2025-08-15
 plangrid.com,startups,artifakt Element,artifakt Element,nextjs,self,browser,2026-09-23
 plasticity.ai,startups,Lato,Lato,,self,browser,2026-09-23
@@ -7071,8 +7121,8 @@ positive.co,startups,Inter,Inter,nextjs,google,browser,2026-09-23
 post-gazette.com,news,Proxima Nova,Proxima Nova,,self,browser,2026-09-23
 poste.dz,popular,Eurostile,Eurostile Ex,,,wayback-browser,2025-11-15
 postera.ai,startups,Inter,Tinos,gatsby,google self,browser,2026-09-23
-postgresql.org,devtools,Open Sans,Open Sans,,self,browser,2026-09-25
-posthog.com,saas,RoundHog,RoundHog,gatsby,self,browser,2026-09-25
+postgresql.org,devtools,Open Sans,Open Sans,,self,browser,2026-09-26
+posthog.com,saas,RoundHog,RoundHog,gatsby,self,browser,2026-09-26
 postman.com,saas,Inter,Degular,nextjs,self,browser,2026-09-23
 postscript.io,startups,Inter,Inter Tight,nextjs,self,browser,2026-09-23
 potaroo.net,indie,Trebuchet MS,Myriad,,,browser,2026-09-23
@@ -7134,9 +7184,9 @@ primevault.com,startups,Funnel Sans,Funnel Display,,google,browser,2026-09-23
 primevideo.com,popular,Amazon Ember,Amazon Ember,,self,browser,2026-09-23
 primitive.dev,startups,JetBrains Mono,JetBrains Mono,nextjs,self,browser,2026-09-23
 princeps.dev,startups,IBM Plex Mono,IBM Plex Mono,,google,browser,2026-09-23
-princeton.edu,universities,Franklin Gothic Urw,Franklin Gothic Urw Cond,,adobe self,browser,2026-09-25
+princeton.edu,universities,Franklin Gothic Urw,Franklin Gothic Urw Cond,,adobe self,browser,2026-09-26
 printful.com,startups,Proxima Nova,Proxima Nova,,self,browser,2026-09-23
-prisma.io,devtools,Inter,Sora,nextjs,self,browser,2026-09-25
+prisma.io,devtools,Inter,Sora,nextjs,self,browser,2026-09-26
 prisminference.com,startups,Geist Mono,Geist Pixel Circle,nextjs,self,browser,2026-09-23
 pristyncare.com,startups,Lexend,Lexend,,google,browser,2026-09-23
 privacy.com.br,popular,Poppins,Poppins,nextjs,self,browser,2026-09-23
@@ -7190,7 +7240,7 @@ property24.com,popular,P24 SourceSans,P24 SourceSans,,self,browser,2026-09-23
 propexo.com,startups,DM Sans,Plus Jakarta Sans,,google,browser,2026-09-23
 propriorobotics.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 proprise.ai,startups,Inter,ui-serif,,google,browser,2026-09-23
-propublica.org,news,Brut Grotesque,Feature Headline,wordpress,google self,browser,2026-09-25
+propublica.org,news,Brut Grotesque,Feature Headline,wordpress,google self,browser,2026-09-26
 prose.md,startups,Literata,Literata,nextjs,self,browser,2026-09-23
 prosights.co,startups,Rethink Sans,Inter,framer,google self,browser,2026-09-23
 prosper.com,startups,Inter,Urbanist,wordpress,self,browser,2026-09-23
@@ -7247,7 +7297,7 @@ pwc.com,enterprise,PwC Helvetica Neue,PwC ITC Charter,,self,browser,2026-09-23
 pylonump.com,startups,Poppins,Poppins,gatsby,google,browser,2026-09-23
 pypi.org,devtools,Source Sans,Source Sans,,self,browser,2026-09-23
 pyrls.com,startups,Inter,Inter,,self,browser,2026-09-23
-python.org,devtools,Source Sans,Flux,,self,browser,2026-09-25
+python.org,devtools,Source Sans,Flux,,self,browser,2026-09-26
 pythonspeed.com,indie,Rosario,Rosario,,self,browser,2026-09-23
 pytorch.org,devtools,Helvetica,Montserrat,wordpress,self,browser,2026-09-23
 pyxai.com,startups,system-ui,system-ui,,self,browser,2026-09-23
@@ -7329,7 +7379,7 @@ radix-ui.com,devtools,system-ui,system-ui,nextjs,self,browser,2026-09-23
 radley.health,startups,Heebo,Montserrat,,google,browser,2026-09-23
 rahuljuliato.com,indie,system-ui,system-ui,nextjs,,browser,2026-09-23
 railbirdexchange.com,startups,Inter,Inter,,google,browser,2026-09-23
-railway.com,devtools,Inter,IBM Plex Serif,,google,browser,2026-09-25
+railway.com,devtools,Inter,IBM Plex Serif,,google,browser,2026-09-26
 railyatri.in,popular,Lato,Lato,nextjs,google,browser,2026-09-23
 rain-neuromorphics.com,startups,Raleway,Raleway,,,browser,2026-09-23
 rainbow.me,startups,SF Rounded,SF Rounded,,self,browser,2026-09-23
@@ -7354,7 +7404,7 @@ ramain.ai,startups,Switzer,Switzer,,fontshare,browser,2026-09-23
 ramani.io,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 ramenvr.com,startups,Helvetica Neue,Helvetica Neue,webflow,self,browser,2026-09-23
 ramones.dev,indie,JetBrains Mono,JetBrains Mono,,self,browser,2026-09-23
-ramp.com,saas,monospace,monospace,,,browser,2026-09-25
+ramp.com,saas,monospace,monospace,,,browser,2026-09-26
 randomascii.wordpress.com,indie,Georgia,Helvetica Neue,wordpress,,browser,2026-09-23
 randomlabs.ai,startups,JetBrains Mono,Satoshi,,fontshare google,browser,2026-09-23
 randsinrepose.com,indie,Ideal Sans SSm A,Sentinel A,wordpress,,browser,2026-09-23
@@ -7380,7 +7430,7 @@ ratkojat.fi,popular,Roboto,Roboto,,google,browser,2026-09-23
 ravelry.com,popular,Inter,Inter,,self,browser,2026-09-23
 ravion.com,startups,PP Neue Montreal,PP Fragment,,self,browser,2026-09-23
 ravn.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
-raycast.com,devtools,Inter,Inter,nextjs,self,browser,2026-09-25
+raycast.com,devtools,Inter,Inter,nextjs,self,browser,2026-09-26
 raycaster.ai,startups,helvetica Now Display,helvetica Now Display,nextjs,self,browser,2026-09-23
 raymii.org,indie,Ubuntu,Ubuntu,,self,browser,2026-09-23
 razest.net,popular,M PLUS 1p,M PLUS 1p,,google,browser,2026-09-23
@@ -7392,7 +7442,7 @@ re.factorcode.org,indie,system-ui,system-ui,,,browser,2026-09-23
 re2.ai,startups,Inter Tight,Inter Tight,nextjs,self,browser,2026-09-23
 reacherapp.com,startups,Hanken Grotesk,Hanken Grotesk,nextjs,self,browser,2026-09-23
 reachpower.com,startups,Inter,Sharp Grotesk,wordpress,google self,browser,2026-09-23
-react.dev,devtools,Optimistic,Optimistic,nextjs,self,browser,2026-09-25
+react.dev,devtools,Optimistic,Optimistic,nextjs,self,browser,2026-09-26
 reactnative.dev,devtools,Optimistic,Optimistic,,self,browser,2026-09-23
 reactwise.com,startups,DM Sans,DM Sans,webflow,google,browser,2026-09-23
 read.engineerscodex.com,indie,system-ui,SF Pro,,google,browser,2026-09-23
@@ -7441,7 +7491,7 @@ reddit.com,startups,system-ui,system-ui,,google,browser,2026-09-23
 redfin.com,popular,Inter,Inter,,,browser,2026-09-23
 redhandsvid.com,popular,Rubik,Rubik,,google,browser,2026-09-23
 rediff.com,popular,Roboto,Roboto,nextjs,self,browser,2026-09-23
-redis.io,devtools,Space Grotesk,Space Grotesk,nextjs,self,browser,2026-09-25
+redis.io,devtools,Space Grotesk,Space Grotesk,nextjs,self,browser,2026-09-26
 reditus.space,startups,Inter,Inter,framer,self,browser,2026-09-23
 rednafi.com,indie,Geist,Geist,,self,browser,2026-09-23
 redouble.ai,startups,Sofia Pro,Sofia Pro,,self,browser,2026-09-23
@@ -7501,7 +7551,7 @@ remote.com,saas,Inter,Bossa,nextjs,self,browser,2026-09-23
 remove.bg,popular,Canva Sans,Poppins,,google self,browser,2026-09-23
 renaultgroup.com,enterprise,RenaultGroupAH,RenaultGroup,nextjs,self,browser,2026-09-23
 rendalomaq.com,startups,Nunito Sans,Nunito Sans,nextjs,self,browser,2026-09-23
-render.com,devtools,PPNeue Montreal,Roobert,nextjs,self,browser,2026-09-25
+render.com,devtools,PPNeue Montreal,Roobert,nextjs,self,browser,2026-09-26
 renderlet.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,webflow,google,browser,2026-09-23
 rentahuman.ai,startups,system-ui,reckless Standard,nextjs,self,browser,2026-09-23
 renthop.com,startups,Open Sans,Open Sans,,google,browser,2026-09-23
@@ -7511,7 +7561,7 @@ repairsmith.com,startups,Inter,Inter,,google self,browser,2026-09-23
 replicas.dev,startups,general Sans,general Sans,nextjs,self,browser,2026-09-23
 replicate.com,startups,Basier Square,Rb Freigeist Neue,,self,browser,2026-09-23
 replika.ai,startups,Pangea,Pangea,nextjs,self,browser,2026-09-23
-replit.com,devtools,ABC Diatype Plus,ABC Diatype Plus,nextjs,self,browser,2026-09-25
+replit.com,devtools,ABC Diatype Plus,ABC Diatype Plus,nextjs,self,browser,2026-09-26
 replo.app,startups,Archivo,editorial New,nextjs,self,browser,2026-09-23
 repool.com,startups,Mallory,Reckless Neue,gatsby,self,browser,2026-09-23
 repromptai.com,startups,Poppins,Poppins,nextjs,google self,browser,2026-09-23
@@ -7542,7 +7592,7 @@ retellai.com,startups,Untitled Sans,Untitled Sans,webflow,google self,browser,20
 rethinkdb.com,startups,Freight Sans Pro,Freight Sans Pro,,adobe,browser,2026-09-23
 rethoric.com,startups,Inter,Inter,webflow,google self,browser,2026-09-23
 reticular.com,startups,Inter,Exposure,nextjs,google self,browser,2026-09-23
-retool.com,saas,saans Font,saans Font,nextjs,self,browser,2026-09-25
+retool.com,saas,saans Font,saans Font,nextjs,self,browser,2026-09-26
 retrofit.shop,startups,Fraunces,Fraunces,nextjs,google,browser,2026-09-23
 retrofix.ai,startups,Inter,Space Grotesk,nextjs,google,browser,2026-09-23
 returnsignals.com,startups,system-ui,Libre Caslon Text,,google,browser,2026-09-23
@@ -7608,7 +7658,7 @@ riovagas.com.br,popular,Open Sans,Open Sans,wordpress,google self,browser,2026-0
 rip.ie,popular,Inter,Domine,nextjs,self,browser,2026-09-23
 ripley.cl,popular,Montserrat,Montserrat,nextjs,,wayback-browser,2025-02-15
 ripple.com,startups,ripple Font,ripple Font,nextjs,self,browser,2026-09-23
-rippling.com,saas,Basel,Basel,nextjs,self,browser,2026-09-25
+rippling.com,saas,Basel,Basel,nextjs,self,browser,2026-09-26
 risd.edu,universities,RISD Sans,RISD Serif Complete,,google self,browser,2026-09-23
 rise-reforming.com,startups,Manrope,Manrope,wix,self,browser,2026-09-23
 risely.ai,startups,Sora,Sora,nextjs,self,browser,2026-09-23
@@ -7746,7 +7796,7 @@ runway.com,saas,abc,abc,nextjs,self,browser,2026-09-23
 runway.team,startups,Manrope Variablefont Wght,Manrope Variablefont Wght,webflow,google self,browser,2026-09-23
 rupiahpondok.com,popular,Avenir,Avenir,,self,browser,2026-09-23
 russianfood.com,popular,Arial,Arial,,self,browser,2026-09-23
-rust-lang.org,devtools,Fira Sans,Fira Sans,,self,browser,2026-09-25
+rust-lang.org,devtools,Fira Sans,Fira Sans,,self,browser,2026-09-26
 rustore.ru,popular,vk Font,vk Font,nextjs,self,browser,2026-09-23
 rutgers.edu,universities,Source Sans,PT Serif,,google self,browser,2026-09-23
 rutracker.org,popular,Verdana,Verdana,,,browser,2026-09-23
@@ -7783,7 +7833,7 @@ salarybook.co.in,startups,Inter,Plus Jakarta Sans,,google,browser,2026-09-23
 salarybox.in,startups,system-ui,system-ui,wordpress,google self,browser,2026-09-23
 saldor.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,,google,browser,2026-09-23
 salemroboticsinc.com,startups,Aptos,Aptos,nextjs,,browser,2026-09-23
-salesforce.com,saas,Salesforce Sans,Avant Garde for Salesforce,,self,browser,2026-09-25
+salesforce.com,saas,Salesforce Sans,Avant Garde for Salesforce,,self,browser,2026-09-26
 salesloft.com,saas,Gellix,Gellix,nextjs,self,browser,2026-09-23
 salespatriot.com,startups,Britti Sans Trial,Britti Sans Trial,framer,google self,browser,2026-09-23
 salomon.com,ecommerce,Inter,Inter,nextjs,self,browser,2026-09-23
@@ -7805,7 +7855,7 @@ samos.insure,startups,Kumbh Sans,Koulen,framer,google self,browser,2026-09-23
 samplehc.com,startups,Apk Protocol,Apk Protocol,webflow,self,browser,2026-09-23
 samsclub.com,ecommerce,Sams Sans UI,Sams Sans UI,nextjs,adobe self,browser,2026-09-23
 samsodisha.gov.in,popular,system-ui,Akhand,,self,browser,2026-09-23
-samsung.com,enterprise,Samsung One,Samsung One,,self,browser,2026-09-25
+samsung.com,enterprise,Samsung One,Samsung One,,self,browser,2026-09-26
 samwho.dev,indie,Seravek,Iowan Old Style,,,browser,2026-09-23
 sandboxaq.com,startups,Satoshi,Satoshi,webflow,google self,browser,2026-09-23
 sandboxbanking.com,startups,n Cino Avenir,Space Grotesk,nextjs,google self,browser,2026-09-23
@@ -7868,7 +7918,7 @@ sc.gov,government,Roboto,Roboto,,adobe google,browser,2026-09-23
 scala-lang.org,devtools,Lato,Lato,,google self,browser,2026-09-23
 scalable.capital,startups,Teka,Teka,,self,browser,2026-09-23
 scalarfield.io,startups,Roboto,Roboto,nextjs,google self,browser,2026-09-23
-scale.com,saas,Aeonik,Aeonik,nextjs,self,browser,2026-09-25
+scale.com,saas,Aeonik,Aeonik,nextjs,self,browser,2026-09-26
 scan-manga.com,popular,Helvetica,Helvetica,,,wayback-browser,2021-08-15
 scanbase.com,startups,Geist,Archivo,webflow,google,browser,2026-09-23
 scandit.com,startups,Helvetica,Helvetica,,self,browser,2026-09-23
@@ -7954,7 +8004,7 @@ selfin.app,startups,system-ui,system-ui,,,browser,2026-09-23
 selia.co,startups,Open Sauce One Latin 400,Gelica Medium Oficial,webflow,google self,browser,2026-09-23
 sellraze.com,startups,SF Pro,SF Pro,nextjs,self,browser,2026-09-23
 seloger.com,popular,Source Sans,Source Sans,,,wayback-browser,2019-08-15
-semafor.com,news,Feature Flat Headline,Feature Flat Headline,,self,browser,2026-09-25
+semafor.com,news,Feature Flat Headline,Feature Flat Headline,,self,browser,2026-09-26
 semana.com,popular,Switzer,Switzer,,self,browser,2026-09-23
 sembleai.com,startups,Source Sans,Source Sans,,google,browser,2026-09-23
 semiotic.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
@@ -7978,9 +8028,9 @@ sensible.bio,startups,DM Sans,DM Sans,webflow,self,browser,2026-09-23
 senso.ai,startups,system-ui,system-ui,nextjs,self,browser,2026-09-23
 sentient-os.ai,startups,Instrument Serif,Instrument Serif,nextjs,self,browser,2026-09-23
 sentrial.com,startups,Nunito,Nunito,nextjs,self,browser,2026-09-23
-sentry.io,saas,Rubik,Dammit Sans,,self,browser,2026-09-25
+sentry.io,saas,Rubik,Dammit Sans,,self,browser,2026-09-26
 sentz.com,startups,Inter,Inter,webflow,google,browser,2026-09-23
-sephora.com,ecommerce,Helvetica Neue,Helvetica Neue,,google self,browser,2026-09-25
+sephora.com,ecommerce,Helvetica Neue,Helvetica Neue,,self,browser,2026-09-26
 sepsisscout.com,startups,system-ui,system-ui,,,browser,2026-09-23
 sequencebio.com,startups,NB International,NB International,webflow,self,browser,2026-09-23
 sequencemkts.com,startups,JetBrains Mono,Inter,,google,browser,2026-09-23
@@ -8077,7 +8127,7 @@ shopch.jp,popular,Hiragino Kaku Gothic,Hiragino Kaku Gothic,,self,browser,2026-0
 shopee.co.id,popular,Roboto,Roboto,,self,browser,2026-09-23
 shopgarage.com,startups,system-ui,system-ui,nextjs,,browser,2026-09-23
 shopier.com,popular,Gilroy,Gilroy,,,wayback-browser,2025-08-15
-shopify.com,saas,Shopify Inter,Shopify Inter,,self,browser,2026-09-25
+shopify.com,saas,Shopify Inter,Shopify Inter,,self,browser,2026-09-26
 shoplocale.com,startups,Figtree,Figtree,shopify,google self,browser,2026-09-23
 shopsy.in,popular,Inter,Inter,nextjs,self,browser,2026-09-23
 shoptiques.com,startups,Quicksand,Fahkwang,shopify,self,browser,2026-09-23
@@ -8176,7 +8226,7 @@ sketchfab.com,popular,Open Sans,Open Sans,,self,browser,2026-09-23
 skild.ai,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 skill-lync.com,startups,Poppins,Poppins,nextjs,google self,browser,2026-09-23
 skillsync.com,startups,Geist Mono,Geist,nextjs,self,browser,2026-09-23
-skims.com,ecommerce,Inter,T Star,shopify,google self,browser,2026-09-25
+skims.com,ecommerce,Inter,T Star,shopify,google self,browser,2026-09-26
 skio.com,startups,Poppins,Poppins,framer,google self,browser,2026-09-23
 sklum.com,popular,Azeret,Azeret,,self,browser,2026-09-23
 skokka.com.pe,popular,Inter,Inter,,google self,browser,2026-09-23
@@ -8195,7 +8245,7 @@ skysports.com,popular,Sky Sports Brand 2026,Sky Sports Brand 2026,,self,browser,
 skyvegas.com,popular,Sky Text,Sky Text,,,wayback-browser,2025-11-15
 skyvern.com,startups,Plus Jakarta Sans,Plus Jakarta Sans,,self,browser,2026-09-23
 skyways.com,startups,Founders Grotesk,Founders Grotesk,,self,browser,2026-09-23
-slack.com,saas,Salesforce Sans,Salesforce Avant Garde,,google self,browser,2026-09-25
+slack.com,saas,Salesforce Sans,Salesforce Avant Garde,,google self,browser,2026-09-26
 slapdash.com,startups,system-ui,system-ui,,,browser,2026-09-23
 slash.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 slashy.com,startups,system-ui,Libertinus Serif,,google,browser,2026-09-23
@@ -8218,7 +8268,7 @@ smartmovepro.net,popular,Roboto,Dosis,,self,browser,2026-09-23
 smartnews.com,startups,system-ui,system-ui,nextjs,,browser,2026-09-23
 smartsheet.com,saas,TT Norms,TT Norms,,self,browser,2026-09-23
 smbcnikko.co.jp,popular,Yu Gothic,Yu Gothic,,google,browser,2026-09-23
-smh.com.au,news,Abril Titling,Abril Titling,,self,browser,2026-09-25
+smh.com.au,news,Abril Titling,Abril Titling,,self,browser,2026-09-26
 smobi.com,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 smolmachines.com,startups,Inter,Inter,,self,browser,2026-09-23
 smooth.sh,startups,Inter,Inter,nextjs,self,browser,2026-09-23
@@ -8242,7 +8292,7 @@ snaptik.app,popular,Inter,Inter,,self,browser,2026-09-23
 snaptrade.com,startups,PPNeue Montreal,PPFormula,nextjs,self,browser,2026-09-23
 snaptube.com,popular,Times New Roman,Times New Roman,,,browser,2026-09-23
 snorkel.ai,startups,Geist,Geist,wordpress,self,browser,2026-09-23
-snowflake.com,saas,Lato,Texta,,self,browser,2026-09-25
+snowflake.com,saas,Lato,Texta,,self,browser,2026-09-26
 snu.ac.kr,universities,Roboto,Roboto,,self,browser,2026-09-23
 snyk.io,saas,Geist,Geist,nextjs,self,browser,2026-09-23
 soatok.blog,indie,Libre Franklin,Libre Franklin,wordpress,self,browser,2026-09-23
@@ -8282,7 +8332,7 @@ sonauto.ai,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 sondakika.com,popular,system-ui,system-ui,,,browser,2026-09-23
 songkick.com,startups,Inter,Archivo,,google,browser,2026-09-23
 soniahealth.com,startups,Inter,Inter,,google,browser,2026-09-23
-sony.com,enterprise,SST W20 Roman,SST W20,,monotype,browser,2026-09-25
+sony.com,enterprise,SST W20 Roman,SST W20,,monotype,browser,2026-09-26
 sonyliv.com,popular,Roboto,Roboto,,,browser,2026-09-23
 soon.app,startups,Montserrat,Montserrat,webflow,google self,browser,2026-09-23
 sooplive.com,popular,Pretendard,Pretendard,nextjs,self,browser,2026-09-23
@@ -8348,7 +8398,7 @@ sphinxhq.com,startups,Abcmonumentgrotesk,Abcarizona,webflow,google self,browser,
 spiber.inc,startups,Spiber,Spiber,wordpress,self,browser,2026-09-23
 spicedata.com,startups,Montserrat,Montserrat,,google,browser,2026-09-23
 spicyweb.dev,indie,Basier Circle,Basier Circle,,self,browser,2026-09-23
-spiegel.de,news,Spiegel Sans UI,Spiegel Sans UI,,self,browser,2026-09-25
+spiegel.de,news,Spiegel Sans UI,Spiegel Sans UI,,self,browser,2026-09-26
 spinach.ai,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 spinny.com,startups,Spinny Jost,Spinny Jost,,google,browser,2026-09-23
 spirelawfirm.com,startups,Signika,Signika,wix,self,browser,2026-09-23
@@ -8378,7 +8428,7 @@ sporx.com,popular,Arial,Open Sans,,google self,browser,2026-09-23
 sporza.be,popular,Roobert Vrt,Roobert Vrt,,self,browser,2026-09-23
 spotangels.com,startups,Museo Sans Rounded,Museo Sans Rounded,nuxt,self,browser,2026-09-23
 spotdx.com,startups,DM Sans,DM Sans,webflow,google,browser,2026-09-23
-spotify.com,enterprise,Spotify Mix UI,Spotify Mix UI,,self,browser,2026-09-25
+spotify.com,enterprise,Spotify Mix UI,Spotify Mix UI,,self,browser,2026-09-26
 spotlessmaterials.com,startups,Inter,Caprasimo,shopify,google self,browser,2026-09-23
 spoton.com,startups,Sofia Pro,Sofia Pro,nextjs,self,browser,2026-09-23
 spotpay.ai,startups,Inter,Inter,framer,self,browser,2026-09-23
@@ -8394,15 +8444,15 @@ sproutgigs.com,popular,Roboto,Roboto,,google self,browser,2026-09-23
 sproutsocial.com,saas,Proxima Nova,Proxima Nova,nextjs,,browser,2026-09-23
 spruceid.com,startups,Inter,Stack Sans Headline,framer,google self,browser,2026-09-23
 spurtest.com,startups,Geist,Martinaplantijn,webflow,self,browser,2026-09-23
-sqlite.org,devtools,Verdana,Verdana,,,browser,2026-09-25
+sqlite.org,devtools,Verdana,Verdana,,,browser,2026-09-26
 squadapp.io,startups,Taviraj,Nunito,wordpress,google self,browser,2026-09-23
-squarespace.com,saas,Clarkson,Clarkson,squarespace,self,browser,2026-09-25
+squarespace.com,saas,Clarkson,Clarkson,squarespace,self,browser,2026-09-26
 squid.energy,startups,Sora,Sora,nextjs,self,browser,2026-09-23
 srf.ch,popular,SRG SSR Text,SRG SSR Text,,self,browser,2026-09-23
 sri.gob.ec,popular,Open Sans,Raleway,,,wayback-browser,2025-11-15
 ss.com,popular,Verdana,Verdana,,,browser,2026-09-23
 ss.lv,popular,Verdana,Verdana,,,browser,2026-09-23
-ssa.gov,government,Public Sans,Public Sans,,self,browser,2026-09-25
+ssa.gov,government,Public Sans,Public Sans,,self,browser,2026-09-26
 ssi.inc,startups,SF Mono,SF Mono,,,browser,2026-09-23
 ssp.sh,indie,Atkinson Hyperlegible,Iosevka,,self,browser,2026-09-23
 ssrchat.com,popular,system-ui,system-ui,nextjs,,browser,2026-09-23
@@ -8423,7 +8473,7 @@ stafbook.com,startups,Poppins,Poppins,nuxt,google,browser,2026-09-23
 staffbase.com,startups,Inter,Epilogue,,self,browser,2026-09-23
 stagewise.io,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 stairsfinancial.com,startups,Plus Jakarta Sans,Instrument Sans,wordpress,google self,browser,2026-09-23
-stake.com,popular,Proxima Nova,Proxima Nova,,,wayback-browser,2022-02-15
+stake.com,popular,Proxima Nova,Proxima Nova,,,wayback-browser,2022-05-15
 stampmail.ai,startups,Suisse,Suisse,nextjs,self,browser,2026-09-23
 standard.ai,startups,Circular,Circular,wordpress,self,browser,2026-09-23
 standard.co.uk,news,Orbikular,Caslon Doric Condensed,,google self,browser,2026-09-23
@@ -8431,10 +8481,10 @@ standardmachines.com,startups,Guaruja Neue,Guaruja Neue,,self,browser,2026-09-23
 standardsignal.com,startups,Domine,Domine,nextjs,self,browser,2026-09-23
 standardtreasury.com,startups,Outfit,Outfit,wordpress,self,browser,2026-09-23
 standout.work,startups,system-ui,Exposure,nextjs,self,browser,2026-09-23
-stanford.edu,universities,Source Sans,Edict,nextjs,google self,browser,2026-09-25
+stanford.edu,universities,Source Sans,Edict,nextjs,google self,browser,2026-09-26
 stanley1913.com,ecommerce,Stanley Favorit,Stanley Favorit,shopify,google self,browser,2026-09-23
 star-telegram.com,news,Noto Sans,Noto Sans,,google,browser,2026-09-23
-starbucks.com,enterprise,So Do Sans,So Do Sans,nextjs,self,browser,2026-09-25
+starbucks.com,enterprise,So Do Sans,So Do Sans,nextjs,self,browser,2026-09-26
 starburst.io,startups,Roboto,PP Mori,nextjs,self,browser,2026-09-23
 starcloud.com,startups,Aeonik,Aeonik,webflow,self,browser,2026-09-23
 stardewvalleywiki.com,popular,sans-serif,sans-serif,,,browser,2026-09-23
@@ -8504,7 +8554,7 @@ stoaexchange.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 stockline.ai,startups,Inter,Inter,nextjs,google self,browser,2026-09-23
 stockunlock.com,startups,Geist,Geist,,google,browser,2026-09-23
 stockx.com,ecommerce,Suisse Intl,Suisse Intl,nextjs,self,browser,2026-09-23
-stoiximan.gr,popular,Roboto,Roboto,,,wayback-browser,2019-11-15
+stoiximan.gr,popular,Roboto,Roboto,,,wayback-browser,2020-02-15
 stokespace.com,startups,Inter,Druk Wide,nextjs,self,browser,2026-09-23
 stonybrook.edu,universities,Barlow Semi Condensed,Alumni Sans,,google,browser,2026-09-23
 stopbullying.gov,government,Source Sans,Merriweather,,google self,browser,2026-09-23
@@ -8537,7 +8587,7 @@ streem.com,startups,Urbanist,Urbanist,,google,browser,2026-09-23
 strideq.com,startups,Poppins,Poppins,wordpress,google self,browser,2026-09-23
 striga.com,startups,Suisse Intl,Suisse Intl,nextjs,self,browser,2026-09-23
 strikingly.com,startups,Open Sans,Open Sans,,adobe self,browser,2026-09-23
-stripe.com,saas,Söhne,Söhne,nextjs,self,browser,2026-09-25
+stripe.com,saas,Söhne,Söhne,nextjs,self,browser,2026-09-26
 strivehealth.com,startups,Lato,Lato,wordpress,adobe,browser,2026-09-23
 strivemath.com,startups,system-ui,system-ui,nextjs,google self,browser,2026-09-23
 strongcompute.com,startups,system-ui,system-ui,,,browser,2026-09-23
@@ -8584,7 +8634,7 @@ suno.com,startups,Neue Montreal,Neue Montreal,nextjs,self,browser,2026-09-23
 sunpia.io,startups,system-ui,system-ui,,,browser,2026-09-23
 sunsama.com,startups,DM Sans,DM Sans,webflow,google,browser,2026-09-23
 sunshowers.io,indie,Inter,Figtree,,self,browser,2026-09-23
-supabase.com,devtools,Inter,Manrope,nextjs,self,browser,2026-09-25
+supabase.com,devtools,Inter,Manrope,nextjs,self,browser,2026-09-26
 super.cz,popular,Inter,Inter,,self,browser,2026-09-23
 superagent.sh,startups,JetBrains Mono,JetBrains Mono,nextjs,self,browser,2026-09-23
 superapp.id,startups,Figtree,Figtree,,google,browser,2026-09-23
@@ -8631,7 +8681,7 @@ sussex.ac.uk,universities,Inter,Inter,,self,browser,2026-09-23
 suumo.jp,popular,Meiryo,Meiryo,,,browser,2026-09-23
 svbtle.com,startups,LT Grotesk,LT Grotesk,,self,browser,2026-09-23
 svd.se,news,SvD Ester Blenda,Sueca Hd,,google self,browser,2026-09-23
-svelte.dev,devtools,Georgia,DM Serif Display,,self,browser,2026-09-25
+svelte.dev,devtools,Georgia,DM Serif Display,,self,browser,2026-09-26
 svix.com,startups,Geist Mono,neue Haas,nextjs,self,browser,2026-09-23
 svpow.com,indie,Georgia,Tahoma,wordpress,,browser,2026-09-23
 swadesh.co,startups,Inter,Neue Haas Grotesk,webflow,adobe google,browser,2026-09-23
@@ -8704,7 +8754,7 @@ tagmango.com,startups,Inter,Poppins,webflow,google self,browser,2026-09-23
 taigabilling.com,startups,Geist,Geist,,self,browser,2026-09-23
 tailor.tech,startups,Inter,Geist,nextjs,self,browser,2026-09-23
 tailscale.com,saas,Inter,Inter,nextjs,self,browser,2026-09-23
-tailwindcss.com,devtools,Inter,Inter,nextjs,self,browser,2026-09-25
+tailwindcss.com,devtools,Inter,Inter,nextjs,self,browser,2026-09-26
 taiv.tv,startups,Inter,Inter,,self,browser,2026-09-23
 tajir.app,startups,Inter,Lora,,google,browser,2026-09-23
 takarakuji-official.jp,popular,Hiragino Kaku Gothic,Hiragino Kaku Gothic,,,wayback-browser,2025-08-15
@@ -8734,7 +8784,7 @@ tamilgun.now,popular,Play,Play,wordpress,google self,browser,2026-09-23
 tamilkamaveri2.com,popular,system-ui,system-ui,wordpress,,browser,2026-09-23
 tamilprint64.art,popular,Verdana,Verdana,,,browser,2026-09-23
 tamilprint65.art,popular,Verdana,Verdana,,,browser,2026-09-23
-tamin.ir,popular,Iran,Iranbold,,,wayback-browser,2019-11-15
+tamin.ir,popular,IRANSans,IRANSans,,,wayback-browser,2020-02-15
 tamlabs.ai,startups,Helvetica Neue,Helvetica Neue,,self,browser,2026-09-23
 tampabay.com,news,Roboto Condensed,Roboto,,google self,browser,2026-09-23
 tamu.edu,universities,Open Sans,Work Sans,,google,browser,2026-09-23
@@ -8753,7 +8803,7 @@ tapology.com,popular,Arial,Arial,,google,browser,2026-09-23
 tappityapp.com,startups,Hanken Grotesk,Hanken Grotesk,,google,browser,2026-09-23
 tara.ai,startups,GD Sherpa,GD Sherpa,,self,browser,2026-09-23
 tarebio.com,startups,Newsreader,Newsreader,,self,browser,2026-09-23
-target.com,ecommerce,Helvetica for Target,Helvetica for Target,nextjs,google self,browser,2026-09-25
+target.com,ecommerce,Helvetica for Target,Helvetica for Target,nextjs,google self,browser,2026-09-26
 tarifflo.com,startups,Inter,Inter,nextjs,google,browser,2026-09-23
 tarjimly.org,startups,DM Sans,DM Sans,webflow,google,browser,2026-09-23
 tarsal.co,startups,ABC Diatype Mono,Untitled Serif,webflow,google self,browser,2026-09-23
@@ -8798,7 +8848,7 @@ tecconcursos.com.br,popular,Source Sans,Source Sans,,google self,browser,2026-09
 tech.marksblogg.com,indie,Roboto,Roboto,,google,browser,2026-09-23
 tech.stonecharioteer.com,indie,Inter,Inter,,self,browser,2026-09-23
 techbiz.app,startups,system-ui,system-ui,,,browser,2026-09-23
-techcrunch.com,news,NB International,NB International,wordpress,google self,browser,2026-09-25
+techcrunch.com,news,NB International,NB International,wordpress,google self,browser,2026-09-26
 techinasia.com,startups,system-ui,Playfair Display,,google,browser,2026-09-23
 techmate.com,startups,Poppins,Degular Display,wordpress,google self,browser,2026-09-23
 technicalwriting.dev,indie,Noto Sans,Noto Sans,,google,browser,2026-09-23
@@ -8910,8 +8960,8 @@ theforage.com,startups,DM Sans,DM Sans,nextjs,self,browser,2026-09-23
 theforecastingcompany.com,startups,Mona Sans,Mona Sans,,self,browser,2026-09-23
 thefuse.co.za,popular,Open Sans,Open Sans,,google,browser,2026-09-23
 thegioididong.com,popular,Arial,Arial,,,wayback-browser,2022-08-15
-theglobeandmail.com,news,Pratt,Pratt,,self,browser,2026-09-25
-theguardian.com,news,Guardian Headline,Guardian Headline,,self,browser,2026-09-25
+theglobeandmail.com,news,Pratt,Pratt,,self,browser,2026-09-26
+theguardian.com,news,Guardian Headline,Guardian Headline,,self,browser,2026-09-26
 thehftguy.com,indie,Roboto,Playfair Display,wordpress,self,browser,2026-09-23
 thehill.com,news,Graphik,Graphik,wordpress,self,browser,2026-09-23
 thehindu.com,news,Merriweather,Merriweather,,google,browser,2026-09-23
@@ -8920,7 +8970,7 @@ thehistoryoftheweb.com,indie,Lora,Oswald,wordpress,google,browser,2026-09-23
 thehive.ai,startups,Roboto,Roboto,nextjs,self,browser,2026-09-23
 thehog.ai,startups,Suisse,Suisse,nextjs,self,browser,2026-09-23
 thehomli.com,startups,Open Sans,Roboto Flex,,google,browser,2026-09-23
-theinformation.com,news,Suisse Neue,Suisse Works,,self,browser,2026-09-25
+theinformation.com,news,Suisse Neue,Suisse Works,,self,browser,2026-09-26
 theintercept.com,news,TIActu Beta,TIActu Beta,wordpress,self,browser,2026-09-23
 thejournal.ie,news,Marr Sans,Marr Sans,,adobe google self,browser,2026-09-23
 thejpster.org.uk,indie,system-ui,system-ui,,,browser,2026-09-23
@@ -8968,7 +9018,7 @@ thethirdplace.is,startups,portrait Text,favorit,nextjs,self,browser,2026-09-23
 thetimes.com,news,Times Modern,Times Modern,,self,browser,2026-09-23
 thetokencompany.com,startups,system-ui,system-ui,nextjs,self,browser,2026-09-23
 thetrainline.com,popular,system-ui,TLCircular,,self,browser,2026-09-23
-theverge.com,news,FK Roman Standard,PolySans,nextjs,google self,browser,2026-09-25
+theverge.com,news,FK Roman Standard,PolySans,nextjs,google self,browser,2026-09-26
 thevisionlab.ai,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 thewaltdisneycompany.com,enterprise,Inspire TWDC,Inspire TWDC,wordpress,self,browser,2026-09-23
 theweathernetwork.com,popular,Poppins,Poppins,nextjs,self,browser,2026-09-23
@@ -9022,7 +9072,7 @@ tilt.io,startups,Geist,Geist Mono,nextjs,self,browser,2026-09-23
 tim.blog,indie,DM Sans,DM Sans,wordpress,self,browser,2026-09-23
 tim.it,popular,TIMSans,TIMSans,,self,browser,2026-09-23
 timdettmers.com,indie,Open Sans,Open Sans,wordpress,google,browser,2026-09-23
-time.com,news,pp Editorial New,pp Editorial New,nextjs,google self,browser,2026-09-25
+time.com,news,pp Editorial New,pp Editorial New,nextjs,self,browser,2026-09-26
 timeanddate.com,popular,Arial,Arial,,self,browser,2026-09-23
 timebucks.com,popular,Open Sans,Open Sans,,self,browser,2026-09-23
 timesofindia.indiatimes.com,news,Rethink Sans,Rethink Sans,,google,browser,2026-09-23
@@ -9110,7 +9160,7 @@ tornyol.com,startups,Archivo,Genos,,google,browser,2026-09-23
 torob.com,popular,Iranyekan,Iranyekan,nextjs,self,browser,2026-09-23
 torpedotherapeutics.com,startups,Poppins,Poppins,wordpress,google,browser,2026-09-23
 torq.io,startups,Inter,Inter,wordpress,google self,browser,2026-09-23
-torrid.com,popular,Arial,Lato,,,wayback-browser,2018-05-15
+torrid.com,popular,Times New Roman,Times New Roman,,,wayback-browser,2018-08-15
 toryburch.com,ecommerce,Neue Haas Grotesk,Neue Haas Grotesk,nextjs,adobe,browser,2026-09-23
 toss.im,startups,Toss Product Sans OTF,Toss Product Sans OTF,nextjs,self,browser,2026-09-23
 totalenergies.com,enterprise,Roboto,Nunito,,self,browser,2026-09-23
@@ -9124,7 +9174,7 @@ touchyapp.com,startups,Figtree,Instrument Serif,,google self,browser,2026-09-23
 tovala.com,startups,Soehne,Soehne,nextjs,self,browser,2026-09-23
 toven.ai,startups,IBM Plex Sans,IBM Plex Sans,nextjs,self,browser,2026-09-23
 toyhou.se,popular,system-ui,Helvetica,,,browser,2026-09-23
-toyota.com,enterprise,tcom,tcom Med,,google self,browser,2026-09-25
+toyota.com,enterprise,tcom,tcom Med,,google self,browser,2026-09-26
 tpaga.co,startups,Montserrat,Montserrat,wordpress,google,browser,2026-09-23
 tportal.hr,popular,Sora,Sora,,google self,browser,2026-09-23
 trace.so,startups,Geist,Geist,framer,google self,browser,2026-09-23
@@ -9204,7 +9254,7 @@ triply.co,startups,Amsi Pro,Amsi Pro,nuxt,self,browser,2026-09-23
 triunfobet.com,popular,Roboto Flex,Roboto Flex,,google self,browser,2026-09-23
 trmlabs.com,startups,TRM Sans,Newsreader,webflow,google self,browser,2026-09-23
 trope.ai,startups,Manrope,Manrope,nextjs,self,browser,2026-09-23
-trovaprezzi.it,popular,Arial,Arial,,,wayback-browser,2022-05-15
+trovaprezzi.it,popular,Arial,Arial,,,wayback-browser,2024-11-15
 troyhunt.com,indie,Vollkorn,Vollkorn,,self,browser,2026-09-23
 trpc.io,devtools,system-ui,system-ui,,,browser,2026-09-23
 true3d.com,startups,M Ying Hei PRC W48 W3,M Ying Hei PRC W48 W3,,self,browser,2026-09-23
@@ -9374,7 +9424,7 @@ tweeks.io,startups,Inter Tight,Inter Tight,nextjs,self,browser,2026-09-23
 twenty.com,startups,Inter,host Grotesk,nextjs,self,browser,2026-09-23
 twentyfour26.com,startups,Manrope,Manrope,nextjs,self,browser,2026-09-23
 twentytwo.bio,startups,Outfit,Space Grotesk,nextjs,self,browser,2026-09-23
-twilio.com,saas,Whitney SSm,Whitney SSm,,self,browser,2026-09-25
+twilio.com,saas,Whitney SSm,Whitney SSm,,self,browser,2026-09-26
 twitch.tv,popular,Inter,Roobert,,self,browser,2026-09-23
 twittervideodownloader.com,popular,system-ui,system-ui,,,browser,2026-09-23
 twkan.com,popular,Microsoft YaHei,Microsoft YaHei,,,browser,2026-09-23
@@ -9395,7 +9445,7 @@ typedream.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 typeface.ai,startups,Suisseintl,Suisseintl,nextjs,self,browser,2026-09-23
 typeform.com,saas,Twklausanne 400,Twklausanne 400,webflow,google self,browser,2026-09-23
 typesanitizer.com,indie,System,System,,,browser,2026-09-23
-typescriptlang.org,devtools,Segoe UI Web (West European),Segoe UI Web (West European),gatsby,self,browser,2026-09-25
+typescriptlang.org,devtools,Segoe UI Web (West European),Segoe UI Web (West European),gatsby,self,browser,2026-09-26
 typewise.app,startups,Inter,Aeonik Pro,,self,browser,2026-09-23
 typing.com,popular,Quicksand,Quicksand,,google,browser,2026-09-23
 typingtest.com,popular,system-ui,system-ui,,,browser,2026-09-23
@@ -9404,7 +9454,7 @@ uafix.net,popular,Source Sans,Source Sans,,google self,browser,2026-09-23
 uakinogo.io,popular,Tahoma,Tahoma,,,browser,2026-09-23
 uala.com.ar,startups,Public Sans,Reddit Sans,nextjs,google self,browser,2026-09-23
 ubc.ca,universities,Whitney SSm A,Whitney SSm A,,self,browser,2026-09-23
-uber.com,enterprise,Uber Move Text,Uber Move Text,,self,browser,2026-09-25
+uber.com,enterprise,Uber Move Text,Uber Move,,self,browser,2026-09-26
 ubereats.com,popular,Uber Move Text,Uber Move,,self,browser,2026-09-23
 ubicloud.com,startups,Bevietnampro,Bevietnampro,webflow,google self,browser,2026-09-23
 ubits.com,saas,Inter Tight,Inter Tight,webflow,google,browser,2026-09-23
@@ -9414,10 +9464,10 @@ uc-share.com,popular,system-ui,system-ui,,,browser,2026-09-23
 ucalgary.ca,universities,Proxima Nova,Proxima Nova,,adobe google self,browser,2026-09-23
 ucd.ie,universities,Indivisible,Indivisible,,adobe self,browser,2026-09-23
 ucdavis.edu,universities,Proxima Nova,Proxima Nova,,self,browser,2026-09-23
-uchicago.edu,universities,UChicagoSansSerif,UChicagoSansSerif,,google self,browser,2026-09-25
+uchicago.edu,universities,UChicagoSansSerif,UChicagoSansSerif,,google self,browser,2026-09-26
 uci.edu,universities,Arial,Montserrat,,google,browser,2026-09-23
-ucl.ac.uk,universities,UCL Sans,UCL Sans,,self,browser,2026-09-25
-ucla.edu,universities,Helvetica,Helvetica,,,browser,2026-09-25
+ucl.ac.uk,universities,UCL Sans,UCL Sans,,self,browser,2026-09-26
+ucla.edu,universities,Helvetica,Helvetica,,,browser,2026-09-26
 uconn.edu,universities,Roboto,PT Serif,wordpress,google self,browser,2026-09-23
 ucr.edu,universities,Fira Sans,Fira Sans,,google self,browser,2026-09-23
 ucsb.edu,universities,Nunito Sans,Nunito Sans,,google self,browser,2026-09-23
@@ -9446,7 +9496,7 @@ ultralig.ht,startups,Rubik,AvenirNextLTPro,,google self,browser,2026-09-23
 ultrasonium.com,startups,Inter,Inter,nextjs,,browser,2026-09-23
 umass.edu,universities,Open Sans,Open Sans,,google,browser,2026-09-23
 umd.edu,universities,Interstate,Interstate,,,browser,2026-09-23
-umich.edu,universities,Roboto Condensed,Roboto Condensed,,self,browser,2026-09-25
+umich.edu,universities,Roboto Condensed,Roboto Condensed,,self,browser,2026-09-26
 umingle.com,popular,system-ui,system-ui,,self,browser,2026-09-23
 umn.edu,universities,Open Sans,Open Sans,,google self,browser,2026-09-23
 umontreal.ca,universities,Object Sans,Object Sans,,self,browser,2026-09-23
@@ -9478,9 +9528,9 @@ uniqlo.com,ecommerce,Times New Roman,Uniqlo Pro,,,wayback-browser,2019-08-15
 unisa.ac.za,popular,system-ui,system-ui,,self,browser,2026-09-23
 unisson.ai,startups,Athletics,Athletics,framer,self,browser,2026-09-23
 uniswap.org,startups,Basel,Basel,,self,browser,2026-09-23
-united.com,enterprise,NeuePlakTextforUnited Rg,NeuePlakforUnited Rg,,self,browser,2026-09-25
+united.com,enterprise,NeuePlakTextforUnited Rg,NeuePlakforUnited Rg,,self,browser,2026-09-26
 unitedcinemas.jp,popular,Meiryo,Meiryo,,,browser,2026-09-23
-unitedhealthgroup.com,enterprise,Optum Sans,Optum Sans,,self,browser,2026-09-25
+unitedhealthgroup.com,enterprise,Optum Sans,Optum Sans,,self,browser,2026-09-26
 uniteus.com,startups,Proxima Nova,Proxima Nova,wordpress,self,browser,2026-09-23
 units.school,startups,Zalando Sans,Exposure,nextjs,self,browser,2026-09-23
 unity.com,devtools,Inter,Nohemi,nextjs,self,browser,2026-09-23
@@ -9523,7 +9573,7 @@ upbhulekh.gov.in,popular,Arial,Poppins,,,wayback-browser,2019-05-15
 upbit.com,startups,Roboto,Roboto,,google,browser,2026-09-23
 upcall.com,startups,Montserrat,Montserrat,,google,browser,2026-09-23
 upchieve.org,startups,Work Sans,Work Sans,squarespace,adobe self,browser,2026-09-23
-upenn.edu,universities,Roboto,EB Garamond,,google self,browser,2026-09-25
+upenn.edu,universities,Roboto,EB Garamond,,google self,browser,2026-09-26
 upequity.com,startups,Montserrat,Montserrat,,self,browser,2026-09-23
 upflow.io,startups,Satoshi,Satoshi,wordpress,google self,browser,2026-09-23
 upfort.com,startups,Roboto,Roboto,webflow,google self,browser,2026-09-23
@@ -9535,7 +9585,7 @@ upliftai.org,startups,halyard Text,halyard Text,nextjs,self,browser,2026-09-23
 uplinkapp.io,startups,Inter,Jost,webflow,google,browser,2026-09-23
 upmusics.com,popular,Upsans,Upsans,wordpress,self,browser,2026-09-23
 uppcl.org,popular,Roboto Condensed,Roboto Condensed,,,wayback-browser,2023-08-15
-ups.com,enterprise,Roboto,Roboto,,self,browser,2026-09-25
+ups.com,enterprise,Roboto,Roboto,,self,browser,2026-09-26
 upsolve.ai,startups,Inter,Inter,framer,google self,browser,2026-09-23
 upsolve.org,startups,Averta,Castoro,gatsby,self,browser,2026-09-23
 upsssc.gov.in,popular,Helvetica Neue,Helvetica Neue,,,wayback-browser,2020-05-15
@@ -9546,16 +9596,16 @@ upswell.ai,startups,Poppins,Poppins,nextjs,self,browser,2026-09-23
 uptake.com,startups,Inter,Poppins,wordpress,,browser,2026-09-23
 upwave.com,startups,Lato,Lato,wordpress,google self,browser,2026-09-23
 upwind.io,startups,Upwind Sans,Upwind Sans,wordpress,adobe google self,browser,2026-09-23
-upwork.com,popular,Gotham,Gotham,,,wayback-browser,2018-11-15
+upwork.com,popular,Gotham SSm,Gotham SSm,,,wayback-browser,2019-02-15
 uq.edu.au,universities,Roboto,Roboto,,google,browser,2026-09-23
 uquiz.com,popular,Roboto,Poppins,,self,browser,2026-09-23
 ura.news,popular,Inter,Inter,nextjs,self,browser,2026-09-23
 urbanladder.com,popular,Mr Eaves Xl Modern,Mr Eaves Xl Modern,,adobe,browser,2026-09-23
 urdupoint.com,popular,Nastliq,Nastliq,,self,browser,2026-09-23
-usa.gov,government,Source Sans,Source Sans,,self,browser,2026-09-25
+usa.gov,government,Source Sans,Source Sans,,self,browser,2026-09-26
 usaid.gov,government,sans-serif,sans-serif,,,browser,2026-09-23
 usajobs.gov,government,Public Sans,Public Sans,,self,browser,2026-09-23
-usatoday.com,news,Unify Sans,Unify Sans,,,browser,2026-09-25
+usatoday.com,news,Unify Sans,Unify Sans,,,browser,2026-09-26
 usbank.com,enterprise,Circular,Circular,,self,browser,2026-09-23
 usc.edu,universities,Source Sans,Adobe Caslon Pro,wordpress,adobe google,browser,2026-09-23
 uscis.gov,government,Source Sans,Merriweather,,self,browser,2026-09-23
@@ -9654,7 +9704,7 @@ usmarshals.gov,government,Nunito,Merriweather,,self,browser,2026-09-23
 usmint.gov,government,Proxima Nova,Adelle,,adobe google self,browser,2026-09-23
 usolie.info,popular,PT Serif,PT Serif,nextjs,self,browser,2026-09-23
 usp.br,universities,Roboto,Roboto,wordpress,google self,browser,2026-09-23
-usps.com,government,Inter,Inter,,self,browser,2026-09-25
+usps.com,government,Inter,Inter,,self,browser,2026-09-26
 uspto.gov,government,Public Sans,Instrument Serif,,self,browser,2026-09-23
 usul.com,startups,Geist,Geist,framer,google,browser,2026-09-23
 usvisa-info.com,popular,Lato,Lato,,,browser,2026-09-23
@@ -9663,7 +9713,7 @@ uta-net.com,popular,Arial,Arial,,,wayback-browser,2022-08-15
 utah.edu,universities,Myriad Pro,Factoria,,adobe self,browser,2026-09-23
 utah.gov,government,Open Sans,UT Industry,,google self,browser,2026-09-23
 utexas.edu,universities,Libre Frank,Libre Frank,,adobe self,browser,2026-09-23
-utoronto.ca,universities,Trade Gothic Next,Trade Gothic Next,,adobe self,browser,2026-09-25
+utoronto.ca,universities,Trade Gothic Next,Trade Gothic Next,,adobe self,browser,2026-09-26
 uts.edu.au,universities,Nb Akademie,Nb Akademie,,google self,browser,2026-09-23
 uu.nl,universities,Open Sans,Open Sans,,self,browser,2026-09-23
 uukanshu.cc,popular,PingFang,PingFang,,,browser,2026-09-23
@@ -9675,7 +9725,7 @@ uzh.ch,universities,Source Sans,Source Sans,,self,browser,2026-09-23
 uzum.com,startups,TT Uzum,TT Uzum,nuxt,self,browser,2026-09-23
 v5.chriskrycho.com,indie,Sabon,Cronos Pro,,adobe self,browser,2026-09-23
 v6velugu.com,popular,Mallanna,Mallanna,,self,browser,2026-09-23
-va.gov,government,Source Sans,Bitter,nextjs,self,browser,2026-09-25
+va.gov,government,Source Sans,Bitter,nextjs,self,browser,2026-09-26
 vaccines.gov,government,system-ui,system-ui,nextjs,,browser,2026-09-23
 vadimkravcenko.com,indie,Plus Jakarta Sans,Plus Jakarta Sans,wordpress,google,browser,2026-09-23
 vaero.ai,startups,Inter,Inter,webflow,self,browser,2026-09-23
@@ -9751,7 +9801,7 @@ vera-health.ai,startups,font Sans,font Sans,nextjs,self,browser,2026-09-23
 veratainsight.com,startups,Inter,Fraunces,nextjs,google self,browser,2026-09-23
 verbiflow.com,startups,Geist,Geist,nextjs,self,browser,2026-09-23
 verbling.com,startups,Bw Nista Grotesk,Bw Nista Grotesk,,self,browser,2026-09-23
-vercel.com,devtools,Geist,Geist,nextjs,self,browser,2026-09-25
+vercel.com,devtools,Geist,Geist,nextjs,self,browser,2026-09-26
 verdagon.dev,indie,Roboto,Roboto,,google,browser,2026-09-23
 verdantapp.com,startups,Inter,Fraunces,nextjs,self,browser,2026-09-23
 verdexai.com,startups,PP Neue Montreal,PP Neue Montreal,,self,browser,2026-09-23
@@ -9764,7 +9814,7 @@ veriff.com,saas,Inter,Inter,wordpress,google,browser,2026-09-23
 verifiable.com,startups,Poppins,Poppins,webflow,google,browser,2026-09-23
 verihubs.com,startups,Inter,Inter,,self,browser,2026-09-23
 veritus.com,startups,Geist,PP Editorial New,,self,browser,2026-09-23
-verizon.com,enterprise,Verizon NHG DS,Verizon NHG DS,,self,browser,2026-09-25
+verizon.com,enterprise,Verizon NHG DS,Verizon NHG DS,,self,browser,2026-09-26
 verkada.com,startups,norms Pro,norms Pro,nextjs,self,browser,2026-09-23
 vermaden.wordpress.com,indie,Poppins,Josefin Sans,wordpress,self,browser,2026-09-23
 vermont.gov,government,Libre Franklin,Libre Franklin,,google self,browser,2026-09-23
@@ -9797,7 +9847,7 @@ vibe.codes,startups,system-ui,system-ui,,,browser,2026-09-23
 vibeflow.ai,startups,Plus Jakarta Sans,Plus Jakarta Sans,,google,browser,2026-09-23
 vibekanban.com,startups,IBM Plex Sans,IBM Plex Sans,nextjs,self,browser,2026-09-23
 vibrantlabs.com,startups,Space Grotesk,Space Grotesk,framer,google self,browser,2026-09-23
-vice.com,news,VICE Grotesk,VICE Grotesk,wordpress,self,browser,2026-09-25
+vice.com,news,VICE Grotesk,VICE Grotesk,wordpress,self,browser,2026-09-26
 vickiboykis.com,indie,Verdana,Verdana,,,browser,2026-09-23
 victoriassecret.com,popular,Public Sans,Public Sans,,self,browser,2026-09-23
 vidarholen.net,indie,Times New Roman,Times New Roman,,,browser,2026-09-23
@@ -9841,7 +9891,7 @@ virtahealth.com,startups,Figtree,Figtree,webflow,google self,browser,2026-09-23
 virtualize.sh,indie,Poppins,Poppins,,,browser,2026-09-23
 virtuallyfun.com,indie,Helvetica Neue,Helvetica Neue,wordpress,,browser,2026-09-23
 virtualmin.com,startups,Roboto,Roboto Condensed,,google,browser,2026-09-23
-visa.com,enterprise,Visa Font Dialect Latin,Visa Font Dialect Latin,nextjs,self,browser,2026-09-25
+visa.com,enterprise,Visa Font Dialect Latin,Visa Font Dialect Latin,nextjs,self,browser,2026-09-26
 visdeyk-ink.click,popular,Inter,Inter,,google self,browser,2026-09-23
 visiblsemi.com,startups,system-ui,system-ui,nextjs,,browser,2026-09-23
 visier.com,startups,Graphik,Cera Pro,gatsby,self,browser,2026-09-23
@@ -9853,7 +9903,7 @@ vitablehealth.com,startups,Roobert,Roobert,webflow,google self,browser,2026-09-2
 vitalik.eth.limo,indie,Inter,Inter,,,browser,2026-09-23
 vitalize.care,startups,APK Protocol,APK Protocol Semi,framer,google self,browser,2026-09-23
 vitau.mx,startups,Open Sans,Open Sans,nextjs,self,browser,2026-09-23
-vite.dev,devtools,Inter,APK Protocol,,self,browser,2026-09-25
+vite.dev,devtools,Inter,APK Protocol,,self,browser,2026-09-26
 vitepress.dev,devtools,Inter,Inter,,self,browser,2026-09-23
 vitest.dev,devtools,Inter,APK Protocol,,self,browser,2026-09-23
 vivareal.com.br,popular,system-ui,Poppins,nextjs,self,browser,2026-09-23
@@ -9900,18 +9950,18 @@ vote.gov,government,Roboto,Merriweather,,self,browser,2026-09-23
 vote.org,startups,Inter,PT Sans Narrow,gatsby,self,browser,2026-09-23
 voting.works,startups,Roboto,Roboto,,google self,browser,2026-09-23
 vouch.us,startups,GT Extended,Mirador,webflow,self,browser,2026-09-23
-vox.com,news,Balto,Balto,nextjs,google self,browser,2026-09-25
+vox.com,news,Balto,Balto,nextjs,google self,browser,2026-09-26
 voxelenergy.com,startups,Geist,Geist,framer,google self,browser,2026-09-23
 voxmedia.com,startups,Feature Text,Sharp Grotesk,wordpress,self,browser,2026-09-23
 voyage.bio,startups,sans-serif,sans-serif,,self,browser,2026-09-23
 voygr.tech,startups,ABC Oracle,ABC Oracle,,self,browser,2026-09-23
 vrbo.com,popular,Centra No2,Centra No2,,self,browser,2026-09-23
 vrt.be,popular,Roobert,Roobert,nextjs,self,browser,2026-09-23
-vseinstrumenti.ru,popular,Roboto,Roboto,nuxt,,wayback-browser,2022-05-15
+vseinstrumenti.ru,popular,Times New Roman,Times New Roman,nuxt,,wayback-browser,2022-08-15
 vt.edu,universities,Acherus,Rubik,,self,browser,2026-09-23
 vtdigger.org,news,Freight Sans Pro,Freight Sans Pro,wordpress,adobe self,browser,2026-09-23
 vts.com,startups,Proxima Nova,Proximanova,wordpress,google self,browser,2026-09-23
-vuejs.org,devtools,Inter,Inter,,self,browser,2026-09-25
+vuejs.org,devtools,Inter,Inter,,self,browser,2026-09-26
 vuiapp.vn,startups,SF Pro,SF Pro,,google self,browser,2026-09-23
 vulcan.ai,startups,Playfair Display,Playfair Display,,self,browser,2026-09-23
 vultr.com,devtools,Roboto,Roboto,,self,browser,2026-09-23
@@ -9928,31 +9978,31 @@ wafid.com,popular,Lato,Lato,,google self,browser,2026-09-23
 wagetap.com,startups,Roobert,Roobert,gatsby,,browser,2026-09-23
 wakie.com,startups,Inter upl,Inter upl,,google self,browser,2026-09-23
 walesonline.co.uk,news,Signika Negative,Signika Negative,nextjs,self,browser,2026-09-23
-walgreens.com,ecommerce,Inter,Inter,,google self,browser,2026-09-25
+walgreens.com,ecommerce,Inter,Inter,,google self,browser,2026-09-26
 walgreensbootsalliance.com,enterprise,Inter,Tiempos,wordpress,google self,browser,2026-09-23
 walkerplus.com,popular,Hiragino Kaku Gothic,Hiragino Kaku Gothic,,,browser,2026-09-23
 wallapop.com,popular,Wallie Chunky,Wallie Chunky,nextjs,self,browser,2026-09-23
 wallbit.io,startups,Geist,Geist,webflow,google self,browser,2026-09-23
-walmart.com,ecommerce,Everyday Sans,Everyday Sans,nextjs,self,browser,2026-09-25
+walmart.com,ecommerce,Everyday Sans,Everyday Sans,nextjs,self,browser,2026-09-26
 walter.one,startups,Brawler,Brawler,,self,browser,2026-09-23
 walzr.com,indie,Suisse,Suisse,,self,browser,2026-09-23
 wanderlog.com,startups,Source Sans,Source Sans,webflow,google,browser,2026-09-23
 wandsolar.com,startups,Roboto,Plus Jakarta Sans,webflow,google self,browser,2026-09-23
-wantgoo.com,popular,Tahoma,Microsoft JhengHei,,,wayback-browser,2019-08-15
+wantgoo.com,popular,Tahoma,Microsoft JhengHei,,,wayback-browser,2019-11-15
 warau.jp,popular,Meiryo,Meiryo,,google,browser,2026-09-23
-warbyparker.com,ecommerce,font Abc Social,font Ivory Ll,nextjs,self,browser,2026-09-25
+warbyparker.com,ecommerce,font Abc Social,font Ivory Ll,nextjs,self,browser,2026-09-26
 wardstone.us,startups,Wardrum,Wardrum,framer,google self,browser,2026-09-23
 wareiq.com,startups,Titillium Web,Titillium Web,wordpress,self,browser,2026-09-23
 warmly.ai,startups,Inter,Hind,webflow,google,browser,2026-09-23
 warp.co,startups,restart Soft,restart Soft,nextjs,self,browser,2026-09-23
-warp.dev,devtools,matter Mono,matter Mono,nextjs,self,browser,2026-09-25
+warp.dev,devtools,matter Mono,matter Mono,nextjs,self,browser,2026-09-26
 warpbuild.com,startups,Geist,Geist Mono,nextjs,self,browser,2026-09-23
 warpfy.com,startups,Poppins,Poppins,wordpress,google self,browser,2026-09-23
 warrant.dev,startups,monospace,monospace,,,browser,2026-09-23
 wartank.ru,popular,Arial,Arial,,,browser,2026-09-23
 warwick.ac.uk,universities,Neue Haas Grotesk,Neue Haas Grotesk,,adobe self,browser,2026-09-23
 washington.edu,universities,Open Sans,Encode Sans Compressed,wordpress,google self,browser,2026-09-23
-washingtonpost.com,news,Postoni,Postoni,nextjs,google self,browser,2026-09-25
+washingtonpost.com,news,Postoni,Postoni,nextjs,google self,browser,2026-09-26
 washu.edu,universities,Ivystyle Sans,Ivypresto Headline,wordpress,adobe,browser,2026-09-23
 wasmer.io,startups,Gilroy,Gilroy,nextjs,self,browser,2026-09-23
 wasmtime.dev,devtools,IBM Plex Sans,Metropolis,,google self,browser,2026-09-23
@@ -9971,7 +10021,7 @@ waxy.org,indie,Satoshi,Satoshi,wordpress,google self,browser,2026-09-23
 waybill.to,startups,Inter,Funnel Display,nextjs,self,browser,2026-09-23
 wayco.ai,startups,Hanken Grotesk,Hanken Grotesk,,google,browser,2026-09-23
 waydev.co,startups,Filson W01,Filson W01,wordpress,self,browser,2026-09-23
-wayfair.com,ecommerce,Sofia,Sofia,nextjs,self,browser,2026-09-25
+wayfair.com,ecommerce,Sofia,Sofia,nextjs,self,browser,2026-09-26
 wayflyer.com,startups,Body,Body,nextjs,self,browser,2026-09-23
 wayground.com,popular,DM Sans Variable font,DM Sans Variable font,,self,browser,2026-09-23
 wayline.com,startups,Inter,Inter,webflow,google self,browser,2026-09-23
@@ -9991,7 +10041,7 @@ wealor.ai,startups,Inter,Judson,,google self,browser,2026-09-23
 wealthsimple.com,startups,The Future,The Future,nextjs,self,browser,2026-09-23
 weareher.com,startups,Archivo,Archivo ExtraBold,wordpress,google self,browser,2026-09-23
 weather.com,popular,Inter,Inter,nextjs,self,browser,2026-09-23
-weather.gov,government,Arial,Arial,,,browser,2026-09-25
+weather.gov,government,Arial,Arial,,,browser,2026-09-26
 weathernews.jp,popular,Arial,Arial,,,browser,2026-09-23
 weav.co,startups,sans-serif,sans-serif,,self,browser,2026-09-23
 weaveos.com,startups,Inter,PP Mori,nextjs,self,browser,2026-09-23
@@ -10003,7 +10053,7 @@ webapp.io,startups,Inter,Inter,nextjs,google,browser,2026-09-23
 webassembly.org,devtools,system-ui,system-ui,,,browser,2026-09-23
 webassign.net,popular,Open Sans,Open Sans,,google,browser,2026-09-23
 webdramaturkey2.com,popular,system-ui,system-ui,,self,browser,2026-09-23
-webflow.com,saas,WF Visual Sans,WF Visual Sans,webflow,google self,browser,2026-09-25
+webflow.com,saas,WF Visual Sans,WF Visual Sans,webflow,google self,browser,2026-09-26
 webhound.ai,startups,Manrope,Instrument Serif,nextjs,self,browser,2026-09-23
 webiny.com,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 webmotors.com.br,popular,Figtree,Figtree,nextjs,google self,browser,2026-09-23
@@ -10051,7 +10101,7 @@ whatsapp.com,popular,WhatsApp Sans,WhatsApp Sans,,self,browser,2026-09-23
 whereoscope.com,startups,sans-serif,sans-serif,,,browser,2026-09-23
 wheresyoured.at,indie,Inter,Inter,,google,browser,2026-09-23
 whip.run,startups,Inter,Inter,,google,browser,2026-09-23
-whitehouse.gov,government,Nord,Nord,wordpress,google self,browser,2026-09-25
+whitehouse.gov,government,Nord,Nord,wordpress,google self,browser,2026-09-26
 whitelabgx.com,startups,Roobert,Roobert,nuxt,self,browser,2026-09-23
 whitepages.com,popular,system-ui,system-ui,,,browser,2026-09-23
 whitespacehq.ai,startups,Inter,Inter,,google,browser,2026-09-23
@@ -10088,7 +10138,7 @@ windytan.com,indie,Arial,Arial,,google,browser,2026-09-23
 winfunc.com,startups,Instrument Sans,Instrument Sans,nextjs,self,browser,2026-09-23
 wingolog.org,indie,Valkyrie,Hermes Maia,,self,browser,2026-09-23
 wipro.com,enterprise,Proxima Nova,Proxima Nova,,adobe,browser,2026-09-23
-wired.com,news,Apercu,Apercu,,self,browser,2026-09-25
+wired.com,news,Apercu,Apercu,,self,browser,2026-09-26
 wisc.edu,universities,Red Hat Text,Libre Baskerville,,self,browser,2026-09-23
 wisconsin.gov,government,Open Sans,Raleway,,google self,browser,2026-09-23
 wise.com,popular,Inter,Inter,nextjs,self,browser,2026-09-23
@@ -10129,7 +10179,7 @@ withterminal.com,startups,Inter,Britti Sans,webflow,self,browser,2026-09-23
 withtower.com,startups,Roboto,Roboto,framer,google self,browser,2026-09-23
 withyotta.com,startups,Poppins,Poppins,webflow,self,browser,2026-09-23
 wits.ac.za,universities,Open Sans,Helvetica Neue,,google self,browser,2026-09-23
-wix.com,saas,Wix Madefor,Wix Madefor,wix,self,browser,2026-09-25
+wix.com,saas,Wix Madefor,Wix Madefor,wix,self,browser,2026-09-26
 wiz.io,saas,font Sans,font Headings,nextjs,self,browser,2026-09-23
 wizardzines.com,indie,Inter,Inter,,google self,browser,2026-09-23
 wizzair.com,popular,Source Sans,Source Sans,nuxt,self,browser,2026-09-23
@@ -10290,7 +10340,7 @@ yad2.co.il,popular,Rubik,Rubik,nextjs,self,browser,2026-09-23
 yadongtv101.com,popular,Pretendard,Pretendard,,self,browser,2026-09-23
 yahoo.com,popular,yahoo Sans,yahoo Sans,nextjs,self,browser,2026-09-23
 yaky.dev,indie,Helvetica,Ocean Trace,,self,browser,2026-09-23
-yale.edu,universities,Mallory,Yale,,self,browser,2026-09-25
+yale.edu,universities,Mallory,Yale,,self,browser,2026-09-26
 yallakora.com,popular,droid,droid,,self,browser,2026-09-23
 yama96.jp,popular,Arial,Arial,,,browser,2026-09-23
 yandex.com,popular,YS Text Home,YS Text Home,,self,browser,2026-09-23
@@ -10387,7 +10437,7 @@ zeloscloud.io,startups,Inter,Inter,nextjs,self,browser,2026-09-23
 zenbu.dev,startups,IBM Plex Mono,IBM Plex Mono,nextjs,self,browser,2026-09-23
 zencoder.com,startups,Satoshi,Area Inktrap,nextjs,adobe self,browser,2026-09-23
 zendar.io,startups,Poppins,sans-serif,,google,browser,2026-09-23
-zendesk.com,saas,Vanilla Sans,Vanilla Sans,nextjs,self,browser,2026-09-25
+zendesk.com,saas,Vanilla Sans,Vanilla Sans,nextjs,self,browser,2026-09-26
 zenefits.com,startups,Centra No2,Centra No2,,self,browser,2026-09-23
 zenflow.com,startups,Inter,Inter,webflow,google,browser,2026-09-23
 zenoti.com,startups,DM Sans,Dinamit,nextjs,self,browser,2026-09-23
@@ -10442,7 +10492,7 @@ zommalabs.com,startups,Atkinson,Merriweather,nextjs,self,browser,2026-09-23
 zonaprop.com.ar,popular,Hind,Hind,,self,browser,2026-09-23
 zonatmo.org,popular,monospace,monospace,,self,browser,2026-09-23
 zone-turf.fr,popular,Arial,Arial,,,browser,2026-09-23
-zoom.com,saas,Inter,Newsreader,,self,browser,2026-09-25
+zoom.com,saas,Inter,Newsreader,,self,browser,2026-09-26
 zoom.us,popular,Open Sans,Open Sans,,,wayback-browser,2019-05-15
 zoominfo.com,saas,Figtree,Figtree,nextjs,self,browser,2026-09-23
 zoomit.ir,popular,Vazir Font,Vazir Font,nextjs,self,browser,2026-09-23
