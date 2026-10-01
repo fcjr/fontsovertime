@@ -25,8 +25,8 @@ const groups = [
 <Layout title="Data" description="Download every Fonts Over Time crawl as CSV or JSON Lines.">
   <section class="wrap hero">
     <h1>The data</h1>
-    <p class="lede">Everything behind this site is free to download and reuse. If you publish something with it, we’d appreciate a link back.</p>
-    <p>The files live in the project’s <a href={REPO_URL}>GitHub repository</a> with the site lists and the crawler.</p>
+    <p class="lede">The collected font-usage dataset is available under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> for reuse, including commercially, under the license terms.</p>
+    <p>The files live in the project’s <a href={REPO_URL}>GitHub repository</a>. See the <a href="#reuse">scope and attribution guidance</a> below before reusing them.</p>
   </section>
 
   <section class="wrap">
@@ -63,6 +63,26 @@ const groups = [
       </section>
     ))
   }
+  <section class="wrap section">
+    <div class="prose">
+      <h2 id="reuse">Reuse and attribution</h2>
+      <p>
+        The license covers our rights in the collected observations and their compilation in the crawl snapshots, CSV exports and generated
+        font-usage aggregates. When sharing covered material under the license, credit Fonts Over Time contributors, link to this project and the license, and indicate
+        changes. A methodology page or accompanying README is a reasonable place for credit.
+      </p>
+      <p>
+        Fonts themselves, third-party page content (including titles and descriptions in snapshots), upstream site lists and catalogs, and the
+        source code are outside this grant. Their existing rights and licenses are unchanged. The license does not impose attribution or other
+        conditions on uses that do not require permission under our rights.
+      </p>
+      <p>
+        Read the <a href={`${REPO_URL}/blob/main/LICENSE-DATA.md`}>dataset license notice and attribution example</a> for the exact scope,
+        exclusions and full legal text. The data is provided without warranties, including as to accuracy or third-party rights.
+      </p>
+    </div>
+  </section>
+
 </Layout>
 
 <style>
