@@ -5,8 +5,8 @@
 // Please pull this list from, and only from https://publicsuffix.org/list/public_suffix_list.dat,
 // rather than any other VCS sites. Pulling from any other URL is not guaranteed to be supported.
 
-// VERSION: 2026-09-21_18-50-07_UTC
-// COMMIT: 728555a30ef4d40e42a82d5678e5fbad2ad17b26
+// VERSION: 2026-09-30_20-56-07_UTC
+// COMMIT: 714ac1bf5f2d038161c7419478cc3207431d706d
 
 // Instructions on pulling and using this list can be found at https://publicsuffix.org/list/.
 
@@ -6812,7 +6812,7 @@ org.zw
 
 // newGTLDs
 
-// List of new gTLDs imported from https://www.icann.org/resources/registries/gtlds/v2/gtlds.json on 2026-07-24T16:40:16Z
+// List of new gTLDs imported from https://www.icann.org/resources/registries/gtlds/v2/gtlds.json on 2026-09-30T19:51:07Z
 // This list is auto-generated, don't edit it manually.
 // aaa : American Automobile Association, Inc.
 // https://www.iana.org/domains/root/db/aaa.html
@@ -7630,7 +7630,7 @@ coffee
 // https://www.iana.org/domains/root/db/college.html
 college
 
-// cologne : dotKoeln GmbH
+// cologne : domainworx Service & Management GmbH
 // https://www.iana.org/domains/root/db/cologne.html
 cologne
 
@@ -8846,7 +8846,7 @@ kitchen
 // https://www.iana.org/domains/root/db/kiwi.html
 kiwi
 
-// koeln : dotKoeln GmbH
+// koeln : domainworx Service & Management GmbH
 // https://www.iana.org/domains/root/db/koeln.html
 koeln
 
@@ -12769,8 +12769,10 @@ co.no
 // Combell.com : https://www.combell.com
 // Submitted by Combell Team <support@combell.com>
 webhosting.be
+site.webhosting.be
 prvw.eu
 hosting-cluster.nl
+site.hosting-cluster.nl
 
 // Contentful GmbH : https://www.contentful.com
 // Submitted by Contentful Developer Experience Team <prd-ecosystem-dx@contentful.com>
@@ -13785,6 +13787,10 @@ gitlab.io
 gitapp.si
 gitpage.si
 
+// Glide : https://www.glideapps.com
+// Submitted by Glide Engineering <engineering@heyglide.com>
+glideos.app
+
 // Global NOG Alliance : https://nogalliance.org/
 // Submitted by Sander Steffann <sander@nogalliance.org>
 nog.community
@@ -14235,6 +14241,10 @@ ipifony.net
 home64.de
 ipv64.de
 ipv64.net
+
+// IQHost / IQ Group : https://iqhost.pl/
+// Submitted by Adam Buhl <admin@iqhost.pl>
+iqhs.pl
 
 // ir.md : https://nic.ir.md
 // Submitted by Ali Soizi <info@nic.ir.md>
