@@ -18,7 +18,7 @@ for dir in crawl backfill; do
     flock -n 9 || { echo busy; exit; }
     cd ~/$dir
     [ -z \"\$(git status --porcelain -- data)\" ] || { echo unsaved; exit; }
-    git pull -q --rebase origin main && pnpm install --frozen-lockfile --silent && echo updated || echo failed")"
+    git fetch -q origin main && git reset -q --hard origin/main && pnpm install --frozen-lockfile --silent && echo updated || echo failed")"
   case "$result" in
     *updated) echo "$dir: updated to $(as_crawler "cd ~/$dir && git rev-parse --short HEAD")" ;;
     *busy) echo "$dir: a job is running; it picks up the new code when it next starts" ;;

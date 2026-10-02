@@ -3,9 +3,6 @@ name: deploy-site
 on:
   push:
     branches: [main]
-  workflow_run:
-    workflows: [lists]
-    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -17,14 +14,7 @@ concurrency:
 
 jobs:
   deploy:
-    # workflow_run fires for any workflow named "lists", including one added by a fork's pull request.
-    if: >-
-      github.ref == 'refs/heads/main' &&
-      (github.event_name != 'workflow_run' || (
-        github.event.workflow_run.conclusion == 'success' &&
-        github.event.workflow_run.head_repository.full_name == github.repository &&
-        github.event.workflow_run.head_branch == 'main' &&
-        contains(fromJSON('["schedule", "workflow_dispatch"]'), github.event.workflow_run.event)))
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: production
     steps:

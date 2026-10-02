@@ -2,7 +2,7 @@
 
 Which typefaces the web's homepages use, tracked weekly: [fontsovertime.com](https://fontsovertime.com).
 
-Every Sunday a small crawl server opens about 11,000 homepages in headless Chromium, records the font doing the work for body text and headings, and commits the results to this repo; Cloudflare redeploys the site on push. A smaller list of well-known sites is crawled daily to catch switches quickly.
+Every Sunday a small crawl server opens about 11,000 homepages in headless Chromium, records the font doing the work for body text and headings, and commits the results to this repo, which redeploys the site. A smaller list of well-known sites is crawled daily to catch switches quickly.
 
 ## Layout
 
@@ -63,6 +63,8 @@ The weekly, daily and archive backfill jobs run on one small Linux server (Ubunt
 2. Settings live in `/etc/fontsovertime.env`: the residential proxy URL, per-run proxy bandwidth cap, crawl concurrency and optional healthchecks.io URLs.
 3. Timers: weekly on Sundays and daily Monday to Saturday at 03:00 UTC, and the backfill every six hours until it runs out of work. `systemctl list-timers 'fontsovertime-*'` shows them and `journalctl -u 'fontsovertime@*'` the logs.
 
+The server can't push to `main`; a ruleset allows only the repository admin to update it. Each job pushes its data to its own `crawl/<time>-<job>` branch, and `promote-data.yml` (woken by `crawl-pushed.yml`, and hourly as a fallback) copies those commits onto `main` if they only add or change regular files under `data/` and the JSON parses. Rejected branches stay put and fail the workflow. It pushes with `MAIN_PUSH_TOKEN`, a fine-grained token with contents write access to this repo, kept in the `main-writer` environment that only `main` can use; `lists.yml` and `opt-out.yml` push with it too.
+
 Pushes that touch the crawler, pipeline or deploy files run the tests and then `deploy-scraper.yml`, which connects as the `deploy` user. That user's key can only run `deploy/deploy.sh`, which updates the checkouts (jobs in progress pick up new code on their next run), Chrome and Playwright's browser, and the systemd units. Repository secrets: `SCRAPER_SSH_KEY`, `SCRAPER_KNOWN_HOSTS`, `SCRAPER_HOST`.
 
 The backfill reads quarterly copies of each homepage from the Internet Archive and Arquivo.pt, going back 10 years by default. Each archive has its own request budget: the Internet Archive's starts at 30 a minute and rises to at most 60 while it returns no errors, and Arquivo.pt's stays far below its published limits. It measures only the quarters needed to find when fonts changed, caches capture lists and stylesheets on disk, tries other copies from the same quarter when one is unusable, and retries temporary failures on later runs. Progress and an estimated finish time are written to `data/runs/backfill-status.json`.
@@ -71,4 +73,4 @@ Each crawl visits every site directly, retries timeouts, then retries sites that
 
 ## Deploying
 
-The site is a Cloudflare Worker serving static assets (`wrangler.jsonc`), deployed by `deploy-site.yml` on every push to `main`, including the crawl bot's commits, and after each site list refresh. It runs `pnpm build` (aggregates `data/snapshots` into `data/agg`, then builds `web/dist`) and `wrangler deploy`. Secrets live in the `production` environment, which only `main` can deploy to: `CLOUDFLARE_API_TOKEN` (Workers Scripts edit, Account Settings read, and Workers Routes, DNS and Zone access for the site's zone) and `CLOUDFLARE_ACCOUNT_ID`. `pnpm preview` serves the built site locally with Wrangler.
+The site is a Cloudflare Worker serving static assets (`wrangler.jsonc`), deployed by `deploy-site.yml` on every push to `main`, including promoted crawl data, site list refreshes and opt-outs. It runs `pnpm build` (aggregates `data/snapshots` into `data/agg`, then builds `web/dist`) and `wrangler deploy`. Secrets live in the `production` environment, which only `main` can deploy to: `CLOUDFLARE_API_TOKEN` (Workers Scripts edit, Account Settings read, and Workers Routes, DNS and Zone access for the site's zone) and `CLOUDFLARE_ACCOUNT_ID`. `pnpm preview` serves the built site locally with Wrangler.
