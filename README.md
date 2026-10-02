@@ -71,4 +71,4 @@ Each crawl visits every site directly, retries timeouts, then retries sites that
 
 ## Deploying
 
-The site is a Cloudflare Worker serving static assets (`wrangler.jsonc`), deployed by Cloudflare's GitHub integration on every push to `main`, including the crawl bot's commits. Build command: `pnpm build` (aggregates `data/snapshots` into `data/agg`, then builds `web/dist`). Deploy command: `npx wrangler deploy`. `pnpm preview` serves the built site locally with Wrangler.
+The site is a Cloudflare Worker serving static assets (`wrangler.jsonc`), deployed by `deploy-site.yml` on every push to `main`, including the crawl bot's commits, and after each site list refresh. It runs `pnpm build` (aggregates `data/snapshots` into `data/agg`, then builds `web/dist`) and `wrangler deploy`. Repository secrets: `CLOUDFLARE_API_TOKEN` (Edit Cloudflare Workers template) and `CLOUDFLARE_ACCOUNT_ID`. `pnpm preview` serves the built site locally with Wrangler.
