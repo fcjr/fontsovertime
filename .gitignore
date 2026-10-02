@@ -4,7 +4,8 @@ out/
 web/dist/
 web/.astro/
 data/agg/
-docs/
+docs/*
+!docs/development.md
 .env
 .env.*
 *.log
