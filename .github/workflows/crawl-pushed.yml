@@ -1,0 +1,15 @@
+name: crawl-pushed
+
+# The crawl server pushes each run to a crawl/* branch. Workflows started by a push run that
+# branch's copy of the workflow, so this one only wakes promote-data, which always runs from main.
+on:
+  push:
+    branches: ['crawl/**']
+
+permissions: {}
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "$GITHUB_REF_NAME is ready for promote-data"

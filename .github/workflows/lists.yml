@@ -6,13 +6,16 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    environment: main-writer
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v5
         with:
@@ -23,11 +26,13 @@ jobs:
       - run: node pipeline/sitelists.ts
       - run: node pipeline/catalogs.ts
       - name: Commit
+        env:
+          TOKEN: ${{ secrets.MAIN_PUSH_TOKEN }}
         run: |
           git config user.name "fontsovertime-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add sites pipeline/public_suffix_list.dat pipeline/catalog.json
           git diff --cached --quiet && exit 0
           git commit -m "Refresh site lists $(date -u +%F)"
-          git pull --rebase
-          git push
+          git pull --rebase origin main
+          git push "https://x-access-token:$TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:main

@@ -46,7 +46,7 @@ It does not license:
 - Upstream site lists, font catalogs or reference data, including `sites/`,
   `pipeline/catalog.json` and `pipeline/public_suffix_list.dat`, or third-party
   material carried from those sources into the outputs. Their existing licenses
-  and notices are unchanged. See the [source list in the README](README.md#site-lists).
+  and notices are unchanged. See the [source list in the development guide](docs/development.md#site-lists).
 - The crawler, pipeline, website source code or other software in this
   repository. This notice does not add or change a software license.
 

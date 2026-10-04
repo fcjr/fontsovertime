@@ -1,0 +1,38 @@
+name: promote-data
+
+# Copies crawl data from the server's crawl/* branches onto main. workflow_run, schedule and
+# workflow_dispatch run from main, so the server can't change this workflow or reach MAIN_PUSH_TOKEN,
+# which lives in the main-writer environment that only main can use.
+on:
+  workflow_run:
+    workflows: [crawl-pushed]
+    types: [completed]
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: promote-data
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: main-writer
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: false
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: .github/promote-data.sh
+        env:
+          TOKEN: ${{ secrets.MAIN_PUSH_TOKEN }}

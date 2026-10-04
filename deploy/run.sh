@@ -21,12 +21,27 @@ hc() { if [ -n "${!hc_var:-}" ]; then curl -fsS -m 10 --retry 3 "${!hc_var}$1" >
 hc /start
 trap 'hc /fail' ERR
 
-# A stopped job may have saved data without committing it; keep it rather than blocking the pull.
+# The server can't push to main. Each run goes to its own crawl/ branch, which promote-data.yml
+# checks and copies onto main. Data that fails to push stays uncommitted for the next run to retry.
+push_data() {
+  git commit -q -m "$1"
+  local branch
+  branch="crawl/$(date -u +%Y%m%dT%H%M%SZ)-$kind"
+  for attempt in 1 2 3 4 5; do
+    git push -q origin "HEAD:refs/heads/$branch" && return 0
+    sleep $((attempt * 20))
+  done
+  git reset -q --soft HEAD~1
+  return 1
+}
+
+# A stopped job may have left data behind; send it on before resetting to main.
 if [ -n "$(git status --porcelain -- data)" ]; then
   git add data
-  git commit -q -m "Save data from an interrupted $kind run"
+  push_data "Save data from an interrupted $kind run"
 fi
-git pull -q --rebase origin main
+git fetch -q origin main
+git reset -q --hard origin/main
 pnpm install --frozen-lockfile --silent
 
 today="$(date -u +%F)"
@@ -64,12 +79,5 @@ case "$kind" in
 esac
 
 git add "${paths[@]}"
-if ! git diff --cached --quiet; then
-  git commit -q -m "$message"
-  for attempt in 1 2 3 4 5; do
-    if git pull -q --rebase origin main && git push -q origin HEAD:main; then break; fi
-    [ "$attempt" = 5 ] && exit 1
-    sleep $((attempt * 20))
-  done
-fi
+git diff --cached --quiet || push_data "$message"
 hc ""

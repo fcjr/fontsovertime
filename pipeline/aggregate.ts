@@ -122,7 +122,7 @@ for (const kind of ['wayback', 'weekly', 'daily'] as Kind[]) {
     const rows = readJsonl(snap.path);
     const ok = rows.filter((r) => r.status === 'ok' && r.body_font);
     const dates = rows.map((r) => r.crawled_at?.slice(0, 10)).filter(Boolean).sort();
-    const date = kind === 'wayback' ? quarterDate(snap.id) : kind === 'daily' ? snap.id : (dates[0] ?? snap.id);
+    const date = kind === 'wayback' ? quarterDate(snap.id) : kind === 'daily' ? snap.id : (dates.at(-1) ?? snap.id);
     if (kind !== 'daily') periods.push({ id: snap.id, date, kind, n: 0 });
     if (kind === 'weekly') {
       for (const r of rows) {
