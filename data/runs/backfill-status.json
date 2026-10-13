@@ -1,33 +1,33 @@
 {
-  "updated": "2026-10-13T13:46:29.674Z",
+  "updated": "2026-10-13T18:14:05.177Z",
   "from": "2016-Q1",
   "sites_remaining": 0,
   "eta_hours": 0,
   "run": {
-    "minutes": 103,
-    "sites": 11361,
-    "sites_per_hour": 6614,
-    "deferred": 6765,
-    "measured": 85,
-    "inferred": 5,
-    "browser": 14,
+    "minutes": 9,
+    "sites": 11360,
+    "sites_per_hour": 75038,
+    "deferred": 6917,
+    "measured": 7,
+    "inferred": 0,
+    "browser": 2,
     "static": 0,
-    "failed": 69,
-    "alternates": 145,
-    "cssHits": 28,
-    "cssMisses": 1075,
-    "css_cache_hit_rate": 0.03
+    "failed": 4,
+    "alternates": 9,
+    "cssHits": 6,
+    "cssMisses": 54,
+    "css_cache_hit_rate": 0.1
   },
   "archives": {
     "ia": {
-      "rpm": 15,
-      "requests": 2633,
+      "rpm": 7,
+      "requests": 80,
       "throttled": 0,
       "refusals": 1
     },
     "arquivo": {
       "rpm": 200,
-      "requests": 0,
+      "requests": 29,
       "throttled": 0,
       "refusals": 0
     },
