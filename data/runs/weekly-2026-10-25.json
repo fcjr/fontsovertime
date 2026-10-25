@@ -1,0 +1,16 @@
+{
+  "sites": 11457,
+  "started": "2026-10-25T03:00:15.414Z",
+  "retried": 285,
+  "retry_recovered": 23,
+  "static_recovered": 101,
+  "counts": {
+    "ok": 9945,
+    "http_error": 171,
+    "blocked": 780,
+    "error": 463,
+    "timeout": 98
+  },
+  "seconds": 18599,
+  "finished": "2026-10-25T08:10:14.311Z"
+}
