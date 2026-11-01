@@ -20,14 +20,12 @@ cleverdeck.com,CleverDeck,winter-2012,active
 screenleap.com,Screenleap,winter-2012,active
 iamexec.com,Exec,winter-2012,acquired
 amplitude.com,Amplitude,winter-2012,public
-tilt.com,Tilt,winter-2012,acquired
 swiftype.com,Swiftype,winter-2012,acquired
 farmlogs.com,FarmLogs,winter-2012,acquired
 authy.com,Authy,winter-2012,acquired
 flutterapp.com,Flutter,winter-2012,acquired
 fond.co,Fond,winter-2012,acquired
 pervices.com,Per Vices,winter-2012,active
-loom.com,Loom,winter-2012,acquired
 yourmechanic.com,YourMechanic,winter-2012,acquired
 priceonomics.com,Priceonomics,winter-2012,acquired
 sendwave.com,Sendwave,winter-2012,acquired
@@ -35,14 +33,12 @@ medmonk.com,Medmonk,winter-2012,active
 socialcam.com,Socialcam,winter-2012,acquired
 shopular.com,Shopular,winter-2012,acquired
 freshplum.com,Freshplum,summer-2011,acquired
-clutch.io,Clutch,summer-2011,acquired
 apollographql.com,Apollo,summer-2011,active
 hackerrank.com,HackerRank,summer-2011,active
 stypi.com,Stypi,summer-2011,acquired
 genius.com,Genius,summer-2011,acquired
 onesignal.com,OneSignal,summer-2011,active
 aisle50.com,Aisle50,summer-2011,acquired
-debteye.com,Debteye,summer-2011,acquired
 streak.com,Streak,summer-2011,active
 scienceexchange.com,Science Exchange,summer-2011,acquired
 quartzy.com,Quartzy,summer-2011,active
@@ -54,7 +50,7 @@ agilemd.com,AgileMD,summer-2011,active
 clerky.com,Clerky,summer-2011,acquired
 realm.io,Realm,summer-2011,acquired
 firebase.com,Firebase,summer-2011,acquired
-gocardless.com,GoCardless,summer-2011,active
+gocardless.com,GoCardless,summer-2011,acquired
 pagelever.com,Pagelever,summer-2011,acquired
 fobo.net,Fobo,summer-2011,acquired
 sift.com,Sift,summer-2011,active
@@ -69,11 +65,9 @@ imgix.com,Imgix,summer-2011,active
 mongohq.com,Compose,summer-2011,acquired
 ansibletechnologies.com,GlassMap,summer-2011,acquired
 vidyard.com,Vidyard,summer-2011,active
-tapengage.com,TapEngage,summer-2011,acquired
 perfectaudience.com,Perfect Audience,summer-2011,acquired
 parse.com,Parse,summer-2011,acquired
 zeusliving.com,Zeus,summer-2011,acquired
-automatic.com,Automatic,summer-2011,acquired
 upverter.com,Upverter,winter-2011,acquired
 singlestore.com,SingleStore,winter-2011,active
 talkable.com,Talkable,winter-2011,active
@@ -112,10 +106,8 @@ aerofs.com,AeroFS,summer-2010,acquired
 padmapper.com,PadMapper,summer-2010,acquired
 demandsphere.com,DemandSphere,summer-2010,active
 anylist.com,AnyList,summer-2010,active
-homejoy.com,Homejoy,summer-2010,acquired
 ancestry.com,1000Memories,summer-2010,acquired
 gazehawk.com,GazeHawk,summer-2010,acquired
-leftronic.com,Leftronic,summer-2010,acquired
 futureadvisor.com,FutureAdvisor,summer-2010,acquired
 docker.com,Docker,summer-2010,active
 indinero.com,inDinero,summer-2010,active
@@ -123,14 +115,10 @@ workflowy.com,WorkFlowy,summer-2010,active
 pagerduty.com,PagerDuty,summer-2010,public
 fanvibe.com,Fanvibe,summer-2010,acquired
 frid.ge,Fridge,summer-2010,acquired
-tapzilla.com,Tapzilla,summer-2010,acquired
 whereoscope.com,Whereoscope,summer-2010,acquired
-adgrok.com,AdGrok,summer-2010,acquired
-mertado.com,Mertado,winter-2010,acquired
 500friends.com,500Friends,winter-2010,acquired
 140fire.com,All Screen,winter-2010,acquired
 crocodoc.com,Crocodoc,winter-2010,acquired
-meetings.io,Bitplay,winter-2010,acquired
 embed.ly,Embedly,winter-2010,acquired
 creativemarket.com,Creative Market,winter-2010,acquired
 nowmov.com,Nowmov,winter-2010,acquired
@@ -139,8 +127,6 @@ zencoder.com,Zencoder,winter-2010,acquired
 cueup.com,Cue,winter-2010,acquired
 ownlocal.com,OwnLocal,winter-2010,active
 cardpool.com,Cardpool,winter-2010,acquired
-movity.com,Movity,winter-2010,acquired
-etacts.com,Etacts,winter-2010,acquired
 listia.com,Listia,summer-2009,active
 stripe.com,Stripe,summer-2009,active
 dailybooth.com,DailyBooth,summer-2009,acquired
@@ -151,7 +137,6 @@ rethinkdb.com,RethinkDB,summer-2009,acquired
 mixpanel.com,Mixpanel,summer-2009,active
 olark.com,Olark,summer-2009,active
 lockitron.com,Lockitron,summer-2009,acquired
-graffitigeo.com,GraffitiGeo,summer-2009,acquired
 renthop.com,RentHop,summer-2009,active
 lingt.com,Lingt,summer-2009,active
 heyzap.com,Heyzap,winter-2009,acquired
@@ -172,12 +157,10 @@ ninite.com,Ninite,winter-2008,active
 mz.com,Machine Zone,winter-2008,acquired
 omnisio.com,Omnisio,winter-2008,acquired
 heroku.com,Heroku,winter-2008,acquired
-280north.com,280 North,winter-2008,acquired
 songkick.com,Songkick,summer-2007,acquired
 dropbox.com,Dropbox,summer-2007,public
 bluefroggaming.com,Blue Frog Gaming,summer-2007,active
 disqus.com,Disqus,summer-2007,acquired
-zumodrive.com,ZumoDrive,summer-2007,acquired
 clickpass.com,Clickpass,summer-2007,acquired
 appjet.com,Appjet,summer-2007,acquired
 anywhere.fm,Anywhere.FM,summer-2007,acquired
@@ -187,7 +170,6 @@ octopart.com,Octopart,winter-2007,acquired
 buxfer.com,Buxfer,winter-2007,active
 googleblog.blogspot.com,Zenter,winter-2007,acquired
 auctomatic.com,Auctomatic,winter-2007,acquired
-heysan.com,Heysan,winter-2007,acquired
 xobni.com,Xobni,summer-2006,acquired
 scribd.com,Scribd,summer-2006,active
 omgpop.com,OMGPop,summer-2006,acquired
@@ -197,21 +179,15 @@ projectwedding.com,Project Wedding,winter-2006,acquired
 wufoo.com,Wufoo,winter-2006,acquired
 loopt.com,Loopt,summer-2005,acquired
 textpayme.com,TextPayMe,summer-2005,acquired
-clickfacts.com,Clickfacts,summer-2005,acquired
-kiko.com,Kiko,summer-2005,acquired
 reddit.com,Reddit,summer-2005,acquired
 twitch.com,Twitch,winter-2007,acquired
-parakey.com,Parakey,summer-2005,acquired
 pixate.com,Pixate,summer-2012,acquired
 knowmia.com,Knowmia,summer-2012,acquired
 boostedboards.com,Boosted,summer-2012,acquired
 zeromailer.com,ZeroMailer,summer-2012,acquired
-kamcord.com,Kamcord,summer-2012,acquired
-statwing.com,Statwing,summer-2012,acquired
 rainforestqa.com,Rainforest,summer-2012,active
 fullstackacademy.com,Fullstack Academy,summer-2012,acquired
 omnivirt.com,OmniVirt,summer-2012,acquired
-streem.com,Streem,summer-2012,acquired
 mthsense.com,Mth Sense,summer-2012,active
 humandx.org,Human Dx,summer-2012,active
 healthsherpa.com,HealthSherpa,summer-2012,active
@@ -219,7 +195,6 @@ mattermost.com,Mattermost,summer-2012,active
 zentail.com,Zentail,summer-2012,active
 soylent.com,Soylent,summer-2012,acquired
 clever.com,Clever,summer-2012,acquired
-vayable.com,Vayable,summer-2012,acquired
 smartasset.com,SmartAsset,summer-2012,active
 fundersclub.com,FundersClub,summer-2012,active
 eligible.com,Eligible,summer-2012,active
@@ -246,7 +221,6 @@ plivo.com,Plivo,summer-2012,active
 svbtle.com,Svbtle,summer-2012,active
 instacart.com,Instacart,summer-2012,public
 9gag.com,9gag,summer-2012,active
-thestyleup.com,StyleUp,winter-2013,active
 circuitlab.com,CircuitLab,winter-2013,active
 screenhero.com,Screenhero,winter-2013,acquired
 scuba.io,Scuba,winter-2013,acquired
@@ -264,13 +238,11 @@ influxdata.com,InfluxData,winter-2013,active
 strikingly.com,Strikingly,winter-2013,active
 lollipuff.com,Lollipuff,winter-2013,active
 goradar.com,RADAR,winter-2013,active
-meldium.com,Meldium,winter-2013,acquired
 experiment.com,Experiment,winter-2013,active
 heap.io,Heap,winter-2013,acquired
 medxt.com,MedXT,winter-2013,acquired
 simplyinsured.com,SimplyInsured,winter-2013,active
 wefunder.com,Wefunder,winter-2013,active
-onlycoin.com,Coin,winter-2013,acquired
 wevorce.com,Wevorce,winter-2013,active
 kalibrr.com,Kalibrr,winter-2013,acquired
 zenefits.com,Zenefits,winter-2013,acquired
@@ -282,7 +254,6 @@ watsi.org,Watsi,winter-2013,active
 urx.com,URX,summer-2013,acquired
 apptimize.com,Apptimize,summer-2013,acquired
 asseta.com,Asseta,summer-2013,active
-standardtreasury.com,Standard Treasury,summer-2013,acquired
 bloomthat.com,BloomThat,summer-2013,acquired
 hackermeter.com,Hackermeter,summer-2013,acquired
 coreos.com,CoreOS,summer-2013,acquired
@@ -302,7 +273,6 @@ reebee.com,Reebee,summer-2013,active
 arcusfi.com,Arcus,summer-2013,acquired
 bop.fm,Bop.fm,summer-2013,acquired
 statuspage.io,StatusPage,summer-2013,acquired
-lumoid.com,Lumoid,summer-2013,acquired
 truelinkfinancial.com,True Link,summer-2013,active
 datarank.com,Datarank,summer-2013,acquired
 webflow.com,Webflow,summer-2013,active
@@ -338,7 +308,6 @@ stacklead.com,StackLead,winter-2014,acquired
 theoremlp.com,Theorem,winter-2014,acquired
 liftigniter.com,Liftigniter,winter-2014,acquired
 piinpoint.com,PiinPoint,winter-2014,active
-pipelinedb.com,PipelineDB,winter-2014,acquired
 povio.com,Povio,winter-2014,active
 pushbullet.com,Pushbullet,winter-2014,active
 gorickshaw.com,Rickshaw,winter-2014,acquired
@@ -350,7 +319,6 @@ guesty.com,Guesty,winter-2014,active
 truevault.com,TrueVault,winter-2014,active
 getweave.com,Weave,winter-2014,public
 wit.ai,Wit.ai,winter-2014,acquired
-zesty.com,Zesty,winter-2014,acquired
 zidisha.org,Zidisha,winter-2014,active
 zinc.com,Zinc,winter-2014,active
 algolia.com,Algolia,winter-2014,active
@@ -368,7 +336,6 @@ zipphone.com,Zip Phone,summer-2014,acquired
 backpackbang.com,Backpack,summer-2014,active
 parenthoods.co,Parenthoods,summer-2014,acquired
 bitaccess.com,Bitaccess,summer-2014,acquired
-carlypso.com,Carlypso,summer-2014,acquired
 checkr.com,Checkr,summer-2014,active
 claralabs.com,Clara Labs,summer-2014,acquired
 clear.in,Clear,summer-2014,active
@@ -379,8 +346,6 @@ hyperpad.com,Hyperpad,summer-2014,active
 govpredict.com,GovPredict,summer-2014,acquired
 blockspring.com,Blockspring,summer-2014,acquired
 greentoe.com,Greentoe,summer-2014,active
-hublo.com,Hublo,summer-2014,acquired
-impraise.com,Impraise,summer-2014,acquired
 protocol.ai,Protocol Labs,summer-2014,active
 withkash.com,Kash,summer-2014,acquired
 lawnlove.com,Lawn Love,summer-2014,acquired
@@ -395,7 +360,6 @@ producthunt.com,Product Hunt,summer-2014,acquired
 rigetti.com,Rigetti Computing,summer-2014,public
 sfox.com,SFOX,summer-2014,active
 usergems.com,UserGems,summer-2014,active
-aptopayments.com,Apto Payments,summer-2014,acquired
 shipbob.com,ShipBob,summer-2014,active
 spotangels.com,SpotAngels,summer-2014,active
 tenjin.com,Tenjin,summer-2014,acquired
@@ -481,7 +445,6 @@ valorwater.com,Valor Water Analytics,winter-2015,acquired
 vanhawks.com,Vanhawks,winter-2015,acquired
 x-zell.com,X-Zell,winter-2015,active
 raventech.com,Raven Tech,winter-2015,acquired
-chariot.com,Chariot,winter-2015,acquired
 justflip.com,Flip,winter-2015,active
 tara.ai,Tara AI,winter-2015,active
 replika.ai,Replika,winter-2015,active
@@ -523,7 +486,6 @@ bodyport.com,Bodyport,summer-2015,active
 appcanary.com,Appcanary,summer-2015,acquired
 chaldal.com,Chaldal,summer-2015,active
 cloudstitch.com,Cloudstitch,summer-2015,acquired
-sphere.works,Sphere Secure Workspace,summer-2015,acquired
 dripcapital.com,Drip Capital,summer-2015,active
 givecampus.com,GiveCampus,summer-2015,active
 circlemedical.com,Circle Medical,summer-2015,active
@@ -533,9 +495,7 @@ zeplin.io,Zeplin,summer-2015,active
 microhealth.com,Microhealth,summer-2015,active
 fountain.com,Fountain,summer-2015,active
 oolusolar.com,Oolu,summer-2015,acquired
-ramp.com,Paribus,summer-2015,acquired
 picktrace.com,PickTrace,summer-2015,active
-interviewed.com,Interviewed,summer-2015,acquired
 plateiq.com,Plate IQ,summer-2015,active
 redcarpetup.com,RedCarpetUp,summer-2015,active
 scentbird.com,Scentbird,summer-2015,active
@@ -580,7 +540,6 @@ petcube.com,Petcube,winter-2016,active
 daily.co,Daily,winter-2016,active
 m.io,Mio,winter-2016,active
 focal.systems,Focal Systems,winter-2016,active
-loopgenomics.com,Loop Genomics,winter-2016,acquired
 ablehealth.com,Able Health,winter-2016,acquired
 truebill.com,Truebill,winter-2016,acquired
 deako.com,Deako,winter-2016,active
@@ -706,7 +665,6 @@ innov8.work,Innov8,summer-2016,acquired
 suiteness.com,Suiteness,summer-2016,active
 elemenohealth.com,Elemeno Health,summer-2016,active
 expo.dev,Expo,summer-2016,active
-proxy.com,Proxy,summer-2016,acquired
 classdojo.com,ClassDojo,summer-2012,active
 starcity.com,Starcity,summer-2016,acquired
 bird.com,Bird,summer-2016,active
@@ -756,12 +714,10 @@ collectly.co,Collectly,winter-2017,active
 request.network,Request Network,winter-2017,active
 alemhealth.com,AlemHealth,winter-2017,active
 fastjvm.com,FastJVM,winter-2017,active
-suprdaily.com,Supr Daily,winter-2017,acquired
 bulkmro.com,Bulk MRO Industrial Supply,winter-2017,active
 solugen.com,Solugen,winter-2017,active
 waystocap.com,WaystoCap,winter-2017,acquired
 bitrise.io,Bitrise,winter-2017,active
-asktetra.com,Tetra,winter-2017,acquired
 plane.com,Plane,winter-2017,active
 hogaru.com,Hogaru,winter-2017,active
 getreliancehealth.com,Reliance Health,winter-2017,active
@@ -774,7 +730,7 @@ nomba.com,Nomba,winter-2017,active
 bios.health,BIOS Health,winter-2017,active
 zipx.com,ZipX,winter-2017,acquired
 nanonets.com,NanoNets,winter-2017,active
-delee.co,Delee,winter-2017,active
+delee.bio,Delee,winter-2017,active
 dabba.com,Wifi Dabba  Inc.,winter-2017,active
 terark.com,Terark,winter-2017,acquired
 playment.io,Playment,winter-2017,acquired
@@ -793,10 +749,9 @@ peer5.com,Peer5,winter-2017,acquired
 helixnano.com,Helix Nanotechnologies,winter-2017,active
 getscopeai.com,ScopeAI,winter-2017,acquired
 retool.com,Retool,winter-2017,active
-humi.ca,Humi,winter-2017,acquired
+employmenthero.com,Humi,winter-2017,acquired
 aclu.org,ACLU,winter-2017,active
 jerry.ai,Jerry,summer-2017,active
-elucd.com,Elucd,summer-2017,acquired
 fazzfinancial.com,FAZZ,summer-2017,active
 sigmagenetics.com,Sigma Genetics,winter-2017,active
 getpy.com,Py,summer-2017,acquired
@@ -830,7 +785,6 @@ get-carrot.com,Carrot Fertility,summer-2017,active
 enzyme.com,Enzyme,summer-2017,acquired
 advano.io,Advano,summer-2017,active
 solve.com,Solve,summer-2017,acquired
-escherreality.com,Escher Reality,summer-2017,acquired
 prelim.com,Prelim,summer-2017,active
 upfort.com,Upfort,summer-2017,active
 getwildfire.com,Wildfire,summer-2017,acquired
@@ -862,7 +816,6 @@ lotuspay.com,LotusPay,summer-2017,acquired
 sourceress.com,Sourceress,summer-2017,active
 onelocal.com,OneLocal,summer-2017,active
 eduflow.com,Eduflow,summer-2017,acquired
-opearlo.com,Opearlo,summer-2017,acquired
 muzz.com,Muzz,summer-2017,active
 headstart.io,Headstart,summer-2017,acquired
 maymobility.com,May Mobility,summer-2017,active
@@ -873,7 +826,7 @@ modernfertility.com,Modern Fertility,summer-2017,acquired
 lyrebird.ai,Lyrebird,summer-2017,acquired
 goodcover.com,Goodcover,summer-2017,active
 templarbit.com,Templarbit,summer-2017,acquired
-routable.com,Routable,summer-2017,active
+routable.com,Routable,summer-2017,acquired
 justappraised.com,Just Appraised,summer-2017,active
 gem.com,Gem,summer-2017,acquired
 disclosures.io,disclosures.io,summer-2017,acquired
@@ -886,7 +839,6 @@ candidately.com,Candidately,summer-2017,active
 cashfree.com,Cashfree Payments,summer-2017,active
 dharma.io,Dharma Labs,summer-2017,acquired
 pullrequest.com,PullRequest,summer-2017,acquired
-assemblymade.com,CoderWall,winter-2012,acquired
 lucy.co,Lucy Goods  Inc,winter-2018,active
 provenskincare.com,Proven Group,winter-2018,active
 preciousapp.com,Precious,winter-2018,active
@@ -912,7 +864,6 @@ clearbrain.com,ClearBrain,winter-2018,acquired
 simetrik.com,Simetrik,winter-2018,active
 srtxlabs.com,SRTX,winter-2018,active
 avrolifesci.com,Avro Life Science,winter-2018,active
-sepsisscout.com,Sepsis Scout,winter-2018,acquired
 macromoltek.com,Macromoltek,winter-2018,active
 ngt.academy,NEXGENT,winter-2018,active
 onederful.co,onederful,winter-2018,acquired
@@ -937,7 +888,6 @@ tequitable.com,tEQuitable,winter-2018,active
 evryhealth.com,Evry Health,winter-2018,acquired
 biorender.com,BioRender,winter-2018,active
 sqreen.com,Sqreen,winter-2018,acquired
-plexus.im,Plexus,winter-2018,active
 sourcify.com,Sourcify,winter-2018,active
 tributi.com,Tributi,winter-2018,active
 supermedium.com,Supermedium,winter-2018,active
@@ -945,7 +895,6 @@ getrest.app,Evolve (makers of Podcast App & Rest),winter-2018,active
 letsdothis.com,Let's Do This,winter-2018,active
 flinto.app,Flinto,winter-2018,acquired
 edwin.ai,Edwin,winter-2018,acquired
-onuniverse.com,Universe,winter-2018,active
 acely.com,Acely,winter-2018,active
 treasuryprime.com,Treasury Prime,winter-2018,active
 psylaris.com,Psylaris,winter-2018,active
@@ -968,7 +917,7 @@ youteam.io,YouTeam,winter-2018,acquired
 groww.in,Groww,winter-2018,public
 memorahealth.com,Memora Health,winter-2018,acquired
 zyper.com,Zyper,winter-2018,acquired
-algosurg.com,AlgoSurg Inc,winter-2018,active
+algosurg.ai,AlgoSurg Inc,winter-2018,active
 medumo.com,Medumo,winter-2018,acquired
 opensea.io,OpenSea,winter-2018,active
 archform.com,ArchForm,winter-2018,active
@@ -1008,7 +957,6 @@ versemedical.com,Verse Medical,summer-2018,active
 lowkey.gg,Lowkey,summer-2018,acquired
 revenuecat.com,RevenueCat,summer-2018,active
 useopenwrench.com,OpenWrench,summer-2018,active
-demeanor.co,Demeanor.co,summer-2018,acquired
 activeloop.ai,Activeloop,summer-2018,active
 titan.com,Titan,summer-2018,active
 datadrivenbioscience.com,Data Driven Bioscience,summer-2018,active
@@ -1033,9 +981,7 @@ pocketworlds.com,Pocket Worlds,summer-2018,active
 tallpoppy.com,Tall Poppy,summer-2018,active
 easol.com,Easol,summer-2018,active
 onegraph.com,OneGraph,summer-2018,acquired
-scanwellhealth.com,Scanwell Health,summer-2018,acquired
 corvus-robotics.com,Corvus Robotics,summer-2018,active
-berbix.com,Berbix,summer-2018,acquired
 duffel.com,Duffel,summer-2018,active
 impactive.io,Impactive (formerly Outvote),summer-2018,acquired
 cspa.io,CSPA,summer-2018,acquired
@@ -1138,7 +1084,6 @@ coursedog.com,Coursedog,winter-2019,acquired
 patternfast.com,PatternFast (prior: Tailornova/Couturme),winter-2019,active
 thriveagric.com,Thrive Agric,winter-2019,active
 communityphone.org,Community Phone Company,winter-2019,active
-weathercheck.co,WeatherCheck,winter-2019,active
 sapling.ai,Sapling.ai,winter-2019,active
 nabis.com,Nabis,winter-2019,active
 theforage.com,Forage,winter-2019,acquired
@@ -1149,7 +1094,6 @@ swadesh.co,Swadesh,summer-2019,active
 visly.app,Visly,winter-2019,acquired
 onswitchboard.com,Switchboard,winter-2019,active
 atomicalchemy.us,Atomic Alchemy,winter-2019,acquired
-docbot.co,Docbot,winter-2019,acquired
 elph.com,Elph,winter-2019,acquired
 okteto.com,Okteto,winter-2019,active
 askdata.com,Askdata,winter-2019,acquired
@@ -1165,19 +1109,17 @@ excepgen.com,Excepgen,winter-2019,active
 mobot.io,Mobot,winter-2019,active
 intacttherapeutics.com,Intact Therapeutics,winter-2019,active
 gotlanded.com,Landed,winter-2019,active
-autodial.com,Autodial prev Qwest,winter-2019,active
+intheroom.social,In The Room,winter-2019,active
 pyxai.com,Pyxai,winter-2019,active
 deel.com,Deel,winter-2019,active
 helloaxel.com,Axel Travel,winter-2019,active
-doppler.com,Doppler,winter-2019,active
+doppler.com,Doppler,winter-2019,acquired
 ravn.com,Ravn,winter-2019,active
 usecaribou.com,Caribou,winter-2019,active
 wren.co,Wren,summer-2019,active
 instapathbio.com,Instapath Inc.,winter-2019,active
-cocoon.com,Cocoon,winter-2019,acquired
 auravision.ai,Aura Vision,winter-2019,active
 wanderlog.com,Wanderlog,winter-2019,active
-boundarylayer.tech,Valo,winter-2019,active
 jetpackaviation.com,JetPack Aviation,winter-2019,active
 voltalabs.com,Volta Labs  Inc.,winter-2019,active
 reelables.com,Reelables,winter-2019,active
@@ -1219,7 +1161,6 @@ cuanto.app,Cuanto,winter-2019,active
 rune.ai,Rune,winter-2019,active
 getdockup.com,Dockup,winter-2019,active
 marsauto.com,Mars Auto,winter-2019,active
-alluresystems.com,Allure Systems,winter-2019,acquired
 voting.works,VotingWorks,winter-2019,active
 globe.exchange,Globe,winter-2019,active
 inito.com,Inito,winter-2019,active
@@ -1260,7 +1201,7 @@ cuboh.com,Cuboh,summer-2019,acquired
 shiru.com,Shiru,summer-2019,active
 aperohealth.com,Apero Health,summer-2019,active
 lofty.ai,Lofty,summer-2019,active
-courier.com,Courier,summer-2019,active
+courier.com,Courier,summer-2019,acquired
 palifer.com,Palifer,summer-2019,acquired
 methodfi.com,Method Financial,summer-2019,active
 gamebytes.io,Gamebytes,summer-2019,active
@@ -1294,13 +1235,9 @@ kitekraft.de,Kitekraft,summer-2019,active
 yummy-future.com,Yummy Future,summer-2019,active
 upequity.com,UpEquity,summer-2019,active
 localyze.com,Localyze,summer-2019,acquired
-taxproper.com,TaxProper,summer-2019,acquired
-featurepeek.com,FeaturePeek,summer-2019,acquired
-fynncredit.com,Fynn,summer-2019,active
 zetasurgical.com,ZETA SURGICAL,summer-2019,active
 openreplay.com,OpenReplay,summer-2019,active
 withbanner.com,Banner,summer-2019,active
-kubesail.com,KubeSail,summer-2019,active
 greencanopynode.com,Green Canopy NODE,summer-2019,active
 canix.com,Canix,summer-2019,active
 outtalent.com,Outtalent,summer-2019,active
@@ -1317,7 +1254,6 @@ directshifts.com,DirectShifts,summer-2019,active
 arpeggiobio.com,Arpeggio Bio,summer-2019,active
 kernsystems.com,Kern Systems,summer-2019,active
 spotlessmaterials.com,spotLESS Materials,summer-2019,active
-datamechanics.co,Data Mechanics,summer-2019,acquired
 microverse.org,Microverse,summer-2019,active
 wasmer.io,Wasmer,summer-2019,active
 earth-ai.com,EARTH AI,summer-2019,active
@@ -1363,12 +1299,11 @@ getflowbot.com,Flowbot,summer-2019,active
 vitau.mx,Vitau,summer-2019,active
 treble.ai,treble.ai,summer-2019,active
 cocowallet.app,Coco Wallet,summer-2019,active
-aspect.app,Aspect,summer-2019,active
 deepnote.com,Deepnote,summer-2019,active
 asherbio.com,Asher Bio,summer-2019,active
 taskade.com,Taskade,summer-2019,active
 vorticity.xyz,Vorticity,summer-2019,active
-usemotion.com,Motion,winter-2020,active
+wonderly.com,Wonderly,winter-2020,active
 laika.com.co,LAIKA,summer-2019,active
 gitstart.com,GitStart,summer-2019,active
 epic-aerospace.com,EPIC AEROSPACE,summer-2019,active
@@ -1393,7 +1328,6 @@ teleo.ai,Teleo,winter-2020,acquired
 polytomic.com,Polytomic,winter-2020,active
 meetladder.com,Ladder,summer-2020,acquired
 porter.run,Porter,summer-2020,active
-hoss.com,Hoss,winter-2020,acquired
 pulley.com,Pulley,winter-2020,active
 mindsdb.com,MindsDB,winter-2020,active
 ophelia.com,Ophelia,winter-2020,active
@@ -1428,7 +1362,7 @@ fig.io,Fig,summer-2020,acquired
 farcast.com,Farcast,winter-2020,active
 infield.ai,Infield,winter-2020,active
 ezeit.ai,Eze,winter-2020,active
-getbenepass.com,Benepass,winter-2020,active
+benepass.com,Benepass,winter-2020,active
 startplayinggames.com,StartPlaying.Games,winter-2020,active
 trygrain.com,Grain,winter-2020,active
 fly.io,Fly.io,winter-2020,active
@@ -1465,7 +1399,7 @@ modernbanc.com,Modernbanc,winter-2020,active
 tryriot.com,Riot,winter-2020,active
 posthog.com,PostHog,winter-2020,active
 cron.com,Cron,winter-2020,acquired
-aiosmedical.com,AIOS,winter-2020,active
+aiosmedical.notion.site,AIOS,winter-2020,active
 jitter.video,Jitter,winter-2020,active
 junction.com,Junction,winter-2020,active
 skypher.co,Skypher,winter-2020,active
@@ -1485,7 +1419,7 @@ morphlelabs.com,Morphle Labs,winter-2020,active
 zeorouteplanner.com,Zeo Route Planner,winter-2020,active
 hiration.com,Hiration,winter-2020,active
 ybanq.com,yBANQ,winter-2020,acquired
-bikry.com,Bikry,winter-2020,active
+askanatomic.com,Anatomic,winter-2020,active
 edurev.in,EduRev,winter-2020,active
 spennyapp.com,Spenny,winter-2020,active
 hiresweet.com,HireSweet,winter-2020,active
@@ -1532,7 +1466,7 @@ atmo.ai,Atmo,winter-2020,active
 send.ng,SEND,winter-2020,active
 powerx.co,PowerX,winter-2020,acquired
 livingcarbon.com,Living Carbon,winter-2020,active
-tambua.health,Yoneda Health,winter-2020,active
+y0n3da.xyz,Yoneda Research,winter-2020,active
 airbyte.com,Airbyte,winter-2020,active
 myworkpay.com,Workpay,winter-2020,active
 humanly.io,Humanly,winter-2020,active
@@ -1550,7 +1484,6 @@ jetadmin.io,Jet Admin,winter-2020,active
 algenbio.com,Algen Biotechnologies,winter-2020,active
 altro.io,Altro,summer-2020,acquired
 ukama.com,Ukama,summer-2020,active
-jemi.so,Jemi,summer-2020,acquired
 jitsu.com,Jitsu,summer-2020,acquired
 ziphq.com,Zip,summer-2020,active
 increase.com,Increase,summer-2020,active
@@ -1661,7 +1594,6 @@ supabase.com,Supabase,summer-2020,active
 socksoho.com,SockSoho,summer-2020,active
 togethervideoapp.com,Together Video Chat,summer-2020,acquired
 ready.net,Ready,summer-2020,active
-pardesbio.com,Pardes Biosciences,summer-2020,public
 taktile.com,Taktile,summer-2020,active
 trymito.io,Mito,summer-2020,active
 draftwise.com,Draftwise,summer-2020,active
@@ -1677,7 +1609,6 @@ tryglimpse.com,Glimpse,summer-2020,active
 fancyapp.live,Fancy,summer-2020,acquired
 nestybox.com,Nestybox,summer-2020,acquired
 warmly.ai,Warmly,summer-2020,acquired
-rally.video,Rally,summer-2020,active
 mozartdata.com,Mozart Data,summer-2020,active
 riogrande.co,Riogrande,summer-2020,acquired
 reflect.run,Reflect,summer-2020,acquired
@@ -1691,7 +1622,6 @@ fieldguide.com,Fieldguide,summer-2020,active
 herondata.io,Heron,summer-2020,active
 hub.la,Hubla,summer-2020,active
 clau.com,Clau,summer-2020,active
-playquell.com,Quell,summer-2020,acquired
 todoscomemos.com,Todos Comemos,summer-2020,active
 futurefields.io,Future Fields,summer-2020,active
 rarebird.coffee,Rarebird,summer-2020,active
@@ -1699,7 +1629,6 @@ siphoxhealth.com,SiPhox Health,summer-2020,active
 verifiable.com,Verifiable,summer-2020,active
 getmatter.app,Matter,summer-2020,active
 gilgameshpharmaceutical.com,Gilgamesh Pharmaceuticals,summer-2020,active
-brevy.com,Brevy,summer-2020,acquired
 webiny.com,Webiny,winter-2021,active
 gather.town,Gather,summer-2019,active
 abacum.ai,Abacum,winter-2021,active
@@ -1780,7 +1709,6 @@ bimaplan.co,Bimaplan,winter-2021,active
 firstbase.io,Firstbase.io,winter-2021,active
 octifi.com,OctiFi,winter-2021,acquired
 tryperdiem.com,Per Diem,winter-2021,active
-fifthtry.com,FifthTry,winter-2021,active
 promoted.ai,Promoted.ai,winter-2021,acquired
 avironactive.com,Aviron Interactive,winter-2021,active
 camber.health,Camber,winter-2021,active
@@ -1809,7 +1737,7 @@ careweather.com,Care Weather,winter-2021,active
 rointech.com,Roin Technologies,winter-2021,acquired
 hermes-robotics.com,Hermes Robotics,winter-2021,active
 popl.co,Popl,winter-2021,active
-fathom.ai,Fathom,winter-2021,active
+fathom.ai,Fathom,winter-2021,acquired
 true3d.com,True3D,winter-2021,active
 briohr.com,BrioHR,winter-2021,active
 firstsupport.ai,FirstSupport.ai,winter-2021,active
@@ -1861,7 +1789,6 @@ simplify.jobs,Simplify,winter-2021,active
 inpharmd.com,InpharmD,winter-2021,active
 striga.com,Striga,winter-2021,acquired
 tint.ai,Tint,winter-2021,active
-unsurvey.ai,unSurvey,winter-2021,acquired
 zoko.io,ZOKO,winter-2021,active
 taofi.com,TaoFi,winter-2021,acquired
 reclaimprotocol.org,Reclaim Protocol,winter-2021,active
@@ -2054,7 +1981,6 @@ doublehq.com,Double,summer-2021,active
 onsleek.com,Sleek,summer-2021,acquired
 socosearch.com,Soco,summer-2021,active
 epinoma.com,Epinoma,summer-2021,active
-reprosent.com,REPROSENT,summer-2021,active
 biteninja.com,Bite Ninja,summer-2021,active
 anakin.io,Anakin,summer-2021,active
 snapcalorie.com,SnapCalorie,summer-2021,active
@@ -2134,7 +2060,6 @@ cartpanda.com,Cartpanda,summer-2021,active
 lootrush.com,LootRush,summer-2021,active
 scispot.io,Scispot,summer-2021,active
 yemaachi.com,Yemaachi Biotechnology,summer-2021,active
-trymable.com,Mable,summer-2021,acquired
 momomedical.com,Momo Medical,summer-2021,active
 lemfi.com,LemFi,summer-2021,active
 infiuss.com,Infiuss Health,summer-2021,active
@@ -2153,7 +2078,6 @@ oneschema.co,OneSchema,summer-2021,active
 shimmer.care,Shimmer,summer-2021,active
 stardex.com,Stardex,summer-2021,active
 encuadrado.com,Encuadrado,summer-2021,active
-zoios.io,Zoios.,summer-2021,active
 alephee.com,Aleph Solutions (Alephee),summer-2021,active
 kaipodlearning.com,KaiPod Learning,summer-2021,active
 getaleph.com,Aleph,summer-2021,active
@@ -2218,7 +2142,7 @@ getfilta.com,Filta,summer-2021,active
 ferveret.com,Ferveret,summer-2021,active
 femaleinvest.com,Female Invest,summer-2021,active
 humanegenomics.com,Humane Genomics,summer-2021,active
-getzuma.com,Zuma,summer-2021,active
+getzuma.com,Zuma,summer-2021,acquired
 telivy.com,Telivy,summer-2021,acquired
 pylonump.com,Pylon,summer-2021,active
 infer.so,Infer,summer-2021,active
@@ -2246,12 +2170,11 @@ strideq.com,StrideQ,summer-2021,active
 storylane.io,Storylane,summer-2021,active
 contraforce.com,ContraForce,summer-2021,active
 abatable.com,Abatable,summer-2021,active
-outputbio.com,Output Biosciences,summer-2021,active
+outputlabs.ai,Output Labs,summer-2021,active
 cellchorus.com,CellChorus,summer-2021,active
 atlas.kitchen,Atlas,summer-2021,active
 plai.io,Plai,summer-2021,active
 hirebolt.com,Hirebolt,summer-2021,active
-phykos.co,Phykos,summer-2021,active
 therify.co,Therify,summer-2021,active
 crew.work,Crew,summer-2021,active
 sfatherapeutics.com,SFA Therapeutics,summer-2021,active
@@ -2369,7 +2292,6 @@ gymclass.com,Gym Class,winter-2022,active
 teamout.com,TeamOut,winter-2022,active
 inferedge.com,InferEdge,winter-2022,active
 sekilo.com,Sekilo,winter-2022,active
-livehomeroom.com,HomeRoom,winter-2022,acquired
 seabound.co,Seabound,winter-2022,active
 dynamo.ai,Dynamo AI,winter-2022,active
 invertbio.com,Invert,winter-2022,active
@@ -2392,7 +2314,6 @@ instant.ca,Instant Labs,winter-2022,active
 miggos.com,Miggos,winter-2022,active
 orca.fyi,Orca,winter-2022,active
 shuttlecentral.com,Shuttle Central,winter-2022,active
-atlas.so,Atlas,winter-2022,active
 dioptra.ai,Dioptra,winter-2022,acquired
 upswell.ai,Bobidi,winter-2022,active
 hyperbeam.com,Hyperbeam,winter-2022,active
@@ -2400,7 +2321,7 @@ getironleap.io,Embedded Labs,winter-2022,active
 ankr.us,Ankr Health,winter-2022,active
 upbanx.com,UpBanx,winter-2022,active
 mysivi.ai,MySivi,winter-2022,active
-fieldproxy.com,Fieldproxy,winter-2022,active
+fieldproxy.ai,Fieldproxy,winter-2022,active
 happl.com,Happl,winter-2022,active
 unlayer.com,Unlayer,winter-2022,active
 pyrls.com,Pyrls,winter-2022,active
@@ -2455,7 +2376,6 @@ tryskylink.com,SkyLink,winter-2022,acquired
 mintlify.com,Mintlify,winter-2022,active
 refinetrain.ai,RefineTrain AI,winter-2022,active
 permitflow.com,PermitFlow,winter-2022,active
-stairsfinancial.com,Stairs Financial,winter-2022,active
 nearwave.co,NearWave,winter-2022,active
 salt.pe,SALT,winter-2022,active
 imt.care,IMT Care,winter-2022,active
@@ -2490,7 +2410,7 @@ pluto.markets,Pluto.markets,winter-2022,active
 getagency.com,Agency,winter-2022,active
 prembly.com,Prembly (formerly Identitypass),winter-2022,active
 alga.bio,Alga Biosciences,winter-2022,active
-elphinstone.com.pk,Elphinstone  Inc.,winter-2022,active
+elphinstone.us,Elphinstone  Inc.,winter-2022,active
 grey.co,Grey,winter-2022,active
 strongcompute.com,Strong Compute,winter-2022,active
 subscriptionflow.com,SubscriptionFlow,winter-2022,active
@@ -2529,8 +2449,7 @@ materialdepot.in,Material Depot,winter-2022,active
 tryduplo.com,Duplo,winter-2022,active
 vimmerse.net,Vimmerse,winter-2022,active
 broccoli.com,Broccoli AI,winter-2022,active
-rome.ai,Rome,winter-2022,active
-joe-app.com,Joe,winter-2022,acquired
+rome.ai,Rome AI,winter-2022,active
 bemlo.com,Bemlo,winter-2022,active
 talentropy.ai,Talentropy.ai,winter-2022,active
 mutable.ai,mutable.ai,winter-2022,acquired
@@ -2538,12 +2457,10 @@ kular.ai,Kular,winter-2022,active
 theneo.io,Theneo,winter-2022,active
 torpedotherapeutics.com,Torpedo Therapeutics,winter-2022,active
 andsonbiotech.com,Andson Biotech,winter-2022,active
-ponyrun.ai,Ponyrun,winter-2022,active
 toproad.ai,Top Road,winter-2022,active
 brainboard.co,Brainboard,winter-2022,active
 numida.com,Numida,winter-2022,active
 pina.id,PINA,winter-2022,active
-usebracket.com,Bracket,winter-2022,acquired
 joonhealth.co,Joon Health,winter-2022,active
 cypherhq.io,Cypher,winter-2022,acquired
 inden.ai,Inden,winter-2022,active
@@ -2605,7 +2522,6 @@ gimo.vn,GIMO,winter-2022,active
 trynara.com,Nara,winter-2022,acquired
 powerhouseai.com,Powerhouse AI,winter-2022,active
 nowcircular.com,Circular,winter-2022,active
-withtai.com,TAI,winter-2022,acquired
 queryvary.com,Query Vary,winter-2022,active
 trustyhomes.com,Trusty,winter-2022,active
 impossiblemetals.com,Impossible Metals,winter-2022,active
@@ -2626,7 +2542,6 @@ mspilot.io,MSPilot,fall-2025,active
 cofactr.com,Cofactr,winter-2022,active
 powerdocs.so,Powerdocs,winter-2022,active
 beudelivery.com,beU delivery,winter-2022,active
-pantorepay.com.br,Pantore Pay,winter-2022,active
 hippo.build,HippoBuild,winter-2022,active
 karatelabs.io,Karate Labs,winter-2022,active
 finnix.id,Finnix,winter-2022,active
@@ -2698,7 +2613,6 @@ ethosx.finance,EthosX,summer-2022,active
 ballerine.com,Ballerine,summer-2022,active
 numind.ai,NuMind,summer-2022,active
 signatur.bio,Signatur Biosciences,summer-2022,active
-paywithlyra.com,Lyra,summer-2022,active
 novig.com,Novig,summer-2022,active
 sunlightapi.com,Sunlight,summer-2022,active
 midplane.ai,Midplane,summer-2022,active
@@ -2725,7 +2639,7 @@ tankpayments.com,Tank Payments,summer-2022,active
 illuminant.ai,Illuminant Surgical,summer-2022,active
 maverickx.com,MaverickX,summer-2022,active
 heymalama.co,Malama Health,summer-2022,active
-tenlives.com,Ten Lives,summer-2022,active
+terraferma.ai,Terraferma,summer-2022,active
 payloadcms.com,Payload,summer-2022,acquired
 hype.meme,Hype,summer-2022,active
 aragorn.ai,Aragorn AI,summer-2022,active
@@ -2734,7 +2648,6 @@ namecard.ai,Namecard.ai,summer-2022,active
 flairlabs.ai,Flair Labs,summer-2022,active
 unify.ai,Unify,winter-2023,active
 biggerpicture.co,BiggerPicture,summer-2022,active
-mistle.dev,Mistle,summer-2022,active
 slidely.ai,Slidely AI,summer-2022,active
 typewise.app,Typewise,summer-2022,active
 newscatcherapi.com,NewsCatcher,summer-2022,active
@@ -2752,7 +2665,7 @@ coris.ai,Coris,summer-2022,active
 hedgehogfoods.com,Hedgehog,summer-2022,active
 alphawatch.ai,Alphawatch AI,winter-2023,active
 anythingllm.com,AnythingLLM,summer-2022,active
-latentspace.sh,Latent Space,summer-2022,active
+openscale.so,OpenScale,summer-2022,active
 helloaviary.ai,AviaryAI,summer-2022,active
 diversion.dev,Diversion,summer-2022,active
 pluralith.com,Pluralith,summer-2022,active
@@ -2767,7 +2680,7 @@ usefini.com,Fini,summer-2022,active
 cobbery.com,Cobbery,summer-2022,active
 featherhq.com,Feather,summer-2022,active
 search-artemis.com,Artemis Search,summer-2022,active
-atlaswork.ai,Atlas,summer-2022,active
+accountablevr.com,Accountable,summer-2022,active
 getplutto.com,Plutto,summer-2022,active
 getanchor.co,Anchor,summer-2022,active
 kombo.dev,Kombo,summer-2022,active
@@ -2814,7 +2727,6 @@ movinglake.com,MovingLake,summer-2022,active
 pump.co,Pump.co,summer-2022,active
 jointaro.com,Taro,summer-2022,acquired
 knowtex.ai,Knowtex,summer-2022,active
-sculptcosting.com,Sculpt,summer-2022,active
 algotest.in,AlgoTest,summer-2022,active
 itsrever.com,REVER,summer-2022,active
 vizzly.co,Vizzly,summer-2022,acquired
@@ -2839,7 +2751,7 @@ materee.id,Materee,summer-2022,active
 morf.health,Morf Health,summer-2022,active
 polymathrobotics.com,Polymath Robotics,summer-2022,active
 gosameday.com,Sameday,winter-2023,active
-zudo.work,zudo.work,winter-2023,active
+zudo.work,Zudo,winter-2023,active
 rubbrband.com,Rubbrband,winter-2023,active
 avoca.ai,Avoca,winter-2023,active
 infisical.com,Infisical,winter-2023,active
@@ -2864,9 +2776,8 @@ magicpatterns.com,Magic Patterns,winter-2023,active
 rollstack.com,Rollstack,winter-2023,active
 depot.dev,Depot,winter-2023,active
 pigeondocuments.com,Pigeon,winter-2023,active
-novel.care,Novelcare,winter-2023,active
+novelcare.com,Novelcare,winter-2023,active
 lume.ai,Lume,winter-2023,acquired
-viddyapp.io,Viddy,winter-2023,acquired
 concourse.ai,Concourse,winter-2023,active
 latenthealth.com,Latent,winter-2023,active
 backdropagent.com,Backdrop,winter-2023,active
@@ -2885,7 +2796,7 @@ ohm.ai,Ohm,winter-2023,active
 double.bot,Double – Coding Copilot,winter-2023,active
 glass.health,Glass Health,winter-2023,active
 getversive.com,Versive,winter-2023,active
-pledge.health,Pledge Health,winter-2023,active
+pledge.health,Pledge Health,winter-2023,acquired
 spendruby.com,Ruby Card,winter-2023,active
 zerodev.app,ZeroDev,winter-2023,active
 trysalient.com,Salient,winter-2023,active
@@ -3035,7 +2946,7 @@ rex.fit,rex.fit,winter-2023,active
 vellum.ai,Vellum,winter-2023,active
 wallbit.io,Wallbit,winter-2023,active
 vocode.dev,Vocode,winter-2023,acquired
-withbenchmark.com,Benchmark,winter-2023,active
+withbenchmark.com,Benchmark,winter-2023,acquired
 withedge.com,Edge,winter-2023,active
 untetherlabs.com,Untether Labs,winter-2023,active
 highlight.io,highlight.io,winter-2023,acquired
@@ -3084,7 +2995,7 @@ nectarclimate.com,Nectar,summer-2023,active
 oraai.com,Ora AI,summer-2023,active
 twenty.com,Twenty,summer-2023,active
 xeol.io,Xeol,summer-2023,acquired
-metoro.io,Metoro,summer-2023,active
+withhuman.ai,withHuman,summer-2023,active
 clearesthealth.com,Clearest Health,summer-2023,active
 elyos.ai,Elyos AI,summer-2023,active
 withaccend.com,Accend,summer-2023,active
@@ -3092,13 +3003,13 @@ deasylabs.com,Deasy Labs,summer-2023,acquired
 hyperbound.ai,Hyperbound,summer-2023,active
 dioxuslabs.com,Dioxus Labs,summer-2023,acquired
 watto.ai,Watto AI,summer-2023,acquired
-linc-ai.com,Linc.,summer-2023,active
+withlinc.com,Linc.,summer-2023,active
 aivideo.com,AIVideo.com,summer-2023,active
 stellarsleep.com,Stellar Sleep,summer-2023,active
 ohmicbiosciences.com,Ohmic Biosciences,summer-2023,active
 magicloops.dev,Magic Loops,summer-2023,active
 sweetspot.so,Sweetspot,summer-2023,active
-soharhealth.com,Sohar Health,summer-2023,active
+soharhealth.com,Sohar Health,summer-2023,acquired
 bland.com,Bland AI,summer-2023,active
 godiligent.ai,Diligent,summer-2023,active
 pointhound.com,Pointhound,summer-2023,active
@@ -3157,7 +3068,7 @@ numen.com,Numen,summer-2023,active
 vetrec.io,VetRec,summer-2023,active
 governgpt.com,GovernGPT,winter-2024,active
 maintouch.com,Maintouch,summer-2023,active
-epsilla.com,Epsilla,summer-2023,active
+harnessrouter.ai,HarnessRouter,summer-2023,active
 refine.dev,refine,summer-2023,active
 candoriq.com,CandorIQ,summer-2023,active
 withsurface.com,Surface Labs,summer-2023,active
@@ -3184,7 +3095,7 @@ apoxy.dev,Apoxy,summer-2023,active
 yenmo.in,Yenmo,winter-2024,active
 pincites.com,Pincites,summer-2023,acquired
 trainy.ai,Trainy,summer-2023,active
-studdy.ai,Studdy,summer-2023,active
+studdyai.com,Studdy,summer-2023,active
 kobaltlabs.com,Kobalt Labs,summer-2023,active
 joingleam.com,Gleam,summer-2023,active
 bolto.com,Bolto,summer-2023,active
@@ -3228,7 +3139,6 @@ tryterracotta.com,Terracotta AI,summer-2023,active
 fiber.ai,Fiber AI,summer-2023,active
 recipeui.com,RecipeUI,summer-2023,active
 tiptap.dev,Tiptap,summer-2023,active
-smobi.com,Smobi,summer-2023,active
 minded.com,Minded,summer-2023,active
 getstrada.com,Strada,summer-2023,active
 quillbills.com,Quill Bills,summer-2023,active
@@ -3290,10 +3200,10 @@ greptile.com,Greptile,winter-2024,active
 ubicloud.com,Ubicloud,winter-2024,active
 happenstance.ai,Happenstance,winter-2024,active
 duckie.ai,Duckie,winter-2024,active
-ion.design,ion design,winter-2024,active
+usedynamite.com,Dynamite,winter-2024,active
 tekton-dynamics.com,Tekton Dynamics,winter-2024,active
 soniahealth.com,Sonia,winter-2024,active
-kabilah.com,Kabilah,winter-2024,active
+aren.com,Aren,winter-2024,active
 tracecat.com,Tracecat,winter-2024,active
 precip.ai,Precip,winter-2024,active
 nuanced.dev,Nuanced,winter-2024,active
@@ -3396,7 +3306,6 @@ whip.run,Whip,winter-2024,active
 trieve.ai,Trieve,winter-2024,acquired
 conduit.ai,Conduit,winter-2024,active
 elodin.systems,Elodin,winter-2024,active
-soundry.ai,Soundry AI,winter-2024,acquired
 getaftercare.com,Aftercare,winter-2024,active
 shiboleth.ai,Shiboleth,winter-2024,active
 hazelai.com,Hazel,winter-2024,active
@@ -3410,7 +3319,7 @@ edgetrace.ai,EdgeTrace,winter-2024,active
 manifoldfreight.com,Manifold Freight,winter-2024,active
 prosights.co,ProSights,winter-2024,active
 centauri-ai.tech,Centauri AI,winter-2024,active
-floatingpoint.ai,floatingpoint,winter-2024,active
+floatingpoint.ai,floatingpoint,winter-2024,acquired
 raindrop.ai,Raindrop,winter-2024,active
 yondu.ai,Yondu,winter-2024,active
 storioai.com,HeartByte,winter-2024,active
@@ -3469,7 +3378,6 @@ powderfi.com,Powder,winter-2024,active
 erisbio.com,Eris Biotech,winter-2024,active
 senso.ai,Senso,winter-2024,active
 silogy.io,Silogy,winter-2024,active
-oddsview.com,OddsView,winter-2024,active
 spurtest.com,Spur,summer-2024,active
 evolverebiosciences.com,Evolvere BioSciences,summer-2024,active
 junction.bio,Junction Bioscience,winter-2024,active
@@ -3487,7 +3395,7 @@ newmoneycompany.com,The New Money Company,winter-2024,active
 latted.com,Latted,winter-2024,active
 renderlet.com,renderlet,winter-2024,active
 dragoneye.ai,Dragoneye,winter-2024,active
-quivr.app,Quivr,winter-2024,active
+thevibecompany.co,The Vibe Company,winter-2024,active
 withtower.com,Tower,winter-2024,active
 mathos.ai,Mathos,winter-2024,active
 kater.ai,kater.ai,winter-2024,active
@@ -3508,7 +3416,7 @@ angstrom-ai.com,Ångström AI,summer-2024,active
 indemni.com,Indemni,winter-2024,active
 ultra.tech,Ultra,summer-2024,active
 abelpolice.com,Abel Police,summer-2024,active
-hireroger.com,Roger,summer-2024,active
+augmentinc.co,Augment Inc.,summer-2024,active
 mirurobotics.com,Miru,summer-2024,active
 spherecast.ai,Spherecast,summer-2024,active
 apten.ai,Apten,summer-2024,active
@@ -3543,7 +3451,7 @@ hexclave.com,Hexclave,summer-2024,active
 sagecare.ai,Sage Care,summer-2024,active
 videogen.io,VideoGen,summer-2024,active
 phonely.ai,Phonely,summer-2024,active
-corgi.com,Corgi Insurance,summer-2024,active
+corgi.com,Corgi,summer-2024,active
 party.build,Party,summer-2024,active
 wordware.ai,Wordware,summer-2024,active
 sorcerer.earth,Sorcerer,summer-2024,active
@@ -3577,7 +3485,6 @@ codeviz.ai,CodeViz,summer-2024,active
 parahelp.com,Parahelp,summer-2024,active
 joinlore.app,Lore,summer-2024,active
 minusx.ai,MinusX,summer-2024,active
-tivara.com,Tivara,summer-2024,active
 kenley.ai,Kenley,summer-2024,active
 tandemspace.com,Tandem,summer-2024,active
 weaverobotics.com,Weave Robotics,summer-2024,active
@@ -3647,7 +3554,7 @@ emberrobotics.com,Ember Robotics,summer-2024,active
 pinnacle.sh,Pinnacle,summer-2024,active
 intryc.com,Intryc,summer-2024,active
 parley.so,Parley,summer-2024,active
-soff.ai,Soff,summer-2024,active
+westgatesupply.com,Westgate,summer-2024,active
 mineflow.ai,Mineflow,summer-2024,active
 brighterway.ai,Brighterway,summer-2024,active
 schemeflow.com,SchemeFlow,summer-2024,active
@@ -3703,7 +3610,7 @@ therentflow.com,RentFlow,summer-2024,active
 serveaiglobal.com,Serve AI,summer-2024,active
 blaze.money,Blaze,summer-2024,active
 elayne.com,Elayne,summer-2024,active
-shipoway.com,Oway,summer-2024,active
+oway.io,Oway,summer-2024,active
 bucket.bot,Bucket Robotics,summer-2024,active
 saldor.com,Saldor,summer-2024,active
 usul.com,Usul,summer-2024,active
@@ -3774,7 +3681,6 @@ sandra-ai.com,Sandra AI,fall-2024,active
 archil.com,Archil,fall-2024,active
 cekura.ai,Cekura,fall-2024,active
 endstack.com,Endstack,fall-2024,active
-matcha-health.com,Matcha,fall-2024,active
 reticular.com,Reticular,fall-2024,active
 smooth.sh,Smooth,fall-2024,active
 attimet.com,attimet,fall-2024,active
@@ -3816,14 +3722,14 @@ alexcodes.app,Alex,fall-2024,active
 kilvin.ai,Kilvin,fall-2024,active
 diffusion.studio,Diffusion Studio,fall-2024,active
 metreecs.com,Metreecs,fall-2024,active
-revi.ai,Revi,fall-2024,active
+thornwick.com,Thornwick,fall-2024,active
 archilabs.ai,ArchiLabs,fall-2024,active
 hellosunset.com,Sunset,fall-2024,active
 surge.app,Surge,fall-2024,active
 struct.ai,Struct,fall-2024,active
 futureclinic.com,FutureClinic,fall-2024,active
-tryforerunner.com,Forerunner AI,fall-2024,active
-x1.new,x1,fall-2024,active
+tryforerunner.com,Forerunner,fall-2024,active
+heybiblo.com,Biblo,fall-2024,active
 flyvaya.com,Vaya,fall-2024,active
 melder.io,Melder,fall-2024,active
 ryvn.ai,Ryvn,fall-2024,active
@@ -3858,7 +3764,7 @@ subimage.io,SubImage,winter-2025,active
 steinmetzmotors.com,Steinmetz,winter-2025,active
 partcl.com,Partcl,spring-2025,active
 axiom.trade,Axiom,winter-2025,active
-bud.app,Bud,winter-2025,active
+bud.app,Bud,winter-2025,acquired
 splash9.com,Splash Inc.,winter-2025,active
 stampmail.ai,Stamp,winter-2025,active
 alice.tech,Alice.tech,winter-2025,active
@@ -3887,7 +3793,7 @@ usetrava.com,Trava,winter-2025,active
 tryelip.ai,Elip AI,winter-2025,active
 caseflood.ai,Caseflood.ai,winter-2025,active
 weaveos.com,Weave,winter-2025,active
-maive.ai,Maive,winter-2025,active
+ladderai.com,Ladder,winter-2025,active
 salespatriot.com,SalesPatriot,winter-2025,active
 runparagon.com,Paragon,winter-2025,active
 carecycle.ai,careCycle,winter-2025,active
@@ -3912,7 +3818,6 @@ mecha-health.ai,Mecha Health,winter-2025,active
 cuckoo.so,Cuckoo Labs,winter-2025,active
 finbar.com,Finbar,winter-2025,active
 hud.ai,HUD,winter-2025,active
-fromolive.com,Olive,winter-2025,active
 pax.markets,PAX Markets,winter-2025,active
 pave-robotics.com,Pave Robotics,winter-2025,active
 galevisa.com,Gale,winter-2025,active
@@ -3945,6 +3850,7 @@ gokarsa.com,Karsa,winter-2025,active
 nitrode.com,Nitrode,winter-2025,active
 calltree.ai,Calltree,winter-2025,active
 harperinsure.com,Harper,winter-2025,active
+sherpalabs.ai,Sherpa Labs,winter-2025,active
 gettireswing.com,Tire Swing,fall-2026,active
 outlit.ai,Outlit,winter-2025,active
 usemesh.com,Mesh,winter-2025,active
@@ -3995,7 +3901,7 @@ trymonte.ai,Monte,summer-2025,active
 axal.ai,Axal,winter-2025,active
 artifact.engineer,Artifact,winter-2025,active
 assistant-ui.com,assistant-ui,winter-2025,active
-firaresearch.com,Fira,winter-2025,active
+artil.ai,Artil,winter-2025,active
 vantel.com,Vantel,winter-2025,active
 ambral.com,Ambral,summer-2025,active
 blindpay.com,BlindPay,winter-2025,active
@@ -4123,7 +4029,7 @@ getden.io,Den,spring-2025,active
 mlop.ai,mlop,spring-2025,active
 lumari.ai,Lumari,spring-2025,active
 codefour.us,Code Four,spring-2025,active
-thevisionlab.ai,Vision Lab,spring-2025,active
+linewise.io,Linewise,spring-2025,active
 oncactus.com,Cactus,spring-2025,active
 wavedash.com,Wavedash,spring-2025,active
 starsling.dev,StarSling,spring-2025,active
@@ -4145,14 +4051,11 @@ preseen.com,Preseen,summer-2025,active
 fifthdoor.com,Fifth Door,fall-2025,active
 pingo.ai,Pingo,summer-2025,active
 becomeautonomous.com,Autonomous Technologies Group,fall-2025,active
-useprox.com,Prox,fall-2025,active
 adaptional.com,Adaptional,summer-2025,active
 getasap.us,GETASAP,summer-2025,active
-browse.dev,Meteor,summer-2025,active
-closera.com,Closera,summer-2025,active
+meteorlabs.ai,Meteor Labs,summer-2025,active
 parametric.company,Parametric,fall-2025,active
 dedaluslabs.ai,Dedalus Labs,summer-2025,active
-acrely.ai,Acrely,summer-2025,active
 promptingcompany.com,The Prompting Company,summer-2025,active
 mangodesk.com,MangoDesk,summer-2025,active
 halluminate.ai,Halluminate,summer-2025,active
@@ -4229,7 +4132,7 @@ costream.ai,Costream,summer-2025,active
 epicenter.so,Epicenter,summer-2025,active
 trychannel3.com,Channel3,summer-2025,active
 ghosteye.ai,GhostEye,summer-2025,active
-normalfactory.com,Normal,summer-2025,active
+normal.ai,Normal,summer-2025,active
 comena.ai,Comena,summer-2025,active
 vibeflow.ai,VibeFlow,summer-2025,active
 nozomio.com,Nozomio,summer-2025,active
@@ -4245,7 +4148,7 @@ manufact.com,Manufact,summer-2025,active
 char.com,Char,summer-2025,active
 relling.co,Relling,summer-2025,active
 motives.ai,Motives,summer-2025,active
-autumn.ai,Autumn AI,winter-2026,active
+autumn.ai,Autumn,winter-2026,active
 gofinto.com,Finto,summer-2025,active
 getirongrid.com,Iron Grid,summer-2025,active
 procindex.com,ProcIndex,summer-2025,active
@@ -4296,7 +4199,6 @@ fleetline.ai,Fleetline,summer-2025,active
 magnetictax.com,Magnetic,summer-2025,active
 modelence.com,Modelence,summer-2025,active
 perspectiveshealth.ai,Perspectives Health,summer-2025,active
-smartbase.so,Smartbase,spring-2026,active
 duranium.co,Duranium,summer-2025,active
 rowflow.ai,RowFlow,summer-2025,active
 munify.ai,Munify,summer-2025,active
@@ -4346,7 +4248,7 @@ sorce.jobs,Sorce,fall-2025,active
 thecontextcompany.com,The Context Company,fall-2025,active
 dari.dev,dari.dev,fall-2025,active
 lunavo.ai,Lunavo,fall-2025,active
-usesoren.com,Soren,fall-2025,active
+soren-ai.com,Soren,fall-2025,active
 norra.io,Norra,fall-2025,active
 kaigohealth.ai,Kaigo Health,fall-2025,active
 koyal.ai,Koyal,fall-2025,active
@@ -4405,9 +4307,8 @@ tornyol.com,Tornyol,fall-2025,active
 s2.dev,s2.dev,fall-2025,active
 patentwatch.ai,Patent Watch,fall-2025,active
 anto.bio,Anto Biosciences,fall-2025,active
-imagineai.me,Imagine AI,fall-2025,active
+useimagine.ai,Imagine AI,fall-2025,active
 expectedparrot.com,Expected Parrot,fall-2025,active
-everestagi.com,Everest,fall-2025,active
 tryscott.ai,Scott AI,fall-2025,active
 aside.com,Aside,fall-2025,active
 tryprism.com,Prism,spring-2026,active
@@ -4425,8 +4326,8 @@ absurd.com,Absurd,fall-2025,active
 kalpalabs.ai,Kalpa Labs,fall-2025,active
 metorial.com,Metorial,fall-2025,active
 denki.ai,Denki,fall-2025,active
-takecareos.com,TakeCareOS,spring-2026,active
-savahq.com,Sava,fall-2025,active
+teaflask.com,Teaflask,spring-2026,active
+savatrustcompany.com,Sava Trust Company,fall-2025,active
 icarus.one,Icarus,fall-2025,active
 karumi.ai,Karumi,fall-2025,active
 perseus.computer,Perseus,fall-2025,active
@@ -4466,7 +4367,7 @@ item.app,item,fall-2025,active
 ndea.com,Ndea,winter-2026,active
 mayflowervisa.com,Mayflower,fall-2025,active
 zephyrfusion.com,Zephyr Fusion,fall-2025,active
-inviscidai.com,Inviscid AI,winter-2026,active
+standardphysics.com,Standard Physics,winter-2026,active
 claimglide.com,ClaimGlide,winter-2026,active
 haladir.com,Haladir,winter-2026,active
 mantisbiotech.com,Mantis,winter-2026,active
@@ -4491,8 +4392,7 @@ didit.me,Didit,winter-2026,active
 onerobot.io,One Robot,winter-2026,active
 quotientlabs.com,Quotient Labs,winter-2026,active
 kita.ai,Kita,winter-2026,active
-klausai.com,Klaus AI,winter-2026,active
-rumacare.com,Ruma Care,winter-2026,active
+janeen.care,Janeen,winter-2026,active
 getprescience.com,Prescience  Inc.,summer-2026,active
 lucenthq.com,Lucent,winter-2026,active
 runanywhere.ai,RunAnywhere,winter-2026,active
@@ -4509,7 +4409,6 @@ sentrial.com,Sentrial,winter-2026,active
 legalos.ai,LegalOS,winter-2026,active
 getfuchsia.ai,Fuchsia,spring-2026,active
 cofia.ai,Cofia,winter-2026,active
-protent.ai,Protent,winter-2026,active
 baseframe.co,BaseFrame,winter-2026,active
 strandai.com,Strand AI,winter-2026,active
 beaconhealth.ai,Beacon Health,winter-2026,active
@@ -4583,12 +4482,13 @@ fenrock.ai,Fenrock AI,winter-2026,active
 maywoodai.com,Maywood,winter-2026,active
 revion.inc,Revion,winter-2026,active
 traverse.so,Traverse,winter-2026,active
-approxima.ai,Approxima,winter-2026,active
+appsidekit.com,SideKit,winter-2026,active
 9mothers.com,9 Mothers,spring-2026,active
 valence.trade,Valence,winter-2026,active
 usereframe.ai,Reframe,winter-2026,active
 congruent.io,Congruent,winter-2026,active
 inventoryquant.com,InventoryQuant,winter-2026,active
+wingmanlaw.com,Wingman Law,fall-2026,active
 emdash.com,Emdash,winter-2026,active
 ressl.ai,Ressl AI,winter-2026,active
 tryrobby.com,Robby,winter-2026,active
@@ -4608,7 +4508,7 @@ archal.ai,Archal,summer-2026,active
 polymathlabs.ai,Polymath,winter-2026,active
 voxelenergy.com,Voxel Energy,winter-2026,active
 netter.ai,Netter,spring-2026,active
-superset.sh,Superset,spring-2026,active
+paradev.com,Paradev (formerly Superset),spring-2026,active
 datoric.com,Datoric,summer-2026,active
 servo7.com,Servo7,winter-2026,active
 dittobio.com,Ditto Biosciences,winter-2026,active
@@ -4624,7 +4524,7 @@ getbalance.ai,Balance,winter-2026,active
 fort.cx,Fort,winter-2026,active
 general.legal,General Legal,winter-2026,active
 corelayer.com,Corelayer,winter-2026,active
-bookoapp.com,Booko,winter-2026,active
+booko.com,Booko,winter-2026,active
 foreman.co,Foreman,winter-2026,active
 myturnstone.ai,Turnstone,winter-2026,active
 squid.energy,Squid,winter-2026,active
@@ -4659,11 +4559,11 @@ zymbly.com,Zymbly,winter-2026,active
 regbase.com,Regbase,spring-2026,active
 ossus.com,Ossus,winter-2026,active
 origami-robotics.com,Origami Robotics,winter-2026,active
-brumby,Brumby (Formerly GrazeMate),winter-2026,active
+brumby.com,Brumby,winter-2026,active
 daivin.tech,DAIVIN!,winter-2026,active
-fixture.app,Fixture,winter-2026,active
+fixture.ai,Fixture,winter-2026,active
 aurorincad.com,Aurorin CAD,winter-2026,active
-trybloom.ai,Bloom,spring-2026,active
+rainbrand.com,Rainbrand,spring-2026,active
 dispatch.space,Dispatch,spring-2026,active
 superpenguin.ai,Carrot Labs,winter-2026,active
 unifold.io,Unifold,winter-2026,active
@@ -4677,6 +4577,7 @@ litmushiring.com,Litmus,summer-2026,active
 martini.film,Martini,winter-2026,active
 wideframe.com,Wideframe,winter-2026,active
 trycardinal.com,Cardinal,winter-2026,active
+databuddy.cc,Databuddy,fall-2026,active
 hedgespecialty.com,Hedge,spring-2026,active
 surtrdefense.com,Surtr Defense Systems,spring-2026,active
 klarify.ca,Klarify,spring-2026,active
@@ -4685,7 +4586,7 @@ primitive.dev,primitive,spring-2026,active
 standardsignal.com,Standard Signal,spring-2026,active
 tryluke.dev,Stage,spring-2026,active
 perfectbit.ai,PerfectBit  Inc.,spring-2026,active
-trymemoir.ai,Memoir,spring-2026,active
+memoirmeet.com,Memoir,spring-2026,active
 illumelabs.ai,Illume Labs,summer-2026,active
 mostrobotic.com,Most Robotic,summer-2026,active
 multiplier.ai,Multiplier,spring-2026,active
@@ -4703,7 +4604,6 @@ trysaffron.ai,Saffron,spring-2026,active
 trychert.com,Chert,spring-2026,active
 ninefives.com,Nine Fives,spring-2026,active
 andustry.com,Andustry,spring-2026,active
-zenbu.dev,Zenbu,spring-2026,active
 inloop-robotics.com,InLoop Robotics,spring-2026,active
 getdayjob.ai,Dayjob,spring-2026,active
 thecompany.company,The Company Company,fall-2026,active
@@ -4713,7 +4613,7 @@ tenetindustries.com,Tenet Industries,spring-2026,active
 hub.xyz,Hub,spring-2026,active
 lightanchor.ai,Light Anchor,spring-2026,active
 lim.run,Limrun,spring-2026,active
-godhands.dev,GodHands,fall-2026,active
+godhands.ai,GodHands,fall-2026,active
 superlog.sh,Superlog,spring-2026,active
 govguard.com,GovGuard,spring-2026,active
 kinro.com,Kinro,spring-2026,active
@@ -4725,7 +4625,7 @@ wealor.ai,Wealor,spring-2026,active
 gethevn.com,HEVN  inc,spring-2026,active
 kelaitech.com,KelAI,spring-2026,active
 deepinteractions.ai,Deep Interactions,spring-2026,active
-qomplement.com,qomplement,spring-2026,active
+baymachines.com,BayMachines,spring-2026,active
 pavoot.com,Pavoot,spring-2026,active
 madrone.cool,Madrone,spring-2026,active
 shotwell.ai,shotwell.ai,spring-2026,active
@@ -4737,6 +4637,7 @@ antinuous.com,Antinuous,spring-2026,active
 instaagent.com,InstaAgent,spring-2026,active
 rentahuman.ai,RentAHuman,spring-2026,active
 useandco.com,Andco,spring-2026,active
+claimkit.co,ClaimKit,fall-2026,active
 argalabs.com,Arga Labs,spring-2026,active
 dreach.ai,Dreach,spring-2026,active
 synphony.co,Synphony,spring-2026,active
@@ -4750,7 +4651,7 @@ bentolabs.ai,BentoLabs AI,spring-2026,active
 lab0.ai,Lab0,spring-2026,active
 wondertx.ai,WonderTx,summer-2026,active
 gojiberry.ai,Gojiberry AI,spring-2026,active
-napkinmath.club,Napkin Math,spring-2026,active
+echoecho.ai,Paper Star,spring-2026,active
 ontora.com,Ontora,spring-2026,active
 voquill.com,Voquill,spring-2026,active
 keyframelabs.com,Keyframe Labs,spring-2026,active
@@ -4761,7 +4662,7 @@ prototyping.io,Prototyping.io,spring-2026,acquired
 textsidekick.com,Sidekick,summer-2026,active
 result.dev,Result,spring-2026,active
 useparrot.com,Parrot,spring-2026,active
-mount.insure,Mount,spring-2026,active
+agideploy.co,AGI Deploy Co,spring-2026,active
 infera.bio,Infera,spring-2026,active
 aicepower.com,AICE,spring-2026,active
 complir.io,Complir,spring-2026,active
@@ -4773,7 +4674,7 @@ rivermarkets.com,River Markets,spring-2026,active
 masterpiecelabs.xyz,Masterpiece,spring-2026,active
 degla.ai,Degla Inc,fall-2026,active
 minicor.com,Minicor,spring-2026,active
-e1o.com,E1O,spring-2026,active
+decuff.ai,decuff,spring-2026,active
 tday.com,tday.com,spring-2026,active
 general-instinct.com,General Instinct,spring-2026,active
 valctrl.com,ValCtrl,spring-2026,active
@@ -4809,16 +4710,17 @@ mentlio.com,Mentlio,summer-2026,active
 hessian.sh,Hessian,spring-2026,active
 amboras.com,Amboras,spring-2026,active
 asterlab.ai,Aster,spring-2026,active
-prose.md,OpenProse,spring-2026,active
-generalaviation.com,General Aviation,spring-2026,active
+generalaviation.com,General Aviation Company,spring-2026,active
 apolloatomics.com,Apollo Atomics  Inc.,spring-2026,active
 openworklabs.com,OpenWork,spring-2026,active
 tolmo.com,Tolmo,spring-2026,active
 projectx.cloud,ProjectX,spring-2026,active
+rodeorobotics.com,Rodeo Robotics,fall-2026,active
 useauxos.com,Auxos,spring-2026,active
 arzana.com,Arzana,spring-2026,active
-pentagon.run,Pentagon,spring-2026,active
+aernata.com,Aernata,spring-2026,active
 characterquilt.com,CharacterQuilt,spring-2026,active
+useprobe.ai,Probe,spring-2026,active
 expanse.sh,Expanse,spring-2026,active
 youart.ai,YouArt,spring-2026,active
 runtm.com,Runtime,spring-2026,active
@@ -4830,7 +4732,7 @@ myunowallet.com,Uno Wallet,spring-2026,active
 revnu.com,Revnu,spring-2026,active
 asendia.ai,Asendia AI,spring-2026,active
 mochatrade.com,Mochatrade,spring-2026,active
-avearobotics.com,Avea Robotics,spring-2026,active
+avearobotics.com,Avea Robotics,spring-2026,acquired
 manicule.com,Manicule,spring-2026,active
 atlasdiscovery.bio,Atlas Discovery,summer-2026,active
 latticehealthai.com,Lattice Health,spring-2026,active
@@ -4845,7 +4747,7 @@ centralcoms.com,CentralComs,spring-2026,active
 withpanacea.com,Panacea,spring-2026,active
 getmodern.ai,Modern,spring-2026,active
 reasonblocks.com,ReasonBlocks,spring-2026,active
-insforge.dev,InsForge (InstaCloud),spring-2026,active
+instabox.sh,InstaBox,spring-2026,active
 heyhyper.ai,Hyper,spring-2026,active
 enjamb.ai,Enjamb Labs,spring-2026,active
 arctic.health,Arctic Health,spring-2026,active
@@ -4862,6 +4764,7 @@ propriorobotics.com,Proprio Robotics,summer-2026,active
 maxxwell.dev,Rindler,summer-2026,active
 gbrain.io,GBrain,spring-2026,active
 heyclicky.com,HeyClicky,spring-2026,active
+fire.co,Fire Wallet,fall-2026,active
 akkari.io,Akkari,spring-2026,active
 edgerun.com,Edgerun,summer-2026,active
 conus-med.com,CONUS,fall-2026,active
@@ -4870,7 +4773,7 @@ git.cafe,GitCafe,summer-2026,active
 hickory.co,Hickory & Company,fall-2026,active
 kebra.com,Kebra,summer-2026,active
 usetorus.com,Torus,summer-2026,active
-tash.cards,tash,summer-2026,active
+tradetash.com,tash,summer-2026,active
 pango.ai,Pango,summer-2026,active
 roma.app,Roma,fall-2026,active
 hoplite.sh,Hoplite,summer-2026,active
@@ -4907,12 +4810,13 @@ jcode.sh,Jcode,summer-2026,active
 insurf.io,Insurf,summer-2026,active
 impact-drones.com,IMPACT Drones,summer-2026,active
 verdantapp.com,Verdant,summer-2026,active
-instaplay.ai,Instaplay,summer-2026,active
+generalcontextlabs.com,General Context Labs,summer-2026,active
 lyon.so,Lyon,fall-2026,active
 rise-reforming.com,Rise Reforming,summer-2026,active
 floracene.com,Floracene,summer-2026,active
 guildai.co,GUILD,summer-2026,active
 realpact.ai,RealPact,summer-2026,active
+evidentmachines.com,Evident Machines,fall-2026,active
 riften.ai,Riften,summer-2026,active
 bizmark.ai,Bizmark,summer-2026,active
 mosaic.inc,Mosaic,summer-2026,active
@@ -4927,6 +4831,7 @@ joinmarble.ai,Marble,summer-2026,active
 stoaexchange.com,Stoa,summer-2026,active
 tryglen.com,Glen,summer-2026,active
 context.dev,Context.dev,summer-2026,active
+confetti.build,Confetti,fall-2026,active
 codag.ai,Codag,summer-2026,active
 exosat.com,Exosat,summer-2026,active
 touchmark.ai,Touchmark,summer-2026,active
@@ -4937,6 +4842,7 @@ screenpipe.com,screenpipe,summer-2026,active
 manifoldindustries.ai,Manifold,summer-2026,active
 rasyn.ai,Rasyn,summer-2026,active
 alkera.ai,Alkera AI,summer-2026,active
+linklane.ai,LinkLane,winter-2027,active
 usedefinite.com,Definite,fall-2026,active
 callbook.ai,Callbook AI,summer-2026,active
 tarifflo.com,Tarifflo Inc.,summer-2026,active
@@ -4945,13 +4851,14 @@ traceforce.ai,Traceforce,summer-2026,active
 edotenv.com,EdotEnv,summer-2026,active
 standardmachines.com,Standard Machines,summer-2026,active
 agencytool.com,Agency Tool Company,summer-2026,active
-cerenovus.ai,Cerenovus,summer-2026,active
+snowstone.ai,Snowstone,summer-2026,active
 molagri.com,Molagri,summer-2026,active
 peer-freight.com,Peer,summer-2026,active
 elitehq.ai,Elite,summer-2026,active
 flowmanual.com,FlowManual,summer-2026,active
 talentpluto.com,Pluto,summer-2026,active
 machine0.io,machine0,summer-2026,active
+audora.art,Audora,fall-2026,active
 bloomylearning.com,Bloomy,summer-2026,active
 6thsense.dev,6thSense,summer-2026,active
 norirobotics.com,Nori,summer-2026,active
@@ -4965,7 +4872,7 @@ usealmanac.com,Almanac,summer-2026,active
 whitespacehq.ai,Whitespace,summer-2026,active
 useclick.ai,Click,summer-2026,active
 akonlabs.com,Akon Labs,summer-2026,active
-vendo.run,Vendo,summer-2026,active
+heygradon.com,Gradon,fall-2026,active
 aktoria.com,Aktoria Robotics,summer-2026,active
 rational.to,Rational,summer-2026,active
 omanta.com,Omanta,summer-2026,active
@@ -4973,11 +4880,10 @@ fabraix.com,Fabraix,summer-2026,active
 getqlo.com,Qlo,summer-2026,active
 heytenor.com,Tenor,summer-2026,active
 daqstra.com,Daqstra,summer-2026,active
-risklytics.ai,Risklytics,summer-2026,active
+risklytics.ai,Risklytics,fall-2026,active
 latolabs.io,LATO,summer-2026,active
 neuromorphic.vision,Neuromorphic,summer-2026,active
 neuronindustries.com,Neuron Industries,summer-2026,active
-pokerclubhub.com,PokerClubHub,summer-2026,active
 arbital.xyz,Arbital,summer-2026,active
 ultrasonium.com,Ultrasonium,summer-2026,active
 vestris.ai,Vestris,summer-2026,active
@@ -4988,21 +4894,22 @@ denta.com,Denta,summer-2026,active
 getcomputable.com,Computable,summer-2026,active
 trynearby.com,TryNearby,summer-2026,active
 financialdatasets.ai,Financial Datasets,summer-2026,active
+liquidenergy.world,Liquid Energy,fall-2026,active
 lucaiq.com,Luca IQ,summer-2026,active
 pacific.space,Pacific,summer-2026,active
-lastaccountingcompany.com,Last Accounting Company,summer-2026,active
+bear.inc,Bear,summer-2026,active
 executor.sh,Executor,summer-2026,active
 waybill.to,Waybill,summer-2026,active
 ronanrx.com,RonanRx Inc.,summer-2026,active
 marengox.com,Marengo,summer-2026,active
 lumeria.skin,Lumeria,summer-2026,active
-thefamiliarlab.com,Familiar,summer-2026,active
 markovstudios.com,Markov,summer-2026,active
 cosmicrobotics.com,Cosmic Robotics,summer-2026,active
+operonsolutions.com,Operon,summer-2026,active
 inkbox.ai,Inkbox,summer-2026,active
 gamgee.io,Gamgee,summer-2026,active
 provenmetal.com,ProvenMetal,summer-2026,active
-agentcard.sh,Agentcard,summer-2026,active
+agentcard.com,Agentcard,summer-2026,active
 agnost.ai,Agnost AI,summer-2026,active
 radley.health,Radley,summer-2026,active
 caregp.com.au,Care GP,summer-2026,active
@@ -5013,11 +4920,11 @@ trycarsignal.com,CarSignal,summer-2026,active
 decawork.ai,Decawork,summer-2026,active
 getpennant.ai,Pennant,summer-2026,active
 usederya.com,Derya,summer-2026,active
-touchyapp.com,Touchy,summer-2026,active
+usetokenless.com,Tokenless,summer-2026,active
 mireye.com,Mireye,summer-2026,active
 shiraz.ai,Shiraz AI,summer-2026,active
 lamb-labs.com,Lamb Labs,summer-2026,active
-chromie.dev,Chromie,summer-2026,active
+gocapto.com,Capto,summer-2026,active
 83sciences.ai,83 Sciences,summer-2026,active
 palisade-ai.com,Palisade,summer-2026,active
 hubble.ai,Hubble,summer-2026,active
@@ -5026,6 +4933,7 @@ griprobotics.ai,Grip,summer-2026,active
 hyperprobe.co,HyperProbe,summer-2026,active
 toven.ai,TovenAI,summer-2026,active
 verdictmachine.com,Verdict Machine,summer-2026,active
+limnion.ai,Limnion,fall-2026,active
 trydock.ai,Dock,summer-2026,active
 openrelay.inc,OpenRelay,summer-2026,active
 isoquant.ai,isoquant,fall-2026,active
@@ -5042,12 +4950,13 @@ subvysion.com,SubVysion,summer-2026,active
 avocasystems.com,Avoca Systems,summer-2026,active
 tracerml.ai,Tracer,summer-2026,active
 wondering.app,Wondering,summer-2026,active
+hillstar.ai,HillStar,fall-2026,active
 vernius.systems,Vernius Systems  Inc.,summer-2026,active
 onecli.sh,OneCLI,summer-2026,active
 nex.ai,Nex,summer-2026,active
 dawnxr.com,Dawn Industries,summer-2026,active
 cuebench.dev,CueBench,summer-2026,active
-hiloop.ai,hiloop,summer-2026,active
+autoresearch.inc,Autoresearch  Inc.,summer-2026,active
 robocurve.org,Robocurve,summer-2026,active
 salemroboticsinc.com,Salem Robotics Inc,summer-2026,active
 allia.health,Allia Health,summer-2026,active
@@ -5059,6 +4968,7 @@ magmahq.ai,Magma,summer-2026,active
 grep.ai,Grep AI,fall-2026,active
 caution.co,Caution,summer-2026,active
 ufo.ai,UFO.ai,fall-2026,active
+ernd.io,ernd,fall-2026,active
 coarena.ai,CoArena,summer-2026,active
 neomatter.com,Neomatter,fall-2026,active
 edviroenergy.com,Edviro,summer-2026,active
@@ -5066,32 +4976,49 @@ experientiallabs.ai,Experiential Labs,summer-2026,active
 simantic.com,Simantic,fall-2026,active
 conifer.build,Conifer,summer-2026,active
 tryopentag.com,OpenTag,summer-2026,active
-lambdarobotics.ai,Lambda Robotics,fall-2026,active
+voyager.so,Voyager,fall-2026,active
+runtime.si,Runtime.si,fall-2026,active
 hue.run,Hue,fall-2026,active
 herdr.dev,herdr,fall-2026,active
+theo.site,Theo,fall-2026,active
+bayworks.app,Bayworks,fall-2026,active
 sentient-os.ai,Sentient OS,fall-2026,active
 simulithic.com,Simulithic,fall-2026,active
+chempilot.ai,ChemPilot.ai,fall-2026,active
 veeza.ai,Veeza AI,fall-2026,active
-qokedas.com,Qokedas,fall-2026,active
+petrichorbio.com,Petrichor,fall-2026,active
 kailashlabs.com,Kailash Labs,fall-2026,active
+toposlab.com,Topos,fall-2026,active
+saccade.health,Saccade,fall-2026,active
 agent37.com,Agent 37,fall-2026,active
 faradaycompute.com,Faraday,fall-2026,active
+anyalpha.ai,AnyAlpha,fall-2026,active
+letter.dev,The Letter Company,fall-2026,active
 viraj-aero.com,Viraj Aero,fall-2026,active
+orgo.ai,Orgo,fall-2026,active
 boat.dev,Boat,fall-2026,active
 appliedkinetics.ai,Applied Kinetics,fall-2026,active
 inflection-space.com,Inflection Space Systems,fall-2026,active
 capveon.ai,Capveon,fall-2026,active
+cardinalsquare.com,Cardinal Square,fall-2026,active
 aviern.com,Aviern,fall-2026,active
 useforward.co,Forward,fall-2026,active
+taan.ai,Taan.ai,fall-2026,active
+stacktrace.ai,Stacktrace,fall-2026,active
+altair-health.com,Altair Health,fall-2026,active
+armorerlabs.com,Armorer Labs,fall-2026,active
 rhem.ai,Rhem Labs,fall-2026,active
 talos-us.com,Talos,fall-2026,active
+nitroduck.tech,Nitroduck,fall-2026,active
 lantern.md,Lantern AI,fall-2026,active
+munito.ai,Munito AI,fall-2026,active
 micora.com,Micora,fall-2026,active
+horizontal-tech.com,horizontal.,fall-2026,active
 nodus-compute.ai,Nodus Compute,fall-2026,active
-runmirrors.com,Mirrors,fall-2026,active
-onepatch.dev,OnePatch,fall-2026,active
+mirrors.dev,Mirrors,fall-2026,active
+getopencrawl.com,OpenCrawl,fall-2026,active
 asakana.co,Asakana,fall-2026,active
-bryel.ai,Bryel,fall-2026,active
+perceptuallabs.com,Perceptual Labs,fall-2026,active
 meetriver.com,River,fall-2026,active
 withhopper.com,Hopper,fall-2026,active
 truemile.ai,TrueMile,fall-2026,active
@@ -5099,58 +5026,124 @@ byteask.ai,ByteAsk,fall-2026,active
 antropi.world,Antropi Robotics,fall-2026,active
 elimentary.com,Elimentary,fall-2026,active
 agentrelay.com,Agent Relay,fall-2026,active
+myhelios.com,Helios Intelligence,fall-2026,active
 invertix.ai,Invertix,fall-2026,active
-pendulumrobotics.com,Pendulum Robotics,fall-2026,active
+ravenphone.com,Raven,fall-2026,active
+openactuation.com,Open Actuation,fall-2026,active
 dydema.com,Dydema,fall-2026,active
+plek.ai,Plek,fall-2026,active
 workers.io,Workers IO,fall-2026,active
 oasive.ai,Oasive,fall-2026,active
+quivly.ai,Quivly AI,fall-2026,active
+runpraxis.ai,Praxis,fall-2026,active
 shepherdrobotics.ai,Shepherd Robotics,fall-2026,active
 deployrobotics.co,Deploy,fall-2026,active
+lucebox.com,Lucebox,winter-2027,active
+kairoxsys.com,Kairox Systems,fall-2026,active
 streamlinesystems.ltd,Streamline Systems,fall-2026,active
 oroagents.com,ORO AI,fall-2026,active
 hemlock.inc,Hemlock,fall-2026,active
 twentyfour26.com,twentyfour26,fall-2026,active
 orcaaerospace.com,Orca Aerospace,fall-2026,active
-superradiant.co,SuperRadiant,fall-2026,active
+usefleety.com,Fleety,fall-2026,active
+0.security,0.security,fall-2026,active
+ploid.com,Ploid,fall-2026,active
+primordiant.com,Primordiant,fall-2026,active
+obia.io,Obia,fall-2026,active
+rystic.ai,Rystic,fall-2026,active
 vorelios.com,Vorelios,fall-2026,active
 dreamscalelabs.com,Dreamscale Labs,fall-2026,active
 halmoslabs.com,Halmos Labs,fall-2026,active
+resineda.com,Resin Technologies,fall-2026,active
+routant.ai,Routant,fall-2026,active
+telamont.com,Telamont,fall-2026,active
 ignitionbenefits.com,Ignition Benefits,fall-2026,active
+pomerado.ai,Pomerado,fall-2026,active
+archgen.tech,Archgen Labs,fall-2026,active
+polemosindustries.com,Polemos Industries,fall-2026,active
 covera-agents.com,Covera,fall-2026,active
 gethesperai.com,Hesper AI,fall-2026,active
-openseo.so,OpenSEO,fall-2026,active
+everyapp.com,EveryApp,fall-2026,active
+particularity.io,Particularity,fall-2026,active
+reconero.com,Reconero,fall-2026,active
 vexoai.com,Vexo,fall-2026,active
 archangelhealth.ai,Archangel Health,fall-2026,active
+hiyam.ai,Yam,fall-2026,active
+native.no,Native,fall-2026,active
 shireintelligence.com,Shire Intelligence,fall-2026,active
+silicamachines.com,Silica,fall-2026,active
+runlatent.ai,Latent,fall-2026,active
 antimattr.one,antimattr,fall-2026,active
+synaraops.com,Synara,fall-2026,active
 usevyra.com,Vyra,fall-2026,active
+odin-robotics.com,Odin Robotics,fall-2026,active
+preload.ai,Preload,fall-2026,active
+luxfoods.xyz,Lux Foods,fall-2026,active
+graphide.com,Graphide,fall-2026,active
+sutrix.ai,Sutrix,fall-2026,active
 operatechnologies.com,OpEra,fall-2026,active
 papaya.fyi,Papaya,fall-2026,active
+vouchwealth.com,Vouch,fall-2026,active
 sinter.systems,Sinter,fall-2026,active
 perit.ai,Perit.AI,fall-2026,active
+obsessiondb.com,ObsessionDB,fall-2026,active
 asim-group.com,Asim,fall-2026,active
+uxduck.com,UXDuck,fall-2026,active
 sona8.com,Sona8,fall-2026,active
+axonnic.com,Axonnic,fall-2026,active
 memorable.sh,Memorable,summer-2027,active
+melty.gg,Melty,fall-2026,active
+routerplus.com,RouterPlus,fall-2026,active
 quippyapp.com,Quippy,fall-2026,active
+composal.com,Composal,fall-2026,active
+epsilab.com,Epsilab,fall-2026,active
+verdun.ai,Verdun,fall-2026,active
+caveman.so,Caveman,fall-2026,active
+acyclic.dev,Acyclic Labs,fall-2026,active
 tilion.com,Tilion,fall-2026,active
 tryclean.ai,Clean,fall-2026,active
-volaren.ai,Volaren Inc.,fall-2026,active
+blinka.co,Blinka,fall-2026,active
+volaren.ai,Volaren,fall-2026,active
 joinspine.ai,Spine,fall-2026,active
 useterse.ai,Terse,fall-2026,active
 subvocal.company,The Subvocal Company,fall-2026,active
 usefr.com,Frontrunner,fall-2026,active
 decent.com,Decent,fall-2026,active
+theseus.bot,Theseus Robotics,fall-2026,active
 ascenix.co,Ascenix,fall-2026,active
-graypass.org,GrayPass,fall-2026,active
+graypass.com,GrayPass,fall-2026,active
 cyclon.ai,Cyclon,fall-2026,active
 ageospatial.com,Ageospatial,fall-2026,active
 buildhabu.com,HABU,fall-2026,active
 theagenticdatacompany.com,The Agentic Data Co.,fall-2026,active
-redoubt.agency,Redoubt Insurance,fall-2026,active
+redoubt.insure,Redoubt Insurance,fall-2026,active
 larkagents.com,Lark,fall-2026,active
+superserve.ai,Superserve,fall-2026,active
+canos.ai,Canos,fall-2026,active
 hundred.systems,Hundred,fall-2026,active
+get-stasis.com,STASIS,fall-2026,active
+tilo.so,Tilo,fall-2026,active
+kairoshealthai.com,Kairos Health,fall-2026,active
+withkiwi.ai,Kiwi,fall-2026,active
 openhack.com,OpenHack,fall-2026,active
+aucert.ai,Aucert,fall-2026,active
 sintropix.com,Sintropix,fall-2026,active
+phone-harness.com,Phone Harness,fall-2026,active
+adside.ai,Adside.ai,fall-2026,active
+ratlog.space,RATLOG,fall-2026,active
+prototypes.fun,Proto,fall-2026,active
 maritime.sh,Maritime,fall-2026,active
+spm.us,Super Powers Mobility (SPM),fall-2026,active
 deepmark.me,DeepMark,fall-2026,active
+wondersearch.com,Wondersearch,fall-2026,active
+plyxl.com,Plyxl,winter-2027,active
 boxes.dev,Boxes.dev,fall-2026,active
+gojinko.com,Jinko,fall-2026,active
+cesara.com,Cesara,fall-2026,active
+keresaero.com,Keres,fall-2026,active
+aikidotechnologies.com,Aikido Technologies,fall-2026,active
+spacesheep.dev,Spacesheep,fall-2026,active
+godpack.gg,Godpack,winter-2027,active
+nuumrobotics.com,Nuum Robotics,winter-2027,active
+tesser.sh,Tesser,winter-2027,active
+colony.tech,Colony,winter-2027,active
