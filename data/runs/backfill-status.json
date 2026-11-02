@@ -1,39 +1,39 @@
 {
-  "updated": "2026-11-01T21:14:39.266Z",
+  "updated": "2026-11-02T01:00:23.642Z",
   "from": "2016-Q1",
   "sites_remaining": 0,
   "eta_hours": 0,
   "run": {
-    "minutes": 193,
-    "sites": 11273,
-    "sites_per_hour": 3499,
-    "deferred": 1823,
-    "measured": 1309,
-    "inferred": 1253,
-    "browser": 782,
+    "minutes": 57,
+    "sites": 11267,
+    "sites_per_hour": 11785,
+    "deferred": 1987,
+    "measured": 344,
+    "inferred": 10,
+    "browser": 165,
     "static": 0,
-    "failed": 445,
-    "alternates": 408,
-    "cssHits": 1404,
-    "cssMisses": 6926,
-    "css_cache_hit_rate": 0.17
+    "failed": 163,
+    "alternates": 155,
+    "cssHits": 521,
+    "cssMisses": 1543,
+    "css_cache_hit_rate": 0.25
   },
   "archives": {
     "ia": {
       "rpm": 15,
-      "requests": 2312,
+      "requests": 965,
       "throttled": 0,
-      "refusals": 3
+      "refusals": 1
     },
     "arquivo": {
-      "rpm": 90,
-      "requests": 7908,
-      "throttled": 2,
+      "rpm": 232,
+      "requests": 1679,
+      "throttled": 0,
       "refusals": 0
     },
     "arquivo-cdx": {
-      "rpm": 44,
-      "requests": 740,
+      "rpm": 30,
+      "requests": 0,
       "throttled": 0,
       "refusals": 0
     }
