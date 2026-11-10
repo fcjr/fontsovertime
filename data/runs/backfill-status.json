@@ -1,27 +1,27 @@
 {
-  "updated": "2026-11-10T06:43:34.013Z",
+  "updated": "2026-11-10T12:57:26.159Z",
   "from": "2016-Q1",
   "sites_remaining": 0,
   "eta_hours": 0,
   "run": {
-    "minutes": 43,
-    "sites": 11229,
-    "sites_per_hour": 15692,
-    "deferred": 2051,
-    "measured": 36,
+    "minutes": 55,
+    "sites": 11228,
+    "sites_per_hour": 12332,
+    "deferred": 2024,
+    "measured": 44,
     "inferred": 1,
-    "browser": 3,
+    "browser": 5,
     "static": 0,
-    "failed": 32,
-    "alternates": 66,
-    "cssHits": 34,
-    "cssMisses": 319,
-    "css_cache_hit_rate": 0.1
+    "failed": 38,
+    "alternates": 82,
+    "cssHits": 7,
+    "cssMisses": 469,
+    "css_cache_hit_rate": 0.01
   },
   "archives": {
     "ia": {
       "rpm": 15,
-      "requests": 848,
+      "requests": 1199,
       "throttled": 0,
       "refusals": 1
     },
