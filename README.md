@@ -20,7 +20,15 @@ Our crawl started in September 2026. Anything on the site dated earlier is an es
 
 Everything is free to download from the [data page](https://fontsovertime.com/data). `data/exports/latest.csv` has one row per site with its body font, heading font, platform and how the fonts are served. The full crawls live in `data/snapshots/` as gzipped JSON Lines. They include every font on each page, its share of the text, and the font files and their sizes.
 
-If you publish something with it, we'd appreciate a link back.
+### Data license
+
+Copyright © 2026 Frank Chiarulli Jr.
+
+Frank Chiarulli Jr. licenses the collected font-usage dataset (crawl snapshots in `data/snapshots/`, CSV exports in `data/exports/`, and generated font-usage aggregates in `data/agg/`) under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), to the extent he holds the relevant rights. This permits reuse and adaptation, including commercially, under the license terms. Other contributors retain their own rights and existing notices.
+
+See [LICENSE-DATA.md](LICENSE-DATA.md) for the exact scope, exclusions and an attribution example, and [LICENSES/CC-BY-4.0.txt](LICENSES/CC-BY-4.0.txt) for the full legal text. When attribution is required, credit Frank Chiarulli Jr. (Fonts Over Time), retain the supplied copyright and other notices, link to the project and license, and indicate changes. The license does not impose conditions on uses that do not require permission under the licensor's rights.
+
+This data license does not cover fonts themselves, third-party website content, upstream site lists or catalogs, or the repository's source code. Existing third-party licenses and notices are unchanged; no software license is added by this notice.
 
 ## Opting out
 
